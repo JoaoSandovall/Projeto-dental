@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useScrollReveal() {
+export function useScrollReveal(routeKey?: unknown) {
   useEffect(() => {
     // Configura o radar (Intersection Observer)
     const observerCallback = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
@@ -25,9 +25,11 @@ export function useScrollReveal() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     // Manda o radar vigiar tudo que tiver as classes de reveal
+    // Roda de novo a cada troca de rota (routeKey), então elementos de páginas
+    // trocadas via navegação SPA também são vigiados — sem precisar de F5.
     const revealElements = document.querySelectorAll(".reveal, .reveal-l, .reveal-r, .stagger-children");
     revealElements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  }, [routeKey]);
 }

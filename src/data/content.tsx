@@ -112,7 +112,7 @@ export const globalData = {
   team: {
     title: "Nossa Equipe",
     members: [
-      { name: "Dr. Leonardo Sant'Anna", cro: "Responsável Clínico", specialty: "Odontologia de Alto Padrão", img: "/imagens/equipe-leonardo.jpg" },
+      { name: "Dr. Leonardo Sant'Anna", cro: "Responsável Clínico", specialty: "Odontologia de Alto Padrão", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
     ]
   },
 
@@ -232,10 +232,10 @@ export const globalData = {
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Odontologia Estética", duration: "Facetas e Clareamento", complaint: "Desgaste dentário e insatisfação com a coloração do sorriso.", procedure: "Tratamento com facetas de porcelana garantindo harmonia, função e beleza natural.", beforeImg: "/imagens/facetas-antes.jpg", afterImg: "/imagens/facetas-depois.jpg" },
-      { category: "Harmonização Orofacial", duration: "Preenchimento Labial", complaint: "Falta de volume nos lábios e assimetria leve.", procedure: "Preenchimento com ácido hialurônico focado em devolver a proporção e naturalidade facial.", beforeImg: "/imagens/harmonizacao-antes.jpg", afterImg: "/imagens/harmonizacao-depois.jpg" },
-      { category: "Implantes Dentários", duration: "Reabilitação", complaint: "Perda dentária afetando a mastigação e autoconfiança.", procedure: "Planejamento cirúrgico digital de implante, seguro e focado na durabilidade e saúde do paciente.", beforeImg: "/imagens/implante-antes.jpg", afterImg: "/imagens/implante-depois.jpg" },
-      { category: "Ortodontia", duration: "Alinhamento Dental", complaint: "Dentes desalinhados afetando a estética do sorriso.", procedure: "Planejamento ortodôntico digital para um alinhamento previsível e resultado natural.", beforeImg: "/imagens/ortodontia-antes.jpg", afterImg: "/imagens/ortodontia-depois.jpg" }
+      { category: "Odontologia Estética", duration: "Facetas e Clareamento", complaint: "Desgaste dentário e insatisfação com a coloração do sorriso.", procedure: "Tratamento com facetas de porcelana garantindo harmonia, função e beleza natural.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
+      { category: "Harmonização Orofacial", duration: "Preenchimento Labial", complaint: "Falta de volume nos lábios e assimetria leve.", procedure: "Preenchimento com ácido hialurônico focado em devolver a proporção e naturalidade facial.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
+      { category: "Implantes Dentários", duration: "Reabilitação", complaint: "Perda dentária afetando a mastigação e autoconfiança.", procedure: "Planejamento cirúrgico digital de implante, seguro e focado na durabilidade e saúde do paciente.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
+      { category: "Ortodontia", duration: "Alinhamento Dental", complaint: "Dentes desalinhados afetando a estética do sorriso.", procedure: "Planejamento ortodôntico digital para um alinhamento previsível e resultado natural.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
     ]
   }
 };

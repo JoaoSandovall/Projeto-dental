@@ -20,8 +20,9 @@ export default function App() {
   const [displayPath, setDisplayPath] = useState(window.location.pathname);
   const [stage, setStage] = useState<"in" | "out" | "done">("done");
 
-  // O nosso "Radar de Animações" é ativado aqui, bem no começo da função!
-  useScrollReveal();
+  // O nosso "Radar de Animações" é ativado aqui — e reativado a cada troca de página,
+  // pra não precisar de F5 pra ver os elementos de Especialidades/Resultados.
+  useScrollReveal(displayPath);
 
   useEffect(() => {
     const onLocationChange = () => setCurrentPath(window.location.pathname);
