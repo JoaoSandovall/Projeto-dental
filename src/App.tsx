@@ -9,6 +9,7 @@ import { FAQ } from "./components/sections/FAQ";
 import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 
 // Nossas páginas isoladas
 import { ResultsPage } from "./components/pages/ResultsPage";
@@ -18,6 +19,9 @@ export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [displayPath, setDisplayPath] = useState(window.location.pathname);
   const [stage, setStage] = useState<"in" | "out" | "done">("done");
+
+  // O nosso "Radar de Animações" é ativado aqui, bem no começo da função!
+  useScrollReveal();
 
   useEffect(() => {
     const onLocationChange = () => setCurrentPath(window.location.pathname);
@@ -90,7 +94,7 @@ export default function App() {
     );
   }
 
-  // Página Principal (Home)
+  // Página Principal (Home) com todas as suas seções restauradas
   return (
     <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
       <Header goTo={goTo} />

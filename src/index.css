@@ -1,33 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-display: 'Playfair Display', serif;
 }
 
 :root {
-  /* Cores Principais - Clinmais (Verde Escuro Saúde para contraste e leitura) */
-  --c-primary: #17422E;
-  --c-primary-rgb: 23, 66, 46;
-  --c-primary-hover: #0E291C;
+  /* Cores Principais - Sant'Anna (Preto/Chumbo sofisticado, como na logo) */
+  --c-primary: #1C1A16;
+  --c-primary-rgb: 28, 26, 22;
+  --c-primary-hover: #302C24;
   
-  /* Cores de Destaque - Clinmais (Verde Vibrante Claro da Logo) */
-  --c-accent: #62C239;
-  --c-accent-rgb: 98, 194, 57;
-  --c-accent-hover: #50A32D;
+  /* Cores de Destaque - Sant'Anna (Dourado Champagne extraído da logo) */
+  --c-accent: #B7A07B;
+  --c-accent-rgb: 183, 160, 123;
+  --c-accent-hover: #9C8663;
   
-  /* Fundos - Tom Off-White levemente esverdeado (Clean e Fresco) */
-  --c-bg: #F5F9F6;
-  --c-bg-rgb: 245, 249, 246;
-  --c-bg-alt: #E8F0EA;
-  --c-team-placeholder: #2B5741;
+  /* Fundos - BRANCO PURO com seções secundárias em marfim quente */
+  --c-bg: #FFFFFF;
+  --c-bg-rgb: 255, 255, 255;
+  --c-bg-alt: #F7F5F1; /* Marfim suave para as seções secundárias, no lugar do verde clarinho */
+  --c-team-placeholder: #23201A;
   
   /* Textos */
-  --c-text-main: #17422E;
-  --c-text-muted: #647B6F;
-  --c-text-light: #A3B5AB;
+  --c-text-main: #1C1A16;
+  --c-text-muted: #756F63;
+  --c-text-light: #B4AEA0;
 }
 
 html {
@@ -53,6 +55,34 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--c-primary);
   border-radius: 3px;
+}
+
+@keyframes blurReveal {
+  0% { opacity: 0; filter: blur(16px); transform: translateY(20px) scale(0.97); }
+  100% { opacity: 1; filter: blur(0px); transform: translateY(0) scale(1); }
+}
+.anim-blur-reveal { 
+  animation: blurReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; 
+  will-change: transform, filter, opacity;
+}
+
+/* 2. Movimento Lento da Aura de Fundo */
+@keyframes auraFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(3vw, -4vh) scale(1.05); }
+  66% { transform: translate(-2vw, 3vh) scale(0.95); }
+}
+.bg-aura {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15; /* Quase invisível, apenas um reflexo luxuoso */
+  animation: auraFloat 18s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-aura-reverse {
+  animation: auraFloat 22s ease-in-out infinite reverse;
 }
 
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -205,3 +235,27 @@ body {
 
 @media (max-width: 900px) { [style*="repeat(3, 1fr)"] { grid-template-columns: 1fr 1fr !important; } }
 @media (max-width: 580px) { [style*="repeat(3, 1fr)"] { grid-template-columns: 1fr !important; } }
+/* --- NOVAS ANIMAÇÕES: FIO CONDUTOR E FAIXA INFINITA --- */
+
+/* Fio que escorre para baixo */
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  45% { transform: scaleY(1); transform-origin: top; }
+  55% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.anim-scroll-line { 
+  animation: scrollLine 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite; 
+}
+
+/* Faixa de texto rolando infinitamente */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
