@@ -8,26 +8,26 @@
 }
 
 :root {
-  /* Cores Principais - Felizardo (Carvão Escuro da Logo) */
-  --c-primary: #211E1D;
-  --c-primary-rgb: 33, 30, 29;
-  --c-primary-hover: #141211;
+  /* Cores Principais - Clinmais (Verde Escuro Saúde para contraste e leitura) */
+  --c-primary: #17422E;
+  --c-primary-rgb: 23, 66, 46;
+  --c-primary-hover: #0E291C;
   
-  /* Cores de Destaque - Felizardo (Ouro Envelhecido / Bronze) */
-  --c-accent: #C39F57;
-  --c-accent-rgb: 195, 159, 87;
-  --c-accent-hover: #D4AF6B;
+  /* Cores de Destaque - Clinmais (Verde Vibrante Claro da Logo) */
+  --c-accent: #62C239;
+  --c-accent-rgb: 98, 194, 57;
+  --c-accent-hover: #50A32D;
   
-  /* Fundos - Tom Off-White Luxuoso e Quente */
-  --c-bg: #FCFBF9;
-  --c-bg-rgb: 252, 251, 249;
-  --c-bg-alt: #F3EFE9;
-  --c-team-placeholder: #3D3835;
+  /* Fundos - Tom Off-White levemente esverdeado (Clean e Fresco) */
+  --c-bg: #F5F9F6;
+  --c-bg-rgb: 245, 249, 246;
+  --c-bg-alt: #E8F0EA;
+  --c-team-placeholder: #2B5741;
   
   /* Textos */
-  --c-text-main: #211E1D;
-  --c-text-muted: #756D68;
-  --c-text-light: #B5ACA5;
+  --c-text-main: #17422E;
+  --c-text-muted: #647B6F;
+  --c-text-light: #A3B5AB;
 }
 
 html {
