@@ -8,26 +8,26 @@
 }
 
 :root {
-  /* Cores Principais - Dra. Ana Julia (Marrom/Cinza Quente Escuro) */
-  --c-primary: #382F2A;
-  --c-primary-rgb: 56, 47, 42;
-  --c-primary-hover: #241D1A;
+  /* Cores Principais - Felizardo (Carvão Escuro da Logo) */
+  --c-primary: #211E1D;
+  --c-primary-rgb: 33, 30, 29;
+  --c-primary-hover: #141211;
   
-  /* Cores de Destaque - Dra. Ana Julia (Dourado da Logo) */
-  --c-accent: #C5A059;
-  --c-accent-rgb: 197, 160, 89;
-  --c-accent-hover: #D8B36D;
+  /* Cores de Destaque - Felizardo (Ouro Envelhecido / Bronze) */
+  --c-accent: #C39F57;
+  --c-accent-rgb: 195, 159, 87;
+  --c-accent-hover: #D4AF6B;
   
-  /* Fundos - O exato tom Creme/Bege do fundo da Logo (Aplica no site e no header) */
-  --c-bg: #FDF9F1;
-  --c-bg-rgb: 253, 249, 241;
-  --c-bg-alt: #F2ECE0;
-  --c-team-placeholder: #4A4039;
+  /* Fundos - Tom Off-White Luxuoso e Quente */
+  --c-bg: #FCFBF9;
+  --c-bg-rgb: 252, 251, 249;
+  --c-bg-alt: #F3EFE9;
+  --c-team-placeholder: #3D3835;
   
   /* Textos */
-  --c-text-main: #382F2A;
-  --c-text-muted: #857A73;
-  --c-text-light: #BDB4AC;
+  --c-text-main: #211E1D;
+  --c-text-muted: #756D68;
+  --c-text-light: #B5ACA5;
 }
 
 html {

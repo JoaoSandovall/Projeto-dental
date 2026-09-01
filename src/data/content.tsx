@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, Stethoscope, HeartHandshake } from "lucide-react";
+import { Smile, Sparkles, Activity, Shield, Users, Stethoscope } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
@@ -8,32 +8,32 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Dra. Ana Julia Ribeiro",
-    subtitulo: "Cirurgiã Dentista",
+    nome: "Instituto Felizardo",
+    subtitulo: "Odontologia de Excelência",
     logoUrl: "/imagens/logo.png",
     contato: {
-      whatsappUrl: "https://wa.me/5516993768794",
+      whatsappUrl: "https://wa.me/556198711826",
       whatsappLabel: "Falar no WhatsApp",
-      telefoneLabel: "(16) 99376-8794",
-      emailLabel: "contato@draanajuliaribeiro.com",
-      instagramLabel: "@dra.anajuliaribeiro no Instagram",
+      telefoneLabel: "(61) 3383-4729",
+      emailLabel: "contato@institutofelizardo.com.br",
+      instagramLabel: "@institutofelizardo no Instagram",
     },
     endereco: {
-      bairroCidade: "Morro Agudo - SP",
-      edificio: "Rua Barão do Rio Branco, 1318",
-      detalhado: "Rua Barão do Rio Branco, 1318\nMorro Agudo - SP, 14640-000",
-      comodidades: ["Ambiente acolhedor", "Fácil acesso", "Atendimento humanizado"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Rua+Barão+do+Rio+Branco,+1318,+Morro+Agudo+-+SP",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.0544158499266!2d-48.0583331!3d-20.731454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bbbc2b24e64f7b%3A0x6b77c59a0f0d2c0e!2sR.%20Bar%C3%A3o%20do%20Rio%20Branco%2C%201318%20-%20Morro%20Agudo%2C%20SP%2C%2014640-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+      bairroCidade: "Guará I, Brasília - DF",
+      edificio: "Guará Office Center",
+      detalhado: "QE 11, Edifício Guará Office Center, Salas 219 e 220\nGuará I, Brasília - DF, 71020-721",
+      comodidades: ["Reabilitação de alta complexidade", "Tecnologia avançada", "Conforto premium"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Instituto+Felizardo+-+ODONTOLOGIA",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7677.3054780961575!2d-47.97985044294515!3d-15.822254328410237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a31bfe2215b7f%3A0xde5de31aaaa4c0d9!2sInstituto%20Felizardo%20-%20ODONTOLOGIA!5e0!3m2!1spt-BR!2sbr!4v1788271933322!5m2!1spt-BR!2sbr"
     },
-    horarios: "Segunda a Sexta\nAberto até as 19:00",
+    horarios: "Segunda a Sexta\nAberto até as 18:00",
   },
 
   // ---------------------------------------------------
   // MENU E NAVEGAÇÃO
   // ---------------------------------------------------
   nav: {
-    links: ["A Clínica", "Especialidades", "Resultados", "Estrutura", "Contato"],
+    links: ["O Instituto", "Especialidades", "Resultados", "Estrutura", "Contato"],
     ids: ["sobre", "/especialidades", "/resultados", "convenios", "contato"]
   },
 
@@ -42,21 +42,21 @@ export const globalData = {
   // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png",
-    eyebrow: "Morro Agudo — SP",
-    title1: "Cuidando do seu",
-    title2: "sorriso",
-    title3: "com saúde.",
-    desc1: "Medo de dentista é mais comum do que você imagina. Aqui, ele é acolhido com ",
-    descBold: "cuidado, paciência e respeito.",
-    desc2: " Transformamos cada consulta em uma experiência leve e segura.",
-    btnPrimary: "Agende sua consulta",
-    btnOutline: "Conheça a equipe",
-    badgeTitle: "Destaque",
-    badgeDesc: "Atendimento Humanizado",
+    eyebrow: "Guará Office Center — Brasília",
+    title1: "Reabilitações",
+    title2: "projetadas",
+    title3: "para durar décadas.",
+    desc1: "Acreditamos que tratamentos de excelência não são definidos por preço, mas pela ",
+    descBold: "capacidade e experiência do profissional.",
+    desc2: " Foco absoluto nos detalhes e na longevidade do seu sorriso.",
+    btnPrimary: "Agende sua avaliação",
+    btnOutline: "Conheça o Instituto",
+    badgeTitle: "Excelência",
+    badgeDesc: "Reabilitação Oral Avançada",
     stats: [
-      { target: 5, suffix: ".0", label: "nota no google", thousands: false },
-      { target: 10, suffix: "+", label: "lentes em resina", thousands: false },
-      { target: 100, suffix: "%", label: "cuidado e paciência", thousands: false },
+      { target: 20, suffix: "+", label: "anos de longevidade planejada", thousands: false },
+      { target: 10, suffix: "+", label: "profissionais por reabilitação", thousands: false },
+      { target: 4, suffix: ".7", label: "nota de excelência no google", thousands: false },
     ]
   },
 
@@ -64,24 +64,24 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Clínica",
-    title1: "Um sonho que",
-    title2: "ganhou forma.",
-    p1: "Hoje temos um lugar para chamar de nosso. Um espaço criado com gratidão, amor e apoio familiar para oferecer a você o melhor cuidado odontológico em Morro Agudo.",
-    p2_1: "Nossa clínica é um ambiente onde a saúde e o ",
-    p2_bold: "cuidado de verdade",
-    p2_2: " caminham juntos. Com parcerias exclusivas e uma metodologia acolhedora, garantimos o bem-estar de toda a sua família, desde os pequenos até os adultos.",
+    eyebrow: "O Instituto",
+    title1: "Não existe almoço grátis.",
+    title2: "Experiência dita a regra.",
+    p1: "Tudo o que envolve um tratamento de excelência tem um custo: tecnologia de ponta e pessoas altamente especializadas para atender necessidades exclusivas. Não é sobre preço, é sobre o valor agregado ao seu resultado final.",
+    p2_1: "Os casos mais complexos de reabilitação com implantes, lentes ou facetas exigem um profissional ",
+    p2_bold: "habilidoso, cuidadoso com os detalhes e extremamente exigente",
+    p2_2: " com a qualidade. Aqui, a experiência e a formação ditam a regra do jogo.",
     topics: [
-      { title: "Odontopediatria Acolhedora", desc: "Consultas leves e seguras para os pequenos." },
-      { title: "Lentes em Resina", desc: "Transformações estéticas com naturalidade." },
-      { title: "Atendimento com Respeito", desc: "Paciência e cuidado para quem tem medo de dentista." },
-      { title: "Estrutura Nova", desc: "Um espaço sonhado e preparado para você." },
+      { title: "Longevidade Comprovada", desc: "Implantes planejados para durar 20, 30 anos." },
+      { title: "Planejamento Estratégico", desc: "Escolha da técnica e dos materiais ideais para você." },
+      { title: "Casos Complexos", desc: "Expertise em reabilitações que exigem alta habilidade." },
+      { title: "Equipe Multidisciplinar", desc: "Até 10 profissionais envolvidos no seu tratamento." },
     ],
     btn: "Agendar uma avaliação",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?w=1200&q=80&fit=crop", title: "Um Sonho Realizado" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Atendimento Humanizado" },
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Cuidado e Respeito" }
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Estrutura Premium" },
+      { url: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?w=1200&q=80&fit=crop", title: "Tecnologia e Precisão" },
+      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Excelência Clínica" }
     ]
   },
 
@@ -90,19 +90,19 @@ export const globalData = {
   // ---------------------------------------------------
   services: {
     eyebrow: "Especialidades",
-    title1: "Cuidado de",
-    title2: "verdade.",
-    desc1: "Atuamos com ",
-    descBold: "excelência e dedicação",
-    desc2: " em diversas áreas, sempre priorizando a sua saúde e conforto durante todo o tratamento.",
+    title1: "Implantes que",
+    title2: "precisam durar.",
+    desc1: "A longevidade das reabilitações protéticas ",
+    descBold: "deve ser duradoura",
+    desc2: ". Quando bem planejadas e bem executadas, nossas reabilitações transformam permanentemente a sua qualidade de vida.",
     btn: "Ver todas especialidades",
     list: [
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria", desc: "Transformamos cada consulta em uma experiência leve e segura para os pequenos. Parceria exclusiva com a Wizard Morro Agudo." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes em Resina", desc: "Renove a estética do seu sorriso com procedimentos modernos, corrigindo cor e formato com resultados incrivelmente naturais." },
-      { icon: <HeartHandshake size={28} strokeWidth={1.2} />, title: "Atendimento Acolhedor", desc: "Acolhemos o medo de dentista com muito cuidado, paciência e respeito, garantindo uma experiência tranquila." },
-      { icon: <Stethoscope size={28} strokeWidth={1.2} />, title: "Clínica Geral", desc: "Prevenção, limpezas e cuidados essenciais para manter a sua saúde bucal e da sua família sempre em dia." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Cirurgia", desc: "Procedimentos cirúrgicos realizados com a máxima segurança, técnica e atenção ao conforto pós-operatório do paciente." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Odontologia Familiar", desc: "Um ambiente preparado para atender desde as crianças até os adultos, fortalecendo a comunidade de Morro Agudo." }
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "A reabilitação sobre implantes exige planejamento meticuloso. Projetamos raízes artificiais estruturadas para durar décadas com a máxima estabilidade." },
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato & Facetas", desc: "Casos complexos de estética exigem um olhar clínico apurado. Utilizamos materiais premium para garantir naturalidade e resistência excepcionais." },
+      { icon: <Activity size={28} strokeWidth={1.2} />, title: "Reabilitação Oral Multidisciplinar", desc: "Tratamentos amplos onde a média de profissionais envolvidos chega a 10 ou mais, garantindo que cada detalhe seja executado por um especialista." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Protocolos avançados de clareamento para devolver a luminosidade do esmalte de forma segura, indolor e altamente duradoura." },
+      { icon: <Stethoscope size={28} strokeWidth={1.2} />, title: "Odontologia Clínica", desc: "A base de uma reabilitação de sucesso. Orientação rigorosa e cuidados contínuos para manter a saúde bucal ao longo dos anos." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Acompanhamento e Conscientização", desc: "Orientar é uma obrigação do dentista. O seu comprometimento com os cuidados necessários muda completamente a longevidade do resultado." }
     ]
   },
 
@@ -110,11 +110,11 @@ export const globalData = {
   // SEÇÃO: CORPO CLÍNICO (EQUIPE)
   // ---------------------------------------------------
   team: {
-    title: "Nossa Equipe",
+    title: "Corpo Clínico",
     members: [
-      { name: "Dra. Ana Julia Ribeiro", cro: "CRO/SP 162327", specialty: "Cirurgiã Dentista", img: "https://images.unsplash.com/photo-1594824432258-f9b1a50c3d9a?w=400&h=500&fit=crop&auto=format" },
-      { name: "Dra. Samara Galvani", cro: "Especialista", specialty: "Cirurgiã Dentista", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
-      { name: "Dr. Carlos Eduardo", cro: "Especialista", specialty: "Cirurgião Dentista", img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=500&fit=crop&auto=format" },
+      { name: "Dr. Luiz Eduardo Felizardo", cro: "Responsável Técnico", specialty: "Reabilitação & Implantes", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
+      { name: "Especialista Felizardo", cro: "Especialista", specialty: "Lentes e Estética", img: "https://images.unsplash.com/photo-1594824432258-f9b1a50c3d9a?w=400&h=500&fit=crop&auto=format" },
+      { name: "Especialista Felizardo", cro: "Especialista", specialty: "Clínica Geral", img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=400&h=500&fit=crop&auto=format" },
     ]
   },
 
@@ -122,16 +122,16 @@ export const globalData = {
   // SEÇÃO: CONVÊNIOS E ESTRUTURA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "Nossa Estrutura",
-    title1: "Um lugar para",
-    title2: "chamar de",
-    title3: "nosso.",
-    desc: "Nossa clínica em Morro Agudo foi planejada para oferecer qualidade, confiança e bem-estar. Um sonho realizado para atender você com o maior conforto.",
+    eyebrow: "A Estrutura Felizardo",
+    title1: "Tecnologia aplicada",
+    title2: "à sua",
+    title3: "qualidade de vida.",
+    desc: "Tudo o que está envolvido em um tratamento de excelência tem um custo invisível: a tecnologia de ponta e o ambiente projetado para suportar casos de alta complexidade.",
     btn: "Agendar minha consulta",
     list: [
-      { title: "Parceria com a Comunidade", content: "Nos unimos à Wizard Morro Agudo para provar que quando negócios locais se apoiam, toda a comunidade cresce. Garantimos o futuro dos seus filhos com saúde bucal e educação." },
-      { title: "Ambiente Acolhedor", content: "Sabemos que o medo de dentista é real. Por isso, nossa estrutura e equipe estão prontas para te receber com a máxima paciência e respeito em cada etapa." },
-      { title: "Tecnologia em Estética", content: "Oferecemos tratamentos de ponta como lentes em resina para garantir que a sua estética dental seja acompanhada de saúde e durabilidade." }
+      { title: "Até 10 Profissionais por Caso", content: "Você sabia que em um tratamento reabilitador complexo a média de profissionais envolvidos chega a 10 ou mais? Nosso instituto centraliza e coordena essa equipe para você." },
+      { title: "Foco na Longevidade", content: "Não trabalhamos com soluções paliativas. Nossa estrutura e escolha de materiais são guiadas pela meta de que o seu tratamento dure de 20 a 30 anos com a manutenção adequada." },
+      { title: "Guará Office Center", content: "Localizados no Edifício Guará Office, oferecemos um ambiente discreto, sofisticado e totalmente equipado para conduzir reabilitações extensas com segurança." }
     ]
   },
 
@@ -141,12 +141,12 @@ export const globalData = {
   testimonials: {
     eyebrow: "Depoimentos",
     title: "O que nossos pacientes dizem",
-    googleScore: "5.0",
-    googleReviews: "8 Avaliações",
+    googleScore: "4.7",
+    googleReviews: "15 Avaliações",
     list: [
-      { name: "Paciente Satisfeito", role: "Morro Agudo", stars: 5, text: "Eu tinha muito medo de ir ao dentista, mas a Dra. Ana Julia e sua equipe me atenderam com um carinho e paciência que nunca vi igual. Perdi o medo!", img: "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=80&h=80&fit=crop&auto=format" },
-      { name: "Mãe de Paciente", role: "Parceria Wizard", stars: 5, text: "Meu filho adorou a consulta! A abordagem da clínica com as crianças é maravilhosa, transforma um momento de tensão em algo super leve.", img: "https://images.unsplash.com/photo-1562337404-3044c84ac061?w=80&h=80&fit=crop&auto=format" },
-      { name: "Paciente Estética", role: "Lentes em Resina", stars: 5, text: "Fiz minhas lentes em resina e o resultado superou todas as expectativas. O sorriso ficou natural e o atendimento foi excelente do início ao fim.", img: "https://images.unsplash.com/photo-1667133295308-9ef24f71952e?w=80&h=80&fit=crop&auto=format" }
+      { name: "Paciente Instituto", role: "Reabilitação Oral", stars: 5, text: "O nível de detalhismo do Dr. Luiz e de toda a equipe é impressionante. Entendi que um implante é um investimento para a vida toda.", img: "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=80&h=80&fit=crop&auto=format" },
+      { name: "Paciente Instituto", role: "Lentes de Contato", stars: 5, text: "A clínica tem uma infraestrutura incrível no Guará. O tratamento foi extremamente bem planejado e o resultado estético ficou além do que eu imaginava.", img: "https://images.unsplash.com/photo-1667133295308-9ef24f71952e?w=80&h=80&fit=crop&auto=format" },
+      { name: "Paciente Instituto", role: "Implante", stars: 5, text: "A honestidade e a experiência deles me passaram muita segurança. Fui orientado sobre cada etapa e sobre como cuidar para que o trabalho dure décadas.", img: "https://images.unsplash.com/photo-1562337404-3044c84ac061?w=80&h=80&fit=crop&auto=format" }
     ]
   },
 
@@ -155,14 +155,14 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "Nossos Resultados",
-    title1: "Transformamos o",
-    title2: "seu sorriso!",
+    title1: "A experiência dita",
+    title2: "o resultado.",
     p1: "A",
     p_bold1: "excelência técnica",
-    p2: "é refletida na naturalidade de cada paciente. Explore nossa",
+    p2: "é o que garante que reabilitações sejam duradouras e belas. Explore nossa",
     p_bold2: "galeria de casos clínicos",
-    p3: "e conheça o padrão da",
-    p_bold3: "Dra. Ana Julia Ribeiro",
+    p3: "e entenda o valor do",
+    p_bold3: "Instituto Felizardo",
     btn: "Ver Galeria de Casos",
     imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
   },
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Perguntas Frequentes",
     list: [
-      { q: "Onde a clínica está localizada?", a: "Estamos na Rua Barão do Rio Branco, 1318, em Morro Agudo - SP. Um espaço novo e planejado para o seu conforto." },
-      { q: "A clínica atende crianças?", a: "Com certeza! A Dra. Ana Julia é especialista em odontopediatria e tem parceria com a Wizard Morro Agudo para oferecer uma experiência lúdica e leve para os pequenos." },
-      { q: "Tenho muito medo de dentista. E agora?", a: "O medo é muito comum e nós entendemos perfeitamente. Aqui, o seu receio é acolhido com paciência e respeito para que a consulta seja a mais tranquila possível." },
-      { q: "Vocês trabalham com estética dental?", a: "Sim, realizamos procedimentos estéticos de alta qualidade, incluindo confecção de Lentes em Resina para a harmonização do seu sorriso." }
+      { q: "Onde o Instituto Felizardo está localizado?", a: "Estamos no Guará I, QE 11, Edifício Guará Office Center, Salas 219 e 220, em Brasília - DF." },
+      { q: "O que é uma reabilitação oral multidisciplinar?", a: "É um tratamento amplo que devolve a estética e a função dos dentes perdidos ou desgastados. Em casos complexos, envolvemos até 10 especialistas de diferentes áreas para garantir o sucesso." },
+      { q: "Quanto tempo dura um implante dentário?", a: "Quando bem planejado, bem executado e com a correta manutenção do paciente, os implantes são projetados para oferecer uma longevidade de 20 a 30 anos." },
+      { q: "Vocês trabalham com lentes de contato dental?", a: "Sim. A execução de lentes de contato exige um profissional extremamente habilidoso e materiais de excelência para garantir naturalidade e segurança." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Barão do Rio Branco, 1318", value2: "Morro Agudo - SP" },
-    box2: { title: "Localização", value1: "Morro Agudo, SP", value2: "CEP: 14640-444" },
-    box3: { title: "Convênios e Parcerias", value1: "HAPVIDA", value2: "Wizard Morro Agudo" },
+    box1: { title: "Edifício", value1: "Guará Office Center", value2: "Salas 219 e 220" },
+    box2: { title: "Localização", value1: "Guará I, QE 11", value2: "Brasília - DF, 71020-721" },
+    box3: { title: "Diferenciais", value1: "Estrutura de Alta Complexidade", value2: "Ambiente Premium" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +196,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "Vamos",
-    title2: "conversar?",
-    desc: "Agende sua consulta e venha conhecer nosso novo espaço. Cuidaremos do seu sorriso com toda a atenção e carinho que você merece.",
+    title1: "Invista na sua",
+    title2: "qualidade de vida.",
+    desc: "Agende sua avaliação e descubra o valor de um tratamento planejado para durar. Nossa equipe multidisciplinar está pronta para conduzir a sua reabilitação.",
     box1_title: "Endereço",
     box2_title: "Contato Direto",
     box3_title: "Mídias",
-    box3_desc1: "Acompanhe o nosso dia a dia",
-    box3_desc2: "@dra.anajuliaribeiro no Instagram"
+    box3_desc1: "Acompanhe nosso conhecimento",
+    box3_desc2: "@institutofelizardo no Instagram"
   },
 
   // ---------------------------------------------------
   // SEÇÃO: RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Cuidando do seu sorriso com saúde. Medo de dentista acolhido com cuidado, paciência e respeito em Morro Agudo.",
+    sobre: "Experiência que dita a regra do jogo. Reabilitações de alta complexidade planejadas para oferecer excelência e longevidade.",
     title_tratamentos: "Tratamentos",
     title_contato: "Contato",
-    direitos: "© 2026 Dra. Ana Julia Ribeiro. Todos os direitos reservados.",
-    registro: "Morro Agudo — SP | CRO/SP 162327"
+    direitos: "© 2026 Instituto Felizardo. Todos os direitos reservados.",
+    registro: "Guará I — Brasília, DF"
   },
 
   // ---------------------------------------------------
@@ -222,20 +222,20 @@ export const globalData = {
   // ---------------------------------------------------
   results_page: {
     eyebrow: "Portfólio Clínico",
-    title1: "Seu sorriso,",
-    title2: "cuidado de verdade.",
+    title1: "Resultados feitos",
+    title2: "para durar décadas.",
     p1: "Navegue pela nossa",
-    p_bold1: "galeria de casos",
-    p2: ". A excelência aliada ao nosso",
-    p_bold2: "olhar humano",
-    p3: "em Morro Agudo nos permite entregar resultados que unem estética e saúde.",
-    btnSaberMais: "Agendar caso semelhante",
+    p_bold1: "galeria de reabilitações",
+    p2: ". O planejamento cirúrgico e a",
+    p_bold2: "experiência de nossos profissionais",
+    p3: "garantem a execução de tratamentos altamente complexos com segurança.",
+    btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Lentes em Resina", duration: "Estética e Naturalidade", complaint: "Desgastes e coloração irregular comprometendo a harmonia do rosto.", procedure: "Reabilitação estética com lentes em resina planejadas de forma única e natural.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
-      { category: "Odontopediatria", duration: "Cuidado Leve", complaint: "Paciente infantil com muito medo das ferramentas do dentista.", procedure: "Atendimento acolhedor, lúdico e seguro, devolvendo a saúde bucal da criança.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
-      { category: "Estética Avançada", duration: "Alta Tecnologia", complaint: "Sorriso com manchas e formato desarmônico ao longo dos anos.", procedure: "Protocolo estético minimamente invasivo para elevar o brilho com sofisticação.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" },
-      { category: "Clínica Geral", duration: "Saúde e Bem Estar", complaint: "Dores pontuais e necessidade de limpeza profunda.", procedure: "Diagnóstico preciso e tratamento clínico focado na eliminação do desconforto.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" }
+      { category: "Implantes Dentários", duration: "Longevidade Planejada", complaint: "Ausência dentária severa exigindo intervenção estrutural duradoura.", procedure: "Carga imediata e fixação de prótese sobre implantes com planejamento 3D.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
+      { category: "Lentes e Facetas", duration: "Meticulosidade", complaint: "Desgaste excessivo do esmalte e perda da dimensão vertical do sorriso.", procedure: "Reabilitação estética envolvendo múltiplos profissionais para garantir a anatomia perfeita.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
+      { category: "Reabilitação Oral", duration: "Multidisciplinar", complaint: "Caso complexo necessitando de intervenção na mordida, gengiva e dentes.", procedure: "Execução coordenada por uma equipe especializada focada na qualidade de vida do paciente.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" },
+      { category: "Clareamento e Perio", duration: "Atenção aos Detalhes", complaint: "Lesões cervicais não cariosas e necessidade de uniformização de cor.", procedure: "Abordagem clínica focada na saúde periodontal prévia à harmonização estética.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" }
     ]
   }
 };
