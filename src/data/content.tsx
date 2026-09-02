@@ -1,199 +1,241 @@
 import { CSSProperties } from "react";
-import { Heart, Sun, Compass, Users, Brain, MessageCircle } from "lucide-react";
+import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
 export const globalData = {
+  // ---------------------------------------------------
+  // DADOS GERAIS DA CLÍNICA
+  // ---------------------------------------------------
   clinica: {
-    nome: "Instituto Aurora",
-    subtitulo: "Psicologia e Bem-estar",
-    logoUrl: "/imagens/logo.png",
+    nome: "Clínica Refini",
+    subtitulo: "Odontologia, Estética e Saúde",
+    logoUrl: "/imagens/logo.png", // Salve a logo da Refini com este nome na pasta public/imagens
     contato: {
-      whatsappUrl: "https://wa.me/5511999999999", 
-      whatsappLabel: "Agendar primeira sessão",
-      telefoneLabel: "Fale com nossa equipe",
-      emailLabel: "contato@institutoaurora.com.br",
-      instagramLabel: "@institutoaurorapsi",
+      whatsappUrl: "https://wa.me/5582981631241", 
+      whatsappLabel: "Agendar pelo WhatsApp",
+      telefoneLabel: "(82) 98163-1241",
+      emailLabel: "contato@clinicarefini.com.br",
+      instagramLabel: "@clinicarefini",
     },
     endereco: {
-      bairroCidade: "Bela Vista, São Paulo",
-      edificio: "Av. Paulista, 1000 - Sala 42",
-      detalhado: "Av. Paulista, 1000 - Sala 42\nBela Vista, São Paulo - SP",
-      comodidades: ["Ambiente sigiloso e acolhedor", "Isolamento acústico", "Terapia Presencial e Online"],
-      mapaGpsUrl: "https://maps.google.com/...",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975765955146!2d-46.65451968502213!3d-23.561338867471966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da7bf317%3A0x6a05e463a56dc815!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1689257613589!5m2!1spt-BR!2sbr"
+      bairroCidade: "Jatiúca, Maceió - AL",
+      edificio: "Empresarial Le Monde",
+      detalhado: "R. José Soares Sobrinho, 119 - Sl 316\nLe Monde Empresarial\nJatiúca, Maceió - AL, 57036-640",
+      comodidades: ["Estética Odontológica", "Reabilitação Oral", "Atendimento Humanizado"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Refini+Maceio",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.400804019531!2d-35.7065481!3d-9.6467526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145ce5c3afd9b%3A0x3ab5eaf709bf314e!2sCl%C3%ADnica%20Refini%20%7C%20Dentista%20Est%C3%A9tica%20em%20Macei%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1788376026966!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimentos sob agendamento",
+    horarios: "Aberto de Segunda a Sexta\nEncerra às 18:00",
   },
 
   nav: {
-    links: ["O Instituto", "Abordagens", "Áreas de Atuação", "O Espaço", "Contato"],
-    ids: ["sobre", "/especialidades", "/resultados", "convenios", "contato"]
+    links: ["A Clínica", "Especialidades", "A Essência", "Resultados", "Contato"],
+    ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: HERO
+  // ---------------------------------------------------
   hero: {
-    imgUrl: "https://images.unsplash.com/photo-1544027993-37db48d5f644?w=800&q=80",
-    eyebrow: "Psicologia Clínica",
-    title1: "Um espaço seguro",
-    title2: "para você,",
-    title3: "no seu tempo.",
-    desc1: "Mais do que ouvir,",
-    descBold: "é ajudar você a se reencontrar.",
-    desc2: " Oferecemos um ambiente livre de julgamentos, focado em clareza mental e desenvolvimento emocional.",
-    btnPrimary: "Agende sua sessão",
-    btnOutline: "Nossas Abordagens",
-    badgeTitle: "Destaque",
-    badgeDesc: "Saúde Mental",
+    imgUrl: "/imagens/hero.png", // Sugestão: Uma foto bonita da Dra. Raquel ou da fachada da clínica
+    eyebrow: "Jatiúca — Maceió, AL",
+    title1: "A beleza",
+    title2: "do sorriso",
+    title3: "começa na intenção.",
+    desc1: "Por trás de cada resultado existe",
+    descBold: "uma equipe que cuida com o coração.",
+    desc2: " Na Refini, acreditamos que a excelência vai além da técnica: ela está em ouvir, acolher e entender cada paciente como único.",
+    btnPrimary: "Agende sua consulta",
+    btnOutline: "Nossas Especialidades",
+    badgeTitle: "Excelência",
+    badgeDesc: "Estética & Saúde Bucal",
     stats: [
-      { target: 10, suffix: "+", label: "anos de experiência", thousands: false },
-      { target: 100, suffix: "%", label: "sigilo e acolhimento", thousands: false },
-      { target: 5000, suffix: "+", label: "sessões realizadas", thousands: true },
+      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
+      { target: 25, suffix: "+", label: "avaliações perfeitas", thousands: false },
+      { target: 100, suffix: "%", label: "cuidado e dedicação", thousands: false },
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: SOBRE NÓS
+  // ---------------------------------------------------
   about: {
-    eyebrow: "O Instituto",
-    title1: "Sua jornada rumo",
-    title2: "à clareza emocional.",
-    p1: "O processo terapêutico não precisa ser solitário. Aqui, construímos juntos os caminhos para você lidar com suas emoções, medos e angústias de forma mais leve e consciente.",
-    p2_1: "Sob a responsabilidade clínica da ",
-    p2_bold: "Dra. Helena Martins",
-    p2_2: ", nossa equipe é formada por especialistas dedicados a oferecer uma escuta ativa e acolhedora, baseada em práticas terapêuticas com evidência científica.",
+    eyebrow: "A Refini",
+    title1: "Onde o cuidado é",
+    title2: "tão importante",
+    title3: "quanto o resultado.",
+    p1: "Aqui, você não é apenas mais um atendimento. Você é parte da nossa história, e o seu sorriso é a nossa melhor conquista.",
+    p2_1: "Sob a responsabilidade técnica da ",
+    p2_bold: "Dra. Raquel Ferreira (CRO 1816 AL)",
+    p2_2: ", a Clínica Refini, localizada no Empresarial Le Monde em Maceió, é referência em Estética Odontológica e Reabilitação Oral de alto padrão.",
     topics: [
-      { title: "Escuta Ativa", desc: "Um olhar atento e humano para a sua história, sem filtros ou julgamentos." },
-      { title: "Terapia Baseada em Evidências", desc: "Abordagens modernas para tratamento eficaz de ansiedade e depressão." },
-      { title: "Autoconhecimento", desc: "Ferramentas para você entender seus padrões e quebrar ciclos negativos." },
-      { title: "Sigilo Absoluto", desc: "Um ambiente protegido para que você se sinta completamente à vontade." },
+      { title: "Estética Odontológica", desc: "Transformações de sorriso focadas em naturalidade, harmonia e na essência de cada paciente." },
+      { title: "Reabilitação Oral", desc: "Devolvemos a função mastigatória e a estética com técnicas avançadas e materiais de ponta." },
+      { title: "Atendimento Único", desc: "Acreditamos que a excelência está em ouvir, acolher e entender as necessidades de cada um." },
+      { title: "Estrutura Premium", desc: "Localizada na Jatiúca, nossa clínica oferece um ambiente pensado para o seu máximo conforto." },
     ],
-    btn: "Quero iniciar minha terapia",
+    btn: "Quero conhecer a clínica",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80", title: "Profissionais Especializados" },
-      { url: "https://images.unsplash.com/photo-1499914485622-a88fac53ebfd?w=1200&q=80", title: "Ambiente Acolhedor" },
-      { url: "https://images.unsplash.com/photo-1520607162513-322433924e5c?w=1200&q=80", title: "Segurança e Conforto" }
+      { url: "/imagens/image.png", title: "Tecnologia e Precisão" },
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Cuidado e Dedicação" },
+      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Atenção a Cada Detalhe" }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: SERVIÇOS
+  // ---------------------------------------------------
   services: {
-    eyebrow: "Nossos Serviços",
-    title1: "Apoio para",
-    title2: "todas as fases.",
-    desc1: "Atuamos com foco absoluto em proporcionar ",
-    descBold: "qualidade de vida e saúde mental",
-    desc2: " através de formatos de terapia adaptados à sua rotina.",
-    btn: "Ver todas as modalidades",
+    eyebrow: "Nossos Tratamentos",
+    title1: "Estética",
+    title2: "e Reabilitação.",
+    desc1: "Oferecemos uma odontologia moderna e detalhista, focada em ",
+    descBold: "elevar a sua autoestima",
+    desc2: " preservando a naturalidade do seu rosto.",
+    btn: "Ver todas as áreas",
     list: [
-      { icon: <Brain size={28} strokeWidth={1.2} />, title: "Terapia Individual", desc: "Espaço dedicado ao tratamento de ansiedade, depressão e desenvolvimento do autoconhecimento." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Terapia de Casal", desc: "Mediação de conflitos, melhora na comunicação e fortalecimento do vínculo afetivo entre os parceiros." },
-      { icon: <Compass size={28} strokeWidth={1.2} />, title: "Orientação de Carreira", desc: "Apoio psicológico para transições profissionais e tratamento da Síndrome de Burnout." },
-      { icon: <Sun size={28} strokeWidth={1.2} />, title: "Terapia para Adolescentes", desc: "Acolhimento focado nas transformações, conflitos de identidade e pressões dessa fase." },
-      { icon: <MessageCircle size={28} strokeWidth={1.2} />, title: "Psicoterapia Online", desc: "A mesma excelência e sigilo do atendimento presencial, no conforto da sua casa." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Apoio ao Luto", desc: "Acompanhamento sensível para ajudar a ressignificar perdas e lidar com momentos de dor profunda." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato e Facetas", desc: "Lâminas cerâmicas ultrafinas que corrigem imperfeições de cor e formato, criando um sorriso esteticamente perfeito." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Tratamentos completos para restaurar a função mastigatória, a saúde gengival e a estrutura dos dentes perdidos ou desgastados." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental Avançado", desc: "Técnicas seguras e monitoradas para devolver a luminosidade e o brilho natural ao seu sorriso." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Odontologia Estética", desc: "Pequenos ajustes e restaurações em resina de alta performance que fazem toda a diferença na harmonia do rosto." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Saúde e Prevenção", desc: "Profilaxia (limpeza) profunda e check-ups rigorosos para garantir que a beleza do seu sorriso se mantenha saudável." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Cada plano de tratamento é desenhado de forma individual, respeitando os seus desejos, o seu tempo e a sua intenção." }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: CORPO CLÍNICO
+  // ---------------------------------------------------
   team: {
-    title: "Quem cuida de você",
+    title: "Direção Clínica",
     members: [
-      { name: "Dra. Helena Martins", cro: "CRP 06/123456", specialty: "Psicologia Clínica e TCC", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" },
+      { name: "Dra. Raquel Ferreira", cro: "CRO/AL 1816", specialty: "Estética Odontológica e Reabilitação Oral", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop&auto=format" }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: A ESSÊNCIA REFINI (Substituindo Convênios)
+  // ---------------------------------------------------
   convenios: {
-    eyebrow: "O Espaço",
-    title1: "Planejado para",
-    title2: "o seu",
-    title3: "bem-estar.",
-    desc: "Acreditamos que o ambiente físico impacta diretamente no processo terapêutico. Criamos um refúgio calmo no meio da cidade para que você possa desacelerar.",
-    btn: "Conhecer a clínica",
+    eyebrow: "A Essência Refini",
+    title1: "A beleza começa",
+    title2: "na",
+    title3: "intenção.",
+    desc: "Acreditamos que a verdadeira estética bucal é aquela que respeita a sua essência. No Empresarial Le Monde, preparamos um ambiente focado no seu bem-estar absoluto.",
+    btn: "Agendar minha avaliação",
     list: [
-      { title: "Isolamento Acústico", content: "Salas preparadas com tecnologia de isolamento para garantir que tudo o que for dito permaneça em absoluto sigilo." },
-      { title: "Cores e Iluminação", content: "Tons terrosos, iluminação quente e indireta, pensados neuro-arquitetonicamente para reduzir o estresse." },
-      { title: "Acessibilidade e Conforto", content: "Poltronas ergonômicas, chás, cafés e um ambiente perfumado com aromaterapia suave para o seu acolhimento." }
+      { title: "Equipe que cuida com o coração", content: "Nosso corpo clínico é treinado para ir além da técnica, proporcionando um acolhimento verdadeiro e sem pressa." },
+      { title: "Você como protagonista", content: "Aqui, você não é apenas mais um atendimento. Ouvimos atentamente seus desejos antes de propor qualquer intervenção estética." },
+      { title: "Estrutura de Alto Padrão", content: "Do agendamento à finalização do tratamento, cada detalhe em nossa clínica na Jatiúca foi pensado para transmitir paz e sofisticação." }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
+  // ---------------------------------------------------
   testimonials: {
-    eyebrow: "A Jornada Terapêutica",
-    quote: "A terapia não é sobre consertar quem você é, mas sobre descobrir quem você sempre foi por baixo da dor.",
-    supporting: "A vida cotidiana frequentemente nos afasta da nossa essência. Nosso papel é guiar você no retorno a si mesmo, com paciência e técnica.",
+    eyebrow: "A Experiência",
+    title1: "Atenção a",
+    title2: "cada detalhe.",
+    quote: "A excelência vai além da técnica. Ela está em ouvir, acolher e entender cada paciente como único.",
+    supporting: "Acompanhe um pouco da nossa rotina clínica e do ambiente onde transformamos vidas através do sorriso.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=800&h=1000&fit=crop", alt: "Sessão de terapia" },
-      { img: "https://images.unsplash.com/photo-1520607162513-322433924e5c?w=800&h=1000&fit=crop", alt: "Ambiente calmo" },
-      { img: "https://images.unsplash.com/photo-1499914485622-a88fac53ebfd?w=800&h=1000&fit=crop", alt: "Anotações e escuta" },
-      { img: "https://images.unsplash.com/photo-1573497491208-6f16fa811b23?w=800&h=1000&fit=crop", alt: "Psicóloga sorrindo" },
-      { img: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=800&h=1000&fit=crop", alt: "Livros e estudos" },
-      { img: "https://images.unsplash.com/photo-1544027993-37db48d5f644?w=800&h=1000&fit=crop", alt: "Sala de espera" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Clínica Refini" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Atendimento Clínico" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Estrutura da Clínica" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Tratamento Odontológico" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Equipe Refini" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Sorrisos Refini" }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO: CTA PARA RESULTADOS
+  // ---------------------------------------------------
   results_cta: {
-    eyebrow: "Por que buscar terapia?",
-    title1: "O primeiro passo",
-    title2: "muda tudo.",
-    p1: "Reconhecer que se precisa de ajuda é o",
-    p_bold1: "ato de maior coragem",
-    p2: "que alguém pode ter. Explore nossas principais",
-    p_bold2: "áreas de atuação",
-    p3: "e veja como podemos ajudar você a recuperar sua",
-    p_bold3: "qualidade de vida.",
-    btn: "Ver Áreas de Atuação",
-    imgUrl: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&q=80"
+    eyebrow: "Nossa Filosofia",
+    title1: "Transformações",
+    title2: "que marcam a vida.",
+    p1: "O seu sorriso é a nossa",
+    p_bold1: "melhor conquista.",
+    p2: "Veja o impacto de um tratamento executado com precisão técnica e",
+    p_bold2: "atenção aos mínimos detalhes",
+    p3: "explorando a nossa",
+    p_bold3: "galeria de resultados clínicos.",
+    btn: "Ver Casos Clínicos",
+    imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
   },
 
+  // ---------------------------------------------------
+  // FAQ
+  // ---------------------------------------------------
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Como funciona a primeira sessão?", a: "A primeira sessão é um momento de acolhimento e escuta. Você poderá falar sobre o que te trouxe à clínica, e o psicólogo explicará como a terapia pode te ajudar, sem qualquer pressão." },
-      { q: "Qual a duração e frequência das sessões?", a: "As sessões duram em média 50 minutos. A frequência geralmente é semanal, mas isso é combinado entre você e o profissional de acordo com a sua necessidade." },
-      { q: "A terapia online tem o mesmo efeito da presencial?", a: "Sim. Estudos comprovam que a eficácia da psicoterapia online é equivalente à presencial. A única exigência é que você esteja em um local com privacidade e boa conexão de internet." },
-      { q: "Tudo o que eu falar ficará em sigilo?", a: "Absolutamente. O sigilo terapêutico é um pilar ético inviolável da psicologia. Tudo o que for discutido em sessão permanece estritamente entre você e seu terapeuta." }
+      { q: "Onde a Clínica Refini está localizada?", a: "Estamos no Empresarial Le Monde (Sala 316), localizado na Rua José Soares Sobrinho, 119, no bairro de Jatiúca, em Maceió - AL." },
+      { q: "Quais são as especialidades da Dra. Raquel Ferreira?", a: "A Dra. Raquel atua com foco primordial em Estética Odontológica (como facetas e lentes de contato) e na Reabilitação Oral de alta complexidade." },
+      { q: "O que significa 'Reabilitação Oral'?", a: "É um conjunto de procedimentos que visam restaurar a saúde bucal completa do paciente, devolvendo a mastigação perfeita, a saúde das gengivas e a estética do sorriso." },
+      { q: "Como funciona a primeira avaliação na Refini?", a: "Nossa avaliação é o momento de ouvir você. Entendemos as suas intenções, necessidades e histórico, realizamos uma análise clínica rigorosa e, a partir daí, desenhamos um plano de tratamento exclusivo." }
     ]
   },
 
+  // ---------------------------------------------------
+  // LOCALIZAÇÃO
+  // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Av. Paulista, 1000", value2: "Bela Vista - SP" },
-    box2: { title: "Atendimento", value1: "Presencial e Online", value2: "Agendamento via WhatsApp" },
-    box3: { title: "Especialidades", value1: "Terapia Individual, Casal", value2: "Burnout e Ansiedade" },
+    box1: { title: "Endereço", value1: "Empresarial Le Monde, Sala 316", value2: "R. José Soares Sobrinho, 119" },
+    box2: { title: "Localização", value1: "Jatiúca, Maceió - AL", value2: "CEP: 57036-640" },
+    box3: { title: "Especialidades", value1: "Estética Odontológica", value2: "Reabilitação Oral e Saúde" },
     btn: "Abrir no Google Maps"
   },
 
+  // ---------------------------------------------------
+  // CONTATO FINAL
+  // ---------------------------------------------------
   contact: {
-    eyebrow: "Agende sua Sessão",
-    title1: "Sua saúde mental",
-    title2: "é prioridade.",
-    desc: "Dê o primeiro passo para uma vida mais leve e equilibrada. Entre em contato com a nossa equipe e agende o seu horário.",
+    eyebrow: "Marque uma Avaliação",
+    title1: "O seu sorriso",
+    title2: "é a nossa prioridade.",
+    desc: "Venha viver uma experiência odontológica onde o cuidado é tão importante quanto o resultado perfeito. Fale com nossa equipe.",
     box1_title: "Endereço",
-    box2_title: "Contato",
+    box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Conteúdos sobre bem-estar",
-    box3_desc2: "@institutoaurorapsi"
+    box3_desc1: "Acompanhe nossos resultados",
+    box3_desc2: "@clinicarefini"
   },
 
+  // ---------------------------------------------------
+  // RODAPÉ
+  // ---------------------------------------------------
   footer: {
-    sobre: "Espaço dedicado à saúde mental e acolhimento emocional. Psicoterapia baseada em evidências para jovens, adultos e casais.",
-    title_tratamentos: "Modalidades",
+    sobre: "Clínica Refini | Excelência em estética e saúde bucal em Maceió. Nossa missão é cuidar de você com técnica apurada e muito coração.",
+    title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Instituto Aurora Psicologia. Todos os direitos reservados.",
-    registro: "Bela Vista, São Paulo - SP"
+    direitos: "© 2026 Clínica Refini. Todos os direitos reservados. RT: Dra. Raquel Ferreira, CRO-AL 1816.",
+    registro: "Jatiúca — Maceió, AL"
   },
 
+  // ---------------------------------------------------
+  // PÁGINA DE RESULTADOS
+  // ---------------------------------------------------
   results_page: {
-    eyebrow: "Áreas de Atuação",
-    title1: "Especialidades",
-    title2: "clínicas.",
-    p1: "Cada sofrimento é único. Nossa equipe possui",
-    p_bold1: "formação especializada",
-    p2: " para lidar com as principais dores, focando na",
-    p_bold2: "resolução de conflitos",
-    p3: "e no seu fortalecimento emocional.",
-    btnSaberMais: "Agendar sessão para este tema",
+    eyebrow: "Casos Clínicos",
+    title1: "Resultados com",
+    title2: "naturalidade.",
+    p1: "Confira o impacto transformador da",
+    p_bold1: "Estética Odontológica",
+    p2: " aliada à reabilitação da saúde. Na ",
+    p_bold2: "Clínica Refini",
+    p3: ", cada sorriso construído pela Dra. Raquel respeita a simetria e a intenção individual do paciente.",
+    btnSaberMais: "Agendar avaliação estética",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Transtornos de Ansiedade", duration: "Acolhimento", complaint: "Pensamentos acelerados, insônia, medo constante do futuro, ataques de pânico e sensação de sufocamento.", procedure: "Uso de técnicas cognitivo-comportamentais para identificar gatilhos, regular o sistema nervoso e retomar o controle da própria vida.", afterImg: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80" },
-      { category: "Depressão e Melancolia", duration: "Apoio Profundo", complaint: "Falta de energia, perda de interesse em atividades que antes davam prazer, isolamento social e tristeza profunda.", procedure: "Trabalho terapêutico focado na reativação comportamental e na reestruturação de pensamentos limitantes de forma gradual e respeitosa.", afterImg: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
-      { category: "Síndrome de Burnout", duration: "Reequilíbrio", complaint: "Esgotamento físico e mental extremo ligado ao trabalho, irritabilidade, baixa produtividade e desmotivação crônica.", procedure: "Criação de limites saudáveis, redefinição de prioridades de carreira e estratégias práticas de enfrentamento do estresse.", afterImg: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=800&q=80" },
-      { category: "Conflitos de Relacionamento", duration: "Comunicação", complaint: "Dificuldade de diálogo no casamento, ciúmes excessivos, distanciamento afetivo ou dor profunda por términos recentes.", procedure: "Espaço neutro para mediar conversas difíceis, promover a responsabilidade afetiva e curar feridas emocionais passadas.", afterImg: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" }
+      { category: "Estética Avançada", duration: "Facetas Cerâmicas", complaint: "Descontentamento com o formato, desgastes naturais e coloração irregular do sorriso.", procedure: "Planejamento estético rigoroso e aplicação de lentes/facetas garantindo uma renovação natural e iluminada.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
+      { category: "Reabilitação Oral", duration: "Saúde e Função", complaint: "Desgaste acentuado da estrutura dental, afetando a mastigação e o suporte dos lábios.", procedure: "Recuperação da dimensão vertical e restauração completa da função e da beleza anatômica dos dentes.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
+      { category: "Clareamento e Harmonia", duration: "Odontologia Estética", complaint: "Sorriso envelhecido devido à absorção de pigmentos ao longo dos anos.", procedure: "Clareamento associado à adequação estética, devolvendo a cor branco-leitoso e a vitalidade.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
+      { category: "Restauração de Alta Performance", duration: "Clínica Integrada", complaint: "Restaurações antigas escurecidas e pequenas fraturas que tiravam a confiança ao sorrir.", procedure: "Substituição por resinas de alta tecnologia, imperceptíveis e com excelente durabilidade e polimento.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
     ]
   }
 };

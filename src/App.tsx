@@ -11,7 +11,6 @@ import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 
-// Nossas páginas isoladas
 import { ResultsPage } from "./components/pages/ResultsPage";
 import { SpecialtiesPage } from "./components/pages/SpecialtiesPage";
 
@@ -20,8 +19,6 @@ export default function App() {
   const [displayPath, setDisplayPath] = useState(window.location.pathname);
   const [stage, setStage] = useState<"in" | "out" | "done">("done");
 
-  // O nosso "Radar de Animações" é ativado aqui — e reativado a cada troca de página,
-  // pra não precisar de F5 pra ver os elementos de Especialidades/Resultados.
   useScrollReveal(displayPath);
 
   useEffect(() => {
@@ -53,7 +50,6 @@ export default function App() {
     return () => clearTimeout(t1);
   }, [currentPath, displayPath]);
 
-  // Função de navegação inteligente
   const goTo = (id: string) => {
     if (id.startsWith("/")) {
       window.dispatchEvent(new CustomEvent("navigate", { detail: id }));
@@ -73,41 +69,36 @@ export default function App() {
   if (stage === "out") transitionClass = "page-transition-out";
   if (stage === "in") transitionClass = "page-transition-in";
 
-  // Limpa a animação com precisão ao terminar
   const handleAnimationEnd = () => {
     if (stage === "in") setStage("done");
   };
 
-  // Roteador de Páginas
-  if (displayPath.includes("resultados")) {
-    return (
-      <div className={transitionClass} onAnimationEnd={handleAnimationEnd}>
-        <ResultsPage goTo={goTo} />
-      </div>
-    );
-  }
-
-  if (displayPath.includes("especialidades")) {
-    return (
-      <div className={transitionClass} onAnimationEnd={handleAnimationEnd}>
-        <SpecialtiesPage goTo={goTo} />
-      </div>
-    );
-  }
-
-  // Página Principal (Home) com todas as suas seções restauradas
+  // === SOLUÇÃO DEFINITIVA ===
+  // Renderizamos o <Header /> aqui, isolado e imune a qualquer bug de CSS
   return (
-    <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
+    <>
       <Header goTo={goTo} />
-      <Hero goTo={goTo} />
-      <About goTo={goTo} />
-      <Convenios />
-      <Testimonials />
-      <ResultsCTA />
-      <FAQ />
-      <Location />
-      <Contact />
-      <Footer />
+      <div className="overflow-x-hidden">
+      <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
+        {displayPath.includes("resultados") ? (
+          <ResultsPage goTo={goTo} />
+        ) : displayPath.includes("especialidades") ? (
+          <SpecialtiesPage goTo={goTo} />
+        ) : (
+          <>
+            <Hero goTo={goTo} />
+            <About goTo={goTo} />
+            <Convenios />
+            <Testimonials />
+            <ResultsCTA />
+            <FAQ />
+            <Location />
+            <Contact />
+            <Footer />
+          </>
+        )}
+      </div>
     </div>
+    </>
   );
 }
