@@ -1,241 +1,199 @@
 import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
+import { Heart, Sun, Compass, Users, Brain, MessageCircle } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
 export const globalData = {
-  // ---------------------------------------------------
-  // DADOS GERAIS DA CLÍNICA
-  // ---------------------------------------------------
   clinica: {
-    nome: "Aldo & Erika Bezerra",
-    subtitulo: "Sorriso para a vida",
-    logoUrl: "/imagens/logo.png", // Salve a logo oficial deles com esse nome
+    nome: "Instituto Aurora",
+    subtitulo: "Psicologia e Bem-estar",
+    logoUrl: "/imagens/logo.png",
     contato: {
-      whatsappUrl: "https://wa.me/5581987868666", 
-      whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(81) 98786-8666",
-      emailLabel: "contato@clinicaaldobezerra.com.br",
-      instagramLabel: "@clinicaaldoeerikabezerra",
+      whatsappUrl: "https://wa.me/5511999999999", 
+      whatsappLabel: "Agendar primeira sessão",
+      telefoneLabel: "Fale com nossa equipe",
+      emailLabel: "contato@institutoaurora.com.br",
+      instagramLabel: "@institutoaurorapsi",
     },
     endereco: {
-      bairroCidade: "Boa Viagem, Recife - PE",
-      edificio: "Empresarial Ítalo Brasil Renda",
-      detalhado: "Av. Conselheiro Aguiar, 1748 - Sala 907\nEmpresarial Ítalo Brasil Renda\nBoa Viagem, Recife - PE, 51111-010",
-      comodidades: ["Implantes Dentários (Carga Imediata)", "Pagamento em até 18x sem juros", "Scanner iTero e Raio-X Digital"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Aldo+Erika+Bezerra+Recife",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63209.83234381271!2d-34.97575425136714!3d-8.038618199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f0c3c2a8d75%3A0xd84ad8fe85ab50a3!2sCl%C3%ADnica%20Aldo%20%26%20Erika%20Bezerra!5e0!3m2!1spt-BR!2sbr!4v1788367625424!5m2!1spt-BR!2sbr"
+      bairroCidade: "Bela Vista, São Paulo",
+      edificio: "Av. Paulista, 1000 - Sala 42",
+      detalhado: "Av. Paulista, 1000 - Sala 42\nBela Vista, São Paulo - SP",
+      comodidades: ["Ambiente sigiloso e acolhedor", "Isolamento acústico", "Terapia Presencial e Online"],
+      mapaGpsUrl: "https://maps.google.com/...",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975765955146!2d-46.65451968502213!3d-23.561338867471966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da7bf317%3A0x6a05e463a56dc815!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1689257613589!5m2!1spt-BR!2sbr"
     },
-    horarios: "Aberto de Segunda a Sexta\nEncerra às 18:00",
+    horarios: "Atendimentos sob agendamento",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "Facilidades", "Estrutura", "Contato"],
-    ids: ["sobre", "/especialidades", "convenios", "resultados", "contato"]
+    links: ["O Instituto", "Abordagens", "Áreas de Atuação", "O Espaço", "Contato"],
+    ids: ["sobre", "/especialidades", "/resultados", "convenios", "contato"]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: HERO
-  // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", // Sugestão: A foto do Dr. Aldo com o jaleco azul
-    eyebrow: "Boa Viagem — Recife, PE",
-    title1: "Tradição,",
-    title2: "tecnologia e",
-    title3: "excelência.",
-    desc1: "Com mais de",
-    descBold: "35 anos de experiência clínica,",
-    desc2: " unimos atendimento humanizado e técnicas avançadas para transformar seu sorriso com segurança e previsibilidade.",
-    btnPrimary: "Agendar minha consulta",
-    btnOutline: "Conhecer tratamentos",
-    badgeTitle: "Referência",
-    badgeDesc: "Implantodontia e Reabilitação",
+    imgUrl: "https://images.unsplash.com/photo-1544027993-37db48d5f644?w=800&q=80",
+    eyebrow: "Psicologia Clínica",
+    title1: "Um espaço seguro",
+    title2: "para você,",
+    title3: "no seu tempo.",
+    desc1: "Mais do que ouvir,",
+    descBold: "é ajudar você a se reencontrar.",
+    desc2: " Oferecemos um ambiente livre de julgamentos, focado em clareza mental e desenvolvimento emocional.",
+    btnPrimary: "Agende sua sessão",
+    btnOutline: "Nossas Abordagens",
+    badgeTitle: "Destaque",
+    badgeDesc: "Saúde Mental",
     stats: [
-      { target: 50, suffix: "k+", label: "atendimentos realizados", thousands: false },
-      { target: 35, suffix: "", label: "anos de experiência", thousands: false },
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
+      { target: 10, suffix: "+", label: "anos de experiência", thousands: false },
+      { target: 100, suffix: "%", label: "sigilo e acolhimento", thousands: false },
+      { target: 5000, suffix: "+", label: "sessões realizadas", thousands: true },
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: SOBRE NÓS
-  // ---------------------------------------------------
   about: {
-    eyebrow: "A Clínica",
-    title1: "Autoridade médica",
-    title2: "para o seu sorriso.",
-    p1: "Localizada em Boa Viagem, a Clínica Aldo & Erika Bezerra une tradição, tecnologia de ponta e um atendimento verdadeiramente humanizado para devolver a sua qualidade de vida.",
-    p2_1: "Comandada pelo ",
-    p2_bold: "Dr. Aldo Bezerra",
-    p2_2: " (Mestre, Prof. da UPE e Cirurgião Buco Maxilo há 31 anos) e pela Dra. Erika Bezerra (Odontopediatra e Ortodontista), nossa equipe garante excelência desde implantes indolores até alinhadores modernos.",
+    eyebrow: "O Instituto",
+    title1: "Sua jornada rumo",
+    title2: "à clareza emocional.",
+    p1: "O processo terapêutico não precisa ser solitário. Aqui, construímos juntos os caminhos para você lidar com suas emoções, medos e angústias de forma mais leve e consciente.",
+    p2_1: "Sob a responsabilidade clínica da ",
+    p2_bold: "Dra. Helena Martins",
+    p2_2: ", nossa equipe é formada por especialistas dedicados a oferecer uma escuta ativa e acolhedora, baseada em práticas terapêuticas com evidência científica.",
     topics: [
-      { title: "Implantes de Carga Imediata", desc: "Procedimentos indolores e rápidos para devolver estética e função mastigatória em tempo recorde." },
-      { title: "Ortodontia Moderna", desc: "Alinhadores ortodônticos discretos, confortáveis e totalmente personalizados com scanner iTero." },
-      { title: "Tecnologia Odontológica", desc: "Contamos com Radiografia Digital e Laser para Clareamento Dental na própria estrutura." },
-      { title: "Cirurgia Oral Menor", desc: "Experiência de mais de 3 décadas em extração de dentes inclusos e procedimentos cirúrgicos." },
+      { title: "Escuta Ativa", desc: "Um olhar atento e humano para a sua história, sem filtros ou julgamentos." },
+      { title: "Terapia Baseada em Evidências", desc: "Abordagens modernas para tratamento eficaz de ansiedade e depressão." },
+      { title: "Autoconhecimento", desc: "Ferramentas para você entender seus padrões e quebrar ciclos negativos." },
+      { title: "Sigilo Absoluto", desc: "Um ambiente protegido para que você se sinta completamente à vontade." },
     ],
-    btn: "Quero agendar uma avaliação",
+    btn: "Quero iniciar minha terapia",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80&fit=crop", title: "Tecnologia de Ponta" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Atendimento Humanizado" },
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Segurança Cirúrgica" }
+      { url: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=80", title: "Profissionais Especializados" },
+      { url: "https://images.unsplash.com/photo-1499914485622-a88fac53ebfd?w=1200&q=80", title: "Ambiente Acolhedor" },
+      { url: "https://images.unsplash.com/photo-1520607162513-322433924e5c?w=1200&q=80", title: "Segurança e Conforto" }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: SERVIÇOS
-  // ---------------------------------------------------
   services: {
-    eyebrow: "Especialidades",
-    title1: "Nossos",
-    title2: "Procedimentos.",
-    desc1: "Do diagnóstico à reabilitação total, entregamos ",
-    descBold: "resultados indolores e rápidos",
-    desc2: " com técnicas dominadas por professores universitários e especialistas.",
-    btn: "Ver todas especialidades",
+    eyebrow: "Nossos Serviços",
+    title1: "Apoio para",
+    title2: "todas as fases.",
+    desc1: "Atuamos com foco absoluto em proporcionar ",
+    descBold: "qualidade de vida e saúde mental",
+    desc2: " através de formatos de terapia adaptados à sua rotina.",
+    btn: "Ver todas as modalidades",
     list: [
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "O procedimento ideal, rápido e indolor para quem perdeu um ou mais dentes e quer voltar a sorrir e mastigar com segurança." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato em Porcelana", desc: "Lâminas ultrafinas que renovam completamente a aparência, forma e cor do seu sorriso." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Alinhadores Ortodônticos", desc: "Tratamentos modernos e confortáveis para o alinhamento dos dentes, conduzidos pela Dra. Erika Bezerra." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Limpeza e Clareamento a Laser", desc: "Remoção de manchas e conquista da coloração branco-leitoso de forma segura e com tecnologia a laser." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Cirurgias Buco Maxilo", desc: "Cirurgias de dentes inclusos e procedimentos avançados com um especialista atuante há mais de 31 anos em hospitais." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Próteses e Periodontia", desc: "Tratamento de gengivas e confecção de próteses fixas e móveis para restabelecimento total da saúde bucal." }
+      { icon: <Brain size={28} strokeWidth={1.2} />, title: "Terapia Individual", desc: "Espaço dedicado ao tratamento de ansiedade, depressão e desenvolvimento do autoconhecimento." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Terapia de Casal", desc: "Mediação de conflitos, melhora na comunicação e fortalecimento do vínculo afetivo entre os parceiros." },
+      { icon: <Compass size={28} strokeWidth={1.2} />, title: "Orientação de Carreira", desc: "Apoio psicológico para transições profissionais e tratamento da Síndrome de Burnout." },
+      { icon: <Sun size={28} strokeWidth={1.2} />, title: "Terapia para Adolescentes", desc: "Acolhimento focado nas transformações, conflitos de identidade e pressões dessa fase." },
+      { icon: <MessageCircle size={28} strokeWidth={1.2} />, title: "Psicoterapia Online", desc: "A mesma excelência e sigilo do atendimento presencial, no conforto da sua casa." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Apoio ao Luto", desc: "Acompanhamento sensível para ajudar a ressignificar perdas e lidar com momentos de dor profunda." }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: CORPO CLÍNICO
-  // ---------------------------------------------------
   team: {
-    title: "Direção Clínica",
+    title: "Quem cuida de você",
     members: [
-      { name: "Dr. Aldo Bezerra", cro: "Mestre em Implantodontia", specialty: "Cirurgião Buco Maxilo", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
-      { name: "Dra. Erika Bezerra", cro: "Mestre e Especialista", specialty: "Odontopediatria e Ortodontia", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop&auto=format" }
+      { name: "Dra. Helena Martins", cro: "CRP 06/123456", specialty: "Psicologia Clínica e TCC", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" },
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: FACILIDADES (Substituindo o texto antigo)
-  // ---------------------------------------------------
   convenios: {
-    eyebrow: "Facilidades Exclusivas",
-    title1: "O seu implante",
-    title2: "nunca foi",
-    title3: "tão acessível.",
-    desc: "Acreditamos que a saúde não pode esperar. Por isso, preparamos condições de pagamento exclusivas para que você realize o seu tratamento com as melhores formas do mercado.",
-    btn: "Peça o orçamento do seu implante",
+    eyebrow: "O Espaço",
+    title1: "Planejado para",
+    title2: "o seu",
+    title3: "bem-estar.",
+    desc: "Acreditamos que o ambiente físico impacta diretamente no processo terapêutico. Criamos um refúgio calmo no meio da cidade para que você possa desacelerar.",
+    btn: "Conhecer a clínica",
     list: [
-      { title: "Parcelamento em até 18x", content: "Realize o pagamento do seu tratamento em até 18 vezes sem juros em todos os cartões de crédito." },
-      { title: "Entrada Facilitada de 30%", content: "Pague apenas 30% de entrada e parcele o restante de forma flexível, combinada diretamente com a nossa equipe." },
-      { title: "Transparência Total", content: "Sem letras miúdas. Você sabe exatamente quanto vai investir antes mesmo do procedimento começar." }
+      { title: "Isolamento Acústico", content: "Salas preparadas com tecnologia de isolamento para garantir que tudo o que for dito permaneça em absoluto sigilo." },
+      { title: "Cores e Iluminação", content: "Tons terrosos, iluminação quente e indireta, pensados neuro-arquitetonicamente para reduzir o estresse." },
+      { title: "Acessibilidade e Conforto", content: "Poltronas ergonômicas, chás, cafés e um ambiente perfumado com aromaterapia suave para o seu acolhimento." }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
-  // ---------------------------------------------------
   testimonials: {
-    eyebrow: "Estrutura",
-    title1: "Tecnologia",
-    title2: "de ponta a ponta.",
-    quote: "Descubra a simplicidade e o conforto dos implantes com nossa abordagem moderna e indolor.",
-    supporting: "Nossa tecnologia de ponta (Scanner iTero, Raio-X Digital, Laser) e equipe especializada garantem um processo tranquilo e sem longas esperas.",
+    eyebrow: "A Jornada Terapêutica",
+    quote: "A terapia não é sobre consertar quem você é, mas sobre descobrir quem você sempre foi por baixo da dor.",
+    supporting: "A vida cotidiana frequentemente nos afasta da nossa essência. Nosso papel é guiar você no retorno a si mesmo, com paciência e técnica.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Tecnologia Odontológica" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Atendimento Clínico" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Estrutura da Clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Tratamento Indolor" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Equipe Especializada" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Sorrisos Renovados" }
+      { img: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=800&h=1000&fit=crop", alt: "Sessão de terapia" },
+      { img: "https://images.unsplash.com/photo-1520607162513-322433924e5c?w=800&h=1000&fit=crop", alt: "Ambiente calmo" },
+      { img: "https://images.unsplash.com/photo-1499914485622-a88fac53ebfd?w=800&h=1000&fit=crop", alt: "Anotações e escuta" },
+      { img: "https://images.unsplash.com/photo-1573497491208-6f16fa811b23?w=800&h=1000&fit=crop", alt: "Psicóloga sorrindo" },
+      { img: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=800&h=1000&fit=crop", alt: "Livros e estudos" },
+      { img: "https://images.unsplash.com/photo-1544027993-37db48d5f644?w=800&h=1000&fit=crop", alt: "Sala de espera" }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: CTA PARA RESULTADOS
-  // ---------------------------------------------------
   results_cta: {
-    eyebrow: "Nossa Filosofia",
-    title1: "Um sorriso para",
-    title2: "a vida inteira.",
-    p1: "Com",
-    p_bold1: "mais de 50 mil atendimentos",
-    p2: "ao longo de mais de 35 anos, nossa missão é garantir que a beleza e a funcionalidade do seu sorriso sejam",
-    p_bold2: "restauradas de forma definitiva.",
-    p3: "Dê o passo decisivo em direção a uma vida mais",
-    p_bold3: "feliz e confiante.",
-    btn: "Entre em contato conosco",
-    imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
+    eyebrow: "Por que buscar terapia?",
+    title1: "O primeiro passo",
+    title2: "muda tudo.",
+    p1: "Reconhecer que se precisa de ajuda é o",
+    p_bold1: "ato de maior coragem",
+    p2: "que alguém pode ter. Explore nossas principais",
+    p_bold2: "áreas de atuação",
+    p3: "e veja como podemos ajudar você a recuperar sua",
+    p_bold3: "qualidade de vida.",
+    btn: "Ver Áreas de Atuação",
+    imgUrl: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&q=80"
   },
 
-  // ---------------------------------------------------
-  // FAQ
-  // ---------------------------------------------------
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "O procedimento de implante dental dói?", a: "Não. A evolução da odontologia permite que nossos implantes sejam indolores. Nossa tecnologia de ponta e equipe especializada garantem um processo totalmente anestesiado e tranquilo." },
-      { q: "O tratamento de implante é muito demorado?", a: "Nosso processo é otimizado para que você obtenha resultados em tempo recorde, minimizando interrupções no seu dia a dia. Inclusive, trabalhamos com protocolos de Carga Imediata quando indicado." },
-      { q: "Como funcionam as formas de pagamento?", a: "Facilitamos ao máximo: oferecemos pagamento em até 18x sem juros em todos os cartões, ou 30% de entrada com o restante parcelado de forma combinada entre você e a clínica." },
-      { q: "Qual a diferença entre Limpeza e Clareamento?", a: "A limpeza remove o tártaro e a placa bacteriana (foco na saúde). O clareamento, realizado com nosso Laser, retira manchas internas e dá uma coloração branco-leitoso aos dentes (foco na estética)." }
+      { q: "Como funciona a primeira sessão?", a: "A primeira sessão é um momento de acolhimento e escuta. Você poderá falar sobre o que te trouxe à clínica, e o psicólogo explicará como a terapia pode te ajudar, sem qualquer pressão." },
+      { q: "Qual a duração e frequência das sessões?", a: "As sessões duram em média 50 minutos. A frequência geralmente é semanal, mas isso é combinado entre você e o profissional de acordo com a sua necessidade." },
+      { q: "A terapia online tem o mesmo efeito da presencial?", a: "Sim. Estudos comprovam que a eficácia da psicoterapia online é equivalente à presencial. A única exigência é que você esteja em um local com privacidade e boa conexão de internet." },
+      { q: "Tudo o que eu falar ficará em sigilo?", a: "Absolutamente. O sigilo terapêutico é um pilar ético inviolável da psicologia. Tudo o que for discutido em sessão permanece estritamente entre você e seu terapeuta." }
     ]
   },
 
-  // ---------------------------------------------------
-  // LOCALIZAÇÃO
-  // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Empresarial Ítalo Brasil Renda", value2: "Av. Conselheiro Aguiar, 1748 - Sala 907" },
-    box2: { title: "Localização", value1: "Boa Viagem, Recife - PE", value2: "CEP: 51111-010" },
-    box3: { title: "Especialidades", value1: "Implantes, Ortodontia,", value2: "Lentes e Buco Maxilo" },
+    box1: { title: "Endereço", value1: "Av. Paulista, 1000", value2: "Bela Vista - SP" },
+    box2: { title: "Atendimento", value1: "Presencial e Online", value2: "Agendamento via WhatsApp" },
+    box3: { title: "Especialidades", value1: "Terapia Individual, Casal", value2: "Burnout e Ansiedade" },
     btn: "Abrir no Google Maps"
   },
 
-  // ---------------------------------------------------
-  // CONTATO FINAL
-  // ---------------------------------------------------
   contact: {
-    eyebrow: "Marque uma Avaliação",
-    title1: "Precisando de um",
-    title2: "implante?",
-    desc: "Deixe o medo e as preocupações de lado. Agende sua avaliação com quem tem 35 anos de experiência formando dentistas e operando pacientes.",
+    eyebrow: "Agende sua Sessão",
+    title1: "Sua saúde mental",
+    title2: "é prioridade.",
+    desc: "Dê o primeiro passo para uma vida mais leve e equilibrada. Entre em contato com a nossa equipe e agende o seu horário.",
     box1_title: "Endereço",
-    box2_title: "Contato Rápido",
+    box2_title: "Contato",
     box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe a Clínica",
-    box3_desc2: "@clinicaaldoeerikabezerra"
+    box3_desc1: "Conteúdos sobre bem-estar",
+    box3_desc2: "@institutoaurorapsi"
   },
 
-  // ---------------------------------------------------
-  // RODAPÉ
-  // ---------------------------------------------------
   footer: {
-    sobre: "Referência em Implantodontia, Buco Maxilo Facial e Ortodontia em Recife. Mais de 35 anos de dedicação técnica e científica aos nossos pacientes.",
-    title_tratamentos: "Especialidades",
+    sobre: "Espaço dedicado à saúde mental e acolhimento emocional. Psicoterapia baseada em evidências para jovens, adultos e casais.",
+    title_tratamentos: "Modalidades",
     title_contato: "Contato",
-    direitos: "© 2026 Clínica Aldo & Erika Bezerra. Todos os direitos reservados. CNPJ: 21.512.300/0001-20. RT: Erika Bezerra, PE-CD-5080.",
-    registro: "Boa Viagem — Recife, PE"
+    direitos: "© 2026 Instituto Aurora Psicologia. Todos os direitos reservados.",
+    registro: "Bela Vista, São Paulo - SP"
   },
 
-  // ---------------------------------------------------
-  // PÁGINA DE RESULTADOS
-  // ---------------------------------------------------
   results_page: {
-    eyebrow: "Casos Clínicos",
-    title1: "Resultados com",
-    title2: "excelência técnica.",
-    p1: "Confira a evolução promovida pelo",
-    p_bold1: "tratamento especializado",
-    p2: " da Clínica Aldo & Erika. Unimos a experiência de um",
-    p_bold2: "professor e mestre",
-    p3: " para devolver sorrisos com previsibilidade e estética de alto nível.",
-    btnSaberMais: "Agendar avaliação semelhante",
+    eyebrow: "Áreas de Atuação",
+    title1: "Especialidades",
+    title2: "clínicas.",
+    p1: "Cada sofrimento é único. Nossa equipe possui",
+    p_bold1: "formação especializada",
+    p2: " para lidar com as principais dores, focando na",
+    p_bold2: "resolução de conflitos",
+    p3: "e no seu fortalecimento emocional.",
+    btnSaberMais: "Agendar sessão para este tema",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Implante Dentário", duration: "Função e Estética", complaint: "Ausência dentária que dificultava a mastigação e causava grande desconforto social ao sorrir.", procedure: "Instalação de implante com pino de titânio de forma indolor e prótese sobre implante idêntica ao dente natural.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
-      { category: "Protocolo de Carga Imediata", duration: "Reabilitação Total", complaint: "Uso de dentadura móvel, insegurança ao falar e restrições graves na alimentação.", procedure: "Tratamento com implantes e instalação de prótese fixa imediata, garantindo resultados rápidos e seguros.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
-      { category: "Lentes de Contato em Porcelana", duration: "Estética Avançada", complaint: "Insatisfação severa com o formato, espaçamentos e cor dos dentes naturais.", procedure: "Planejamento digital e cimentação de lâminas ultrafinas de porcelana para uma renovação completa do sorriso.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
-      { category: "Alinhadores Ortodônticos", duration: "Ortodontia Moderna", complaint: "Dentes apinhados em paciente adulto que recusava o uso de aparelhos metálicos tradicionais.", procedure: "Uso de alinhadores transparentes (invisíveis), garantindo total discrição, conforto e previsibilidade de tempo.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
+      { category: "Transtornos de Ansiedade", duration: "Acolhimento", complaint: "Pensamentos acelerados, insônia, medo constante do futuro, ataques de pânico e sensação de sufocamento.", procedure: "Uso de técnicas cognitivo-comportamentais para identificar gatilhos, regular o sistema nervoso e retomar o controle da própria vida.", afterImg: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80" },
+      { category: "Depressão e Melancolia", duration: "Apoio Profundo", complaint: "Falta de energia, perda de interesse em atividades que antes davam prazer, isolamento social e tristeza profunda.", procedure: "Trabalho terapêutico focado na reativação comportamental e na reestruturação de pensamentos limitantes de forma gradual e respeitosa.", afterImg: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
+      { category: "Síndrome de Burnout", duration: "Reequilíbrio", complaint: "Esgotamento físico e mental extremo ligado ao trabalho, irritabilidade, baixa produtividade e desmotivação crônica.", procedure: "Criação de limites saudáveis, redefinição de prioridades de carreira e estratégias práticas de enfrentamento do estresse.", afterImg: "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=800&q=80" },
+      { category: "Conflitos de Relacionamento", duration: "Comunicação", complaint: "Dificuldade de diálogo no casamento, ciúmes excessivos, distanciamento afetivo ou dor profunda por términos recentes.", procedure: "Espaço neutro para mediar conversas difíceis, promover a responsabilidade afetiva e curar feridas emocionais passadas.", afterImg: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" }
     ]
   }
 };
