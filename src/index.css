@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Sant'Anna (Preto/Chumbo sofisticado, como na logo) */
-  --c-primary: #1C1A16;
-  --c-primary-rgb: 28, 26, 22;
-  --c-primary-hover: #302C24;
+  /* Cores Principais - Nilton Dias (Azul Petróleo Escuro extraído da logo) */
+  --c-primary: #152B3C;
+  --c-primary-rgb: 21, 43, 60;
+  --c-primary-hover: #1E3D54;
   
-  /* Cores de Destaque - Sant'Anna (Dourado Champagne extraído da logo) */
-  --c-accent: #B7A07B;
-  --c-accent-rgb: 183, 160, 123;
-  --c-accent-hover: #9C8663;
+  /* Cores de Destaque - Nilton Dias (Teal/Ciano vibrante extraído da onda da logo) */
+  --c-accent: #19A4B7;
+  --c-accent-rgb: 25, 164, 183;
+  --c-accent-hover: #158B9C;
   
-  /* Fundos - BRANCO PURO com seções secundárias em marfim quente */
+  /* Fundos - BRANCO PURO com seções secundárias em um tom gélido bem suave para combinar com o ciano */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F7F5F1; /* Marfim suave para as seções secundárias, no lugar do verde clarinho */
-  --c-team-placeholder: #23201A;
+  --c-bg-alt: #F2F6F8; /* Um tom de gelo levíssimo no lugar do marfim antigo */
+  --c-team-placeholder: #0F1F2B;
   
   /* Textos */
-  --c-text-main: #1C1A16;
-  --c-text-muted: #756F63;
-  --c-text-light: #B4AEA0;
+  --c-text-main: #152B3C;
+  --c-text-muted: #5A6D7C;
+  --c-text-light: #8E9FA9;
 }
 
 html {
@@ -39,9 +39,6 @@ html {
 
 body {
   background-color: var(--c-bg);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 300px 300px;
   color: var(--c-text-main);
   font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -68,21 +65,30 @@ body {
 
 /* 2. Movimento Lento da Aura de Fundo */
 @keyframes auraFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(3vw, -4vh) scale(1.05); }
-  66% { transform: translate(-2vw, 3vh) scale(0.95); }
+  /* Adicionamos translate3d para ativar a GPU em todas as etapas */
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(3vw, -4vh, 0) scale(1.05); }
+  66% { transform: translate3d(-2vw, 3vh, 0) scale(0.95); }
 }
+
 .bg-aura {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15; /* Quase invisível, apenas um reflexo luxuoso */
-  animation: auraFloat 18s ease-in-out infinite;
+  filter: blur(90px); /* Leve redução para salvar aparelhos mais fracos */
+  opacity: 0.15;
+  animation: auraFloat 18s linear infinite; /* 'linear' evita saltos de velocidade */
   z-index: 0;
   pointer-events: none;
+  
+  /* COMANDOS DE ACELERAÇÃO DE HARDWARE (GPU) */
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
+
 .bg-aura-reverse {
-  animation: auraFloat 22s ease-in-out infinite reverse;
+  animation: auraFloat 22s linear infinite reverse;
 }
 
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -235,27 +241,3 @@ body {
 
 @media (max-width: 900px) { [style*="repeat(3, 1fr)"] { grid-template-columns: 1fr 1fr !important; } }
 @media (max-width: 580px) { [style*="repeat(3, 1fr)"] { grid-template-columns: 1fr !important; } }
-/* --- NOVAS ANIMAÇÕES: FIO CONDUTOR E FAIXA INFINITA --- */
-
-/* Fio que escorre para baixo */
-@keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; }
-  45% { transform: scaleY(1); transform-origin: top; }
-  55% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
-}
-.anim-scroll-line { 
-  animation: scrollLine 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite; 
-}
-
-/* Faixa de texto rolando infinitamente */
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-.animate-marquee {
-  display: inline-flex;
-  white-space: nowrap;
-  animation: marquee 35s linear infinite;
-  will-change: transform;
-}

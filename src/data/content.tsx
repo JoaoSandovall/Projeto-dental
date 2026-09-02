@@ -8,55 +8,52 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Sant'Anna",
-    subtitulo: "Odontologia de Alto Padrão",
-    logoUrl: "/imagens/logo.png",
+    nome: "Nilton Dias",
+    subtitulo: "Odontologia Estética",
+    logoUrl: "/imagens/logo.png", // Salve a logo da onda azul com esse mesmo nome
     contato: {
-      whatsappUrl: "https://wa.me/5551989921001",
-      whatsappLabel: "Falar no WhatsApp",
-      telefoneLabel: "(51) 98992-1001",
-      emailLabel: "contato@santannaodontologia.com.br",
-      instagramLabel: "@leonardo_santanna_dentista no Instagram",
+      whatsappUrl: "https://wa.me/55...", // Coloque o número aqui
+      whatsappLabel: "Agendar pelo WhatsApp",
+      telefoneLabel: "Agende sua consulta",
+      emailLabel: "contato@niltondiasodontologia.com.br",
+      instagramLabel: "@niltondiasodontologiaestetica",
     },
     endereco: {
-      bairroCidade: "Petrópolis — Porto Alegre, RS",
-      edificio: "Rua Maranguapé, 72 - Sl 203",
-      detalhado: "Rua Maranguapé, 72 - Sl 203\nPetrópolis, Porto Alegre - RS, 90690-380",
-      comodidades: ["Atendimento de alto padrão", "Ambiente sofisticado e reservado", "Odontologia digital 3D"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Sant'Anna+Odontologia+Porto+Alegre",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7758223323876!2d-51.18238242369472!3d-30.043288674924238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979b3f97387d9%3A0x8b6d71ee9adc0007!2sSant'Anna%20Odontologia%20-%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1788304780888!5m2!1spt-BR!2sbr"
+      bairroCidade: "Santana do Araguaia, PA",
+      edificio: "Av. José Mendonça, 185",
+      detalhado: "Av. José Mendonça, 185\nSantana do Araguaia - PA",
+      comodidades: ["Lentes de Contato", "Implantes Dentários", "Estética Avançada"],
+      mapaGpsUrl: "https://maps.google.com/?q=Av.+José+Mendonça,+185+-+Santana+do+Araguaia",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.848526569112!2d-50.60334812386927!3d-10.43444458969476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d7732a394cf965%3A0xcabf1be2edb07d61!2sSantana%20do%20Araguaia%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1714440000000!5m2!1spt-BR!2sbr"
     },
-    horarios: "Segunda a Sábado\nHorários sob agendamento",
+    horarios: "Atendimentos sob agendamento",
   },
 
-  // ---------------------------------------------------
-  // MENU E NAVEGAÇÃO
-  // ---------------------------------------------------
   nav: {
     links: ["A Clínica", "Especialidades", "Resultados", "Estrutura", "Contato"],
     ids: ["sobre", "/especialidades", "/resultados", "convenios", "contato"]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: HERO (BANNER INICIAL)
+  // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png",
-    eyebrow: "Petrópolis — Porto Alegre, RS",
+    imgUrl: "/imagens/hero.png", // Se for usar foto, pode colocar a da moça sorrindo tapando os olhos
+    eyebrow: "Santana do Araguaia",
     title1: "Odontologia",
-    title2: "de alto padrão,",
-    title3: "sorrisos únicos.",
-    desc1: "Na Sant'Anna Odontologia, ",
-    descBold: "cada detalhe importa.",
-    desc2: " Unimos técnica apurada, tecnologia digital de ponta e um atendimento verdadeiramente próximo para o seu sorriso.",
-    btnPrimary: "Agende sua avaliação",
-    btnOutline: "Conheça a clínica",
+    title2: "estética,",
+    title3: "resultados naturais.",
+    desc1: "Mais do que transformar um sorriso,",
+    descBold: "é transformar a forma como você se sente.",
+    desc2: " Cada detalhe é pensado para alcançar um resultado harmônico que tenha a ver com a sua essência.",
+    btnPrimary: "Agende sua consulta",
+    btnOutline: "Nossos Tratamentos",
     badgeTitle: "Destaque",
-    badgeDesc: "Odontologia de Alto Padrão",
+    badgeDesc: "Odontologia Estética",
     stats: [
-      { target: 5, suffix: ".0", label: "nota no google", thousands: false },
-      { target: 23, suffix: "+", label: "avaliações 5 estrelas", thousands: false },
-      { target: 100, suffix: "%", label: "foco em você", thousands: false },
+      { target: 5, suffix: ".0", label: "nota de satisfação", thousands: false },
+      { target: 800, suffix: "+", label: "acompanham nosso trabalho", thousands: false },
+      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
     ]
   },
 
@@ -64,24 +61,24 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Clínica",
-    title1: "Excelência que",
-    title2: "se vê no sorriso.",
-    p1: "A Sant'Anna Odontologia nasceu para oferecer tratamentos de alto padrão em Porto Alegre, unindo técnica refinada, tecnologia de ponta e um atendimento verdadeiramente próximo do paciente.",
-    p2_1: "Sob a responsabilidade técnica do ",
-    p2_bold: "Dr. Leonardo Sant'Anna",
-    p2_2: ", a clínica reúne planejamento digital, procedimentos estéticos e cirúrgicos para entregar resultados naturais e duradouros.",
+    eyebrow: "O Consultório",
+    title1: "Confiança e",
+    title2: "leveza ao sorrir.",
+    p1: "Mais do que transformar um sorriso, é transformar a forma como alguém se sente ao sorrir. É resgatar a felicidade de se reconhecer novamente no próprio reflexo.",
+    p2_1: "Sob a responsabilidade do ",
+    p2_bold: "Dr. Nilton Dias",
+    p2_2: ", nossa estrutura atua como referência em estética dental em Santana do Araguaia, oferecendo tratamentos precisos em lentes, próteses e implantes.",
     topics: [
-      { title: "Harmonização Orofacial", desc: "Procedimentos estéticos que valorizam a naturalidade do seu rosto." },
-      { title: "Clareamento Dental", desc: "Técnicas seguras para um sorriso mais branco e uniforme." },
-      { title: "Cirurgias e Implantes", desc: "Planejamento cirúrgico preciso com foco em segurança e conforto." },
-      { title: "Prótese e Odontologia Digital", desc: "Tecnologia 3D para próteses e facetas com encaixe perfeito." },
+      { title: "Lentes de Contato Dental", desc: "Transformação estética com preservação, corrigindo forma, cor e alinhamento." },
+      { title: "Implantes Dentários", desc: "Procedimento seguro e preciso que devolve qualidade de vida e função." },
+      { title: "Prótese e Reabilitação", desc: "Soluções sob medida para devolver a segurança ao mastigar e falar." },
+      { title: "Clareamento e Estética", desc: "Técnicas avançadas para um sorriso iluminado, com extrema naturalidade." },
     ],
-    btn: "Agendar uma avaliação",
+    btn: "Quero agendar uma avaliação",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Atendimento de Alto Padrão" },
       { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80&fit=crop", title: "Tecnologia e Precisão" },
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Cada Detalhe Importa" }
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Cuidado em cada detalhe" },
+      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Resultados Naturais" }
     ]
   },
 
@@ -92,150 +89,150 @@ export const globalData = {
     eyebrow: "Especialidades",
     title1: "Nossos",
     title2: "Tratamentos.",
-    desc1: "Atuamos com ",
-    descBold: "excelência técnica",
-    desc2: " em cada etapa, do planejamento digital ao resultado final, para entregar odontologia de alto padrão.",
+    desc1: "Atuamos com foco absoluto em ",
+    descBold: "estética e função",
+    desc2: " para entregar a você o sorriso que sempre desejou, com técnicas modernas e previsíveis.",
     btn: "Ver todas especialidades",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Harmonização Orofacial", desc: "Toxina botulínica e preenchimentos para equilíbrio e naturalidade no seu rosto." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Protocolos seguros e eficazes para um sorriso mais luminoso e uniforme." },
-      { icon: <Stethoscope size={28} strokeWidth={1.2} />, title: "Cirurgias Odontológicas", desc: "Extrações, implantes e procedimentos cirúrgicos com máxima segurança." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prótese Dentária", desc: "Coroas, facetas e próteses planejadas digitalmente para o encaixe perfeito." },
-      { icon: <Activity size={28} strokeWidth={1.2} />, title: "Odontologia Digital 3D", desc: "Planejamento digital de ponta a ponta para resultados previsíveis e naturais." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Personalizado", desc: "Cada plano de tratamento é pensado nas necessidades exclusivas do paciente." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato e Facetas", desc: "Laminados cerâmicos ultrafinos planejados para corrigir cor e formato com total naturalidade." },
+      { icon: <Activity size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "A solução ideal e segura para quem perdeu um ou mais dentes e quer voltar a sorrir com confiança." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Próteses Dentárias", desc: "Reabilitação estética e funcional utilizando materiais de alta resistência e beleza anatômica." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Protocolos seguros e altamente eficazes para remover manchas e entregar um sorriso iluminado." },
+      { icon: <Stethoscope size={28} strokeWidth={1.2} />, title: "Odontologia Geral", desc: "Diagnóstico e prevenção clínica focado em garantir a máxima longevidade para os seus tratamentos." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Planejamento Personalizado", desc: "Cada tratamento começa com uma análise do seu rosto, visando um resultado puramente exclusivo." }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: CORPO CLÍNICO (EQUIPE)
+  // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
-    title: "Nossa Equipe",
+    title: "Dr. Nilton Dias",
     members: [
-      { name: "Dr. Leonardo Sant'Anna", cro: "Responsável Clínico", specialty: "Odontologia de Alto Padrão", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
+      { name: "Dr. Nilton Dias", cro: "Odontologia Estética", specialty: "Lentes, Próteses e Implantes", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: CONVÊNIOS E ESTRUTURA
+  // SEÇÃO: ESTRUTURA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Estrutura Sant'Anna",
+    eyebrow: "O Consultório",
     title1: "Um espaço pensado",
-    title2: "para o seu",
-    title3: "conforto e sofisticação.",
-    desc: "Cada detalhe da nossa estrutura em Petrópolis, Porto Alegre, foi planejado para o seu bem-estar — do primeiro atendimento ao resultado final.",
+    title2: "para a sua",
+    title3: "confiança e conforto.",
+    desc: "Em Santana do Araguaia, criamos um ambiente onde a tecnologia se encontra com um atendimento humano e acolhedor para a sua melhor experiência.",
     btn: "Agendar minha consulta",
     list: [
-      { title: "Planejamento Digital 3D", content: "Utilizamos tecnologia de ponta para simular e planejar cada tratamento com precisão." },
-      { title: "Acompanhamento Próximo", content: "O Dr. Leonardo acompanha de perto cada etapa do seu tratamento, do diagnóstico ao resultado." },
-      { title: "Ambiente Sofisticado", content: "Um espaço reservado e confortável, pensado para o seu bem-estar durante toda a consulta." }
+      { title: "Odontologia Moderna", content: "Utilizamos as melhores técnicas e materiais para garantir procedimentos seguros e esteticamente perfeitos." },
+      { title: "Foco na Essência do Paciente", content: "Acreditamos que o melhor sorriso não é o mais artificial, e sim aquele que harmoniza perfeitamente com você." },
+      { title: "Atendimento Criterioso", content: "O Dr. Nilton conduz cada planejamento lado a lado com o paciente, esclarecendo todas as dúvidas do processo." }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: GALERIA DE FOTOS DA CLÍNICA
+  // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "Nosso Dia a Dia",
-    quote: "Cuidamos de cada paciente como gostaríamos de ser cuidados: com atenção, técnica e respeito ao seu tempo.",
-    supporting: "Alguns registros do dia a dia na Sant'Anna Odontologia — consultas, parcerias e a confiança de quem já faz parte da nossa história.",
+    eyebrow: "Transformações Reais",
+    quote: "A confiança, a leveza e a felicidade imensa de se reconhecer ainda mais no próprio sorriso.",
+    supporting: "Casos como o da Andressa refletem a nossa missão: cada detalhe alcançado de forma natural, harmônica e que faz sentido para você.",
     photos: [
-      { img: "/imagens/gallery-familia.jpg", alt: "Paciente e família na Sant'Anna Odontologia" },
-      { img: "/imagens/gallery-parceiro1.jpg", alt: "Dr. Leonardo Sant'Anna com paciente na clínica" },
-      { img: "/imagens/gallery-parceiro2.jpg", alt: "Dr. Leonardo Sant'Anna com paciente na clínica" },
-      { img: "/imagens/gallery-casal.jpg", alt: "Dr. Leonardo Sant'Anna com paciente na clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Ambiente da Sant'Anna Odontologia" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Atendimento na Sant'Anna Odontologia" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Sorriso Natural" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Equipe em ação" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Cuidado Clínico" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Sorriso Transformado" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Consultório" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Resultados Estéticos" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: CHAMADA PARA RESULTADOS
+  // SEÇÃO: CTA PARA RESULTADOS
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "Nossos Resultados",
     title1: "Técnica que",
-    title2: "transforma sorrisos.",
-    p1: "A",
-    p_bold1: "excelência técnica do Dr. Leonardo",
-    p2: "é refletida em cada resultado. Explore a nossa",
-    p_bold2: "galeria de casos clínicos",
-    p3: "e conheça o padrão da",
-    p_bold3: "Sant'Anna Odontologia",
-    btn: "Ver Galeria de Resultados",
+    title2: "transforma vidas.",
+    p1: "A visão técnica do",
+    p_bold1: "Dr. Nilton Dias",
+    p2: "está impressa em cada tratamento finalizado. Explore a nossa",
+    p_bold2: "galeria de casos",
+    p3: "e comprove a qualidade de uma",
+    p_bold3: "estética de alto nível",
+    btn: "Ver Antes e Depois",
     imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: FAQ (PERGUNTAS FREQUENTES)
+  // FAQ
   // ---------------------------------------------------
   faq: {
-    title: "Perguntas Frequentes",
+    title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a Sant'Anna Odontologia está localizada?", a: "Estamos na Rua Maranguapé, 72 - Sl 203, no bairro Petrópolis, em Porto Alegre - RS. Ambiente reservado e de fácil acesso." },
-      { q: "Quais tratamentos a clínica oferece?", a: "Atuamos com Harmonização Orofacial, Clareamento Dental, Cirurgias e Implantes, Prótese e Odontologia Digital 3D, sempre sob a responsabilidade técnica do Dr. Leonardo Sant'Anna." },
-      { q: "Vocês realizam harmonização facial?", a: "Sim! Oferecemos procedimentos de Harmonização Orofacial, incluindo toxina botulínica e preenchimentos, sempre com foco na naturalidade do resultado." },
-      { q: "Como funciona o planejamento digital 3D?", a: "Utilizamos tecnologia digital de ponta para simular o resultado do tratamento antes mesmo de começar, garantindo mais previsibilidade e segurança para o paciente." }
+      { q: "Onde o Dr. Nilton Dias atende?", a: "Nosso consultório está localizado na Av. José Mendonça, 185, em Santana do Araguaia - PA." },
+      { q: "Quais são as principais especialidades do consultório?", a: "Nosso foco maior é na Odontologia Estética e Reabilitação, incluindo Lentes de Contato Dental, Implantes, Próteses e Clareamento." },
+      { q: "Como saber se preciso de implante ou prótese?", a: "A melhor forma é agendando uma avaliação. O Dr. Nilton fará uma análise clínica rigorosa para determinar a solução mais segura para o seu caso específico." },
+      { q: "As lentes de contato dental ficam com aspecto artificial?", a: "Não. Nosso planejamento é focado em entregar resultados absolutamente naturais e harmônicos, respeitando o formato do seu rosto e a sua essência." }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: LOCALIZAÇÃO
+  // LOCALIZAÇÃO
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Maranguapé, 72 - Sl 203", value2: "Porto Alegre - RS" },
-    box2: { title: "Localização", value1: "Petrópolis, Porto Alegre", value2: "CEP: 90690-380" },
-    box3: { title: "Odontologia de Alto Padrão", value1: "Harmonização, Cirurgias,", value2: "Prótese e Digital 3D" },
+    box1: { title: "Endereço", value1: "Av. José Mendonça, 185", value2: "Santana do Araguaia - PA" },
+    box2: { title: "Atendimento", value1: "Agendamento prévio", value2: "Entre em contato via WhatsApp" },
+    box3: { title: "Especialidades", value1: "Lentes de Contato, Implantes", value2: "Prótese e Estética" },
     btn: "Abrir no Google Maps"
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: CONTATO FINAL
+  // CONTATO FINAL
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "Seu sorriso merece",
-    title2: "alto padrão.",
-    desc: "Agende sua avaliação com o Dr. Leonardo Sant'Anna e conheça de perto o cuidado, a técnica e a tecnologia que fazem a diferença no seu tratamento.",
+    title1: "Volte a sorrir com",
+    title2: "segurança.",
+    desc: "Agende sua consulta com o Dr. Nilton Dias e descubra como uma técnica precisa pode devolver sua qualidade de vida.",
     box1_title: "Endereço",
-    box2_title: "Contato Direto",
-    box3_title: "Mídias",
-    box3_desc1: "Acompanhe nossas novidades",
-    box3_desc2: "@leonardo_santanna_dentista no Instagram"
+    box2_title: "Contato Rápido",
+    box3_title: "Redes Sociais",
+    box3_desc1: "Acompanhe nossos resultados",
+    box3_desc2: "@niltondiasodontologiaestetica"
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: RODAPÉ
+  // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Odontologia de alto padrão em Porto Alegre. Harmonização, cirurgias, prótese e odontologia digital 3D sob a responsabilidade do Dr. Leonardo Sant'Anna.",
+    sobre: "Odontologia estética em Santana do Araguaia. Lentes, próteses e implantes sob a responsabilidade e dedicação técnica do Dr. Nilton Dias.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Sant'Anna Odontologia. Todos os direitos reservados.",
-    registro: "Petrópolis — Porto Alegre, RS"
+    direitos: "© 2026 Nilton Dias Odontologia. Todos os direitos reservados.",
+    registro: "Santana do Araguaia, PA"
   },
 
   // ---------------------------------------------------
-  // PÁGINA: RESULTADOS (PORTFÓLIO)
+  // PÁGINA DE RESULTADOS
   // ---------------------------------------------------
   results_page: {
-    eyebrow: "Portfólio e Resultados",
-    title1: "Técnica planejada",
-    title2: "para transformar.",
-    p1: "Navegue pela nossa",
-    p_bold1: "galeria de resultados",
-    p2: ". O planejamento digital e o",
-    p_bold2: "olhar técnico e individualizado",
-    p3: "do Dr. Leonardo nos permitem entregar as melhores transformações para o seu sorriso.",
+    eyebrow: "Antes e Depois",
+    title1: "Resultados com",
+    title2: "harmonia real.",
+    p1: "Confira o reflexo do",
+    p_bold1: "planejamento criterioso",
+    p2: " da nossa equipe. Cada caso do ",
+    p_bold2: "Dr. Nilton Dias",
+    p3: "  é construído para entregar naturalidade, beleza e recuperação mastigatória total.",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Odontologia Estética", duration: "Facetas e Clareamento", complaint: "Desgaste dentário e insatisfação com a coloração do sorriso.", procedure: "Tratamento com facetas de porcelana garantindo harmonia, função e beleza natural.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
-      { category: "Harmonização Orofacial", duration: "Preenchimento Labial", complaint: "Falta de volume nos lábios e assimetria leve.", procedure: "Preenchimento com ácido hialurônico focado em devolver a proporção e naturalidade facial.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
-      { category: "Implantes Dentários", duration: "Reabilitação", complaint: "Perda dentária afetando a mastigação e autoconfiança.", procedure: "Planejamento cirúrgico digital de implante, seguro e focado na durabilidade e saúde do paciente.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
-      { category: "Ortodontia", duration: "Alinhamento Dental", complaint: "Dentes desalinhados afetando a estética do sorriso.", procedure: "Planejamento ortodôntico digital para um alinhamento previsível e resultado natural.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
+      { category: "Lentes de Contato", duration: "Estética", complaint: "Desgaste dentário, espaçamentos e descontentamento com o formato natural do sorriso.", procedure: "Planejamento com lentes cerâmicas preservando a estrutura para um encaixe harmônico.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
+      { category: "Reabilitação com Prótese", duration: "Função e Beleza", complaint: "Dificuldade mastigatória severa e baixa autoestima ao sorrir devido à perda de estrutura.", procedure: "Prótese sobre medida garantindo devolução integral da estética e qualidade de vida.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
+      { category: "Implante Dentário", duration: "Segurança", complaint: "Perda dentária localizada que gerava insegurança ao falar e sorrir em público.", procedure: "Cirurgia precisa e segura com pino de titânio e coroa de porcelana idêntica ao dente natural.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
+      { category: "Clareamento Avançado", duration: "Iluminação", complaint: "Dentes escurecidos e amarelados com o passar do tempo.", procedure: "Protocolo de clareamento estético para remoção de pigmentos mantendo a saúde do esmalte.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
     ]
   }
 };

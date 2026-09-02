@@ -12,20 +12,22 @@ export function Testimonials() {
 
   useEffect(() => {
     if (activeIndex === null) return;
+
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") showPrev();
       if (e.key === "ArrowRight") showNext();
     };
+
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
   }, [activeIndex]);
 
-  // Divide as fotos em duas colunas, cada uma rolando num sentido — padrão único de crop para dar unidade visual
   const colA = photos.filter((_, i) => i % 2 === 0);
   const colB = photos.filter((_, i) => i % 2 !== 0);
 
@@ -38,6 +40,7 @@ export function Testimonials() {
       <img
         src={photo.img}
         alt={photo.alt}
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 scale-[1.03] group-hover:scale-100 transition-all duration-700 ease-out"
       />
       <div className="absolute inset-0 bg-[var(--c-primary)] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
@@ -48,11 +51,9 @@ export function Testimonials() {
   return (
     <Section id="depoimentos" style={{ background: "var(--c-bg-alt)" }} className="overflow-hidden">
       <div className="max-w-[1280px] mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-16 lg:gap-20 items-center">
-
-        {/* BLOCO EDITORIAL: acolhimento, sem métricas, sem nomes */}
+        
         <div className="reveal lg:sticky lg:top-32">
           <span className="eyebrow">{eyebrow}</span>
-
           <div className="relative mt-4">
             <span
               aria-hidden
@@ -68,20 +69,17 @@ export function Testimonials() {
               {quote}
             </p>
           </div>
-
           <p className="mt-8 text-[0.95rem] leading-relaxed text-[var(--c-text-muted)] max-w-[440px]">
             {supporting}
           </p>
-
           <div className="mt-10 flex items-center gap-3">
             <span className="w-10 h-[1px] bg-[var(--c-accent)]" />
             <span className="text-[0.68rem] uppercase tracking-[0.22em] font-semibold text-[var(--c-text-muted)]">
-              Clinmais — Camboriú, SC
+              Clinmais – Camboriú, SC
             </span>
           </div>
         </div>
 
-        {/* GALERIA: duas colunas de fotos com crop idêntico, rolagem contínua e sentidos opostos */}
         <div className="relative grid grid-cols-2 gap-4 md:gap-5 h-[460px] sm:h-[560px] md:h-[640px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
           <div className="marquee-col overflow-hidden">
             <div className="flex flex-col gap-4 md:gap-5 marquee-up">
@@ -94,10 +92,8 @@ export function Testimonials() {
             </div>
           </div>
         </div>
-
       </div>
 
-      {/* LIGHTBOX — só a foto, sem legenda, sem nome */}
       {activeIndex !== null && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(11,26,19,0.92)] backdrop-blur-md px-4"
@@ -110,7 +106,7 @@ export function Testimonials() {
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
           </button>
-
+          
           <button
             onClick={(e) => { e.stopPropagation(); showPrev(); }}
             aria-label="Foto anterior"
@@ -118,14 +114,15 @@ export function Testimonials() {
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
           </button>
-
+          
           <img
             src={photos[activeIndex].img}
             alt={photos[activeIndex].alt}
+            loading="lazy"
             onClick={(e) => e.stopPropagation()}
             className="max-w-[90vw] max-h-[85vh] rounded-[1.2rem] object-contain shadow-[0_30px_80px_rgba(0,0,0,0.4)]"
           />
-
+          
           <button
             onClick={(e) => { e.stopPropagation(); showNext(); }}
             aria-label="Próxima foto"
@@ -136,12 +133,23 @@ export function Testimonials() {
         </div>
       )}
 
-      {/* Animações de rolagem contínua, isoladas nesta seção */}
       <style>{`
-        @keyframes marquee-up-kf { from { transform: translateY(0); } to { transform: translateY(-50%); } }
-        @keyframes marquee-down-kf { from { transform: translateY(-50%); } to { transform: translateY(0); } }
-        .marquee-up { animation: marquee-up-kf 34s linear infinite; }
-        .marquee-down { animation: marquee-down-kf 40s linear infinite; }
+        @keyframes marquee-up-kf { 
+          from { transform: translateY(0) translateZ(0); } 
+          to { transform: translateY(-50%) translateZ(0); } 
+        }
+        @keyframes marquee-down-kf { 
+          from { transform: translateY(-50%) translateZ(0); } 
+          to { transform: translateY(0) translateZ(0); } 
+        }
+        .marquee-up { 
+          animation: marquee-up-kf 34s linear infinite; 
+          will-change: transform;
+        }
+        .marquee-down { 
+          animation: marquee-down-kf 40s linear infinite; 
+          will-change: transform;
+        }
         .marquee-col:hover .marquee-up,
         .marquee-col:hover .marquee-down { animation-play-state: paused; }
       `}</style>
