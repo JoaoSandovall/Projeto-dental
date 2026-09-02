@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Thaynara Alcântara (Chumbo Quente / Deep Taupe para contraste luxuoso) */
-  --c-primary: #3A2F2D;
-  --c-primary-rgb: 58, 47, 45;
-  --c-primary-hover: #292120;
+  /* Cores Principais - Clínica Aldo & Erika (Azul Marinho Profundo - transmite confiança, ciência e luxo) */
+  --c-primary: #1A2E40;
+  --c-primary-rgb: 26, 46, 64;
+  --c-primary-hover: #12212E;
   
-  /* Cores de Destaque - Thaynara Alcântara (Rose Gold / Malva extraído da logo) */
-  --c-accent: #BC807C;
-  --c-accent-rgb: 188, 128, 124;
-  --c-accent-hover: #A36B67;
+  /* Cores de Destaque - Clínica Aldo & Erika (Laranja Terracota extraído e refinado da logo) */
+  --c-accent: #DE6B35;
+  --c-accent-rgb: 222, 107, 53;
+  --c-accent-hover: #C25A2A;
   
-  /* Fundos - BRANCO PURO com seções secundárias em um tom Nude/Rosado muito suave */
+  /* Fundos - BRANCO PURO com seções secundárias em um tom cinza-azulado levíssimo */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #FDF9F8; 
-  --c-team-placeholder: #2B2120;
+  --c-bg-alt: #F4F7F9; 
+  --c-team-placeholder: #12212E;
   
   /* Textos */
-  --c-text-main: #3A2F2D;
-  --c-text-muted: #736462;
-  --c-text-light: #B0A19F;
+  --c-text-main: #1A2E40;
+  --c-text-muted: #647483;
+  --c-text-light: #9CB0C1;
 }
 
 html {
