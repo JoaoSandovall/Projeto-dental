@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Nilton Dias (Azul Petróleo Escuro extraído da logo) */
-  --c-primary: #152B3C;
-  --c-primary-rgb: 21, 43, 60;
-  --c-primary-hover: #1E3D54;
+  /* Cores Principais - Thaynara Alcântara (Chumbo Quente / Deep Taupe para contraste luxuoso) */
+  --c-primary: #3A2F2D;
+  --c-primary-rgb: 58, 47, 45;
+  --c-primary-hover: #292120;
   
-  /* Cores de Destaque - Nilton Dias (Teal/Ciano vibrante extraído da onda da logo) */
-  --c-accent: #19A4B7;
-  --c-accent-rgb: 25, 164, 183;
-  --c-accent-hover: #158B9C;
+  /* Cores de Destaque - Thaynara Alcântara (Rose Gold / Malva extraído da logo) */
+  --c-accent: #BC807C;
+  --c-accent-rgb: 188, 128, 124;
+  --c-accent-hover: #A36B67;
   
-  /* Fundos - BRANCO PURO com seções secundárias em um tom gélido bem suave para combinar com o ciano */
+  /* Fundos - BRANCO PURO com seções secundárias em um tom Nude/Rosado muito suave */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F2F6F8; /* Um tom de gelo levíssimo no lugar do marfim antigo */
-  --c-team-placeholder: #0F1F2B;
+  --c-bg-alt: #FDF9F8; 
+  --c-team-placeholder: #2B2120;
   
   /* Textos */
-  --c-text-main: #152B3C;
-  --c-text-muted: #5A6D7C;
-  --c-text-light: #8E9FA9;
+  --c-text-main: #3A2F2D;
+  --c-text-muted: #736462;
+  --c-text-light: #B0A19F;
 }
 
 html {

@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Smile, Sparkles, Activity, Shield, Users, Stethoscope } from "lucide-react";
+import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
@@ -8,25 +8,25 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Nilton Dias",
-    subtitulo: "Odontologia Estética",
-    logoUrl: "/imagens/logo.png", // Salve a logo da onda azul com esse mesmo nome
+    nome: "Thaynara Alcântara",
+    subtitulo: "Odontologia Especializada",
+    logoUrl: "/imagens/logo.png", // Salve a logo Rose Gold dela com esse nome na pasta imagens
     contato: {
-      whatsappUrl: "https://wa.me/55...", // Coloque o número aqui
+      whatsappUrl: "https://wa.me/5561986130283", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "Agende sua consulta",
-      emailLabel: "contato@niltondiasodontologia.com.br",
-      instagramLabel: "@niltondiasodontologiaestetica",
+      telefoneLabel: "(61) 98613-0283",
+      emailLabel: "contato@thaynaraodontologia.com.br",
+      instagramLabel: "@thayalcantara.odonto",
     },
     endereco: {
-      bairroCidade: "Santana do Araguaia, PA",
-      edificio: "Av. José Mendonça, 185",
-      detalhado: "Av. José Mendonça, 185\nSantana do Araguaia - PA",
-      comodidades: ["Lentes de Contato", "Implantes Dentários", "Estética Avançada"],
-      mapaGpsUrl: "https://maps.google.com/?q=Av.+José+Mendonça,+185+-+Santana+do+Araguaia",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.848526569112!2d-50.60334812386927!3d-10.43444458969476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d7732a394cf965%3A0xcabf1be2edb07d61!2sSantana%20do%20Araguaia%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1714440000000!5m2!1spt-BR!2sbr"
+      bairroCidade: "Gama, Brasília - DF",
+      edificio: "Ed. Alternativo Center - Sala 126",
+      detalhado: "A/E 20/21 Lado Oeste, Sala 126\nEd. Alternativo Center Setor Central\nGama, Brasília - DF, 72405-922\n(Localizado na Ótica Center)",
+      comodidades: ["Ortodontia", "Alinhadores Estéticos", "Clínica Geral"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Thaynara+Alcântara+Odontologia+Gama",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.10172036142!2d-48.082333970700525!3d-16.008219451780874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935981932bc8f8ed%3A0x29985b42f00fc091!2sThaynara%20Alc%C3%A2ntara%20%7C%20Odontologia%20Especializada!5e0!3m2!1spt-BR!2sbr!4v1788355215863!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimentos sob agendamento",
+    horarios: "Atendimentos sob agendamento\nReabre às 13:00",
   },
 
   nav: {
@@ -38,22 +38,22 @@ export const globalData = {
   // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", // Se for usar foto, pode colocar a da moça sorrindo tapando os olhos
-    eyebrow: "Santana do Araguaia",
-    title1: "Odontologia",
-    title2: "estética,",
-    title3: "resultados naturais.",
-    desc1: "Mais do que transformar um sorriso,",
-    descBold: "é transformar a forma como você se sente.",
-    desc2: " Cada detalhe é pensado para alcançar um resultado harmônico que tenha a ver com a sua essência.",
-    btnPrimary: "Agende sua consulta",
+    imgUrl: "/imagens/hero.png", // Sugestão: Uma foto bonita dela no consultório
+    eyebrow: "Gama — Brasília, DF",
+    title1: "O sorriso é o",
+    title2: "cartão de visitas.",
+    title3: "Vá com ele aonde for.",
+    desc1: "Na clínica Thaynara Alcântara,",
+    descBold: "cada detalhe da sua saúde bucal importa.",
+    desc2: " Oferecemos uma odontologia especializada, moderna e focada em devolver a sua melhor versão.",
+    btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossos Tratamentos",
     badgeTitle: "Destaque",
-    badgeDesc: "Odontologia Estética",
+    badgeDesc: "Ortodontia & Estética",
     stats: [
-      { target: 5, suffix: ".0", label: "nota de satisfação", thousands: false },
-      { target: 800, suffix: "+", label: "acompanham nosso trabalho", thousands: false },
-      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
+      { target: 4, suffix: ".8", label: "nota no google", thousands: false },
+      { target: 20, suffix: "+", label: "avaliações 5 estrelas", thousands: false },
+      { target: 100, suffix: "%", label: "foco no paciente", thousands: false },
     ]
   },
 
@@ -61,24 +61,24 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "O Consultório",
-    title1: "Confiança e",
-    title2: "leveza ao sorrir.",
-    p1: "Mais do que transformar um sorriso, é transformar a forma como alguém se sente ao sorrir. É resgatar a felicidade de se reconhecer novamente no próprio reflexo.",
-    p2_1: "Sob a responsabilidade do ",
-    p2_bold: "Dr. Nilton Dias",
-    p2_2: ", nossa estrutura atua como referência em estética dental em Santana do Araguaia, oferecendo tratamentos precisos em lentes, próteses e implantes.",
+    eyebrow: "A Clínica",
+    title1: "Cuidado, estética e",
+    title2: "saúde em um só lugar.",
+    p1: "Acreditamos que um sorriso saudável e bem cuidado tem o poder de transformar a autoestima e abrir portas na vida pessoal e profissional.",
+    p2_1: "Liderada pela ",
+    p2_bold: "Dra. Thaynara Alcântara",
+    p2_2: ", nossa clínica no Edifício Alternativo Center une técnicas ortodônticas modernas (como os alinhadores invisíveis) a um atendimento humanizado e transparente.",
     topics: [
-      { title: "Lentes de Contato Dental", desc: "Transformação estética com preservação, corrigindo forma, cor e alinhamento." },
-      { title: "Implantes Dentários", desc: "Procedimento seguro e preciso que devolve qualidade de vida e função." },
-      { title: "Prótese e Reabilitação", desc: "Soluções sob medida para devolver a segurança ao mastigar e falar." },
-      { title: "Clareamento e Estética", desc: "Técnicas avançadas para um sorriso iluminado, com extrema naturalidade." },
+      { title: "Ortodontia Especializada", desc: "Aparelhos estéticos e tradicionais para o alinhamento perfeito dos seus dentes." },
+      { title: "Alinhadores Invisíveis", desc: "Tratamento discreto, confortável e previsível para quem busca discrição." },
+      { title: "Prevenção e Profilaxia", desc: "Limpezas profundas e orientações completas para manter sua saúde bucal em dia." },
+      { title: "Estética Dental", desc: "Clareamentos e procedimentos voltados para iluminar e harmonizar seu sorriso." },
     ],
     btn: "Quero agendar uma avaliação",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80&fit=crop", title: "Tecnologia e Precisão" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Cuidado em cada detalhe" },
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Resultados Naturais" }
+      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80&fit=crop", title: "Tecnologia e Conforto" },
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Atendimento Humanizado" },
+      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Seu melhor sorriso" }
     ]
   },
 
@@ -89,17 +89,17 @@ export const globalData = {
     eyebrow: "Especialidades",
     title1: "Nossos",
     title2: "Tratamentos.",
-    desc1: "Atuamos com foco absoluto em ",
-    descBold: "estética e função",
-    desc2: " para entregar a você o sorriso que sempre desejou, com técnicas modernas e previsíveis.",
+    desc1: "Do alinhamento ortodôntico à estética, entregamos ",
+    descBold: "excelência técnica",
+    desc2: " para garantir que seu sorriso seja sua melhor assinatura.",
     btn: "Ver todas especialidades",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato e Facetas", desc: "Laminados cerâmicos ultrafinos planejados para corrigir cor e formato com total naturalidade." },
-      { icon: <Activity size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "A solução ideal e segura para quem perdeu um ou mais dentes e quer voltar a sorrir com confiança." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Próteses Dentárias", desc: "Reabilitação estética e funcional utilizando materiais de alta resistência e beleza anatômica." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Protocolos seguros e altamente eficazes para remover manchas e entregar um sorriso iluminado." },
-      { icon: <Stethoscope size={28} strokeWidth={1.2} />, title: "Odontologia Geral", desc: "Diagnóstico e prevenção clínica focado em garantir a máxima longevidade para os seus tratamentos." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Planejamento Personalizado", desc: "Cada tratamento começa com uma análise do seu rosto, visando um resultado puramente exclusivo." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Alinhadores Estéticos (Invisíveis)", desc: "A revolução da ortodontia: aparelhos transparentes e removíveis que alinham seus dentes sem comprometer a estética." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Ortodontia Convencional", desc: "Aparelhos metálicos e de safira com planejamento rigoroso para correção de mordidas e alinhamento." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Técnicas seguras para devolver a luminosidade natural dos seus dentes, removendo manchas e amarelados." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Limpeza (Profilaxia)", desc: "A base da saúde bucal: remoção de tártaro, placa bacteriana e aplicação de flúor para evitar cáries." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Clínica Geral", desc: "Restaurações, avaliações de rotina e cuidados essenciais para manter a integridade dos seus dentes." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Personalizado", desc: "Uma consulta sem pressa, onde suas dúvidas são ouvidas e o tratamento é traçado junto com você." }
     ]
   },
 
@@ -107,9 +107,9 @@ export const globalData = {
   // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
-    title: "Dr. Nilton Dias",
+    title: "Dra. Thaynara",
     members: [
-      { name: "Dr. Nilton Dias", cro: "Odontologia Estética", specialty: "Lentes, Próteses e Implantes", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
+      { name: "Dra. Thaynara Alcântara", cro: "Ortodontista", specialty: "Odontologia Especializada", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop&auto=format" },
     ]
   },
 
@@ -119,14 +119,14 @@ export const globalData = {
   convenios: {
     eyebrow: "O Consultório",
     title1: "Um espaço pensado",
-    title2: "para a sua",
-    title3: "confiança e conforto.",
-    desc: "Em Santana do Araguaia, criamos um ambiente onde a tecnologia se encontra com um atendimento humano e acolhedor para a sua melhor experiência.",
+    title2: "para o seu",
+    title3: "conforto no Gama.",
+    desc: "Localizada no Edifício Alternativo Center, nossa clínica oferece uma estrutura moderna, segura e de fácil acesso para que você tenha a melhor experiência odontológica.",
     btn: "Agendar minha consulta",
     list: [
-      { title: "Odontologia Moderna", content: "Utilizamos as melhores técnicas e materiais para garantir procedimentos seguros e esteticamente perfeitos." },
-      { title: "Foco na Essência do Paciente", content: "Acreditamos que o melhor sorriso não é o mais artificial, e sim aquele que harmoniza perfeitamente com você." },
-      { title: "Atendimento Criterioso", content: "O Dr. Nilton conduz cada planejamento lado a lado com o paciente, esclarecendo todas as dúvidas do processo." }
+      { title: "Localização Privilegiada", content: "Estamos no Setor Central do Gama (dentro da Ótica Center), com fácil acesso para você." },
+      { title: "Acompanhamento Direto", content: "Aqui você não é apenas um número. A Dra. Thaynara acompanha de perto a evolução de cada etapa do seu sorriso." },
+      { title: "Ambiente Acolhedor", content: "Um espaço limpo, organizado e preparado para receber você e sua família com total segurança." }
     ]
   },
 
@@ -134,9 +134,9 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "Transformações Reais",
-    quote: "A confiança, a leveza e a felicidade imensa de se reconhecer ainda mais no próprio sorriso.",
-    supporting: "Casos como o da Andressa refletem a nossa missão: cada detalhe alcançado de forma natural, harmônica e que faz sentido para você.",
+    eyebrow: "Nosso Dia a Dia",
+    quote: "Você leva o seu sorriso para todos os lugares. Invista na sua saúde bucal com quem entende do assunto.",
+    supporting: "Acompanhe um pouco do nosso trabalho clínico e veja como o cuidado diário reflete na confiança dos nossos pacientes.",
     photos: [
       { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Sorriso Natural" },
       { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Equipe em ação" },
@@ -152,28 +152,27 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "Nossos Resultados",
-    title1: "Técnica que",
-    title2: "transforma vidas.",
-    p1: "A visão técnica do",
-    p_bold1: "Dr. Nilton Dias",
-    p2: "está impressa em cada tratamento finalizado. Explore a nossa",
-    p_bold2: "galeria de casos",
-    p3: "e comprove a qualidade de uma",
-    p_bold3: "estética de alto nível",
-    btn: "Ver Antes e Depois",
+    title1: "Ortodontia que",
+    title2: "transforma.",
+    p1: "A técnica certa nas mãos da",
+    p_bold1: "Dra. Thaynara Alcântara",
+    p2: "traz resultados visíveis. Explore nossa",
+    p_bold2: "galeria de evolução",
+    p3: "e veja como o tratamento adequado pode alinhar estética e função.",
+    btn: "Ver Casos Clínicos",
     imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
   },
 
   // ---------------------------------------------------
-  // FAQ
+  // FAQ - INCORPORANDO A DICA DO INSTAGRAM DELA AQUI!
   // ---------------------------------------------------
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde o Dr. Nilton Dias atende?", a: "Nosso consultório está localizado na Av. José Mendonça, 185, em Santana do Araguaia - PA." },
-      { q: "Quais são as principais especialidades do consultório?", a: "Nosso foco maior é na Odontologia Estética e Reabilitação, incluindo Lentes de Contato Dental, Implantes, Próteses e Clareamento." },
-      { q: "Como saber se preciso de implante ou prótese?", a: "A melhor forma é agendando uma avaliação. O Dr. Nilton fará uma análise clínica rigorosa para determinar a solução mais segura para o seu caso específico." },
-      { q: "As lentes de contato dental ficam com aspecto artificial?", a: "Não. Nosso planejamento é focado em entregar resultados absolutamente naturais e harmônicos, respeitando o formato do seu rosto e a sua essência." }
+      { q: "Quais são os 5 itens obrigatórios na necessaire de quem usa aparelho?", a: "Dica de ortodontista! 1️⃣ Escova dental em V (limpa ao redor do bráquete). 2️⃣ Escova de tufo (para os cantinhos difíceis). 3️⃣ Passa fio (não ter como usar não é mais desculpa). 4️⃣ Enxaguante bucal com fluoreto. 5️⃣ Escova macia (força demais causa retração, não limpeza!)." },
+      { q: "Onde fica o consultório?", a: "Atendemos na A/E 20/21 Lado Oeste, Sala 126, no Edifício Alternativo Center (dentro da Ótica Center), no Setor Central do Gama - DF." },
+      { q: "Vocês trabalham com alinhadores estéticos (invisíveis)?", a: "Sim! Os alinhadores são uma excelente opção para quem busca um tratamento ortodôntico discreto, rápido e muito mais confortável." },
+      { q: "Como faço para agendar uma avaliação?", a: "Basta clicar no botão do WhatsApp aqui no site! Você falará diretamente com nossa equipe para agendar o melhor horário para a sua rotina." }
     ]
   },
 
@@ -182,9 +181,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Av. José Mendonça, 185", value2: "Santana do Araguaia - PA" },
+    box1: { title: "Endereço", value1: "Ed. Alternativo Center, Sala 126", value2: "Setor Central, Gama - DF" },
     box2: { title: "Atendimento", value1: "Agendamento prévio", value2: "Entre em contato via WhatsApp" },
-    box3: { title: "Especialidades", value1: "Lentes de Contato, Implantes", value2: "Prótese e Estética" },
+    box3: { title: "Especialidades", value1: "Ortodontia, Alinhadores", value2: "Clínica Geral e Estética" },
     btn: "Abrir no Google Maps"
   },
 
@@ -193,25 +192,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "Volte a sorrir com",
-    title2: "segurança.",
-    desc: "Agende sua consulta com o Dr. Nilton Dias e descubra como uma técnica precisa pode devolver sua qualidade de vida.",
+    title1: "Seu sorriso",
+    title2: "pede atenção.",
+    desc: "Não deixe para depois o cartão de visitas que te acompanha todos os dias. Agende sua avaliação com a Dra. Thaynara.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe nossos resultados",
-    box3_desc2: "@niltondiasodontologiaestetica"
+    box3_desc1: "Acompanhe nossas dicas diárias",
+    box3_desc2: "@thayalcantara.odonto"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Odontologia estética em Santana do Araguaia. Lentes, próteses e implantes sob a responsabilidade e dedicação técnica do Dr. Nilton Dias.",
+    sobre: "Odontologia Especializada no Gama, DF. Ortodontia, prevenção e estética sob a responsabilidade e dedicação técnica da Dra. Thaynara Alcântara.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Nilton Dias Odontologia. Todos os direitos reservados.",
-    registro: "Santana do Araguaia, PA"
+    direitos: "© 2026 Thaynara Alcântara Odontologia. Todos os direitos reservados.",
+    registro: "Gama, Brasília - DF"
   },
 
   // ---------------------------------------------------
@@ -220,19 +219,19 @@ export const globalData = {
   results_page: {
     eyebrow: "Antes e Depois",
     title1: "Resultados com",
-    title2: "harmonia real.",
-    p1: "Confira o reflexo do",
-    p_bold1: "planejamento criterioso",
-    p2: " da nossa equipe. Cada caso do ",
-    p_bold2: "Dr. Nilton Dias",
-    p3: "  é construído para entregar naturalidade, beleza e recuperação mastigatória total.",
-    btnSaberMais: "Agendar avaliação semelhante",
+    title2: "precisão clínica.",
+    p1: "Confira a evolução promovida pelo",
+    p_bold1: "tratamento ortodôntico e estético",
+    p2: " na clínica da ",
+    p_bold2: "Dra. Thaynara",
+    p3: ". Cada sorriso é construído com dedicação e muito planejamento.",
+    btnSaberMais: "Agendar avaliação ortodôntica",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Lentes de Contato", duration: "Estética", complaint: "Desgaste dentário, espaçamentos e descontentamento com o formato natural do sorriso.", procedure: "Planejamento com lentes cerâmicas preservando a estrutura para um encaixe harmônico.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
-      { category: "Reabilitação com Prótese", duration: "Função e Beleza", complaint: "Dificuldade mastigatória severa e baixa autoestima ao sorrir devido à perda de estrutura.", procedure: "Prótese sobre medida garantindo devolução integral da estética e qualidade de vida.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
-      { category: "Implante Dentário", duration: "Segurança", complaint: "Perda dentária localizada que gerava insegurança ao falar e sorrir em público.", procedure: "Cirurgia precisa e segura com pino de titânio e coroa de porcelana idêntica ao dente natural.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
-      { category: "Clareamento Avançado", duration: "Iluminação", complaint: "Dentes escurecidos e amarelados com o passar do tempo.", procedure: "Protocolo de clareamento estético para remoção de pigmentos mantendo a saúde do esmalte.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
+      { category: "Alinhadores Invisíveis", duration: "Ortodontia", complaint: "Desalinhamento e espaçamentos sem o desejo de usar aparelhos metálicos fixos.", procedure: "Tratamento previsível e confortável utilizando placas transparentes e removíveis.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
+      { category: "Ortodontia Metálica", duration: "Alinhamento", complaint: "Mordida cruzada e dentes apinhados dificultando a mastigação e higienização.", procedure: "Uso de aparelho fixo tradicional associado às técnicas de higienização recomendadas (escova em V e passa fio).", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
+      { category: "Clareamento Dental", duration: "Estética", complaint: "Dentes amarelados e sem brilho devido à alimentação e falta de manutenção.", procedure: "Protocolo seguro de clareamento aliado a uma profilaxia profunda, removendo manchas e tártaro.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
+      { category: "Restauração Estética", duration: "Clínica Geral", complaint: "Dentes com cáries iniciais afetando a estética e a segurança ao sorrir.", procedure: "Remoção do tecido cariado e restauração imperceptível com resina da cor exata do dente natural.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
     ]
   }
 };
