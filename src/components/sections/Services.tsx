@@ -4,7 +4,10 @@ import { serif, globalData } from "../../data/content";
 export function Services({ goTo }: { goTo: (id: string) => void }) {
   return (
     <Section id="servicos">
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
+      {/* ADICIONADO "items-start" AQUI PARA O STICKY FUNCIONAR PERFEITAMENTE */}
+      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 relative items-start">
+        
+        {/* Bloco esquerdo que agora vai acompanhar o scroll fluidamente */}
         <div className="lg:w-4/12 lg:sticky lg:top-32 lg:h-max">
           <div className="reveal"><span className="eyebrow">{globalData.services.eyebrow}</span></div>
           <h2 className="reveal mt-3" style={{ ...serif, fontWeight: 400, lineHeight: 1.05, fontSize: "clamp(2.4rem, 4vw, 3.8rem)", color: "var(--c-text-main)" }}>
@@ -18,6 +21,7 @@ export function Services({ goTo }: { goTo: (id: string) => void }) {
           </div>
         </div>
 
+        {/* Coluna da direita com a lista de serviços */}
         <div className="lg:w-8/12 flex flex-col stagger-children">
           {globalData.services.list.map((s, index) => (
             <div key={s.title} className="reveal group border-t border-[rgba(var(--c-primary-rgb),0.1)] py-8 md:py-12 first:border-t-0 first:pt-0">
@@ -42,9 +46,11 @@ export function Services({ goTo }: { goTo: (id: string) => void }) {
             </div>
           ))}
         </div>
+
         <div className="reveal mt-4 lg:hidden">
           <button onClick={() => goTo("contato")} className="btn-outline w-full text-center">{globalData.services.btn}</button>
         </div>
+
       </div>
     </Section>
   );

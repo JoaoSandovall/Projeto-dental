@@ -78,7 +78,7 @@ export default function App() {
   return (
     <>
       <Header goTo={goTo} />
-      <div className="overflow-x-hidden">
+      {/* A div com overflow-x-hidden foi removida daqui para liberar o sticky */}
       <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
         {displayPath.includes("resultados") ? (
           <ResultsPage goTo={goTo} />
@@ -98,7 +98,6 @@ export default function App() {
           </>
         )}
       </div>
-    </div>
     </>
   );
 }

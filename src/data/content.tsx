@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
+import { Smile, Sparkles, Shield, Users, CheckCircle, Heart, Star } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
@@ -8,25 +8,25 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Clínica Refini",
-    subtitulo: "Odontologia, Estética e Saúde",
-    logoUrl: "/imagens/logo.png", // Salve a logo da Refini com este nome na pasta public/imagens
+    nome: "OdontoMarcos",
+    subtitulo: "Odontologia",
+    logoUrl: "/imagens/logo.png", // Certifique-se de salvar sua logo azul com este nome
     contato: {
-      whatsappUrl: "https://wa.me/5582981631241", 
+      whatsappUrl: "https://wa.me/556195900562?text=Ol%C3%A1%2C++gostaria+de+marcar+uma+avalia%C3%A7%C3%A3o%21", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(82) 98163-1241",
-      emailLabel: "contato@clinicarefini.com.br",
-      instagramLabel: "@clinicarefini",
+      telefoneLabel: "(61) 3624-1355",
+      emailLabel: "contato@odontomarcos.com.br",
+      instagramLabel: "@odontomarcos1",
     },
     endereco: {
-      bairroCidade: "Jatiúca, Maceió - AL",
-      edificio: "Empresarial Le Monde",
-      detalhado: "R. José Soares Sobrinho, 119 - Sl 316\nLe Monde Empresarial\nJatiúca, Maceió - AL, 57036-640",
-      comodidades: ["Estética Odontológica", "Reabilitação Oral", "Atendimento Humanizado"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Refini+Maceio",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.400804019531!2d-35.7065481!3d-9.6467526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145ce5c3afd9b%3A0x3ab5eaf709bf314e!2sCl%C3%ADnica%20Refini%20%7C%20Dentista%20Est%C3%A9tica%20em%20Macei%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1788376026966!5m2!1spt-BR!2sbr"
+      bairroCidade: "Valparaíso de Goiás - GO",
+      edificio: "Jardim Ceu Azul",
+      detalhado: "R. 71, Quadra 114 - Lote 33\nJardim Ceu Azul\nValparaíso de Goiás - GO, 72871-071",
+      comodidades: ["Implantes", "Ortodontia", "Estética Bucal"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Odontologica+OdontoMarcos+Valparaiso",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7668.68577958091!2d-48.029940515473946!3d-16.047686807244705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93598149dbf9ede9%3A0xe2e3a1d806091a4a!2sCl%C3%ADnica%20Odontol%C3%B3gica%20OdontoMarcos!5e0!3m2!1spt-BR!2sbr!4v1788444766705!5m2!1spt-BR!2sbr"
     },
-    horarios: "Aberto de Segunda a Sexta\nEncerra às 18:00",
+    horarios: "Aberto de Segunda a Sábado\nFecha para almoço 12:00 - Reabre às 14:00",
   },
 
   nav: {
@@ -38,22 +38,22 @@ export const globalData = {
   // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", // Sugestão: Uma foto bonita da Dra. Raquel ou da fachada da clínica
-    eyebrow: "Jatiúca — Maceió, AL",
-    title1: "A beleza",
-    title2: "do sorriso",
-    title3: "começa na intenção.",
-    desc1: "Por trás de cada resultado existe",
-    descBold: "uma equipe que cuida com o coração.",
-    desc2: " Na Refini, acreditamos que a excelência vai além da técnica: ela está em ouvir, acolher e entender cada paciente como único.",
-    btnPrimary: "Agende sua consulta",
+    imgUrl: "/imagens/hero.png",
+    eyebrow: "Valparaíso de Goiás, GO",
+    title1: "Seu sorriso,",
+    title2: "nossa",
+    title3: "especialidade.",
+    desc1: "Cuidar do seu sorriso é o primeiro passo para",
+    descBold: "transformar a sua vida.",
+    desc2: " Na OdontoMarcos, oferecemos excelência em implantes, ortodontia e estética para você sorrir com confiança e saúde.",
+    btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossas Especialidades",
     badgeTitle: "Excelência",
-    badgeDesc: "Estética & Saúde Bucal",
+    badgeDesc: "Transformar Sorrisos!",
     stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 25, suffix: "+", label: "avaliações perfeitas", thousands: false },
-      { target: 100, suffix: "%", label: "cuidado e dedicação", thousands: false },
+      { target: 4, suffix: ".7", label: "estrelas no google", thousands: false },
+      { target: 17, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 100, suffix: "%", label: "foco em você", thousands: false },
     ]
   },
 
@@ -61,46 +61,46 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Refini",
-    title1: "Onde o cuidado é",
-    title2: "tão importante",
-    title3: "quanto o resultado.",
-    p1: "Aqui, você não é apenas mais um atendimento. Você é parte da nossa história, e o seu sorriso é a nossa melhor conquista.",
-    p2_1: "Sob a responsabilidade técnica da ",
-    p2_bold: "Dra. Raquel Ferreira (CRO 1816 AL)",
-    p2_2: ", a Clínica Refini, localizada no Empresarial Le Monde em Maceió, é referência em Estética Odontológica e Reabilitação Oral de alto padrão.",
+    eyebrow: "A OdontoMarcos",
+    title1: "Confiança e",
+    title2: "qualidade",
+    title3: "em cada detalhe.",
+    p1: "Localizada no coração do Jardim Ceu Azul, em Valparaíso de Goiás, a OdontoMarcos é referência em tratamentos odontológicos completos e humanizados.",
+    p2_1: "Nossa missão é devolver a sua autoestima através de especialidades como ",
+    p2_bold: "Implantodontia, Ortodontia e Estética Bucal,",
+    p2_2: " sempre utilizando materiais de alta qualidade, tecnologia moderna e o cuidado que você merece.",
     topics: [
-      { title: "Estética Odontológica", desc: "Transformações de sorriso focadas em naturalidade, harmonia e na essência de cada paciente." },
-      { title: "Reabilitação Oral", desc: "Devolvemos a função mastigatória e a estética com técnicas avançadas e materiais de ponta." },
-      { title: "Atendimento Único", desc: "Acreditamos que a excelência está em ouvir, acolher e entender as necessidades de cada um." },
-      { title: "Estrutura Premium", desc: "Localizada na Jatiúca, nossa clínica oferece um ambiente pensado para o seu máximo conforto." },
+      { title: "Implantodontia", desc: "Devolva sua segurança ao mastigar e sorrir com implantes fixos de alta durabilidade." },
+      { title: "Ortodontia Especializada", desc: "Aparelhos estéticos e convencionais para o alinhamento perfeito dos seus dentes." },
+      { title: "Odontologia Estética", desc: "Clareamentos e restaurações invisíveis que valorizam a harmonia do seu rosto." },
+      { title: "Atendimento Humanizado", desc: "Acreditamos que o conforto e a clareza na comunicação fazem parte da cura." },
     ],
     btn: "Quero conhecer a clínica",
     gallery: [
-      { url: "/imagens/image.png", title: "Tecnologia e Precisão" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80&fit=crop", title: "Cuidado e Dedicação" },
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80&fit=crop", title: "Atenção a Cada Detalhe" }
+      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80", title: "Saúde Bucal" },
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Confiança" },
+      { url: "/imagens/hero.png", title: "Qualidade" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: SERVIÇOS
+  // SEÇÃO: SERVIÇOS (Ajustado exatamente com a sua lista)
   // ---------------------------------------------------
   services: {
     eyebrow: "Nossos Tratamentos",
-    title1: "Estética",
-    title2: "e Reabilitação.",
-    desc1: "Oferecemos uma odontologia moderna e detalhista, focada em ",
-    descBold: "elevar a sua autoestima",
-    desc2: " preservando a naturalidade do seu rosto.",
+    title1: "Tudo o que seu",
+    title2: "sorriso precisa.",
+    desc1: "Oferecemos um escopo completo de tratamentos, da ",
+    descBold: "prevenção à reabilitação total",
+    desc2: " com foco em resultados estéticos e duradouros.",
     btn: "Ver todas as áreas",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Contato e Facetas", desc: "Lâminas cerâmicas ultrafinas que corrigem imperfeições de cor e formato, criando um sorriso esteticamente perfeito." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Tratamentos completos para restaurar a função mastigatória, a saúde gengival e a estrutura dos dentes perdidos ou desgastados." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental Avançado", desc: "Técnicas seguras e monitoradas para devolver a luminosidade e o brilho natural ao seu sorriso." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Odontologia Estética", desc: "Pequenos ajustes e restaurações em resina de alta performance que fazem toda a diferença na harmonia do rosto." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Saúde e Prevenção", desc: "Profilaxia (limpeza) profunda e check-ups rigorosos para garantir que a beleza do seu sorriso se mantenha saudável." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Cada plano de tratamento é desenhado de forma individual, respeitando os seus desejos, o seu tempo e a sua intenção." }
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantodontia", desc: "Solução definitiva e segura para a substituição de dentes perdidos, recuperando mastigação e estética." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Alinhamento e correção da mordida através de aparelhos adequados para cada fase da vida." },
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Restauração", desc: "Remoção de cáries e recuperação do dente com resinas que simulam perfeitamente a cor natural." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Tratamento de Canal", desc: "Procedimento seguro e anestesiado para salvar dentes com inflamação ou infecção profunda na polpa." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Prótese Total e Parcial", desc: "Reabilitações sob medida que devolvem a qualidade de vida e a harmonia facial de quem perdeu múltiplos dentes." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria e Periodontia", desc: "Cuidado especial com o sorriso das crianças e tratamento profundo das gengivas (periodontia)." }
     ]
   },
 
@@ -108,26 +108,26 @@ export const globalData = {
   // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
-    title: "Direção Clínica",
+    title: "Nossa Equipe",
     members: [
-      { name: "Dra. Raquel Ferreira", cro: "CRO/AL 1816", specialty: "Estética Odontológica e Reabilitação Oral", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop&auto=format" }
+      { name: "Equipe OdontoMarcos", cro: "Especialistas", specialty: "Saúde e Reabilitação", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA REFINI (Substituindo Convênios)
+  // SEÇÃO: A ESSÊNCIA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Essência Refini",
-    title1: "A beleza começa",
-    title2: "na",
-    title3: "intenção.",
-    desc: "Acreditamos que a verdadeira estética bucal é aquela que respeita a sua essência. No Empresarial Le Monde, preparamos um ambiente focado no seu bem-estar absoluto.",
+    eyebrow: "A Essência OdontoMarcos",
+    title1: "Seu sorriso",
+    title2: "merece",
+    title3: "atenção!",
+    desc: "Acreditamos que cuidar da saúde bucal é um investimento direto na sua autoconfiança. Por isso, preparamos uma clínica acolhedora e focada em resolver o seu problema com excelência.",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Equipe que cuida com o coração", content: "Nosso corpo clínico é treinado para ir além da técnica, proporcionando um acolhimento verdadeiro e sem pressa." },
-      { title: "Você como protagonista", content: "Aqui, você não é apenas mais um atendimento. Ouvimos atentamente seus desejos antes de propor qualquer intervenção estética." },
-      { title: "Estrutura de Alto Padrão", content: "Do agendamento à finalização do tratamento, cada detalhe em nossa clínica na Jatiúca foi pensado para transmitir paz e sofisticação." }
+      { title: "Confiança e Qualidade", content: "Utilizamos materiais de ponta para garantir que seu tratamento dure anos com máxima segurança." },
+      { title: "Atendimento Humanizado", content: "Não deixe para depois. Aqui, ouvimos as suas dúvidas e montamos um plano de tratamento respeitando seu tempo e orçamento." },
+      { title: "Localização Acessível", content: "Nossa clínica na Rua 71 do Jardim Ceu Azul é de fácil acesso para todo o Valparaíso." }
     ]
   },
 
@@ -138,15 +138,15 @@ export const globalData = {
     eyebrow: "A Experiência",
     title1: "Atenção a",
     title2: "cada detalhe.",
-    quote: "A excelência vai além da técnica. Ela está em ouvir, acolher e entender cada paciente como único.",
-    supporting: "Acompanhe um pouco da nossa rotina clínica e do ambiente onde transformamos vidas através do sorriso.",
+    quote: "Cuidar do seu sorriso é o primeiro passo para transformar sua vida.",
+    supporting: "Acompanhe um pouco da nossa rotina clínica e do ambiente onde realizamos transformações diárias.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Clínica Refini" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Atendimento Clínico" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Estrutura da Clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop&auto=format", alt: "Tratamento Odontológico" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop&auto=format", alt: "Equipe Refini" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop&auto=format", alt: "Sorrisos Refini" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica OdontoMarcos" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe OdontoMarcos" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos" }
     ]
   },
 
@@ -155,14 +155,14 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "Nossa Filosofia",
-    title1: "Transformações",
-    title2: "que marcam a vida.",
+    title1: "Transformar",
+    title2: "sorrisos!",
     p1: "O seu sorriso é a nossa",
-    p_bold1: "melhor conquista.",
-    p2: "Veja o impacto de um tratamento executado com precisão técnica e",
-    p_bold2: "atenção aos mínimos detalhes",
-    p3: "explorando a nossa",
-    p_bold3: "galeria de resultados clínicos.",
+    p_bold1: "maior conquista.",
+    p2: "Veja o impacto de um tratamento executado com precisão e técnica ao explorar nossa",
+    p_bold2: "galeria de resultados",
+    p3: "e entenda por que nossos pacientes indicam a ",
+    p_bold3: "OdontoMarcos.",
     btn: "Ver Casos Clínicos",
     imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
   },
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a Clínica Refini está localizada?", a: "Estamos no Empresarial Le Monde (Sala 316), localizado na Rua José Soares Sobrinho, 119, no bairro de Jatiúca, em Maceió - AL." },
-      { q: "Quais são as especialidades da Dra. Raquel Ferreira?", a: "A Dra. Raquel atua com foco primordial em Estética Odontológica (como facetas e lentes de contato) e na Reabilitação Oral de alta complexidade." },
-      { q: "O que significa 'Reabilitação Oral'?", a: "É um conjunto de procedimentos que visam restaurar a saúde bucal completa do paciente, devolvendo a mastigação perfeita, a saúde das gengivas e a estética do sorriso." },
-      { q: "Como funciona a primeira avaliação na Refini?", a: "Nossa avaliação é o momento de ouvir você. Entendemos as suas intenções, necessidades e histórico, realizamos uma análise clínica rigorosa e, a partir daí, desenhamos um plano de tratamento exclusivo." }
+      { q: "Onde a OdontoMarcos está localizada?", a: "Nossa clínica fica em Valparaíso de Goiás. O endereço exato é R. 71, Quadra 114 - Lote 33, no Jardim Ceu Azul." },
+      { q: "O procedimento de implante dental dói?", a: "Não! Hoje a implantodontia conta com anestesias locais de altíssima eficiência. O procedimento é feito no consultório de forma muito tranquila e indolor." },
+      { q: "Quando devo procurar um tratamento de canal?", a: "Se você sente dor aguda contínua, sensibilidade prolongada ao frio/quente, ou percebe inchaço na gengiva, é urgente agendar uma avaliação para analisar a necessidade de canal." },
+      { q: "Com qual idade devo levar meu filho ao Odontopediatra?", a: "Recomendamos que a primeira visita ocorra logo quando nascem os primeiros dentinhos de leite, ou até o primeiro ano de vida, para focar em prevenção e orientação." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Empresarial Le Monde, Sala 316", value2: "R. José Soares Sobrinho, 119" },
-    box2: { title: "Localização", value1: "Jatiúca, Maceió - AL", value2: "CEP: 57036-640" },
-    box3: { title: "Especialidades", value1: "Estética Odontológica", value2: "Reabilitação Oral e Saúde" },
+    box1: { title: "Endereço", value1: "R. 71, Q. 114 - Lote 33", value2: "Jardim Ceu Azul" },
+    box2: { title: "Localização", value1: "Valparaíso de Goiás - GO", value2: "CEP: 72871-071" },
+    box3: { title: "Especialidades", value1: "Ortodontia, Implantes,", value2: "Canal e Próteses" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +196,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "O seu sorriso",
-    title2: "é a nossa prioridade.",
-    desc: "Venha viver uma experiência odontológica onde o cuidado é tão importante quanto o resultado perfeito. Fale com nossa equipe.",
+    title1: "Seu sorriso",
+    title2: "merece atenção!",
+    desc: "Não deixe para depois. Agende sua avaliação, descubra as melhores opções de tratamento e transforme seu sorriso hoje mesmo!",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe nossos resultados",
-    box3_desc2: "@clinicarefini"
+    box3_desc1: "Siga a Clínica",
+    box3_desc2: "@odontomarcos1"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Clínica Refini | Excelência em estética e saúde bucal em Maceió. Nossa missão é cuidar de você com técnica apurada e muito coração.",
+    sobre: "OdontoMarcos | Clínica odontológica referência em Implantes, Ortodontia e Estética em Valparaíso de Goiás.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Clínica Refini. Todos os direitos reservados. RT: Dra. Raquel Ferreira, CRO-AL 1816.",
-    registro: "Jatiúca — Maceió, AL"
+    direitos: "© 2026 Clínica OdontoMarcos. Todos os direitos reservados.",
+    registro: "Valparaíso de Goiás - GO"
   },
 
   // ---------------------------------------------------
@@ -222,20 +222,48 @@ export const globalData = {
   // ---------------------------------------------------
   results_page: {
     eyebrow: "Casos Clínicos",
-    title1: "Resultados com",
-    title2: "naturalidade.",
-    p1: "Confira o impacto transformador da",
-    p_bold1: "Estética Odontológica",
-    p2: " aliada à reabilitação da saúde. Na ",
-    p_bold2: "Clínica Refini",
-    p3: ", cada sorriso construído pela Dra. Raquel respeita a simetria e a intenção individual do paciente.",
-    btnSaberMais: "Agendar avaliação estética",
+    title1: "Resultados de",
+    title2: "excelência.",
+    p1: "Confira o impacto transformador da odontologia especializada na ",
+    p_bold1: "OdontoMarcos",
+    p2: ". Cada sorriso finalizado representa nossa dedicação à",
+    p_bold2: "qualidade e à saúde.",
+    p3: "",
+    btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
-      { category: "Estética Avançada", duration: "Facetas Cerâmicas", complaint: "Descontentamento com o formato, desgastes naturais e coloração irregular do sorriso.", procedure: "Planejamento estético rigoroso e aplicação de lentes/facetas garantindo uma renovação natural e iluminada.", beforeImg: "/imagens/lentes-antes.jpg", afterImg: "/imagens/lentes-depois.jpg" },
-      { category: "Reabilitação Oral", duration: "Saúde e Função", complaint: "Desgaste acentuado da estrutura dental, afetando a mastigação e o suporte dos lábios.", procedure: "Recuperação da dimensão vertical e restauração completa da função e da beleza anatômica dos dentes.", beforeImg: "/imagens/alinhamento-antes.jpg", afterImg: "/imagens/alinhamento-depois.jpg" },
-      { category: "Clareamento e Harmonia", duration: "Odontologia Estética", complaint: "Sorriso envelhecido devido à absorção de pigmentos ao longo dos anos.", procedure: "Clareamento associado à adequação estética, devolvendo a cor branco-leitoso e a vitalidade.", beforeImg: "/imagens/gengivo-antes.jpg", afterImg: "/imagens/gengivo-depois.jpg" },
-      { category: "Restauração de Alta Performance", duration: "Clínica Integrada", complaint: "Restaurações antigas escurecidas e pequenas fraturas que tiravam a confiança ao sorrir.", procedure: "Substituição por resinas de alta tecnologia, imperceptíveis e com excelente durabilidade e polimento.", beforeImg: "/imagens/clareamento-antes.jpg", afterImg: "/imagens/clareamento-depois.jpg" }
+      { 
+        category: "Ortodontia Especializada", 
+        duration: "Alinhamento Perfeito", 
+        complaint: "Desalinhamento e apinhamento dental que gerava dificuldade de higienização e estética prejudicada.", 
+        procedure: "Tratamento ortodôntico completo, corrigindo a mordida e devolvendo a harmonia natural do sorriso.", 
+        beforeImg: "/imagens/branco.png", 
+        afterImg: "/imagens/preto.png" 
+      },
+      { 
+        category: "Implantodontia", 
+        duration: "Segurança e Função", 
+        complaint: "Perda de dentes que causava grande insegurança ao mastigar e ao falar em público.", 
+        procedure: "Instalação cirúrgica de implantes de titânio e colocação de prótese fixa idêntica aos dentes naturais.", 
+        beforeImg: "/imagens/branco.png", 
+        afterImg: "/imagens/preto.png" 
+      },
+      { 
+        category: "Odontologia Estética", 
+        duration: "Clareamento e Resinas", 
+        complaint: "Dentes amarelados com o tempo e presenças de manchas e pequenas quebras no esmalte.", 
+        procedure: "Clareamento clínico seguro somado a discretas restaurações em resina de alta qualidade.", 
+        beforeImg: "/imagens/branco.png", 
+        afterImg: "/imagens/preto.png" 
+      },
+      { 
+        category: "Prótese Total / Parcial", 
+        duration: "Reabilitação", 
+        complaint: "Falta de estrutura dental afetando severamente a alimentação e suporte das bochechas.", 
+        procedure: "Confecção de prótese sob medida, perfeitamente adaptada para o conforto e estética facial do paciente.", 
+        beforeImg: "/imagens/branco.png", 
+        afterImg: "/imagens/preto.png" 
+      }
     ]
   }
 };
