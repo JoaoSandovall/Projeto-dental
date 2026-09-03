@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, CheckCircle, Heart, Star } from "lucide-react";
+import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
@@ -8,29 +8,29 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "OdontoMarcos",
-    subtitulo: "Odontologia",
-    logoUrl: "/imagens/logo.png", // Certifique-se de salvar sua logo azul com este nome
+    nome: "Dra. Maraiza Horni",
+    subtitulo: "Odontologia Especializada",
+    logoUrl: "/imagens/logo.png", // Certifique-se de ter a logo salva na pasta public/imagens
     contato: {
-      whatsappUrl: "https://wa.me/556195900562?text=Ol%C3%A1%2C++gostaria+de+marcar+uma+avalia%C3%A7%C3%A3o%21", 
+      whatsappUrl: "https://wa.me/559293094920", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(61) 3624-1355",
-      emailLabel: "contato@odontomarcos.com.br",
-      instagramLabel: "@odontomarcos1",
+      telefoneLabel: "(92) 99309-4920",
+      emailLabel: "contato@dramaraizahorni.com.br",
+      instagramLabel: "@dra.maraiza_horni",
     },
     endereco: {
-      bairroCidade: "Valparaíso de Goiás - GO",
-      edificio: "Jardim Ceu Azul",
-      detalhado: "R. 71, Quadra 114 - Lote 33\nJardim Ceu Azul\nValparaíso de Goiás - GO, 72871-071",
-      comodidades: ["Implantes", "Ortodontia", "Estética Bucal"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Odontologica+OdontoMarcos+Valparaiso",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7668.68577958091!2d-48.029940515473946!3d-16.047686807244705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93598149dbf9ede9%3A0xe2e3a1d806091a4a!2sCl%C3%ADnica%20Odontol%C3%B3gica%20OdontoMarcos!5e0!3m2!1spt-BR!2sbr!4v1788444766705!5m2!1spt-BR!2sbr"
+      bairroCidade: "São José, Manacapuru - AM",
+      edificio: "Consultório Odontológico",
+      detalhado: "Rua Waldemar Ventura, 397\nSão José\nManacapuru - AM, 69400-746",
+      comodidades: ["Alinhadores Transparentes", "Implantes", "Clínica Geral", "Odontopediatria"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Dra+Maraiza+Horni+Dentista+Manacapuru",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.2290203777898!2d-60.63067682416148!3d-3.2933697966815316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926e8771a90d0869%3A0x4f05e0bc7109982d!2sDra%20Maraiza%20Horni%20(Dentista)!5e0!3m2!1spt-BR!2sbr!4v1788473094589!5m2!1spt-BR!2sbr"
     },
-    horarios: "Aberto de Segunda a Sábado\nFecha para almoço 12:00 - Reabre às 14:00",
+    horarios: "Atendimento de Segunda a Sexta\nA partir das 08:00",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "A Essência", "Resultados", "Contato"],
+    links: ["A Clínica", "Especialidades", "Alinhadores", "Resultados", "Contato"],
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
@@ -39,20 +39,20 @@ export const globalData = {
   // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png",
-    eyebrow: "Valparaíso de Goiás, GO",
-    title1: "Seu sorriso,",
-    title2: "nossa",
-    title3: "especialidade.",
-    desc1: "Cuidar do seu sorriso é o primeiro passo para",
-    descBold: "transformar a sua vida.",
-    desc2: " Na OdontoMarcos, oferecemos excelência em implantes, ortodontia e estética para você sorrir com confiança e saúde.",
+    eyebrow: "Manacapuru, AM",
+    title1: "Seu sorriso",
+    title2: "transformado",
+    title3: "com leveza.",
+    desc1: "Seu sorriso pode mudar sem precisar",
+    descBold: "chamar atenção para o aparelho.",
+    desc2: " Unimos discrição, conforto e planejamento para transformar o seu sorriso de um jeito muito mais leve.",
     btnPrimary: "Agende sua avaliação",
-    btnOutline: "Nossas Especialidades",
-    badgeTitle: "Excelência",
-    badgeDesc: "Transformar Sorrisos!",
+    btnOutline: "Conhecer tratamentos",
+    badgeTitle: "Dra. Maraiza",
+    badgeDesc: "CRO AM 5488",
     stats: [
-      { target: 4, suffix: ".7", label: "estrelas no google", thousands: false },
-      { target: 17, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
+      { target: 40, suffix: "+", label: "avaliações reais", thousands: false },
       { target: 100, suffix: "%", label: "foco em você", thousands: false },
     ]
   },
@@ -61,46 +61,46 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A OdontoMarcos",
-    title1: "Confiança e",
-    title2: "qualidade",
+    eyebrow: "A Profissional",
+    title1: "Cuidado e",
+    title2: "precisão",
     title3: "em cada detalhe.",
-    p1: "Localizada no coração do Jardim Ceu Azul, em Valparaíso de Goiás, a OdontoMarcos é referência em tratamentos odontológicos completos e humanizados.",
-    p2_1: "Nossa missão é devolver a sua autoestima através de especialidades como ",
-    p2_bold: "Implantodontia, Ortodontia e Estética Bucal,",
-    p2_2: " sempre utilizando materiais de alta qualidade, tecnologia moderna e o cuidado que você merece.",
+    p1: "Localizado em Manacapuru, o consultório da Dra. Maraiza Horni é referência em tratamentos modernos, unindo tecnologia e acolhimento para toda a família.",
+    p2_1: "Como ",
+    p2_bold: "cirurgiã-dentista (CRO AM 5488)",
+    p2_2: ", a Dra. Maraiza atua com excelência em Clínica Geral, Implantes e Ortodontia, garantindo um atendimento cuidadoso para adultos e crianças.",
     topics: [
-      { title: "Implantodontia", desc: "Devolva sua segurança ao mastigar e sorrir com implantes fixos de alta durabilidade." },
-      { title: "Ortodontia Especializada", desc: "Aparelhos estéticos e convencionais para o alinhamento perfeito dos seus dentes." },
-      { title: "Odontologia Estética", desc: "Clareamentos e restaurações invisíveis que valorizam a harmonia do seu rosto." },
-      { title: "Atendimento Humanizado", desc: "Acreditamos que o conforto e a clareza na comunicação fazem parte da cura." },
+      { title: "Ortodontia Invisível", desc: "Alinhadores transparentes que unem discrição e eficiência no tratamento." },
+      { title: "Implantodontia", desc: "Devolva a função mastigatória e a estética do seu sorriso com total segurança." },
+      { title: "Odontopediatria", desc: "Atendimento acolhedor e paciente focado na saúde bucal das crianças." },
+      { title: "Clínica Geral", desc: "Prevenção, limpezas e cuidados essenciais para manter seu sorriso saudável." },
     ],
-    btn: "Quero conhecer a clínica",
+    btn: "Quero agendar uma consulta",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=1200&q=80", title: "Saúde Bucal" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Confiança" },
-      { url: "/imagens/hero.png", title: "Qualidade" }
+      { url: "/imagens/hero.png", title: "Saúde Bucal" },
+      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Cuidado Humanizado" },
+      { url: "/imagens/leve.png", title: "Sorrisos Leves" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: SERVIÇOS (Ajustado exatamente com a sua lista)
+  // SEÇÃO: SERVIÇOS
   // ---------------------------------------------------
   services: {
     eyebrow: "Nossos Tratamentos",
-    title1: "Tudo o que seu",
-    title2: "sorriso precisa.",
-    desc1: "Oferecemos um escopo completo de tratamentos, da ",
-    descBold: "prevenção à reabilitação total",
-    desc2: " com foco em resultados estéticos e duradouros.",
+    title1: "Atendimento para",
+    title2: "adultos e crianças.",
+    desc1: "Oferecemos soluções completas para a sua saúde bucal, unindo ",
+    descBold: "técnicas modernas e conforto",
+    desc2: " em todas as etapas do seu tratamento.",
     btn: "Ver todas as áreas",
     list: [
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantodontia", desc: "Solução definitiva e segura para a substituição de dentes perdidos, recuperando mastigação e estética." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Alinhamento e correção da mordida através de aparelhos adequados para cada fase da vida." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Restauração", desc: "Remoção de cáries e recuperação do dente com resinas que simulam perfeitamente a cor natural." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Tratamento de Canal", desc: "Procedimento seguro e anestesiado para salvar dentes com inflamação ou infecção profunda na polpa." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Prótese Total e Parcial", desc: "Reabilitações sob medida que devolvem a qualidade de vida e a harmonia facial de quem perdeu múltiplos dentes." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria e Periodontia", desc: "Cuidado especial com o sorriso das crianças e tratamento profundo das gengivas (periodontia)." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Ortodontia & Alinhadores", desc: "Sorriso alinhado com discrição. Somos especialistas em transformar sorrisos sem chamar atenção para o aparelho." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "Recupere a confiança ao sorrir e a segurança ao mastigar com nossos tratamentos de implantodontia." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clínica Geral & Prevenção", desc: "A base de um sorriso bonito é a saúde. Realizamos limpezas, restaurações e check-ups completos." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Odontopediatria", desc: "Cuidamos dos sorrisos dos pequenos com muita paciência e técnicas voltadas para o conforto infantil." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Renove a cor e o brilho dos seus dentes de forma segura, rápida e eficiente no consultório." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Um ambiente preparado para que você e sua família se sintam confortáveis e acolhidos." }
     ]
   },
 
@@ -110,24 +110,24 @@ export const globalData = {
   team: {
     title: "Nossa Equipe",
     members: [
-      { name: "Equipe OdontoMarcos", cro: "Especialistas", specialty: "Saúde e Reabilitação", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop" }
+      { name: "Dra. Maraiza Horni", cro: "CRO AM 5488", specialty: "Dentista e Ortodontista", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA
+  // SEÇÃO: A ESSÊNCIA (Foco nos Alinhadores)
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Essência OdontoMarcos",
-    title1: "Seu sorriso",
-    title2: "merece",
-    title3: "atenção!",
-    desc: "Acreditamos que cuidar da saúde bucal é um investimento direto na sua autoconfiança. Por isso, preparamos uma clínica acolhedora e focada em resolver o seu problema com excelência.",
+    eyebrow: "Ortodontia Invisível",
+    title1: "Sorria com",
+    title2: "liberdade e",
+    title3: "discrição.",
+    desc: "Os alinhadores transparentes unem discrição, conforto e planejamento para transformar o sorriso de um jeito muito mais leve. Quer saber se eles são uma opção para você?",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Confiança e Qualidade", content: "Utilizamos materiais de ponta para garantir que seu tratamento dure anos com máxima segurança." },
-      { title: "Atendimento Humanizado", content: "Não deixe para depois. Aqui, ouvimos as suas dúvidas e montamos um plano de tratamento respeitando seu tempo e orçamento." },
-      { title: "Localização Acessível", content: "Nossa clínica na Rua 71 do Jardim Ceu Azul é de fácil acesso para todo o Valparaíso." }
+      { title: "Praticidade no dia a dia", content: "Sendo removíveis, os alinhadores facilitam a higienização e não impõem restrições alimentares." },
+      { title: "Estética Incomparável", content: "Corrija seus dentes sem que ninguém perceba. O material é transparente e se adapta perfeitamente ao seu sorriso." },
+      { title: "Mais Conforto e Previsibilidade", content: "Sem fios metálicos machucando a boca. O tratamento é planejado digitalmente para ser suave e exato." }
     ]
   },
 
@@ -138,14 +138,14 @@ export const globalData = {
     eyebrow: "A Experiência",
     title1: "Atenção a",
     title2: "cada detalhe.",
-    quote: "Cuidar do seu sorriso é o primeiro passo para transformar sua vida.",
-    supporting: "Acompanhe um pouco da nossa rotina clínica e do ambiente onde realizamos transformações diárias.",
+    quote: "Nosso objetivo é garantir que cada visita ao dentista seja uma experiência leve e positiva.",
+    supporting: "Acompanhe nosso ambiente e estrutura, preparados com carinho para receber pacientes de todas as idades.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica OdontoMarcos" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Dra Maraiza" },
       { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
       { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
       { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe OdontoMarcos" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe" },
       { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos" }
     ]
   },
@@ -155,16 +155,16 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "Nossa Filosofia",
-    title1: "Transformar",
-    title2: "sorrisos!",
-    p1: "O seu sorriso é a nossa",
-    p_bold1: "maior conquista.",
-    p2: "Veja o impacto de um tratamento executado com precisão e técnica ao explorar nossa",
-    p_bold2: "galeria de resultados",
-    p3: "e entenda por que nossos pacientes indicam a ",
-    p_bold3: "OdontoMarcos.",
+    title1: "Sorrisos",
+    title2: "transformados.",
+    p1: "Acreditamos no poder de um sorriso saudável.",
+    p_bold1: "Veja na prática",
+    p2: "como nossos tratamentos de ortodontia, implantes e reabilitação estética trazem de volta a confiança dos nossos pacientes em nossa",
+    p_bold2: "galeria de resultados.",
+    p3: "",
+    p_bold3: "",
     btn: "Ver Casos Clínicos",
-    imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
+    imgUrl: "/imagens/dentes.png"
   },
 
   // ---------------------------------------------------
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a OdontoMarcos está localizada?", a: "Nossa clínica fica em Valparaíso de Goiás. O endereço exato é R. 71, Quadra 114 - Lote 33, no Jardim Ceu Azul." },
-      { q: "O procedimento de implante dental dói?", a: "Não! Hoje a implantodontia conta com anestesias locais de altíssima eficiência. O procedimento é feito no consultório de forma muito tranquila e indolor." },
-      { q: "Quando devo procurar um tratamento de canal?", a: "Se você sente dor aguda contínua, sensibilidade prolongada ao frio/quente, ou percebe inchaço na gengiva, é urgente agendar uma avaliação para analisar a necessidade de canal." },
-      { q: "Com qual idade devo levar meu filho ao Odontopediatra?", a: "Recomendamos que a primeira visita ocorra logo quando nascem os primeiros dentinhos de leite, ou até o primeiro ano de vida, para focar em prevenção e orientação." }
+      { q: "Onde o consultório está localizado?", a: "Nosso consultório fica na Rua Waldemar Ventura, 397, no bairro São José, em Manacapuru - AM." },
+      { q: "Os alinhadores transparentes servem para o meu caso?", a: "Os alinhadores são indicados para a maioria dos casos de desalinhamento dental. Para ter certeza, precisamos realizar uma avaliação clínica e um planejamento digital." },
+      { q: "A partir de qual idade as crianças podem ser atendidas?", a: "O ideal é que a primeira consulta aconteça logo nos primeiros anos de vida, focado na prevenção e na correta higienização dos dentes de leite." },
+      { q: "O implante dentário dói?", a: "Não. O procedimento de instalação de implantes é feito sob anestesia local, tornando a cirurgia completamente indolor e tranquila para o paciente." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "R. 71, Q. 114 - Lote 33", value2: "Jardim Ceu Azul" },
-    box2: { title: "Localização", value1: "Valparaíso de Goiás - GO", value2: "CEP: 72871-071" },
-    box3: { title: "Especialidades", value1: "Ortodontia, Implantes,", value2: "Canal e Próteses" },
+    box1: { title: "Endereço", value1: "Rua Waldemar Ventura, 397", value2: "Bairro São José" },
+    box2: { title: "Localização", value1: "Manacapuru - AM", value2: "CEP: 69400-746" },
+    box3: { title: "Especialidades", value1: "Ortodontia, Implantes", value2: "Clínica Geral e Infantil" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +196,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "Seu sorriso",
-    title2: "merece atenção!",
-    desc: "Não deixe para depois. Agende sua avaliação, descubra as melhores opções de tratamento e transforme seu sorriso hoje mesmo!",
+    title1: "Quer saber se os alinhadores",
+    title2: "são para você?",
+    desc: "Agende sua avaliação e descubra como a odontologia moderna pode transformar o seu sorriso de forma rápida, confortável e invisível.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Siga a Clínica",
-    box3_desc2: "@odontomarcos1"
+    box3_desc1: "Acompanhe a Clínica",
+    box3_desc2: "@dra.maraiza_horni"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "OdontoMarcos | Clínica odontológica referência em Implantes, Ortodontia e Estética em Valparaíso de Goiás.",
+    sobre: "Dra. Maraiza Horni | Clínica Geral, Implantes e Ortodontia. Atendimento especializado para adultos e crianças em Manacapuru-AM.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Clínica OdontoMarcos. Todos os direitos reservados.",
-    registro: "Valparaíso de Goiás - GO"
+    direitos: "© 2026 Dra. Maraiza Horni. Todos os direitos reservados. CRO AM 5488.",
+    registro: "Manacapuru - AM"
   },
 
   // ---------------------------------------------------
@@ -222,45 +222,45 @@ export const globalData = {
   // ---------------------------------------------------
   results_page: {
     eyebrow: "Casos Clínicos",
-    title1: "Resultados de",
-    title2: "excelência.",
-    p1: "Confira o impacto transformador da odontologia especializada na ",
-    p_bold1: "OdontoMarcos",
-    p2: ". Cada sorriso finalizado representa nossa dedicação à",
-    p_bold2: "qualidade e à saúde.",
+    title1: "Resultados com",
+    title2: "previsibilidade.",
+    p1: "Confira o impacto transformador dos nossos tratamentos em ",
+    p_bold1: "ortodontia e reabilitação",
+    p2: ". Devolver a saúde e a estética do sorriso é o nosso",
+    p_bold2: "maior compromisso.",
     p3: "",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
-        category: "Ortodontia Especializada", 
-        duration: "Alinhamento Perfeito", 
-        complaint: "Desalinhamento e apinhamento dental que gerava dificuldade de higienização e estética prejudicada.", 
-        procedure: "Tratamento ortodôntico completo, corrigindo a mordida e devolvendo a harmonia natural do sorriso.", 
+        category: "Alinhadores Transparentes", 
+        duration: "Ortodontia Invisível", 
+        complaint: "Dentes desalinhados gerando desconforto estético e paciente com resistência ao uso de aparelhos metálicos.", 
+        procedure: "Tratamento discreto com alinhadores removíveis, corrigindo o sorriso com alto conforto e estética.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png" 
       },
       { 
         category: "Implantodontia", 
         duration: "Segurança e Função", 
-        complaint: "Perda de dentes que causava grande insegurança ao mastigar e ao falar em público.", 
-        procedure: "Instalação cirúrgica de implantes de titânio e colocação de prótese fixa idêntica aos dentes naturais.", 
+        complaint: "Perda de dentes que causava insegurança ao mastigar e ao sorrir.", 
+        procedure: "Instalação cirúrgica de implantes e colocação de prótese fixa, restaurando a saúde funcional da boca.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png" 
       },
       { 
         category: "Odontologia Estética", 
         duration: "Clareamento e Resinas", 
-        complaint: "Dentes amarelados com o tempo e presenças de manchas e pequenas quebras no esmalte.", 
-        procedure: "Clareamento clínico seguro somado a discretas restaurações em resina de alta qualidade.", 
+        complaint: "Sorriso com coloração amarelada e desgastes no esmalte dental ao longo dos anos.", 
+        procedure: "Clareamento clínico associado a leves adequações estéticas em resina, devolvendo a juventude ao sorriso.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png" 
       },
       { 
-        category: "Prótese Total / Parcial", 
-        duration: "Reabilitação", 
-        complaint: "Falta de estrutura dental afetando severamente a alimentação e suporte das bochechas.", 
-        procedure: "Confecção de prótese sob medida, perfeitamente adaptada para o conforto e estética facial do paciente.", 
+        category: "Clínica Geral Integrada", 
+        duration: "Saúde Bucal", 
+        complaint: "Dores pontuais e necessidade de adequação de saúde bucal após longo período sem ir ao dentista.", 
+        procedure: "Profilaxia completa, remoção de cáries e restaurações seguras para prevenir problemas futuros.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png" 
       }

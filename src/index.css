@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - OdontoMarcos (Azul Marinho Profundo dos banners do Instagram) */
-  --c-primary: #0A1E3F;
-  --c-primary-rgb: 10, 30, 63;
-  --c-primary-hover: #07152D;
+  /* Cores Principais - Dra. Maraiza Horni (Azul Marinho Suave - transmite confiança e saúde clínica) */
+  --c-primary: #1E3A5F;
+  --c-primary-rgb: 30, 58, 95;
+  --c-primary-hover: #152B47;
   
-  /* Cores de Destaque - OdontoMarcos (Azul Claro/Ciano vibrante da Logo oficial) */
-  --c-accent: #009FE3;
-  --c-accent-rgb: 0, 159, 227;
-  --c-accent-hover: #0088C4;
+  /* Cores de Destaque - Dra. Maraiza Horni (Champagne/Dourado - remete à estética, alinhadores e leveza) */
+  --c-accent: #C5A880;
+  --c-accent-rgb: 197, 168, 128;
+  --c-accent-hover: #B0926A;
   
-  /* Fundos - BRANCO PURO com seções secundárias em um tom Gelo/Azulado muito limpo */
+  /* Fundos - BRANCO PURO com seções secundárias em um tom cinza muito leve */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F2F6FA; 
-  --c-team-placeholder: #0A1E3F;
+  --c-bg-alt: #F8F9FA; 
+  --c-team-placeholder: #1E3A5F;
   
   /* Textos */
-  --c-text-main: #0A1E3F;
-  --c-text-muted: #5A6D85;
-  --c-text-light: #94A6B8;
+  --c-text-main: #1F2937;
+  --c-text-muted: #6B7280;
+  --c-text-light: #9CA3AF;
 }
 
 html {
@@ -70,7 +70,6 @@ html, body {
 
 /* 2. Movimento Lento da Aura de Fundo */
 @keyframes auraFloat {
-  /* Adicionamos translate3d para ativar a GPU em todas as etapas */
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   33% { transform: translate3d(3vw, -4vh, 0) scale(1.05); }
   66% { transform: translate3d(-2vw, 3vh, 0) scale(0.95); }
@@ -79,13 +78,11 @@ html, body {
 .bg-aura {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px); /* Leve redução para salvar aparelhos mais fracos */
+  filter: blur(90px);
   opacity: 0.15;
-  animation: auraFloat 18s linear infinite; /* 'linear' evita saltos de velocidade */
+  animation: auraFloat 18s linear infinite;
   z-index: 0;
   pointer-events: none;
-  
-  /* COMANDOS DE ACELERAÇÃO DE HARDWARE (GPU) */
   will-change: transform;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
