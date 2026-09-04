@@ -8,29 +8,29 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Dra. Maraiza Horni",
-    subtitulo: "Odontologia Especializada",
-    logoUrl: "/imagens/logo.png", // Certifique-se de ter a logo salva na pasta public/imagens
+    nome: "Instituto Áurea",
+    subtitulo: "A Arte de Sorrir com Alma",
+    logoUrl: "/imagens/logo.png", // Sua logo local
     contato: {
-      whatsappUrl: "https://wa.me/559293094920", 
-      whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(92) 99309-4920",
-      emailLabel: "contato@dramaraizahorni.com.br",
-      instagramLabel: "@dra.maraiza_horni",
+      whatsappUrl: "https://wa.me/5511988887777", 
+      whatsappLabel: "Conversar com a Concierge",
+      telefoneLabel: "(11) 98888-7777",
+      emailLabel: "contato@institutoaurea.com.br",
+      instagramLabel: "@instituto.aurea",
     },
     endereco: {
-      bairroCidade: "São José, Manacapuru - AM",
-      edificio: "Consultório Odontológico",
-      detalhado: "Rua Waldemar Ventura, 397\nSão José\nManacapuru - AM, 69400-746",
-      comodidades: ["Alinhadores Transparentes", "Implantes", "Clínica Geral", "Odontopediatria"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Dra+Maraiza+Horni+Dentista+Manacapuru",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.2290203777898!2d-60.63067682416148!3d-3.2933697966815316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926e8771a90d0869%3A0x4f05e0bc7109982d!2sDra%20Maraiza%20Horni%20(Dentista)!5e0!3m2!1spt-BR!2sbr!4v1788473094589!5m2!1spt-BR!2sbr"
+      bairroCidade: "Jardins, São Paulo - SP",
+      edificio: "Boulevard Design, Cobertura 12",
+      detalhado: "Avenida das Gardênias, 1200\nBoulevard Design\nJardins, São Paulo - SP, 01400-000",
+      comodidades: ["Estética Natural", "Ambiente de Spa", "Odontologia Humanizada", "Reabilitação"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Jardins+Sao+Paulo",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975850290515!2d-46.66699318447573!3d-23.561332784682496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cd3e54bba9%3A0xc0fb1f2c2ecf555c!2sRua%20Oscar%20Freire%20-%20Jardim%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1714400000000!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento de Segunda a Sexta\nA partir das 08:00",
+    horarios: "Atendimentos Exclusivos\nSegunda a Sexta, das 09:00 às 19:00",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "Alinhadores", "Resultados", "Contato"],
+    links: ["O Instituto", "Especialidades", "A Experiência", "Resultados", "Contato"],
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
@@ -38,22 +38,22 @@ export const globalData = {
   // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png",
-    eyebrow: "Manacapuru, AM",
-    title1: "Seu sorriso",
-    title2: "transformado",
-    title3: "com leveza.",
-    desc1: "Seu sorriso pode mudar sem precisar",
-    descBold: "chamar atenção para o aparelho.",
-    desc2: " Unimos discrição, conforto e planejamento para transformar o seu sorriso de um jeito muito mais leve.",
-    btnPrimary: "Agende sua avaliação",
-    btnOutline: "Conhecer tratamentos",
-    badgeTitle: "Dra. Maraiza",
-    badgeDesc: "CRO AM 5488",
+    imgUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80",
+    eyebrow: "Jardins, São Paulo",
+    title1: "A sua essência,",
+    title2: "refletida em",
+    title3: "cada detalhe.",
+    desc1: "Acreditamos que o sorriso é a",
+    descBold: "sua assinatura no mundo.",
+    desc2: " No Instituto Áurea, unimos ciência, arte e muito acolhimento para revelar a sua melhor versão de forma natural.",
+    btnPrimary: "Agendar minha experiência",
+    btnOutline: "Nossa Filosofia",
+    badgeTitle: "Dra. Helena Valença",
+    badgeDesc: "Diretora Clínica",
     stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 40, suffix: "+", label: "avaliações reais", thousands: false },
-      { target: 100, suffix: "%", label: "foco em você", thousands: false },
+      { target: 5, suffix: ".0", label: "estrelas de satisfação", thousands: false },
+      { target: 15, suffix: "+", label: "anos de maestria", thousands: false },
+      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
     ]
   },
 
@@ -61,25 +61,25 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Profissional",
-    title1: "Cuidado e",
-    title2: "precisão",
-    title3: "em cada detalhe.",
-    p1: "Localizado em Manacapuru, o consultório da Dra. Maraiza Horni é referência em tratamentos modernos, unindo tecnologia e acolhimento para toda a família.",
-    p2_1: "Como ",
-    p2_bold: "cirurgiã-dentista (CRO AM 5488)",
-    p2_2: ", a Dra. Maraiza atua com excelência em Clínica Geral, Implantes e Ortodontia, garantindo um atendimento cuidadoso para adultos e crianças.",
+    eyebrow: "A Filosofia",
+    title1: "Mais do que dentes,",
+    title2: "nós cuidamos",
+    title3: "de pessoas.",
+    p1: "Criamos o Instituto Áurea para ser um refúgio. Um lugar onde a ansiedade de ir ao dentista dá lugar ao bem-estar e ao cuidado genuíno.",
+    p2_1: "Liderado pela ",
+    p2_bold: "Dra. Helena Valença",
+    p2_2: ", nossa clínica foi desenhada para oferecer uma odontologia sem dor, sem pressa e pautada no respeito absoluto aos seus traços naturais e à sua história.",
     topics: [
-      { title: "Ortodontia Invisível", desc: "Alinhadores transparentes que unem discrição e eficiência no tratamento." },
-      { title: "Implantodontia", desc: "Devolva a função mastigatória e a estética do seu sorriso com total segurança." },
-      { title: "Odontopediatria", desc: "Atendimento acolhedor e paciente focado na saúde bucal das crianças." },
-      { title: "Clínica Geral", desc: "Prevenção, limpezas e cuidados essenciais para manter seu sorriso saudável." },
+      { title: "Estética com Alma", desc: "Procedimentos planejados digitalmente para devolver a harmonia ao rosto, sem exageros." },
+      { title: "Ambiente de Spa", desc: "Aromaterapia, música ambiente e um chá quente esperando por você na recepção." },
+      { title: "Medicina do Conforto", desc: "Técnicas de sedação moderna e controle rigoroso da dor em todas as etapas." },
+      { title: "Tempo para Você", desc: "Consultas estendidas. Aqui nós sentamos, ouvimos e entendemos seus desejos antes de qualquer intervenção." },
     ],
-    btn: "Quero agendar uma consulta",
+    btn: "Conhecer a Diretora Clínica",
     gallery: [
-      { url: "/imagens/hero.png", title: "Saúde Bucal" },
-      { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Cuidado Humanizado" },
-      { url: "/imagens/leve.png", title: "Sorrisos Leves" }
+      { url: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80", title: "Beleza Natural" },
+      { url: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80", title: "Acolhimento" },
+      { url: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=80", title: "Precisão" }
     ]
   },
 
@@ -87,20 +87,20 @@ export const globalData = {
   // SEÇÃO: SERVIÇOS
   // ---------------------------------------------------
   services: {
-    eyebrow: "Nossos Tratamentos",
-    title1: "Atendimento para",
-    title2: "adultos e crianças.",
-    desc1: "Oferecemos soluções completas para a sua saúde bucal, unindo ",
-    descBold: "técnicas modernas e conforto",
-    desc2: " em todas as etapas do seu tratamento.",
-    btn: "Ver todas as áreas",
+    eyebrow: "Nossa Expertise",
+    title1: "Arte,",
+    title2: "ciência e saúde.",
+    desc1: "Cada tratamento é um projeto único, desenhado sob medida para ",
+    descBold: "realçar a sua beleza natural",
+    desc2: " e garantir saúde a longo prazo.",
+    btn: "Ver portfólio completo",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Ortodontia & Alinhadores", desc: "Sorriso alinhado com discrição. Somos especialistas em transformar sorrisos sem chamar atenção para o aparelho." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "Recupere a confiança ao sorrir e a segurança ao mastigar com nossos tratamentos de implantodontia." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clínica Geral & Prevenção", desc: "A base de um sorriso bonito é a saúde. Realizamos limpezas, restaurações e check-ups completos." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Odontopediatria", desc: "Cuidamos dos sorrisos dos pequenos com muita paciência e técnicas voltadas para o conforto infantil." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Renove a cor e o brilho dos seus dentes de forma segura, rápida e eficiente no consultório." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Um ambiente preparado para que você e sua família se sintam confortáveis e acolhidos." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Porcelana Ultra-realistas", desc: "Lâminas artesanais que corrigem imperfeições e recriam a textura exata de um dente jovem e saudável, sem o aspecto artificial." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Ortodontia Invisível", desc: "Alinhadores transparentes que oferecem um tratamento ortodôntico altamente previsível, discreto e livre de fios metálicos." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes & Reabilitação", desc: "Devolvemos não apenas dentes, mas a segurança de mastigar, falar e sorrir com implantes fixos de excelência suíça." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Spa Odontológico & Prevenção", desc: "Sessões de limpeza profunda com tecnologia suíça de jato e ultrassom guiado, totalmente indolores e focadas na longevidade da gengiva." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Odontologia Minimamente Invasiva", desc: "Intervenções que preservam ao máximo a estrutura original do dente, utilizando microscopia e resinas de alta performance." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Cuidado Materno-Infantil", desc: "Uma abordagem psicológica especial para que as crianças construam uma relação de afeto e sem traumas com a saúde bucal." }
     ]
   },
 
@@ -108,26 +108,26 @@ export const globalData = {
   // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
-    title: "Nossa Equipe",
+    title: "Quem cuida de você",
     members: [
-      { name: "Dra. Maraiza Horni", cro: "CRO AM 5488", specialty: "Dentista e Ortodontista", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
+      { name: "Dra. Helena Valença", cro: "Especialista", specialty: "Reabilitação Estética", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA (Foco nos Alinhadores)
+  // SEÇÃO: A ESSÊNCIA (A Experiência)
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "Ortodontia Invisível",
-    title1: "Sorria com",
-    title2: "liberdade e",
-    title3: "discrição.",
-    desc: "Os alinhadores transparentes unem discrição, conforto e planejamento para transformar o sorriso de um jeito muito mais leve. Quer saber se eles são uma opção para você?",
-    btn: "Agendar minha avaliação",
+    eyebrow: "A Experiência Áurea",
+    title1: "O fim do",
+    title2: "medo",
+    title3: "de ir ao dentista.",
+    desc: "Nós reimaginamos completamente a ida ao consultório. Do momento em que você cruza a nossa porta, tudo é pensado para baixar a sua frequência e elevar o seu bem-estar.",
+    btn: "Agendar um momento para mim",
     list: [
-      { title: "Praticidade no dia a dia", content: "Sendo removíveis, os alinhadores facilitam a higienização e não impõem restrições alimentares." },
-      { title: "Estética Incomparável", content: "Corrija seus dentes sem que ninguém perceba. O material é transparente e se adapta perfeitamente ao seu sorriso." },
-      { title: "Mais Conforto e Previsibilidade", content: "Sem fios metálicos machucando a boca. O tratamento é planejado digitalmente para ser suave e exato." }
+      { title: "Consultório Boutique", content: "Nossas salas são projetadas para reduzir a ansiedade. Esqueça as luzes brancas frias e os sons de motor; oferecemos fones com cancelamento de ruído e iluminação suave." },
+      { title: "Diagnóstico Digital 3D", content: "Antes de qualquer tratamento, escaneamos o seu sorriso. Você vê na tela, em 3D, como ficará o resultado final antes mesmo de começarmos." },
+      { title: "Concierge de Atendimento", content: "Você terá um canal direto com nossa equipe para dúvidas diárias, agendamentos flexíveis e acompanhamento pós-consulta." }
     ]
   },
 
@@ -135,18 +135,18 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "A Experiência",
-    title1: "Atenção a",
+    eyebrow: "A Atmosfera",
+    title1: "Beleza em",
     title2: "cada detalhe.",
-    quote: "Nosso objetivo é garantir que cada visita ao dentista seja uma experiência leve e positiva.",
-    supporting: "Acompanhe nosso ambiente e estrutura, preparados com carinho para receber pacientes de todas as idades.",
+    quote: "Acreditamos que a cura e o bem-estar começam no ambiente. Aqui, tudo inspira calma e renovação.",
+    supporting: "Navegue pelo nosso espaço e sinta um pouco da atmosfera que criamos exclusivamente para os nossos pacientes.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Dra Maraiza" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos" }
+      { img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&h=1000&fit=crop", alt: "Ambiente do Instituto" },
+      { img: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&h=1000&fit=crop", alt: "Atendimento Humanizado" },
+      { img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&h=1000&fit=crop", alt: "Tecnologia 3D" },
+      { img: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&h=1000&fit=crop", alt: "Estética Facial" },
+      { img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=1000&fit=crop", alt: "Precisão" },
+      { img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=1000&fit=crop", alt: "Sorrisos Leves" }
     ]
   },
 
@@ -154,29 +154,29 @@ export const globalData = {
   // SEÇÃO: CTA PARA RESULTADOS
   // ---------------------------------------------------
   results_cta: {
-    eyebrow: "Nossa Filosofia",
-    title1: "Sorrisos",
-    title2: "transformados.",
-    p1: "Acreditamos no poder de um sorriso saudável.",
-    p_bold1: "Veja na prática",
-    p2: "como nossos tratamentos de ortodontia, implantes e reabilitação estética trazem de volta a confiança dos nossos pacientes em nossa",
-    p_bold2: "galeria de resultados.",
-    p3: "",
-    p_bold3: "",
-    btn: "Ver Casos Clínicos",
-    imgUrl: "/imagens/dentes.png"
+    eyebrow: "O Portfólio",
+    title1: "Histórias",
+    title2: "reveladas.",
+    p1: "Nós não criamos sorrisos artificiais. Nós resgatamos a",
+    p_bold1: "identidade",
+    p2: "dos nossos pacientes. Veja as histórias de transformação na nossa",
+    p_bold2: "galeria de resultados clínicos",
+    p3: "e entenda por que o",
+    p_bold3: "Instituto Áurea é diferente.",
+    btn: "Ver Histórias Reais",
+    imgUrl: "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=800&q=80"
   },
 
   // ---------------------------------------------------
   // FAQ
   // ---------------------------------------------------
   faq: {
-    title: "Dúvidas Frequentes",
+    title: "O que você precisa saber",
     list: [
-      { q: "Onde o consultório está localizado?", a: "Nosso consultório fica na Rua Waldemar Ventura, 397, no bairro São José, em Manacapuru - AM." },
-      { q: "Os alinhadores transparentes servem para o meu caso?", a: "Os alinhadores são indicados para a maioria dos casos de desalinhamento dental. Para ter certeza, precisamos realizar uma avaliação clínica e um planejamento digital." },
-      { q: "A partir de qual idade as crianças podem ser atendidas?", a: "O ideal é que a primeira consulta aconteça logo nos primeiros anos de vida, focado na prevenção e na correta higienização dos dentes de leite." },
-      { q: "O implante dentário dói?", a: "Não. O procedimento de instalação de implantes é feito sob anestesia local, tornando a cirurgia completamente indolor e tranquila para o paciente." }
+      { q: "Onde o Instituto Áurea está localizado?", a: "Nosso refúgio urbano fica na Avenida das Gardênias, 1200, na cobertura do Boulevard Design, no coração dos Jardins, São Paulo." },
+      { q: "Eu tenho pavor de dentista. O Instituto é para mim?", a: "Absolutamente. Nossa clínica foi idealizada exatamente para pessoas como você. Usamos aromaterapia, fones de cancelamento de ruído, anestesias computadorizadas indolores e muito acolhimento." },
+      { q: "Como funciona a Primeira Experiência (Avaliação)?", a: "Não chamamos de avaliação. É um momento de escuta ativa. Fazemos um escaneamento 3D da sua boca, tiramos fotografias profissionais do seu rosto e conversamos sobre as suas expectativas sem nenhuma pressa." },
+      { q: "Lentes de porcelana desgastam os dentes originais?", a: "Trabalhamos com a odontologia minimamente invasiva. Nossas lentes são tão finas quanto uma lente de contato ocular, o que nos permite, na grande maioria dos casos, fazer zero ou mínimos desgastes na estrutura natural." }
     ]
   },
 
@@ -184,85 +184,85 @@ export const globalData = {
   // LOCALIZAÇÃO
   // ---------------------------------------------------
   location: {
-    eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Waldemar Ventura, 397", value2: "Bairro São José" },
-    box2: { title: "Localização", value1: "Manacapuru - AM", value2: "CEP: 69400-746" },
-    box3: { title: "Especialidades", value1: "Ortodontia, Implantes", value2: "Clínica Geral e Infantil" },
-    btn: "Abrir no Google Maps"
+    eyebrow: "Localização &\nContato",
+    box1: { title: "O Instituto", value1: "Boulevard Design, Cobertura 12", value2: "Avenida das Gardênias, 1200" },
+    box2: { title: "Localização", value1: "Jardins, São Paulo - SP", value2: "CEP: 01400-000" },
+    box3: { title: "Áreas de Atuação", value1: "Estética Natural, Implantes", value2: "Ortodontia Invisível e Prevenção" },
+    btn: "Abrir rota no Maps"
   },
 
   // ---------------------------------------------------
   // CONTATO FINAL
   // ---------------------------------------------------
   contact: {
-    eyebrow: "Marque uma Avaliação",
-    title1: "Quer saber se os alinhadores",
-    title2: "são para você?",
-    desc: "Agende sua avaliação e descubra como a odontologia moderna pode transformar o seu sorriso de forma rápida, confortável e invisível.",
+    eyebrow: "Inicie sua jornada",
+    title1: "A sua melhor versão",
+    title2: "está esperando.",
+    desc: "Permita-se viver uma experiência onde o cuidado clínico encontra o bem-estar absoluto. Entre em contato com a nossa concierge e reserve o seu horário.",
     box1_title: "Endereço",
-    box2_title: "Contato Rápido",
-    box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe a Clínica",
-    box3_desc2: "@dra.maraiza_horni"
+    box2_title: "Fale Conosco",
+    box3_title: "Nossa Comunidade",
+    box3_desc1: "Inspire-se conosco",
+    box3_desc2: "@instituto.aurea"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Dra. Maraiza Horni | Clínica Geral, Implantes e Ortodontia. Atendimento especializado para adultos e crianças em Manacapuru-AM.",
+    sobre: "Instituto Áurea | A arte de sorrir com alma. Odontologia estética e reabilitação de altíssimo padrão em um ambiente desenhado para o seu bem-estar.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Dra. Maraiza Horni. Todos os direitos reservados. CRO AM 5488.",
-    registro: "Manacapuru - AM"
+    direitos: "© 2026 Instituto Áurea. Todos os direitos reservados. Fictício para demonstração.",
+    registro: "Jardins — São Paulo, SP"
   },
 
   // ---------------------------------------------------
   // PÁGINA DE RESULTADOS
   // ---------------------------------------------------
   results_page: {
-    eyebrow: "Casos Clínicos",
-    title1: "Resultados com",
-    title2: "previsibilidade.",
-    p1: "Confira o impacto transformador dos nossos tratamentos em ",
-    p_bold1: "ortodontia e reabilitação",
-    p2: ". Devolver a saúde e a estética do sorriso é o nosso",
-    p_bold2: "maior compromisso.",
-    p3: "",
-    btnSaberMais: "Agendar avaliação semelhante",
-    btnVoltar: "Retornar à página inicial",
+    eyebrow: "Estudos de Caso",
+    title1: "Arte e",
+    title2: "Naturalidade.",
+    p1: "Nossa premissa é clara: um procedimento estético só é perfeito quando é",
+    p_bold1: "imperceptível",
+    p2: ". Observe nos casos abaixo a recuperação da",
+    p_bold2: "textura, cor e proporção",
+    p3: "dos sorrisos, sempre respeitando a essência facial de cada paciente.",
+    btnSaberMais: "Agendar minha avaliação",
+    btnVoltar: "Voltar para o Início",
     cases: [
       { 
-        category: "Alinhadores Transparentes", 
-        duration: "Ortodontia Invisível", 
-        complaint: "Dentes desalinhados gerando desconforto estético e paciente com resistência ao uso de aparelhos metálicos.", 
-        procedure: "Tratamento discreto com alinhadores removíveis, corrigindo o sorriso com alto conforto e estética.", 
-        beforeImg: "/imagens/branco.png", 
-        afterImg: "/imagens/preto.png" 
+        category: "Estética Natural", 
+        duration: "Lentes Ultra-finas", 
+        complaint: "Dentes desgastados pelo bruxismo e levemente escurecidos, conferindo um aspecto envelhecido ao rosto.", 
+        procedure: "Planejamento digital e cimentação de facetas cerâmicas artesanais, recuperando o comprimento jovem sem aspecto artificial.", 
+        beforeImg: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80", 
+        afterImg: "https://images.unsplash.com/photo-1506468160473-b6dcbc9c20a4?w=800&q=80" 
       },
       { 
-        category: "Implantodontia", 
-        duration: "Segurança e Função", 
-        complaint: "Perda de dentes que causava insegurança ao mastigar e ao sorrir.", 
-        procedure: "Instalação cirúrgica de implantes e colocação de prótese fixa, restaurando a saúde funcional da boca.", 
-        beforeImg: "/imagens/branco.png", 
-        afterImg: "/imagens/preto.png" 
+        category: "Reabilitação Complexa", 
+        duration: "Implantes Suíços", 
+        complaint: "Ausências dentárias que impactavam a mastigação e traziam timidez profunda na hora de sorrir.", 
+        procedure: "Instalação de implantes guiada por computador e fixação de dentes em porcelana idênticos aos naturais.", 
+        beforeImg: "https://images.unsplash.com/photo-1554721299-e0b8a798ee5e?w=800&q=80", 
+        afterImg: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80" 
       },
       { 
-        category: "Odontologia Estética", 
-        duration: "Clareamento e Resinas", 
-        complaint: "Sorriso com coloração amarelada e desgastes no esmalte dental ao longo dos anos.", 
-        procedure: "Clareamento clínico associado a leves adequações estéticas em resina, devolvendo a juventude ao sorriso.", 
-        beforeImg: "/imagens/branco.png", 
-        afterImg: "/imagens/preto.png" 
+        category: "Ortodontia Invisível", 
+        duration: "Alinhadores", 
+        complaint: "Apinhamento dos dentes inferiores e mordida profunda em paciente com aversão a aparelhos metálicos.", 
+        procedure: "Tratamento de 10 meses utilizando alinhadores invisíveis, alinhando os arcos de forma totalmente confortável e discreta.", 
+        beforeImg: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&q=80", 
+        afterImg: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" 
       },
       { 
-        category: "Clínica Geral Integrada", 
-        duration: "Saúde Bucal", 
-        complaint: "Dores pontuais e necessidade de adequação de saúde bucal após longo período sem ir ao dentista.", 
-        procedure: "Profilaxia completa, remoção de cáries e restaurações seguras para prevenir problemas futuros.", 
-        beforeImg: "/imagens/branco.png", 
-        afterImg: "/imagens/preto.png" 
+        category: "Longevidade", 
+        duration: "Adequação de Saúde", 
+        complaint: "Inflamação gengival constante e restaurações antigas de amálgama que comprometiam a estética.", 
+        procedure: "Sessões de Spa Odontológico para cura periodontal e substituição por resinas injetadas imperceptíveis.", 
+        beforeImg: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80", 
+        afterImg: "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=800&q=80" 
       }
     ]
   }

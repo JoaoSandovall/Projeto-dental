@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Dra. Maraiza Horni (Azul Marinho Suave - transmite confiança e saúde clínica) */
-  --c-primary: #1E3A5F;
-  --c-primary-rgb: 30, 58, 95;
-  --c-primary-hover: #152B47;
+  /* Cores Principais - Instituto Áurea (Verde Esmeralda Profundo - transmite saúde, vida e altíssimo padrão) */
+  --c-primary: #13322B;
+  --c-primary-rgb: 19, 50, 43;
+  --c-primary-hover: #0A1C18;
   
-  /* Cores de Destaque - Dra. Maraiza Horni (Champagne/Dourado - remete à estética, alinhadores e leveza) */
-  --c-accent: #C5A880;
-  --c-accent-rgb: 197, 168, 128;
-  --c-accent-hover: #B0926A;
+  /* Cores de Destaque - Instituto Áurea (Dourado Fosco/Champagne - remete ao luxo, estética e requinte) */
+  --c-accent: #C8A97E;
+  --c-accent-rgb: 200, 169, 126;
+  --c-accent-hover: #B08D5F;
   
-  /* Fundos - BRANCO PURO com seções secundárias em um tom cinza muito leve */
-  --c-bg: #FFFFFF;
-  --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F8F9FA; 
-  --c-team-placeholder: #1E3A5F;
+  /* Fundos - Off-White/Marfim com seções em um tom bege extremamente sutil */
+  --c-bg: #FDFCF0;
+  --c-bg-rgb: 253, 252, 240;
+  --c-bg-alt: #F7F5EA; 
+  --c-team-placeholder: #13322B;
   
   /* Textos */
-  --c-text-main: #1F2937;
-  --c-text-muted: #6B7280;
-  --c-text-light: #9CA3AF;
+  --c-text-main: #1C2220;
+  --c-text-muted: #5C6661;
+  --c-text-light: #9DA6A0;
 }
 
 html {
@@ -68,7 +68,6 @@ html, body {
   will-change: transform, filter, opacity;
 }
 
-/* 2. Movimento Lento da Aura de Fundo */
 @keyframes auraFloat {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   33% { transform: translate3d(3vw, -4vh, 0) scale(1.05); }
