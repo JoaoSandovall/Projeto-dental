@@ -8,29 +8,29 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Dra. Júllia Rodrigues",
-    subtitulo: "Odontologia Estética",
-    logoUrl: "/imagens/logo.png", // Mantido o seu caminho original
+    nome: "Dualle",
+    subtitulo: "Odontologia Especializada",
+    logoUrl: "/imagens/logo.png", // Mantido como solicitado
     contato: {
-      whatsappUrl: "https://wa.me/5584988125810", 
+      whatsappUrl: "https://wa.link/xngh9v", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(84) 98812-5810",
-      emailLabel: "contato@drajulliarodrigues.com.br",
-      instagramLabel: "@drajulliarodrigues",
+      telefoneLabel: "(84) 98789-0488",
+      emailLabel: "contato@dualleodonto.com.br",
+      instagramLabel: "@dualle.odonto",
     },
     endereco: {
-      bairroCidade: "Tirol, Natal - RN",
-      edificio: "Praça Augusto Leite, 656",
-      detalhado: "Praça Augusto Leite, 656 - Sala 12\nTirol\nNatal - RN, 59020-380",
-      comodidades: ["Facetas em Resina", "Clareamento Dental", "Dentística Restauradora", "Ambiente Acolhedor"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Dra+Jullia+Rodrigues+Dentista+Natal",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.6975850852562!2d-35.2036375!3d-5.7997312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b301f208fff727%3A0x9a488ad351f3f427!2sDra.%20J%C3%BAllia%20Rodrigues%20%7C%20Dentista%20em%20Natal%20%7C%20Clareamento%20Dental%20%7C%20Facetas%20em%20Resina!5e0!3m2!1spt-BR!2sbr!4v1788527145273!5m2!1spt-BR!2sbr"
+      bairroCidade: "Petrópolis, Natal - RN",
+      edificio: "Harmony Medical Center, Sala 1601",
+      detalhado: "Rua Coronel Joaquim Manoel, 615\n16º andar - Sala 1601\nPetrópolis, Natal - RN, 59012-530",
+      comodidades: ["Odontopediatria", "Ortodontia", "Facetas e Clareamento", "Prótese"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Dualle+Odontologia+Natal",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.516558095891!2d-35.19895952412895!3d-5.782455057071209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b30167d2626cf3%3A0x4d7812b6d52e2835!2sDualle%20Odontologia%20Especializada!5e0!3m2!1spt-BR!2sbr!4v1788549453063!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento de Segunda a Sexta\nEncerra às 18:00",
+    horarios: "Aberto de Segunda a Sexta\nEncerra às 21:00",
   },
 
   nav: {
-    links: ["A Profissional", "Especialidades", "A Experiência", "Resultados", "Contato"],
+    links: ["A Clínica", "Especialidades", "A Experiência", "Resultados", "Contato"],
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
@@ -38,22 +38,22 @@ export const globalData = {
   // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", // Mantido o seu caminho original
-    eyebrow: "Tirol — Natal, RN",
-    title1: "A arte da",
-    title2: "odontologia",
-    title3: "estética.",
-    desc1: "Com foco total em",
-    descBold: "Odontologia Estética e Restauradora,",
-    desc2: " realçamos a beleza natural do seu sorriso com precisão, muito cuidado e atenção a cada detalhe.",
-    btnPrimary: "Agende sua consulta",
+    imgUrl: "/imagens/hero.png", // Mantido como solicitado
+    eyebrow: "Harmony Medical Center — Natal, RN",
+    title1: "O cuidado que",
+    title2: "vai além do",
+    title3: "seu sorriso.",
+    desc1: "Acolhimento, confiança e",
+    descBold: "experiências leves desde cedo.",
+    desc2: " Na Dualle, atendemos adultos e crianças em todas as especialidades, garantindo excelência e cuidado em cada detalhe.",
+    btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossas Especialidades",
-    badgeTitle: "Dra. Júllia",
-    badgeDesc: "CRO-RN 7320",
+    badgeTitle: "Dra. Sabrina Azevedo",
+    badgeDesc: "CRO/RN 5132",
     stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 23, suffix: "+", label: "avaliações reais", thousands: false },
-      { target: 100, suffix: "%", label: "atenção e cuidado", thousands: false },
+      { target: 4, suffix: ".9", label: "estrelas no google", thousands: false },
+      { target: 35, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 100, suffix: "%", label: "cuidado e dedicação", thousands: false },
     ]
   },
 
@@ -61,25 +61,25 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Profissional",
-    title1: "Atendimento",
-    title2: "agradável e",
-    title3: "altamente qualificado.",
-    p1: "Localizada no bairro Tirol, em Natal, nossa clínica oferece uma experiência única. Somos uma empresa de empreendedoras, e um espaço seguro que acolhe a comunidade LGBTQ+ com todo o respeito.",
-    p2_1: "Sob os cuidados da ",
-    p2_bold: "Dra. Júllia Rodrigues (CRO-RN 7320)",
-    p2_2: ", pós-graduada em Dentística, você recebe um tratamento focado em detalhes precisos e muita dedicação para promover sempre o melhor para os pacientes.",
+    eyebrow: "A Dualle",
+    title1: "Acolhimento e",
+    title2: "confiança",
+    title3: "para toda a família.",
+    p1: "Localizada no Harmony Medical Center em Natal, a Dualle Odontologia Especializada nasceu para transformar a sua relação com o dentista.",
+    p2_1: "Liderada pela ",
+    p2_bold: "Dra. Sabrina Azevedo (CRO/RN 5132)",
+    p2_2: ", nossa equipe é dedicada a criar experiências leves desde cedo, atendendo todas as especialidades para cuidar de crianças e adultos com o mesmo carinho.",
     topics: [
-      { title: "Odontologia Estética", desc: "Procedimentos de alta precisão que devolvem a harmonia do seu rosto." },
-      { title: "Dentística Restauradora", desc: "Pós-graduação e expertise para tratamentos seguros e duradouros." },
-      { title: "Acolhimento Real", desc: "Um ambiente onde você é ouvido, respeitado e bem atendido." },
-      { title: "Clareza e Objetividade", desc: "Comunicação transparente em todas as etapas do seu procedimento." },
+      { title: "Odontopediatria", desc: "Criamos experiências lúdicas para que as crianças amem cuidar do sorriso desde cedo." },
+      { title: "Odontologia Estética", desc: "Facetas, clareamento e soluções modernas para adultos sorrirem com confiança." },
+      { title: "Todas as Especialidades", desc: "Da ortodontia à prótese, centralizamos toda a sua saúde bucal em um só lugar." },
+      { title: "Acolhimento Real", desc: "Entendemos seus desejos e respeitamos o tempo de cada paciente na cadeira." },
     ],
-    btn: "Quero agendar uma avaliação",
+    btn: "Quero conhecer a clínica",
     gallery: [
-      { url: "/imagens/hero.png", title: "Saúde Bucal" }, // Mantido o seu caminho original
+      { url: "/imagens/hero.png", title: "Saúde Bucal" }, // Mantido como solicitado
       { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Cuidado Humanizado" },
-      { url: "/imagens/leve.png", title: "Sorrisos Leves" } // Mantido o seu caminho original
+      { url: "/imagens/leve.png", title: "Sorrisos Leves" } // Mantido como solicitado
     ]
   },
 
@@ -88,19 +88,19 @@ export const globalData = {
   // ---------------------------------------------------
   services: {
     eyebrow: "Nossos Tratamentos",
-    title1: "Beleza natural",
-    title2: "e restauração.",
-    desc1: "Oferecemos soluções voltadas para a ",
-    descBold: "estética e saúde do seu sorriso",
-    desc2: ", unindo as melhores técnicas da dentística moderna.",
+    title1: "Cuidado para",
+    title2: "todas as idades.",
+    desc1: "Oferecemos odontologia integrada para ",
+    descBold: "crianças e adultos",
+    desc2: ", garantindo conforto e resultados duradouros em todas as fases da vida.",
     btn: "Ver todas as áreas",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Facetas em Resina", desc: "Transformações estéticas de alta performance, corrigindo cor e formato dos dentes com resinas imperceptíveis." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Renove a luminosidade e o brilho do seu sorriso com técnicas modernas e seguras no consultório." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Dentística Restauradora", desc: "Restaurações estéticas que devolvem a função mastigatória preservando a naturalidade dental." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prevenção e Profilaxia", desc: "Limpezas profundas e acompanhamento contínuo para garantir que a beleza do seu sorriso se mantenha saudável." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Tempo dedicado para escutar suas necessidades e construir o tratamento ideal com você." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Espaço Inclusivo", desc: "Um ambiente seguro, feito por empreendedoras, de respeito absoluto a todos e apoio à comunidade LGBTQ+." }
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria", desc: "Atendimento especializado, lúdico e paciente para criar memórias positivas e cuidar da saúde bucal infantil." },
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Facetas e Estética", desc: "Transformação do formato e cor dos dentes com naturalidade, elevando a harmonia do seu rosto." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Correção da mordida e alinhamento dos dentes para adultos e crianças com aparelhos modernos." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Técnicas seguras para remover manchas e devolver o brilho e a cor clara natural ao seu sorriso." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prótese e Reabilitação", desc: "Devolvemos a função mastigatória e a estética para quem sofreu desgaste ou perda estrutural dos dentes." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Clínica Geral", desc: "Prevenção, profilaxia (limpeza) e restaurações essenciais para manter a saúde diária da sua boca." }
     ]
   },
 
@@ -110,7 +110,7 @@ export const globalData = {
   team: {
     title: "Quem cuida de você",
     members: [
-      { name: "Dra. Júllia Rodrigues", cro: "CRO-RN 7320", specialty: "Odontologia Estética e Restauradora", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
+      { name: "Dra. Sabrina Azevedo", cro: "CRO/RN 5132", specialty: "Dentista Especializada", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" } // Mantido url original
     ]
   },
 
@@ -118,16 +118,16 @@ export const globalData = {
   // SEÇÃO: A ESSÊNCIA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Experiência",
-    title1: "Cuidado em",
-    title2: "cada",
-    title3: "detalhe.",
-    desc: "Nossos pacientes destacam constantemente a atenção, a rapidez e a objetividade em nossos atendimentos. Estamos aqui para oferecer o melhor de forma única.",
+    eyebrow: "A Experiência Dualle",
+    title1: "Experiências",
+    title2: "leves",
+    title3: "desde cedo.",
+    desc: "Acreditamos que ir ao dentista não precisa ser motivo de medo. Venha viver esse cuidado de perto em um ambiente preparado para relaxar você e sua família.",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Postura e Profissionalismo", content: "Nosso atendimento é focado em entregar resultados com agilidade e clareza, sempre respeitando o tempo do paciente." },
-      { title: "Detalhes Precisos", content: "Acreditamos que na estética odontológica, a precisão milimétrica é o que diferencia um tratamento bom de um tratamento espetacular." },
-      { title: "Dedicação ao Paciente", content: "Nos dedicamos integralmente a promover o melhor para quem senta em nossa cadeira, garantindo uma experiência agradável." }
+      { title: "Do infantil ao adulto", content: "Nosso espaço e atendimento são adaptáveis: lúdicos para os pequenos e extremamente sofisticados e objetivos para os adultos." },
+      { title: "Segurança e Confiança", content: "Construímos relacionamentos duradouros com nossos pacientes através da transparência em cada diagnóstico." },
+      { title: "Localização Privilegiada", content: "Estamos no 16º andar do Harmony Medical Center, em Petrópolis, oferecendo comodidade e fácil acesso em Natal." }
     ]
   },
 
@@ -138,10 +138,11 @@ export const globalData = {
     eyebrow: "O que dizem sobre nós",
     title1: "Uma experiência",
     title2: "única.",
-    quote: "Uma qualidade a destacar é nos detalhes precisos em todos os procedimentos estéticos e postura profissional.",
-    supporting: "Nossos pacientes no Google avaliam nosso trabalho com 5.0 estrelas. Acompanhe a atmosfera de cuidado da nossa clínica no Tirol.",
+    quote: "Uma qualidade a destacar é a atenção aos detalhes e o profissionalismo. Experiência altamente recomendada.",
+    supporting: "Nossos pacientes no Google avaliam nosso trabalho com 4.9 estrelas. Sinta um pouco do ambiente acolhedor da Dualle.",
+    // Mantidas todas as URLs do Unsplash do content_8.tsx
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Dra Jullia" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Dualle" },
       { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
       { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
       { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
@@ -157,14 +158,14 @@ export const globalData = {
     eyebrow: "O Portfólio",
     title1: "Sorrisos",
     title2: "transformados.",
-    p1: "Acreditamos no poder da",
-    p_bold1: "odontologia estética",
-    p2: "feita com responsabilidade.",
-    p_bold2: "Veja na prática",
-    p3: "o impacto de tratamentos como clareamento e facetas em resina na nossa",
-    p_bold3: "galeria de resultados clínicos.",
+    p1: "Acreditamos no poder de uma",
+    p_bold1: "odontologia bem planejada.",
+    p2: "Veja na prática como realçamos a estética e devolvemos a saúde aos nossos pacientes em nossa",
+    p_bold2: "galeria de casos clínicos",
+    p3: "e venha viver esse cuidado de perto.",
+    p_bold3: "",
     btn: "Ver Casos Clínicos",
-    imgUrl: "/imagens/dentes.png" // Mantido o seu caminho original
+    imgUrl: "/imagens/dentes.png" // Mantido como solicitado
   },
 
   // ---------------------------------------------------
@@ -173,10 +174,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde o consultório da Dra. Júllia está localizado?", a: "Nosso consultório fica na Praça Augusto Leite, 656 - Sala 12, no bairro Tirol, em Natal - RN." },
-      { q: "O que são Facetas em Resina?", a: "São finas camadas de resina aplicadas sobre os dentes para corrigir imperfeições de cor, formato e alinhamento, de forma rápida e menos invasiva." },
-      { q: "O clareamento dental deixa os dentes sensíveis?", a: "A sensibilidade pode ocorrer de forma leve, mas utilizamos técnicas e materiais que minimizam muito esse desconforto, garantindo um processo seguro." },
-      { q: "Vocês atendem todos os públicos?", a: "Com certeza! Somos um espaço seguro, de empreendedoras, que acolhe a comunidade LGBTQ+ com todo carinho, respeito e profissionalismo." }
+      { q: "Onde o consultório da Dualle está localizado?", a: "Nosso consultório fica no Harmony Medical Center, 16º andar - Sala 1601, na Rua Coronel Joaquim Manoel, 615, no bairro Petrópolis, em Natal - RN." },
+      { q: "Com qual idade devo levar meu filho ao Odontopediatra?", a: "Recomendamos que a primeira visita ocorra logo quando nascem os primeiros dentinhos de leite, para que possamos criar uma experiência leve e focar na prevenção." },
+      { q: "Quais especialidades vocês atendem?", a: "A Dualle atende todas as especialidades: odontopediatria para os pequenos, e estética, ortodontia, clareamento, facetas e prótese para os adultos." },
+      { q: "O clareamento dental deixa os dentes sensíveis?", a: "A sensibilidade pode ocorrer, mas utilizamos técnicas modernas e individualizadas no consultório que minimizam o desconforto e garantem um processo seguro." }
     ]
   },
 
@@ -185,9 +186,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Praça Augusto Leite, 656", value2: "Sala 12 - Tirol" },
-    box2: { title: "Localização", value1: "Natal - RN", value2: "CEP: 59020-380" },
-    box3: { title: "Especialidades", value1: "Dentística Restauradora", value2: "Facetas e Clareamento" },
+    box1: { title: "Endereço", value1: "R. Cel. Joaquim Manoel, 615", value2: "Harmony Medical Center - Sl 1601" },
+    box2: { title: "Localização", value1: "Petrópolis, Natal - RN", value2: "CEP: 59012-530" },
+    box3: { title: "Especialidades", value1: "Odontopediatria, Estética", value2: "Ortodontia e Prótese" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +197,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "A beleza do seu",
-    title2: "sorriso te espera.",
-    desc: "Agende sua avaliação e descubra como a odontologia estética pode realçar o que você tem de melhor, com cuidado e precisão.",
+    title1: "Venha viver esse",
+    title2: "cuidado de perto!",
+    desc: "Agende sua avaliação e descubra como a odontologia especializada pode cuidar do sorriso de toda a sua família.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
     box3_desc1: "Acompanhe nossos casos",
-    box3_desc2: "@drajulliarodrigues"
+    box3_desc2: "@dualle.odonto"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Dra. Júllia Rodrigues | Pós-graduada em Dentística. Odontologia Estética e Restauradora com atendimento acolhedor em Natal-RN.",
+    sobre: "Dualle | Dentistas para crianças e adultos em Natal/RN. O cuidado que vai além do seu sorriso.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 Dra. Júllia Rodrigues. Todos os direitos reservados. CRO-RN 7320.",
-    registro: "Tirol — Natal, RN"
+    direitos: "© 2026 Dualle Odontologia Especializada. Todos os direitos reservados. Dra. Sabrina Azevedo CRO/RN 5132.",
+    registro: "Petrópolis — Natal, RN"
   },
 
   // ---------------------------------------------------
@@ -225,44 +226,44 @@ export const globalData = {
     title1: "Resultados com",
     title2: "precisão.",
     p1: "Confira a transformação dos sorrisos através da nossa dedicação em ",
-    p_bold1: "Odontologia Estética",
-    p2: ". Valorizamos os",
-    p_bold2: "detalhes precisos",
-    p3: "para garantir a beleza natural e a saúde em cada procedimento.",
+    p_bold1: "Odontologia Especializada",
+    p2: ". Valorizamos o",
+    p_bold2: "cuidado e a saúde",
+    p3: "em cada fase da vida, do infantil ao adulto.",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
         category: "Estética Avançada", 
-        duration: "Facetas em Resina", 
-        complaint: "Dentes com formato irregular e descontentamento com a cor do sorriso.", 
-        procedure: "Aplicação de facetas em resina com modelagem detalhista, devolvendo simetria e brilho natural.", 
-        beforeImg: "/imagens/branco.png", // Mantido o seu caminho original
-        afterImg: "/imagens/preto.png"    // Mantido o seu caminho original
+        duration: "Facetas e Resinas", 
+        complaint: "Descontentamento com o formato e cor do sorriso na fase adulta.", 
+        procedure: "Aplicação de facetas com modelagem detalhista, devolvendo simetria e brilho natural.", 
+        beforeImg: "/imagens/branco.png", // Mantido como solicitado
+        afterImg: "/imagens/preto.png"    // Mantido como solicitado
       },
       { 
-        category: "Clareamento e Harmonia", 
-        duration: "Clareamento Dental", 
-        complaint: "Sorriso com coloração amarelada e aspecto de cansaço devido a pigmentos.", 
-        procedure: "Protocolo de clareamento seguro e monitorado, alcançando uma tonalidade limpa e iluminada.", 
-        beforeImg: "/imagens/branco.png", // Mantido o seu caminho original
-        afterImg: "/imagens/preto.png"    // Mantido o seu caminho original
+        category: "Clareamento", 
+        duration: "Estética do Sorriso", 
+        complaint: "Sorriso com coloração amarelada e aspecto de cansaço.", 
+        procedure: "Protocolo de clareamento seguro no consultório, alcançando uma tonalidade limpa e iluminada.", 
+        beforeImg: "/imagens/branco.png", // Mantido como solicitado
+        afterImg: "/imagens/preto.png"    // Mantido como solicitado
       },
       { 
-        category: "Restauração de Alta Performance", 
-        duration: "Dentística Restauradora", 
-        complaint: "Restaurações antigas escurecidas que comprometiam a confiança ao sorrir.", 
-        procedure: "Substituição por resinas de alta tecnologia, imperceptíveis e com excelente durabilidade e polimento.", 
-        beforeImg: "/imagens/branco.png", // Mantido o seu caminho original
-        afterImg: "/imagens/preto.png"    // Mantido o seu caminho original
+        category: "Ortodontia", 
+        duration: "Alinhamento Perfeito", 
+        complaint: "Dentes desalinhados prejudicando a mastigação e a confiança.", 
+        procedure: "Tratamento ortodôntico contínuo, garantindo a correção da mordida e um sorriso harmônico.", 
+        beforeImg: "/imagens/branco.png", // Mantido como solicitado
+        afterImg: "/imagens/preto.png"    // Mantido como solicitado
       },
       { 
-        category: "Saúde e Prevenção", 
-        duration: "Profilaxia Estética", 
-        complaint: "Presença de tártaro e manchas superficiais que apagavam o brilho dos dentes.", 
-        procedure: "Limpeza profunda e polimento coronário, devolvendo a saúde das gengivas e a textura lisa dos dentes.", 
-        beforeImg: "/imagens/branco.png", // Mantido o seu caminho original
-        afterImg: "/imagens/preto.png"    // Mantido o seu caminho original
+        category: "Odontopediatria", 
+        duration: "Saúde Infantil", 
+        complaint: "Necessidade de adaptação e prevenção em pacientes infantis/pré-adolescentes.", 
+        procedure: "Atendimento acolhedor focado em profilaxia e desenvolvimento saudável da dentição.", 
+        beforeImg: "/imagens/branco.png", // Mantido como solicitado
+        afterImg: "/imagens/preto.png"    // Mantido como solicitado
       }
     ]
   }
