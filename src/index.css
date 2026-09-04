@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Instituto Áurea (Verde Esmeralda Profundo - Saúde, exclusividade e calma) */
-  --c-primary: #0F2922;
-  --c-primary-rgb: 15, 41, 34;
-  --c-primary-hover: #0A1C17;
+  /* Cores Principais - Dra. Júllia (Marrom Escuro Aquecido/Grafite - Contraste elegante e sofisticado) */
+  --c-primary: #382E2A;
+  --c-primary-rgb: 56, 46, 42;
+  --c-primary-hover: #261F1C;
   
-  /* Cores de Destaque - Dourado Fosco/Champagne (Sofisticação, estética e conversão) */
-  --c-accent: #D4AF37;
-  --c-accent-rgb: 212, 175, 55;
-  --c-accent-hover: #B5952F;
+  /* Cores de Destaque - Dra. Júllia (Coral/Salmão extraído exatamente da sacola e logotipo oficial) */
+  --c-accent: #DF7465;
+  --c-accent-rgb: 223, 116, 101;
+  --c-accent-hover: #C55E50;
   
-  /* Fundos - Off-White/Marfim (Sensação de Spa, não cansa a vista do cliente) */
-  --c-bg: #FCFBF8;
-  --c-bg-rgb: 252, 251, 248;
-  --c-bg-alt: #F3F1EA; 
-  --c-team-placeholder: #0F2922;
+  /* Fundos - Off-White quente (Bege muito sutil, combinando com a identidade da marca) */
+  --c-bg: #FDFCF9;
+  --c-bg-rgb: 253, 252, 249;
+  --c-bg-alt: #F4EFEA; 
+  --c-team-placeholder: #382E2A;
   
   /* Textos */
-  --c-text-main: #1A211E;
-  --c-text-muted: #5E6662;
-  --c-text-light: #9DA6A1;
+  --c-text-main: #2A2320;
+  --c-text-muted: #6B5E59;
+  --c-text-light: #A39690;
 }
 
 html {
@@ -68,7 +68,6 @@ html, body {
   will-change: transform, filter, opacity;
 }
 
-/* Aura de fundo agora com leve gradiente para trazer vida ao site */
 @keyframes auraFloat {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   33% { transform: translate3d(3vw, -4vh, 0) scale(1.05); }
