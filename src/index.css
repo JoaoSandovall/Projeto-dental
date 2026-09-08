@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Curso VIP (Azul Meia-Noite Profundo - Autoridade, Foco e Premium) */
-  --c-primary: #0A1128;
-  --c-primary-rgb: 10, 17, 40;
-  --c-primary-hover: #050814;
+  /* Cores Principais - OdontoMed Prime (Preto Luxo / Grafite Profundo extraído do fundo da logo) */
+  --c-primary: #141414;
+  --c-primary-rgb: 20, 20, 20;
+  --c-primary-hover: #000000;
   
-  /* Cores de Destaque - (Dourado Champagne - Remete a turmas exclusivas e alto padrão) */
-  --c-accent: #D4AF37;
-  --c-accent-rgb: 212, 175, 55;
-  --c-accent-hover: #B5952F;
+  /* Cores de Destaque - OdontoMed Prime (Dourado Premium da sigla "OMP") */
+  --c-accent: #C5A059;
+  --c-accent-rgb: 197, 160, 89;
+  --c-accent-hover: #A88546;
   
-  /* Fundos - Branco Puro com tons muito leves de cinza-azulado nas seções */
+  /* Fundos - Branco Puro com seções secundárias em um Off-White levemente aquecido pelo dourado */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F4F6F9; 
-  --c-team-placeholder: #0A1128;
+  --c-bg-alt: #FBF9F6; 
+  --c-team-placeholder: #141414;
   
   /* Textos */
-  --c-text-main: #111827;
-  --c-text-muted: #4B5563;
-  --c-text-light: #9CA3AF;
+  --c-text-main: #1A1A1A;
+  --c-text-muted: #666666;
+  --c-text-light: #A3A3A3;
 }
 
 html {
@@ -132,11 +132,11 @@ html, body {
 .stagger-children > *:nth-child(9) { transition-delay: .72s; }
 
 .header-scrolled {
-  background: rgba(var(--c-bg-rgb),.98);
+  background: rgba(var(--c-bg-rgb),.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(var(--c-primary-rgb),.05);
-  box-shadow: 0 4px 20px rgba(var(--c-primary-rgb),.05);
+  box-shadow: 0 4px 24px rgba(var(--c-primary-rgb),.05);
 }
 
 .nav-link {
@@ -166,11 +166,10 @@ html, body {
   color: #FFFFFF;
   font-family: 'DM Sans', sans-serif;
   font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  border-radius: 4px;
-  padding: .9rem 2.5rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  border-radius: 5px;
+  padding: .85rem 2.4rem;
   border: none;
   cursor: pointer;
   transition: background .22s ease, transform .18s ease, box-shadow .22s ease;
@@ -188,11 +187,10 @@ html, body {
   color: var(--c-primary);
   font-family: 'DM Sans', sans-serif;
   font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  border-radius: 4px;
-  padding: .9rem 2.5rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  border-radius: 5px;
+  padding: .85rem 2.4rem;
   background: transparent;
   cursor: pointer;
   transition: border-color .22s ease, background .22s ease, transform .18s ease;
@@ -200,7 +198,7 @@ html, body {
 
 .btn-outline:hover {
   border-color: var(--c-primary);
-  background: rgba(var(--c-primary-rgb),.04);
+  background: rgba(var(--c-primary-rgb),.06);
   transform: translateY(-2px);
 }
 
@@ -209,9 +207,9 @@ html, body {
 }
 
 .eyebrow {
-  display: inline-block; font-family: 'DM Sans', sans-serif; font-size: .68rem; font-weight: 700;
-  letter-spacing: .25em; text-transform: uppercase; color: var(--c-accent); padding-bottom: 4px;
-  border-bottom: 2px solid rgba(var(--c-accent-rgb), 0.4); margin-bottom: 1.6rem;
+  display: inline-block; font-family: 'DM Sans', sans-serif; font-size: .68rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--c-accent); padding-bottom: 4px;
+  border-bottom: 1px solid rgba(var(--c-accent-rgb), 0.4); margin-bottom: 1.6rem;
 }
 
 .stat-float { animation: floatY 4.5s ease-in-out infinite; }
