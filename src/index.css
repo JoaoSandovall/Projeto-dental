@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Template Premium (Azul Marinho Profundo - transmite autoridade e segurança) */
-  --c-primary: #0A1B2E;
-  --c-primary-rgb: 10, 27, 46;
-  --c-primary-hover: #06111D;
+  /* Cores Principais - MF Beauty (Grafite Profundo - Elegante, remete ao VIP) */
+  --c-primary: #1A1A1A;
+  --c-primary-rgb: 26, 26, 26;
+  --c-primary-hover: #000000;
   
-  /* Cores de Destaque - Template Premium (Dourado/Champagne - remete a alto padrão) */
-  --c-accent: #C5A46D;
-  --c-accent-rgb: 197, 164, 109;
-  --c-accent-hover: #A68755;
+  /* Cores de Destaque - MF Beauty (Dourado Champagne da Logo) */
+  --c-accent: #D0A96B;
+  --c-accent-rgb: 208, 169, 107;
+  --c-accent-hover: #B89255;
   
-  /* Fundos - Branco Puro com seções Off-White limpas */
-  --c-bg: #FFFFFF;
-  --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F8F9FA; 
-  --c-team-placeholder: #0A1B2E;
+  /* Fundos - Off-White com toque quente (inspirado na iluminação da clínica) */
+  --c-bg: #FCFBFA;
+  --c-bg-rgb: 252, 251, 250;
+  --c-bg-alt: #F4F1ED; 
+  --c-team-placeholder: #1A1A1A;
   
   /* Textos */
-  --c-text-main: #1A1F24;
-  --c-text-muted: #5C656D;
-  --c-text-light: #A1AAB3;
+  --c-text-main: #2D2A26;
+  --c-text-muted: #7A7571;
+  --c-text-light: #B3AEAA;
 }
 
 html {
