@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - OdontoMed Prime (Preto Luxo / Grafite Profundo extraído do fundo da logo) */
-  --c-primary: #141414;
-  --c-primary-rgb: 20, 20, 20;
-  --c-primary-hover: #000000;
+  /* Cores Principais - Template Premium (Azul Marinho Profundo - transmite autoridade e segurança) */
+  --c-primary: #0A1B2E;
+  --c-primary-rgb: 10, 27, 46;
+  --c-primary-hover: #06111D;
   
-  /* Cores de Destaque - OdontoMed Prime (Dourado Premium da sigla "OMP") */
-  --c-accent: #C5A059;
-  --c-accent-rgb: 197, 160, 89;
-  --c-accent-hover: #A88546;
+  /* Cores de Destaque - Template Premium (Dourado/Champagne - remete a alto padrão) */
+  --c-accent: #C5A46D;
+  --c-accent-rgb: 197, 164, 109;
+  --c-accent-hover: #A68755;
   
-  /* Fundos - Branco Puro com seções secundárias em um Off-White levemente aquecido pelo dourado */
+  /* Fundos - Branco Puro com seções Off-White limpas */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #FBF9F6; 
-  --c-team-placeholder: #141414;
+  --c-bg-alt: #F8F9FA; 
+  --c-team-placeholder: #0A1B2E;
   
   /* Textos */
-  --c-text-main: #1A1A1A;
-  --c-text-muted: #666666;
-  --c-text-light: #A3A3A3;
+  --c-text-main: #1A1F24;
+  --c-text-muted: #5C656D;
+  --c-text-light: #A1AAB3;
 }
 
 html {
@@ -78,7 +78,7 @@ html, body {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.15;
+  opacity: 0.12;
   animation: auraFloat 18s linear infinite;
   z-index: 0;
   pointer-events: none;

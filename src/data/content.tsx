@@ -8,29 +8,29 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "OdontoMed Prime",
+    nome: "Lumina Integrada",
     subtitulo: "Odontologia & Medicina",
     logoUrl: "/imagens/logo.png", // Mantido o seu caminho original
     contato: {
-      whatsappUrl: "https://wa.me/message/5CKVQUCTAYBJF1", 
+      whatsappUrl: "https://wa.me/5500000000000", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(91) 99124-3754",
-      emailLabel: "contato@odontomedprime.com.br",
-      instagramLabel: "@odonto.med.prime",
+      telefoneLabel: "(00) 90000-0000",
+      emailLabel: "contato@clinicamodelo.com.br",
+      instagramLabel: "@lumina.integrada",
     },
     endereco: {
-      bairroCidade: "Centro, Breves - PA",
-      edificio: "OdontoMed Prime",
-      detalhado: "R. Cel. Lourenço Borges, 1921\nCentro\nBreves - PA, 68800-000",
-      comodidades: ["Odontologia Especializada", "Especialidades Médicas", "Radiologia Integrada", "Atendimento Multiprofissional"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/OdontoMed+Prime+Breves",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.093624170763!2d-50.48529752416566!3d-1.6847404982996388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x929839db4169df93%3A0xed0f51e705f78a18!2sOdontoMed%20Prime!5e0!3m2!1spt-BR!2sbr!4v1788891437222!5m2!1spt-BR!2sbr"
+      bairroCidade: "Bairro Nobre, Sua Cidade - UF",
+      edificio: "Edifício Saúde & Bem-estar",
+      detalhado: "Avenida Principal, 1000\nBairro Nobre\nSua Cidade - UF, 00000-000",
+      comodidades: ["Odontologia Especializada", "Especialidades Médicas", "Radiologia Digital", "Atendimento Multiprofissional"],
+      mapaGpsUrl: "#",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975850290515!2d-46.66699318447573!3d-23.561332784682496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cd3e54bba9%3A0xc0fb1f2c2ecf555c!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1714400000000!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:30",
+    horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:00",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "A Missão", "Resultados", "Contato"],
+    links: ["A Clínica", "Especialidades", "Nossa Filosofia", "Resultados", "Contato"],
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
@@ -39,20 +39,20 @@ export const globalData = {
   // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png", // Mantido o seu caminho original
-    eyebrow: "Centro — Breves, PA",
-    title1: "Saúde e",
-    title2: "Sorrisos",
-    title3: "de Excelência.",
+    eyebrow: "Sua Cidade — UF",
+    title1: "A arte de",
+    title2: "transformar",
+    title3: "vidas.",
     desc1: "Bem-vindo a um centro integrado de saúde de",
     descBold: "alta performance.",
-    desc2: " Na OdontoMed Prime, unimos odontologia e especialidades médicas em um único espaço para cuidar de você com tecnologia, segurança e responsabilidade.",
-    btnPrimary: "Cuide-se com exclusividade",
+    desc2: " Unimos as mais avançadas técnicas da odontologia e da medicina em um único espaço para cuidar da sua saúde com segurança absoluta.",
+    btnPrimary: "Agendar minha avaliação",
     btnOutline: "Nossas Especialidades",
-    badgeTitle: "OdontoMed Prime",
-    badgeDesc: "Clínica Integrada",
+    badgeTitle: "Lumina Integrada",
+    badgeDesc: "Cuidado Completo",
     stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 60, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 5, suffix: ".0", label: "estrelas de satisfação", thousands: false },
+      { target: 10, suffix: "+", label: "especialidades integradas", thousands: false },
       { target: 100, suffix: "%", label: "foco no paciente", thousands: false },
     ]
   },
@@ -61,21 +61,21 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A OdontoMed Prime",
-    title1: "Odontologia",
-    title2: "e medicina",
+    eyebrow: "A Clínica Lumina",
+    title1: "Saúde e",
+    title2: "medicina",
     title3: "integradas.",
-    p1: "Somos um centro completo dedicado ao seu bem-estar. Aqui você encontra o cuidado completo, da saúde bucal ao acompanhamento médico.",
-    p2_1: "Sob a responsabilidade de profissionais experientes e dedicados, como a ",
-    p2_bold: "Dra. Marina Carvalho",
-    p2_2: ", nossa clínica foi projetada para entregar o mais alto padrão em saúde, com uma equipe multiprofissional em um ambiente acolhedor e moderno.",
+    p1: "Acreditamos que o corpo humano é um sistema interligado. Por isso, criamos um espaço completo onde a sua saúde oral e sistêmica são tratadas de forma unificada.",
+    p2_1: "Liderada por um ",
+    p2_bold: "corpo clínico altamente experiente",
+    p2_2: ", nossa estrutura foi projetada para oferecer diagnósticos precisos e tratamentos definitivos em um ambiente onde você se sinta verdadeiramente acolhido.",
     topics: [
-      { title: "Odontologia de Ponta", desc: "Soluções completas, de limpezas preventivas a implantes, canal e odontopediatria." },
-      { title: "Especialidades Médicas", desc: "Clínica Geral, Cardiologia, Ginecologia, Nutrição, Ortopedia e Psicologia." },
-      { title: "Radiologia Completa", desc: "Tomografia Cone Beam 3D, Raio-x Panorâmico e exames por imagem na própria clínica." },
-      { title: "Estética Facial", desc: "Harmonização com Botox e Preenchedores focados em naturalidade e rejuvenescimento." },
+      { title: "Odontologia de Excelência", desc: "Do cuidado preventivo e odontopediatria até reabilitações completas com implantes de alto padrão." },
+      { title: "Especialidades Médicas", desc: "Corpo clínico preparado para realizar consultas, exames e acompanhamento contínuo da sua saúde." },
+      { title: "Centro de Radiologia", desc: "Equipamentos de Tomografia 3D e Raio-X Panorâmico disponíveis na própria clínica, sem precisar se deslocar." },
+      { title: "Estética e Harmonização", desc: "Procedimentos voltados para o rejuvenescimento facial, sempre preservando a naturalidade dos seus traços." },
     ],
-    btn: "Quero conhecer a clínica",
+    btn: "Quero conhecer a estrutura",
     gallery: [
       { url: "/imagens/hero.png", title: "Saúde Integrada" }, // Mantido o seu caminho original
       { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80", title: "Atendimento Médico" },
@@ -89,18 +89,18 @@ export const globalData = {
   services: {
     eyebrow: "Tratamentos & Especialidades",
     title1: "Tudo para a",
-    title2: "sua saúde",
-    desc1: "Da prevenção ao tratamento avançado. Oferecemos ",
+    title2: "sua saúde.",
+    desc1: "Da prevenção primária ao tratamento de alta complexidade. Oferecemos ",
     descBold: "tecnologia e profissionais dedicados",
-    desc2: " para cuidar da sua saúde integralmente.",
+    desc2: " para cuidar da sua família.",
     btn: "Ver todas as áreas",
     list: [
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes e Reabilitação", desc: "Substitua dentes perdidos com segurança. Devolvemos função, estética e estabilidade ao seu sorriso." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Endodontia e Cirurgias", desc: "Tratamentos de canal para eliminar a dor preservando o dente, além de extrações seguras de sisos." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Radiologia Integrada", desc: "Diagnósticos precisos com Tomografia Cone Beam 3D, Raio-x Panorâmico, Periapical e Carpal." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Corpo Médico Completo", desc: "Consultas e exames em Cardiologia, Ginecologia, Nutrição, Ortopedia, Psicologia e Ultrassonografia." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria & Ortodontia", desc: "Cuidado com o sorriso desde cedo com carinho e aparelhos para o alinhamento perfeito dos dentes." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Harmonização Facial", desc: "Aplicação de Botox e Preenchedores faciais para suavizar linhas de expressão com naturalidade." }
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes e Reabilitação Oral", desc: "Substitua dentes perdidos com segurança cirúrgica. Devolvemos a estabilidade, a função mastigatória e a estética do seu sorriso." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Endodontia e Microcirurgias", desc: "Tratamentos de canal utilizando microscopia para eliminar dores agudas preservando a estrutura original do dente." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Centro de Radiologia Integrado", desc: "Diagnósticos milimétricos no mesmo dia com Tomografia Cone Beam 3D e documentação radiográfica digital." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Acompanhamento Médico", desc: "Consultas médicas especializadas e realização de exames complementares para cuidar do seu corpo por completo." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria e Prevenção", desc: "Acolhimento especial para crianças, criando uma relação de confiança com o dentista e prevenindo problemas futuros." },
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Estética Facial Avançada", desc: "Aplicação de botox e preenchedores focados em suavizar marcas de expressão e devolver o contorno jovem ao rosto." }
     ]
   },
 
@@ -108,9 +108,9 @@ export const globalData = {
   // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
-    title: "Quem cuida de você",
+    title: "Nossa Liderança Clínica",
     members: [
-      { name: "Dra. Marina Carvalho", cro: "Odontologia", specialty: "Saúde & Sorrisos de Excelência", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" } // Mantido url original
+      { name: "Nome do Profissional", cro: "Diretor(a) Clínico(a)", specialty: "Responsável Técnico", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
     ]
   },
 
@@ -118,16 +118,16 @@ export const globalData = {
   // SEÇÃO: A ESSÊNCIA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Missão OdontoMed Prime",
+    eyebrow: "A Nossa Filosofia",
     title1: "Humanidade,",
     title2: "segurança e",
     title3: "excelência.",
-    desc: "Cuidar de pessoas com excelência em todas as fases da vida. Essa missão reflete a nossa essência: cuidamos de pessoas, e não apenas de tratamentos.",
+    desc: "Nossa missão reflete a nossa essência mais profunda: nós cuidamos de pessoas, e não apenas de protocolos de tratamento. A sua segurança é a nossa prioridade.",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Segurança nunca é negociável", content: "Nosso ambiente é equipado com as melhores tecnologias, como Raio-X digital e Tomografia 3D, garantindo diagnósticos precisos." },
-      { title: "Humanidade em primeiro lugar", content: "Acreditamos que a humanidade vem antes de qualquer protocolo clínico. Nosso atendimento é focado no seu bem-estar absoluto." },
-      { title: "Excelência como padrão", content: "Na OdontoMed Prime, a excelência não é um diferencial opcional, mas sim a nossa entrega padrão em cada consulta." }
+      { title: "Segurança clínica não é negociável", content: "Nosso ambiente é rigorosamente equipado com tecnologias de esterilização e equipamentos de diagnóstico por imagem de última geração." },
+      { title: "Humanidade em primeiro lugar", content: "Acreditamos que o conforto e a empatia vêm antes de qualquer intervenção. Nosso atendimento é humanizado, respeitando seus medos e seu tempo." },
+      { title: "A excelência é o nosso padrão", content: "Na Lumina, entregar um resultado estético e funcional impecável não é um diferencial, é a base da nossa conduta diária." }
     ]
   },
 
@@ -135,14 +135,14 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "A Experiência Prime",
+    eyebrow: "A Experiência do Paciente",
     title1: "Laços",
     title2: "verdadeiros.",
-    quote: "Além de resultados técnicos, nós criamos laços e confiança com nossos pacientes.",
-    supporting: "Esse tipo de feedback é o combustível para nossa equipe, que fica sempre feliz em servir bem. Conheça nossa estrutura em Breves.",
+    quote: "Além de entregarmos resultados técnicos impressionantes, nós construímos confiança e relacionamentos duradouros.",
+    supporting: "A satisfação e o sorriso dos nossos pacientes são o combustível da nossa equipe. Conheça um pouco do nosso espaço.",
     // Mantidas todas as URLs do Unsplash
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica OdontoMed Prime" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Integrada" },
       { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
       { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
       { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
@@ -160,9 +160,9 @@ export const globalData = {
     title2: "reconstruídos.",
     p1: "Acreditamos no impacto de uma ",
     p_bold1: "odontologia de alta performance.",
-    p2: "Nós devolvemos a sua saúde e a sua confiança. Acompanhe os resultados dos nossos procedimentos na",
+    p2: "Nós devolvemos a sua saúde e a sua confiança ao sorrir. Acompanhe os resultados dos nossos procedimentos na",
     p_bold2: "galeria de casos clínicos",
-    p3: "e entenda por que a OdontoMed Prime é referência.",
+    p3: "e entenda o nível da nossa entrega.",
     p_bold3: "",
     btn: "Ver Casos Clínicos",
     imgUrl: "/imagens/dentes.png" // Mantido como solicitado
@@ -174,10 +174,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Quais especialidades médicas a clínica oferece?", a: "Além de odontologia completa, oferecemos atendimento em Clínica Geral, Cardiologia (consultas e exames), Ginecologia, Nutrição, Ortopedia, Psicologia e Ultrassonografia." },
-      { q: "O que é a Tomografia Cone Beam?", a: "É um exame 3D avançado feito aqui mesmo na clínica que oferece visão detalhada da região bucal e facial, permitindo maior segurança para cirurgias e implantes." },
-      { q: "Como saber se preciso de tratamento de canal?", a: "O canal é indicado quando a polpa interna do dente está inflamada ou infeccionada, causando dor aguda. O tratamento elimina a dor e evita a extração do dente." },
-      { q: "A clínica faz atendimento para crianças?", a: "Sim! Cuidar do sorriso desde cedo faz toda a diferença. Oferecemos odontopediatria com carinho, paciência e um ambiente acolhedor e seguro para os pequenos." }
+      { q: "Quais serviços médicos a clínica oferece?", a: "Dispomos de atendimento integrado abrangendo diversas frentes de cuidado com a saúde, incluindo realização de exames laboratoriais e consultas especializadas no mesmo local." },
+      { q: "O que é e para que serve a Tomografia 3D?", a: "É um exame de imagem moderno feito na nossa própria clínica. Ele gera um modelo tridimensional da sua boca, essencial para o planejamento cirúrgico seguro de implantes dentários." },
+      { q: "Como saber se eu preciso de um tratamento de canal?", a: "Normalmente o canal é indicado quando há dor intensa, sensibilidade aguda prolongada ou infecções visíveis. Apenas uma avaliação clínica e radiográfica pode confirmar o diagnóstico." },
+      { q: "A clínica é preparada para receber crianças?", a: "Sim. O ambiente foi pensado para promover uma experiência sem traumas, com profissionais treinados para garantir a saúde bucal infantil com muita paciência e ludicidade." }
     ]
   },
 
@@ -186,9 +186,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Cel. Lourenço Borges, 1921", value2: "Centro" },
-    box2: { title: "Localização", value1: "Breves - PA", value2: "CEP: 68800-000" },
-    box3: { title: "Especialidades", value1: "Odontologia Completa", value2: "Medicina, Imagem e Estética" },
+    box1: { title: "Endereço", value1: "Avenida Principal, 1000", value2: "Bairro Nobre" },
+    box2: { title: "Localização", value1: "Sua Cidade - UF", value2: "CEP: 00000-000" },
+    box3: { title: "Especialidades", value1: "Odontologia de Ponta", value2: "Medicina, Imagem e Estética" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,26 +196,26 @@ export const globalData = {
   // CONTATO FINAL
   // ---------------------------------------------------
   contact: {
-    eyebrow: "Marque uma Avaliação",
-    title1: "Cuide-se com",
-    title2: "exclusividade!",
-    desc: "Agende sua avaliação. Toda a estrutura de radiologia, atendimento médico e tratamentos odontológicos em um só lugar.",
+    eyebrow: "Inicie seu acompanhamento",
+    title1: "A sua saúde no",
+    title2: "lugar certo.",
+    desc: "Agende sua avaliação. Tenha acesso a uma estrutura completa de radiologia, acompanhamento médico e excelência odontológica em um só lugar.",
     box1_title: "Endereço",
-    box2_title: "Contato Rápido",
+    box2_title: "Fale Conosco",
     box3_title: "Redes Sociais",
     box3_desc1: "Acompanhe nossa rotina",
-    box3_desc2: "@odonto.med.prime"
+    box3_desc2: "@lumina.integrada"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "OdontoMed Prime | Centro integrado de saúde em Breves - PA. Odontologia e medicina de alta performance com humanidade e excelência.",
+    sobre: "Lumina Integrada | Um centro dedicado à sua saúde. Odontologia e medicina de alta performance aliadas ao cuidado humanizado.",
     title_tratamentos: "Especialidades",
     title_contato: "Contato",
-    direitos: "© 2026 OdontoMed Prime. Todos os direitos reservados. Dra. Marina Carvalho.",
-    registro: "Centro — Breves, PA"
+    direitos: "© 2026 Lumina Saúde Integrada. Todos os direitos reservados. Fictício para demonstração.",
+    registro: "Sua Cidade — UF"
   },
 
   // ---------------------------------------------------

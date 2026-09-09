@@ -14,10 +14,12 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
   }, []);
 
   useEffect(() => {
-    // Trava firmemente a rolagem do site quando o menu abre
-    if (menuOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
-    return () => { document.body.style.overflow = "unset"; };
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = ""; // Fixado para Safari Mobile
+    }
+    return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const handleNav = (id: string) => {
@@ -39,8 +41,6 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 h-[76px] md:h-[92px] flex items-center justify-between relative z-[10000]">
-
-          {/* LOGO — uma linha só, sem duplicar informação em caixa alta */}
           <div className="flex items-center gap-3 cursor-pointer select-none group" onClick={() => handleNav("inicio")}>
             <img src={globalData.clinica.logoUrl} alt="Logo" className="h-9 md:h-11 w-auto object-contain" />
             <div className="hidden sm:flex items-center gap-3">
@@ -53,8 +53,6 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
               </span>
             </div>
           </div>
-
-          {/* NAV DESKTOP — sem caixa alta, sem tracking largo, hover discreto */}
           <nav className="hidden lg:flex items-center gap-9">
             {globalData.nav.links.map((label, i) => (
               <button
@@ -73,20 +71,15 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
               Agendar
             </button>
           </nav>
-
           <div className="lg:hidden relative z-[10001] -mr-2">
             <Hamburger toggled={menuOpen} toggle={setMenuOpen} color="var(--c-primary)" size={24} rounded />
           </div>
         </div>
       </header>
-
-      {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-[rgba(var(--c-primary-rgb),0.35)] backdrop-blur-sm z-[9997] lg:hidden transition-opacity duration-300 ${menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         onClick={() => setMenuOpen(false)}
       />
-
-      {/* GAVETA MOBILE — tratamento editorial: itens numerados, entrada escalonada */}
       <aside
         className={`fixed top-0 right-0 w-[85vw] max-w-[340px] h-[100dvh] bg-white z-[9998] shadow-2xl flex flex-col pt-[96px] px-7 pb-8 lg:hidden transition-transform duration-500 ease-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -105,7 +98,6 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
             </button>
           ))}
         </nav>
-
         <div className="mt-auto pt-6">
           <button
             onClick={() => handleNav("contato")}
