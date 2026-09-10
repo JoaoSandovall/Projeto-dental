@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Clínica MAR (Grafite/Chumbo - Transmite segurança, modernidade e contraste) */
-  --c-primary: #383A3F;
-  --c-primary-rgb: 56, 58, 63;
-  --c-primary-hover: #222326;
+  /* Cores Principais - Espaço Sorriso (Verde Escuro/Musgo extraído do fundo da logo) */
+  --c-primary: #15241B;
+  --c-primary-rgb: 21, 36, 27;
+  --c-primary-hover: #0E1A13;
   
-  /* Cores de Destaque - Clínica MAR (Rose Gold / Nude Rosado extraído exatamente da logo) */
-  --c-accent: #C59D96;
-  --c-accent-rgb: 197, 157, 150;
-  --c-accent-hover: #A8817A;
+  /* Cores de Destaque - Espaço Sorriso (Verde Limão Claro do detalhe do dente) */
+  --c-accent: #8DC63F;
+  --c-accent-rgb: 141, 198, 63;
+  --c-accent-hover: #7AB034;
   
-  /* Fundos - Off-White com toque quente (inspirado no fundo da logo) */
-  --c-bg: #FCFBFA;
-  --c-bg-rgb: 252, 251, 250;
-  --c-bg-alt: #F5F3F2; 
-  --c-team-placeholder: #383A3F;
+  /* Fundos - Branco Puro com seções em Off-White com toque quente (inspirado na madeira da recepção) */
+  --c-bg: #FFFFFF;
+  --c-bg-rgb: 255, 255, 255;
+  --c-bg-alt: #F7F6F3; 
+  --c-team-placeholder: #15241B;
   
   /* Textos */
-  --c-text-main: #2D2A26;
-  --c-text-muted: #7A7571;
-  --c-text-light: #B3AEAA;
+  --c-text-main: #1A211D;
+  --c-text-muted: #5C6660;
+  --c-text-light: #A1AAB3;
 }
 
 html {
