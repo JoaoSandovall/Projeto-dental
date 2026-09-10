@@ -10,21 +10,21 @@
 }
 
 :root {
-  /* Cores Principais - MF Beauty (Grafite Profundo - Elegante, remete ao VIP) */
-  --c-primary: #1A1A1A;
-  --c-primary-rgb: 26, 26, 26;
-  --c-primary-hover: #000000;
+  /* Cores Principais - Clínica MAR (Grafite/Chumbo - Transmite segurança, modernidade e contraste) */
+  --c-primary: #383A3F;
+  --c-primary-rgb: 56, 58, 63;
+  --c-primary-hover: #222326;
   
-  /* Cores de Destaque - MF Beauty (Dourado Champagne da Logo) */
-  --c-accent: #D0A96B;
-  --c-accent-rgb: 208, 169, 107;
-  --c-accent-hover: #B89255;
+  /* Cores de Destaque - Clínica MAR (Rose Gold / Nude Rosado extraído exatamente da logo) */
+  --c-accent: #C59D96;
+  --c-accent-rgb: 197, 157, 150;
+  --c-accent-hover: #A8817A;
   
-  /* Fundos - Off-White com toque quente (inspirado na iluminação da clínica) */
+  /* Fundos - Off-White com toque quente (inspirado no fundo da logo) */
   --c-bg: #FCFBFA;
   --c-bg-rgb: 252, 251, 250;
-  --c-bg-alt: #F4F1ED; 
-  --c-team-placeholder: #1A1A1A;
+  --c-bg-alt: #F5F3F2; 
+  --c-team-placeholder: #383A3F;
   
   /* Textos */
   --c-text-main: #2D2A26;

@@ -8,51 +8,51 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "MF Beauty",
-    subtitulo: "Estética Avançada",
-    logoUrl: "/imagens/logo.png", 
+    nome: "Clínica MAR",
+    subtitulo: "Odontologia e Estética",
+    logoUrl: "/imagens/logo.png", // Mantido o seu caminho original (A logo Rose Gold da Clínica MAR)
     contato: {
-      whatsappUrl: "https://wa.me/5561993448223?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+procedimentos+da+MF+Beauty.", 
+      whatsappUrl: "https://wa.me/5531994319181?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+consulta+na+Cl%C3%ADnica+MAR.", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(61) 99344-8223",
-      emailLabel: "contato@mfbeauty.com.br",
-      instagramLabel: "@mfbeauty.bsb",
+      telefoneLabel: "(31) 3043-3795 / (31) 99431-9181",
+      emailLabel: "contato@clinicamar.com.br",
+      instagramLabel: "@clinicamarodontologia",
     },
     endereco: {
-      bairroCidade: "Sudoeste, Brasília - DF",
-      edificio: "Edifício Belas Artes",
-      detalhado: "CLSW 300 A, Edifício Belas Artes, Loja 10\nSudoeste\nBrasília - DF, 70673-006",
-      comodidades: ["Harmonização Facial e Glútea", "Ultraformer MPT", "Botox e Preenchimentos", "Rejuvenescimento"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/MF+BEAUTY+-+Estetica+Avançada+e+Harmonização+Facial",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3079476641597!2d-47.91815092403457!3d-15.787708184851693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b5dea467675%3A0x9ed19e1d290ca4c!2sMF%20BEAUTY%20-%20Est%C3%A9tica%20Avan%C3%A7ada%20e%20Harmoniza%C3%A7%C3%A3o%20Facial!5e0!3m2!1spt-BR!2sbr!4v1788959591235!5m2!1spt-BR!2sbr"
+      bairroCidade: "Santa Inês, Belo Horizonte - MG",
+      edificio: "Avenida Contagem, 1451",
+      detalhado: "Avenida Contagem, 1451 - Loja 4\nBairro Santa Inês\nBelo Horizonte - MG, 31080-255",
+      comodidades: ["Lentes de Resina", "Endodontia", "Odontopediatria", "Estética Facial"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+MAR+Santa+Ines+BH",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.984794611574!2d-43.91152085730838!3d-19.882863957308114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69ba57398fc07%3A0xc4ccdf666ebc82fa!2sCl%C3%ADnica%20MAR!5e0!3m2!1spt-BR!2sbr!4v1789050487011!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento Exclusivo\nSegunda a Sábado, encerra às 20:00",
+    horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:00",
   },
 
   nav: {
-    links: ["A Clínica", "Procedimentos", "Grupo VIP", "Resultados", "Contato"],
-    ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
+    links: ["A Clínica", "Tratamentos", "Depoimentos", "Resultados", "Localização"],
+    ids: ["sobre", "/especialidades", "depoimentos", "/resultados", "localizacao"]
   },
 
   // ---------------------------------------------------
   // SEÇÃO: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", 
-    eyebrow: "Sudoeste — Brasília, DF",
-    title1: "Realce a sua",
-    title2: "beleza",
-    title3: "natural.",
-    desc1: "Um espaço exclusivo para quem ama se cuidar e busca a sua ",
-    descBold: "melhor versão.",
-    desc2: " Na MF Beauty, unimos ciência, tecnologia e arte para entregar resultados sofisticados em estética avançada e harmonização.",
-    btnPrimary: "Agende sua avaliação",
-    btnOutline: "Conhecer procedimentos",
-    badgeTitle: "MF Beauty",
-    badgeDesc: "Estética Avançada",
+    imgUrl: "/imagens/hero.png", // Mantido o caminho seguro
+    eyebrow: "Santa Inês — Belo Horizonte, MG",
+    title1: "Cuidando do",
+    title2: "seu sorriso",
+    title3: "com excelência.",
+    desc1: "Somos especialistas em odontologia e",
+    descBold: "estética facial.",
+    desc2: " Na Clínica MAR, unimos tecnologia, tratamentos de alto padrão e um atendimento humano para devolver a sua autoestima.",
+    btnPrimary: "Agende sua consulta",
+    btnOutline: "Nossos Tratamentos",
+    badgeTitle: "Clínica MAR",
+    badgeDesc: "Odontologia Avançada",
     stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 12, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 4, suffix: ".3", label: "estrelas no google", thousands: false },
+      { target: 37, suffix: "+", label: "avaliações reais", thousands: false },
       { target: 100, suffix: "%", label: "foco no seu bem-estar", thousands: false },
     ]
   },
@@ -61,25 +61,25 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A MF Beauty",
-    title1: "Sofisticação,",
-    title2: "tecnologia e",
-    title3: "autoestima.",
-    p1: "Localizada no Edifício Belas Artes, no Sudoeste, a MF Beauty foi idealizada para ser um verdadeiro refúgio de beleza e autocuidado em Brasília.",
-    p2_1: "Nossa clínica é especializada em ",
-    p2_bold: "Estética Avançada e Harmonização Facial,",
-    p2_2: " oferecendo desde os mais modernos protocolos de Ultraformer MPT até preenchimentos delicados que valorizam os seus traços únicos.",
+    eyebrow: "A Clínica MAR",
+    title1: "Odontologia,",
+    title2: "estética e",
+    title3: "acolhimento.",
+    p1: "Localizada no bairro Santa Inês, em Belo Horizonte, a Clínica MAR nasceu com o propósito de transformar sorrisos e cuidar da sua saúde por completo.",
+    p2_1: "Nossa equipe é formada por ",
+    p2_bold: "Especialistas em Odontologia e Estética Facial,",
+    p2_2: " oferecendo desde os cuidados essenciais de prevenção para crianças até lentes de resina de alta performance para adultos.",
     topics: [
-      { title: "Harmonização de Alto Padrão", desc: "Resultados elegantes e naturais em Harmonização Facial e Glútea." },
-      { title: "Tecnologia de Ponta", desc: "Protocolos inovadores de rejuvenescimento e qualidade da pele, como o Ultraformer MPT." },
-      { title: "Atendimento Personalizado", desc: "Cada rosto e corpo contam uma história. Nossos tratamentos são inteiramente individualizados." },
-      { title: "Conforto e Exclusividade", desc: "Um ambiente intimista, moderno e preparado para proporcionar a melhor experiência possível." },
+      { title: "Estética do Sorriso", desc: "Especialistas em Lentes de Resina, devolvendo harmonia e beleza com muita naturalidade." },
+      { title: "Saúde desde a infância", desc: "Atendimento de Odontopediatria focado em criar experiências positivas para os pequenos." },
+      { title: "Fim da dor (Endodontia)", desc: "Tratamentos de canal seguros, indolores e realizados por especialistas." },
+      { title: "Estética Facial", desc: "Procedimentos de harmonização para valorizar os traços do seu rosto de forma elegante." },
     ],
-    btn: "Falar com nossa equipe",
+    btn: "Falar com a recepção",
     gallery: [
-      { url: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=1200&q=80", title: "Harmonização" },
-      { url: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=80", title: "Cuidado e Beleza" },
-      { url: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80", title: "Pele Iluminada" }
+      { url: "/imagens/hero.png", title: "Cuidado e Excelência" },
+      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80", title: "Odontologia Moderna" },
+      { url: "/imagens/leve.png", title: "Estética Facial" }
     ]
   },
 
@@ -87,20 +87,20 @@ export const globalData = {
   // SEÇÃO: SERVIÇOS E PROCEDIMENTOS
   // ---------------------------------------------------
   services: {
-    eyebrow: "Nossos Procedimentos",
-    title1: "O melhor para",
-    title2: "a sua pele e corpo.",
-    desc1: "Oferecemos protocolos completos e avançados para ",
-    descBold: "rejuvenescimento e estética",
-    desc2: ", entregando confiança e segurança em cada detalhe.",
+    eyebrow: "Nossos Tratamentos",
+    title1: "Tudo o que o",
+    title2: "seu sorriso precisa.",
+    desc1: "Oferecemos soluções completas em ",
+    descBold: "odontologia estética, preventiva e reabilitadora",
+    desc2: ", garantindo conforto e segurança em cada detalhe.",
     btn: "Ver todos os tratamentos",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Botox e Preenchimentos", desc: "Suavização de rugas, linhas de expressão e reposição de volume facial (lábios, olheiras, malar) com máxima naturalidade." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Ultraformer MPT", desc: "A tecnologia mais avançada do mercado para lifting facial sem cortes, estímulo de colágeno e quebra de gordura localizada." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Harmonização Facial", desc: "Alinhamento e simetria do rosto, valorizando seus pontos fortes para um perfil marcante e rejuvenescido." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Harmonização Glútea", desc: "Protocolos corporais seguros para melhora do contorno, firmeza e volumização da região glútea." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Melasmas e Cicatrizes", desc: "Tratamentos profundos para uniformização do tom da pele, clareamento de manchas e melhora de texturas e cicatrizes." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Qualidade da Pele", desc: "Skinboosters, bioestimuladores de colágeno e peelings para um rosto iluminado, firme e hidratado de dentro para fora." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes de Resina", desc: "Transforme a cor, o formato e o tamanho dos seus dentes com a técnica de lentes de resina composta (estratificação direta)." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Endodontia (Tratamento de Canal)", desc: "Elimine a dor e preserve seu dente natural. Tratamentos de canal realizados por especialista com alto conforto e precisão." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontopediatria", desc: "Sorrisos saudáveis começam na infância! Cuidado especializado, paciente e acolhedor para as crianças." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Técnicas seguras e modernas para clarear os dentes sem enfraquecer o esmalte, devolvendo um sorriso iluminado." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Prevenção e Limpeza", desc: "Profilaxia completa para evitar cáries, doenças na gengiva e manter a saúde bucal da sua família sempre em dia." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Estética Facial", desc: "Procedimentos de harmonização para equilibrar os traços faciais, proporcionando rejuvenescimento e bem-estar." }
     ]
   },
 
@@ -110,24 +110,24 @@ export const globalData = {
   team: {
     title: "Quem cuida de você",
     members: [
-      { name: "Equipe MF Beauty", cro: "Especialistas", specialty: "Estética Avançada e Harmonização", img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=500&fit=crop" }
+      { name: "Equipe Clínica MAR", cro: "Especialistas", specialty: "Odontologia e Estética Facial", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA E GRUPO VIP
+  // SEÇÃO: A ESSÊNCIA E CAMPANHAS
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "Comunidade Exclusiva",
-    title1: "Faça parte do nosso",
-    title2: "Grupo VIP",
-    title3: "MF Beauty.",
-    desc: "Um espaço exclusivo para quem ama se cuidar. Participe da nossa comunidade e tenha acesso em primeira mão às melhores condições, novidades e oportunidades da clínica.",
-    btn: "Entrar para o Grupo VIP",
+    eyebrow: "A Experiência Clínica MAR",
+    title1: "Informação,",
+    title2: "dicas e",
+    title3: "cuidado.",
+    desc: "Estamos de cara nova! Mantendo a mesma excelência em nossos atendimentos, mas renovados para trazer informações transparentes e um cuidado cada vez mais próximo para você.",
+    btn: "Agendar minha consulta",
     list: [
-      { title: "Condições Especiais", content: "Receba ofertas exclusivas em tratamentos de Botox, Preenchimentos e protocolos corporais antes de todo mundo." },
-      { title: "Novidades em Primeira Mão", content: "Fique sabendo sobre o lançamento de novas tecnologias como Ultraformer MPT e novas técnicas de harmonização." },
-      { title: "Dicas de Beleza e Skincare", content: "Conteúdos elaborados pela nossa equipe para ajudar você a manter a qualidade e o rejuvenescimento da pele em casa." }
+      { title: "Atendimento Humanizado", content: "Nosso foco é proporcionar uma experiência tranquila, seja para um clareamento, um tratamento de canal ou na primeira consulta do seu filho." },
+      { title: "Especialistas Qualificados", content: "Contamos com profissionais especialistas, como em Endodontia e Lentes de Resina, garantindo o mais alto nível técnico no seu tratamento." },
+      { title: "Campanha Sorriso Premiado", content: "Na Clínica MAR, quem indica amigos sai ganhando! Participe das nossas campanhas de indicação e concorra a prêmios incríveis na recepção." }
     ]
   },
 
@@ -135,18 +135,18 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "O Ambiente",
+    eyebrow: "A Clínica",
     title1: "Conforto e",
-    title2: "exclusividade.",
-    quote: "A excelência da estética avançada aliada a um ambiente pensado para o seu total relaxamento.",
-    supporting: "Nossos pacientes avaliam nossa clínica com 5 estrelas no Google. Conheça um pouco do nosso espaço no Sudoeste.",
+    title2: "modernidade.",
+    quote: "Cuidando do seu sorriso com excelência em um ambiente pensado para o seu total bem-estar.",
+    supporting: "Acompanhe um pouco da nossa estrutura no bairro Santa Inês, em Belo Horizonte.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&h=1000&fit=crop", alt: "Procedimento Estético" },
-      { img: "https://images.unsplash.com/photo-1560944527-a4a429848866?w=800&h=1000&fit=crop", alt: "Skincare" },
-      { img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&h=1000&fit=crop", alt: "Beleza Facial" },
-      { img: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=1000&fit=crop", alt: "Clínica MF Beauty" },
-      { img: "https://images.unsplash.com/photo-1629367142312-588ce35868bd?w=800&h=1000&fit=crop", alt: "Tratamento Facial" },
-      { img: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=1000&fit=crop", alt: "Relaxamento e Spa" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica MAR" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Odontológico" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos" }
     ]
   },
 
@@ -155,16 +155,16 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "O Portfólio",
-    title1: "Resultados",
-    title2: "que inspiram.",
+    title1: "A beleza de",
+    title2: "um sorriso.",
     p1: "Acreditamos na",
-    p_bold1: "estética avançada",
-    p2: "que realça a beleza individual sem perder a naturalidade. Acompanhe a transformação das nossas pacientes na nossa",
-    p_bold2: "galeria de antes e depois",
-    p3: "e descubra o padrão MF Beauty.",
+    p_bold1: "odontologia de excelência",
+    p2: "que devolve a estética e a função mastigatória. Acompanhe a transformação dos nossos pacientes na nossa",
+    p_bold2: "galeria de resultados",
+    p3: "e descubra o padrão da Clínica MAR.",
     p_bold3: "",
     btn: "Ver Resultados Reais",
-    imgUrl: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" 
+    imgUrl: "/imagens/dentes.png" 
   },
 
   // ---------------------------------------------------
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a MF Beauty está localizada?", a: "Nossa clínica fica no CLSW 300 A, Edifício Belas Artes, Loja 10, no bairro Sudoeste, em Brasília - DF." },
-      { q: "O que é o Ultraformer MPT?", a: "É a tecnologia mais moderna de ultrassom micro e macrofocado. Ele atua na firmeza da pele, efeito lifting não cirúrgico e destruição de gordura localizada, tanto facial quanto corporal." },
-      { q: "Os preenchimentos e harmonizações ficam artificiais?", a: "De forma alguma! Nossa filosofia de trabalho é baseada na naturalidade. O objetivo é sempre realçar seus pontos fortes e trazer jovialidade, mantendo os traços que fazem de você quem você é." },
-      { q: "Como faço para entrar no Grupo VIP?", a: "Você pode clicar no link disponível na nossa bio do Instagram ou solicitar o acesso diretamente pelo nosso WhatsApp para receber todas as ofertas em primeira mão." }
+      { q: "Onde a Clínica MAR está localizada?", a: "Nossa clínica fica na Avenida Contagem, nº 1451, Loja 4, no bairro Santa Inês, em Belo Horizonte - MG." },
+      { q: "O clareamento enfraquece os dentes?", a: "Não! Esse é um mito comum. Fazer clareamento com o acompanhamento de um dentista é totalmente seguro e não enfraquece nem desgasta o esmalte do dente." },
+      { q: "Qual a diferença das lentes de resina para as de porcelana?", a: "As lentes de resina (feitas com técnica direta) normalmente exigem menos ou nenhum desgaste do dente natural, são feitas em menos sessões e possuem excelente estética e durabilidade." },
+      { q: "A partir de que idade devo levar meu filho ao dentista?", a: "O ideal é que a primeira consulta ocorra logo que nascer o primeiro dentinho. Sorrisos saudáveis começam na infância, focando sempre na prevenção de cáries." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "CLSW 300 A, Ed. Belas Artes", value2: "Loja 10" },
-    box2: { title: "Localização", value1: "Sudoeste, Brasília - DF", value2: "CEP: 70673-006" },
-    box3: { title: "Especialidades", value1: "Harmonização, Botox", value2: "Ultraformer e Glúteo" },
+    box1: { title: "Endereço", value1: "Avenida Contagem, 1451", value2: "Loja 4 - Santa Inês" },
+    box2: { title: "Localização", value1: "Belo Horizonte - MG", value2: "CEP: 31080-255" },
+    box3: { title: "Especialidades", value1: "Dentista Geral, Lentes", value2: "Odontopediatria e Estética" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +196,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "A sua melhor versão",
-    title2: "espera por você.",
-    desc: "Agende sua avaliação. Venha viver a experiência MF Beauty e descubra protocolos exclusivos de estética avançada para o seu rosto e corpo.",
+    title1: "Cuidando do",
+    title2: "seu sorriso.",
+    desc: "Agende sua consulta. Venha viver a experiência da Clínica MAR e conte com especialistas dedicados à sua saúde e estética facial.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe nossos resultados",
-    box3_desc2: "@mfbeauty.bsb"
+    box3_desc1: "Acompanhe dicas de saúde",
+    box3_desc2: "@clinicamarodontologia"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "MF Beauty | Estética Avançada e Harmonização Facial no Sudoeste. Tecnologia e sofisticação para realçar a sua beleza natural.",
-    title_tratamentos: "Procedimentos",
+    sobre: "Clínica MAR Odontologia | Especialistas em odontologia e estética facial no bairro Santa Inês. Cuidando do seu sorriso com excelência.",
+    title_tratamentos: "Tratamentos",
     title_contato: "Contato",
-    direitos: "© 2026 MF Beauty. Todos os direitos reservados.",
-    registro: "Sudoeste — Brasília, DF"
+    direitos: "© 2026 Clínica MAR Odontologia. Todos os direitos reservados.",
+    registro: "Santa Inês — Belo Horizonte, MG"
   },
 
   // ---------------------------------------------------
@@ -222,45 +222,45 @@ export const globalData = {
   // ---------------------------------------------------
   results_page: {
     eyebrow: "Casos Clínicos e Resultados",
-    title1: "Resultados com",
-    title2: "sofisticação.",
-    p1: "Confira a transformação das nossas pacientes através da ",
-    p_bold1: "Estética Avançada",
+    title1: "A beleza de",
+    title2: "um sorriso.",
+    p1: "Confira a transformação dos nossos pacientes através da ",
+    p_bold1: "Odontologia de Excelência",
     p2: ". Valorizamos a",
-    p_bold2: "naturalidade e a simetria",
-    p3: "em cada detalhe dos nossos procedimentos.",
+    p_bold2: "naturalidade e a função",
+    p3: "em cada detalhe dos nossos tratamentos.",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
-        category: "Harmonização Facial", 
-        duration: "Botox e Preenchimento", 
-        complaint: "Perda de contorno facial e surgimento de linhas de expressão severas.", 
-        procedure: "Aplicação estratégica de toxina botulínica e preenchedores de ácido hialurônico devolvendo a jovialidade.", 
+        category: "Estética do Sorriso", 
+        duration: "Lentes de Resina", 
+        complaint: "Descontentamento com o formato, cor e pequenos desgastes nos dentes incisivos.", 
+        procedure: "Estratificação com lentes de resina de alta qualidade devolvendo o brilho e a simetria ao sorriso.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Tecnologia", 
-        duration: "Ultraformer MPT", 
-        complaint: "Flacidez acentuada no terço inferior do rosto e papada.", 
-        procedure: "Sessão de Ultraformer MPT promovendo ancoragem muscular, lifting sem cortes e firmeza na pele.", 
+        category: "Estética Facial", 
+        duration: "Harmonização", 
+        complaint: "Perda de contorno facial e linhas de expressão visíveis.", 
+        procedure: "Protocolos de harmonização facial seguros, valorizando os traços naturais da paciente.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Estética Corporal", 
-        duration: "Harmonização Glútea", 
-        complaint: "Falta de projeção e flacidez na região glútea.", 
-        procedure: "Protocolo com bioestimuladores de colágeno promovendo volumização, sustentação e melhora no contorno.", 
+        category: "Odontologia Clínica", 
+        duration: "Endodontia", 
+        complaint: "Dor severa e risco de perda dental devido a cárie profunda afetando o nervo do dente.", 
+        procedure: "Tratamento de canal executado por especialista, eliminando a dor e salvando a estrutura dental.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Qualidade da Pele", 
-        duration: "Tratamento de Melasma", 
-        complaint: "Manchas escuras resistentes e textura de pele irregular.", 
-        procedure: "Protocolo clareador profundo aliado a microagulhamento, garantindo uma pele uniforme e iluminada.", 
+        category: "Prevenção", 
+        duration: "Clareamento e Limpeza", 
+        complaint: "Dentes amarelados pelo tempo e acúmulo de placa bacteriana.", 
+        procedure: "Profilaxia rigorosa seguida de protocolo de clareamento seguro sem desgaste do esmalte.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       }
