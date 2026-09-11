@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Espaço Sorriso (Verde Escuro/Musgo extraído do fundo da logo) */
-  --c-primary: #15241B;
-  --c-primary-rgb: 21, 36, 27;
-  --c-primary-hover: #0E1A13;
+  /* Cores Principais - Dra. Julia Sidaoui (Fendi/Taupe Escuro - Traz um contraste elegante sem o peso do preto) */
+  --c-primary: #4A4643;
+  --c-primary-rgb: 74, 70, 67;
+  --c-primary-hover: #363331;
   
-  /* Cores de Destaque - Espaço Sorriso (Verde Limão Claro do detalhe do dente) */
-  --c-accent: #8DC63F;
-  --c-accent-rgb: 141, 198, 63;
-  --c-accent-hover: #7AB034;
+  /* Cores de Destaque - Dourado/Bronze Acetinado (inspirado nos metais do consultório) */
+  --c-accent: #C4A47C;
+  --c-accent-rgb: 196, 164, 124;
+  --c-accent-hover: #AA8B64;
   
-  /* Fundos - Branco Puro com seções em Off-White com toque quente (inspirado na madeira da recepção) */
+  /* Fundos - Branco Mármore e Off-White muito limpo e luminoso */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F7F6F3; 
-  --c-team-placeholder: #15241B;
+  --c-bg-alt: #F9F8F6; 
+  --c-team-placeholder: #4A4643;
   
   /* Textos */
-  --c-text-main: #1A211D;
-  --c-text-muted: #5C6660;
-  --c-text-light: #A1AAB3;
+  --c-text-main: #2C2B2A;
+  --c-text-muted: #7A7774;
+  --c-text-light: #B5B2AF;
 }
 
 html {

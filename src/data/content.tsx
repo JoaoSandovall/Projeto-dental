@@ -8,29 +8,29 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Espaço Sorriso",
-    subtitulo: "Clínica Integrada",
-    logoUrl: "/imagens/logo.png", // Mantido o seu caminho original
+    nome: "Dra. Julia Sidaoui",
+    subtitulo: "Reabilitação & Estética Dental",
+    logoUrl: "/imagens/logo.png", // Mantido o seu caminho original local
     contato: {
-      whatsappUrl: "https://wa.me/554230352080?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+consulta+no+Espa%C3%A7o+Sorriso.", 
+      whatsappUrl: "https://wa.me/5512991280597?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Julia.", 
       whatsappLabel: "Agendar Consulta",
-      telefoneLabel: "(42) 3035-2080",
-      emailLabel: "contato@clinicaespacosorriso.com.br",
-      instagramLabel: "@espacosorriso.guarapuava",
+      telefoneLabel: "(12) 99128-0597",
+      emailLabel: "contato@drajuliasidaoui.com.br",
+      instagramLabel: "@juliasidaoui",
     },
     endereco: {
-      bairroCidade: "Centro, Guarapuava - PR",
-      edificio: "Clínica Integrada",
-      detalhado: "Rua Vicente Machado, 1539, 1º andar\nCentro\nGuarapuava - PR, 85010-260",
-      comodidades: ["Odontologia Especializada", "Psicologia Clínica", "Saúde e Bem-estar", "Atendimento Humanizado"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Clinica+Espaço+Sorriso+Guarapuava",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.328715886758!2d-51.46715!3d-25.393805099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ef37f14738de35%3A0x1e2667719e4c4347!2sCl%C3%ADnica%20Espa%C3%A7o%20Sorriso!5e0!3m2!1spt-BR!2sbr!4v1789064823970!5m2!1spt-BR!2sbr"
+      bairroCidade: "São José dos Campos - SP",
+      edificio: "Altos do Esplanada",
+      detalhado: "Rua Itajai, 80 - Sl 604 - Conj 02\nAltos do Esplanada\nSão José dos Campos - SP, 12246-856",
+      comodidades: ["Lentes de Contato Dental", "Reabilitação Oral", "Estética Facial", "Atendimento Boutique"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Dra.+Julia+Sidaoui+Dentista+em+São+José+dos+Campos",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58670.20973195401!2d-45.9781471!3d-23.210748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b7436ad8135%3A0xbdd17f32fe2407e9!2sDra.%20Julia%20Sidaoui%20Dentista%20em%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos!5e0!3m2!1spt-BR!2sbr!4v1789134316660!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:00",
+    horarios: "Atendimento Exclusivo\nCom horário marcado",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "Nossa Essência", "Resultados", "Contato"],
+    links: ["A Doutora", "Procedimentos", "A Essência", "Resultados", "Contato"],
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
@@ -39,21 +39,21 @@ export const globalData = {
   // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png", // Mantido o caminho original
-    eyebrow: "Centro — Guarapuava, PR",
-    title1: "Saúde e",
-    title2: "bem-estar",
-    title3: "integrados.",
-    desc1: "Muito mais do que odontologia. Somos uma",
-    descBold: "Clínica Integrada",
-    desc2: " unindo excelência odontológica, psicologia e saúde em um ambiente acolhedor e moderno.",
+    eyebrow: "S. José dos Campos, SP",
+    title1: "Sorrisos",
+    title2: "construídos",
+    title3: "nos detalhes.",
+    desc1: "Acreditamos que a verdadeira beleza mora na",
+    descBold: "harmonia e na naturalidade.",
+    desc2: " Uma odontologia de altíssimo padrão focada em reabilitação oral e estética dental para transformar a sua autoestima.",
     btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossos Tratamentos",
-    badgeTitle: "Espaço Sorriso",
-    badgeDesc: "Cuidado Completo",
+    badgeTitle: "Dra. Julia Sidaoui",
+    badgeDesc: "CRO-SP 149524",
     stats: [
       { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 20, suffix: "+", label: "avaliações reais", thousands: false },
-      { target: 100, suffix: "%", label: "foco no seu bem-estar", thousands: false },
+      { target: 66, suffix: "+", label: "avaliações reais", thousands: false },
+      { target: 100, suffix: "%", label: "atenção aos detalhes", thousands: false },
     ]
   },
 
@@ -61,25 +61,25 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Espaço Sorriso",
-    title1: "Odontologia,",
-    title2: "psicologia e",
-    title3: "acolhimento.",
-    p1: "Localizada no coração de Guarapuava, a Clínica Espaço Sorriso nasceu para transformar a forma como você cuida da sua saúde física e mental.",
-    p2_1: "Em nosso novo espaço, unimos ",
-    p2_bold: "profissionais qualificados em diversas áreas da saúde,",
-    p2_2: " oferecendo desde tratamentos odontológicos estéticos e preventivos até o acompanhamento psicológico necessário para o seu bem-estar.",
+    eyebrow: "A Profissional",
+    title1: "A arte da",
+    title2: "reabilitação",
+    title3: "estética.",
+    p1: "Localizado no Altos do Esplanada, em São José dos Campos, nosso consultório boutique foi idealizado para oferecer uma experiência odontológica única, acolhedora e exclusiva.",
+    p2_1: "Sob os cuidados da ",
+    p2_bold: "Dra. Julia Sidaoui (CRO-SP 149524),",
+    p2_2: " nossa missão é entregar resultados sofisticados. Cada tratamento é minuciosamente planejado para valorizar a sua essência.",
     topics: [
-      { title: "Odontologia Completa", desc: "Clínica geral, estética, ortodontia e reabilitação oral com máxima qualidade." },
-      { title: "Psicologia Clínica", desc: "Apoio emocional e saúde mental integrados para cuidar de você por inteiro." },
-      { title: "Ambiente Acolhedor", desc: "Um espaço moderno, recém-inaugurado, pensado para o seu conforto absoluto." },
-      { title: "Cuidado Integrado", desc: "Acreditamos que um sorriso bonito e uma mente saudável caminham juntos." },
+      { title: "Odontologia de Detalhes", desc: "Planejamento minucioso de cada sorriso para garantir simetria, cor ideal e naturalidade absoluta." },
+      { title: "Facetas e Lentes", desc: "Transformações estéticas de alto padrão utilizando os materiais mais modernos da odontologia." },
+      { title: "Estética Facial Integrada", desc: "Preenchimentos sutis para emoldurar o seu novo sorriso e harmonizar o seu rosto." },
+      { title: "Ambiente Boutique", desc: "Um espaço elegante, luminoso e confortável para que você se sinta em casa durante o tratamento." },
     ],
-    btn: "Falar com o atendimento",
+    btn: "Conheça o consultório",
     gallery: [
-      { url: "/imagens/hero.png", title: "Saúde Integrada" },
-      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80", title: "Cuidado Humanizado" },
-      { url: "/imagens/leve.png", title: "Bem-estar" }
+      { url: "/imagens/hero.png", title: "Estética Dental" },
+      { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80", title: "Cuidado Exclusivo" },
+      { url: "/imagens/leve.png", title: "Design do Sorriso" }
     ]
   },
 
@@ -87,47 +87,47 @@ export const globalData = {
   // SEÇÃO: SERVIÇOS E PROCEDIMENTOS
   // ---------------------------------------------------
   services: {
-    eyebrow: "Nossas Especialidades",
-    title1: "Cuidando de você",
-    title2: "por inteiro.",
-    desc1: "Oferecemos soluções completas unindo ",
-    descBold: "odontologia, psicologia e saúde",
-    desc2: ", garantindo acolhimento e resultados em todas as áreas.",
-    btn: "Ver todas as áreas",
+    eyebrow: "Nossa Expertise",
+    title1: "Beleza em",
+    title2: "cada milímetro.",
+    desc1: "Oferecemos tratamentos avançados focados em ",
+    descBold: "reabilitação e estética",
+    desc2: ", unindo técnica precisa e materiais de excelência.",
+    btn: "Ver todos os procedimentos",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Odontologia Estética", desc: "Transforme seu sorriso com segurança. Oferecemos tratamentos estéticos que devolvem a beleza e a naturalidade aos seus dentes." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Odontologia Clínica", desc: "Prevenção, profilaxia, restaurações e tratamentos essenciais para manter a saúde bucal da sua família sempre protegida." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Psicologia", desc: "Atendimento psicológico clínico para promover o autoconhecimento, a saúde mental e a inteligência emocional." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Correção do posicionamento dos dentes e da mordida com aparelhos modernos para um sorriso funcional e harmônico." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Saúde Integrada", desc: "Uma visão completa do paciente, entendendo que a saúde física e a saúde emocional estão sempre conectadas." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Uma equipe dedicada a ouvir você e a criar um planejamento de tratamento focado nas suas reais necessidades." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Facetas e Lentes de Contato", desc: "Lâminas ultrafinas desenhadas artesanalmente para corrigir cor, formato e proporção, criando um sorriso perfeito e natural." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Devolvemos a função mastigatória e a estética completa para pacientes que sofreram desgastes ou perdas dentárias." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Estética Facial e Preenchimento", desc: "Procedimentos seguros com ácido hialurônico (como preenchimento labial) para complementar e valorizar seu sorriso." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Avançado", desc: "Técnicas seguras e eficazes para devolver a luminosidade natural dos seus dentes com conforto e sem dor." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prevenção e Longevidade", desc: "Check-ups e limpezas profundas para garantir a saúde das gengivas e a durabilidade dos seus tratamentos estéticos." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Personalizado", desc: "Tempo dedicado exclusivamente a você, com consultas sem pressa, permitindo entender e realizar o seu desejo." }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: CORPO CLÍNICO / ESPECIALISTAS
+  // SEÇÃO: CORPO CLÍNICO
   // ---------------------------------------------------
   team: {
     title: "Quem cuida de você",
     members: [
-      { name: "Equipe Espaço Sorriso", cro: "Clínica Integrada", specialty: "Odontologia, Psicologia e Saúde", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
+      { name: "Dra. Julia Sidaoui", cro: "CRO-SP 149524", specialty: "Reabilitação & Estética Dental", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA E CAMPANHAS
+  // SEÇÃO: A ESSÊNCIA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "A Nossa Essência",
-    title1: "Um novo espaço",
-    title2: "para cuidar",
-    title3: "de você.",
-    desc: "A Clínica Espaço Sorriso foi projetada para oferecer uma nova experiência em saúde. Muito além de tratamentos, nós construímos confiança e relacionamentos com nossos pacientes.",
-    btn: "Agendar minha consulta",
+    eyebrow: "Nossa Filosofia",
+    title1: "A odontologia",
+    title2: "feita sob",
+    title3: "medida.",
+    desc: "Acreditamos que não existem dois sorrisos iguais. Por isso, a nossa abordagem foge do padrão industrial. Cada paciente recebe um projeto único e exclusivo.",
+    btn: "Agendar minha avaliação",
     list: [
-      { title: "Odontologia e Psicologia Juntas", content: "Entendemos que saúde é um conceito amplo. Ao unir cuidado odontológico e mental, entregamos resultados muito mais profundos." },
-      { title: "Infraestrutura Moderna", content: "Nosso novo ambiente, localizado no 1º andar da Vicente Machado, foi cuidadosamente pensado para trazer paz e conforto durante suas visitas." },
-      { title: "Atendimento Transparente", content: "Valorizamos a clareza. Você sempre saberá exatamente cada etapa do seu tratamento, seja na cadeira do dentista ou na terapia." }
+      { title: "Resultados Naturais", content: "Nossas reabilitações e facetas são desenhadas para se integrar ao seu rosto, garantindo que as pessoas notem a sua beleza, e não apenas o procedimento." },
+      { title: "Foco nos Detalhes", content: "Acreditamos que a perfeição mora nos pequenos detalhes. Desde o planejamento digital até a cimentação final, nada passa despercebido." },
+      { title: "Conforto Incomparável", content: "Nosso consultório foi desenhado com mármore, tons claros e uma iluminação perfeita para que você se sinta em um spa de beleza e bem-estar." }
     ]
   },
 
@@ -135,18 +135,18 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "A Clínica",
+    eyebrow: "A Experiência Boutique",
     title1: "Conforto e",
-    title2: "modernidade.",
-    quote: "Cuidando da sua saúde com excelência em um ambiente pensado para o seu total bem-estar e tranquilidade.",
-    supporting: "Acompanhe um pouco do nosso novo espaço no Centro de Guarapuava, PR.",
+    title2: "exclusividade.",
+    quote: "Nosso espaço reflete a qualidade da nossa entrega: moderno, acolhedor e focado no seu bem-estar absoluto.",
+    supporting: "Acompanhe nossa estrutura no Altos do Esplanada. Nossos pacientes nos avaliam com 5.0 estrelas no Google.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Espaço Sorriso" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Integrado" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Saúde e Bem-estar" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Consultório Dra Julia" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura Elegante" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Estética Dental" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Dra Julia Sidaoui" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos Perfeitos" }
     ]
   },
 
@@ -155,13 +155,13 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "O Portfólio",
-    title1: "A beleza de",
-    title2: "um sorriso.",
+    title1: "Sorrisos",
+    title2: "transformados.",
     p1: "Acreditamos na",
-    p_bold1: "odontologia de excelência",
-    p2: "que devolve a estética e a função. Acompanhe a transformação dos nossos pacientes na nossa",
-    p_bold2: "galeria de resultados clínicos",
-    p3: "e descubra o padrão Espaço Sorriso.",
+    p_bold1: "reabilitação de alto padrão",
+    p2: "que devolve a estética e a função mastigatória. Acompanhe a transformação das nossas pacientes na nossa",
+    p_bold2: "galeria de resultados",
+    p3: "e comprove a qualidade do nosso trabalho.",
     p_bold3: "",
     btn: "Ver Resultados Reais",
     imgUrl: "/imagens/dentes.png" // Mantido o caminho original
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a Clínica Espaço Sorriso está localizada?", a: "Nossa clínica fica na Rua Vicente Machado, 1539, 1º andar, no Centro de Guarapuava - PR." },
-      { q: "Quais serviços a clínica oferece?", a: "Somos uma clínica integrada. Oferecemos atendimento odontológico completo (clínica geral, estética, ortodontia), além de consultas na área de Psicologia e saúde mental." },
-      { q: "A clínica atende todas as idades?", a: "Sim! Nossa equipe está preparada para cuidar da saúde bucal e do bem-estar de toda a família, desde crianças até adultos e idosos." },
-      { q: "Como faço para agendar minha consulta?", a: "Você pode agendar de forma rápida e prática enviando uma mensagem para o nosso WhatsApp no número (42) 3035-2080 ou ligando diretamente para nós." }
+      { q: "Onde o consultório da Dra. Julia está localizado?", a: "Nosso espaço fica na Rua Itajaí, 80, Sala 604 - Conjunto 02, no bairro Altos do Esplanada, em São José dos Campos - SP." },
+      { q: "Qual a diferença entre Facetas e Lentes de Contato?", a: "Ambas são finas lâminas que recobrem os dentes. As Lentes são extremamente finas (como lentes oculares) e exigem zero ou mínimo desgaste, enquanto as Facetas são ligeiramente mais espessas, ideais para correções mais severas de cor ou formato." },
+      { q: "As lentes de porcelana ficam artificiais?", a: "De forma alguma. O nosso grande diferencial é o planejamento cuidadoso. Estudamos seu rosto e sorriso para criar lentes que tenham textura, translucidez e cor idênticas a um dente natural perfeito." },
+      { q: "A clínica faz harmonização ou preenchimento facial?", a: "Sim, realizamos procedimentos estéticos faciais, como o preenchimento labial, com o objetivo de emoldurar o seu novo sorriso e trazer um aspecto descansado e harmonioso ao rosto." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Vicente Machado, 1539", value2: "1º andar - Centro" },
-    box2: { title: "Localização", value1: "Guarapuava - PR", value2: "CEP: 85010-260" },
-    box3: { title: "Especialidades", value1: "Odontologia, Psicologia", value2: "Saúde Integrada e Estética" },
+    box1: { title: "Endereço", value1: "Rua Itajaí, 80 - Sala 604", value2: "Altos do Esplanada" },
+    box2: { title: "Localização", value1: "São José dos Campos - SP", value2: "CEP: 12246-856" },
+    box3: { title: "Especialidades", value1: "Facetas e Reabilitação", value2: "Estética Dental e Facial" },
     btn: "Abrir no Google Maps"
   },
 
@@ -196,25 +196,25 @@ export const globalData = {
   // ---------------------------------------------------
   contact: {
     eyebrow: "Marque uma Avaliação",
-    title1: "Cuidando de você",
-    title2: "por inteiro.",
-    desc: "Agende sua consulta. Venha viver a experiência da Clínica Espaço Sorriso e conte com profissionais dedicados à sua saúde física e mental.",
+    title1: "O seu novo sorriso",
+    title2: "começa aqui.",
+    desc: "Agende sua consulta. Venha viver a experiência de uma odontologia de detalhes em um ambiente pensado exclusivamente para o seu conforto.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe nossa rotina",
-    box3_desc2: "@espacosorriso.guarapuava"
+    box3_desc1: "Acompanhe nossos casos",
+    box3_desc2: "@juliasidaoui"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Espaço Sorriso | Clínica Integrada no Centro de Guarapuava. Unindo odontologia, psicologia e saúde para o seu bem-estar completo.",
-    title_tratamentos: "Especialidades",
+    sobre: "Dra. Julia Sidaoui | Dentista em São José dos Campos. Reabilitação & Estética Dental. Sorrisos construídos nos mínimos detalhes.",
+    title_tratamentos: "Tratamentos",
     title_contato: "Contato",
-    direitos: "© 2026 Clínica Espaço Sorriso. Todos os direitos reservados.",
-    registro: "Centro — Guarapuava, PR"
+    direitos: "© 2026 Dra. Julia Sidaoui. Todos os direitos reservados. CRO-SP 149524.",
+    registro: "Altos do Esplanada — SJC, SP"
   },
 
   // ---------------------------------------------------
@@ -222,45 +222,45 @@ export const globalData = {
   // ---------------------------------------------------
   results_page: {
     eyebrow: "Casos Clínicos e Resultados",
-    title1: "A beleza de",
-    title2: "um sorriso.",
-    p1: "Confira a transformação dos nossos pacientes através da ",
-    p_bold1: "Odontologia de Excelência",
+    title1: "A beleza nos",
+    title2: "mínimos detalhes.",
+    p1: "Confira a transformação das nossas pacientes através da ",
+    p_bold1: "Odontologia de Alto Padrão",
     p2: ". Valorizamos a",
-    p_bold2: "naturalidade e a função",
-    p3: "em cada detalhe dos nossos tratamentos.",
+    p_bold2: "naturalidade e a proporção",
+    p3: "em cada faceta e reabilitação que construímos.",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
         category: "Estética do Sorriso", 
-        duration: "Odontologia Estética", 
-        complaint: "Descontentamento com o formato, cor e pequenos desgastes nos dentes incisivos.", 
-        procedure: "Tratamento estético conservador devolvendo o brilho e a simetria ao sorriso do paciente.", 
+        duration: "Facetas de Porcelana", 
+        complaint: "Dentes escurecidos, com restaurações antigas aparentes e formato irregular.", 
+        procedure: "Estratificação com lentes de alta qualidade devolvendo textura, brilho e uma cor natural.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Ortodontia", 
-        duration: "Alinhamento Perfeito", 
-        complaint: "Dentes desalinhados prejudicando a mastigação e a confiança ao sorrir.", 
-        procedure: "Tratamento ortodôntico contínuo, garantindo a correção da mordida e um sorriso harmônico.", 
+        category: "Reabilitação Oral", 
+        duration: "Devolução de Função", 
+        complaint: "Desgaste severo dos dentes anteriores (bruxismo), afetando a mordida e envelhecendo o sorriso.", 
+        procedure: "Reabilitação completa restabelecendo o tamanho original dos dentes e a guia mastigatória com cerâmicas.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Prevenção e Saúde", 
-        duration: "Clínica Geral", 
-        complaint: "Dores pontuais e necessidade de adequação de saúde bucal.", 
-        procedure: "Profilaxia completa, remoção de cáries e restaurações seguras para prevenir problemas futuros.", 
+        category: "Estética Facial", 
+        duration: "Preenchimento Labial", 
+        complaint: "Lábios finos com perda de contorno, não acompanhando a harmonia do novo sorriso.", 
+        procedure: "Preenchimento sutil com ácido hialurônico focando no contorno e em um volume elegante e muito natural.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Reabilitação", 
-        duration: "Saúde e Função", 
-        complaint: "Perda de estrutura dental afetando a função mastigatória.", 
-        procedure: "Reabilitação funcional devolvendo o conforto e a segurança na mastigação do dia a dia.", 
+        category: "Clareamento e Acabamento", 
+        duration: "Estética Conservadora", 
+        complaint: "Sorriso com tonalidade amarelada devido ao tempo e consumo de pigmentos.", 
+        procedure: "Protocolo de clareamento de alta performance garantindo dentes iluminados sem dor ou sensibilidade.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       }
