@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Dra. Julia Sidaoui (Fendi/Taupe Escuro - Traz um contraste elegante sem o peso do preto) */
-  --c-primary: #4A4643;
-  --c-primary-rgb: 74, 70, 67;
-  --c-primary-hover: #363331;
+  /* Cores Principais - Sorrivem (Azul Marinho / Royal Profundo - Segurança, Saúde e Confiança) */
+  --c-primary: #0A2463;
+  --c-primary-rgb: 10, 36, 99;
+  --c-primary-hover: #071947;
   
-  /* Cores de Destaque - Dourado/Bronze Acetinado (inspirado nos metais do consultório) */
-  --c-accent: #C4A47C;
-  --c-accent-rgb: 196, 164, 124;
-  --c-accent-hover: #AA8B64;
+  /* Cores de Destaque - Sorrivem (Dourado/Areia da logomarca e grafismos) */
+  --c-accent: #C8A870;
+  --c-accent-rgb: 200, 168, 112;
+  --c-accent-hover: #B0925B;
   
-  /* Fundos - Branco Mármore e Off-White muito limpo e luminoso */
+  /* Fundos - Branco Puro com um Off-White em tom Areia claro para contrastar com o Azul */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F9F8F6; 
-  --c-team-placeholder: #4A4643;
+  --c-bg-alt: #F7F5F0; 
+  --c-team-placeholder: #0A2463;
   
   /* Textos */
-  --c-text-main: #2C2B2A;
-  --c-text-muted: #7A7774;
-  --c-text-light: #B5B2AF;
+  --c-text-main: #1A202C;
+  --c-text-muted: #4A5568;
+  --c-text-light: #A0AEC0;
 }
 
 html {
@@ -44,11 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   line-height: 1.65;
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x: clip; 
   max-width: 100vw;
 }
 
