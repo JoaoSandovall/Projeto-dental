@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Sorrivem (Azul Marinho / Royal Profundo - Segurança, Saúde e Confiança) */
-  --c-primary: #0A2463;
-  --c-primary-rgb: 10, 36, 99;
-  --c-primary-hover: #071947;
+  /* Cores Principais - LH Odonto Clinic (Grafite/Preto Profundo para destacar o Dourado) */
+  --c-primary: #1C1B1A;
+  --c-primary-rgb: 28, 27, 26;
+  --c-primary-hover: #0F0F0E;
   
-  /* Cores de Destaque - Sorrivem (Dourado/Areia da logomarca e grafismos) */
-  --c-accent: #C8A870;
-  --c-accent-rgb: 200, 168, 112;
-  --c-accent-hover: #B0925B;
+  /* Cores de Destaque - Dourado da Logomarca */
+  --c-accent: #CFA968;
+  --c-accent-rgb: 207, 169, 104;
+  --c-accent-hover: #B5904D;
   
-  /* Fundos - Branco Puro com um Off-White em tom Areia claro para contrastar com o Azul */
+  /* Fundos - Branco Puro com toques de Cinza Claro Metálico */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F7F5F0; 
-  --c-team-placeholder: #0A2463;
+  --c-bg-alt: #F7F7F7; 
+  --c-team-placeholder: #1C1B1A;
   
   /* Textos */
-  --c-text-main: #1A202C;
-  --c-text-muted: #4A5568;
-  --c-text-light: #A0AEC0;
+  --c-text-main: #2A2A2A;
+  --c-text-muted: #666666;
+  --c-text-light: #A3A3A3;
 }
 
 html {

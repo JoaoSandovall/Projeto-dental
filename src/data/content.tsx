@@ -8,25 +8,25 @@ export const globalData = {
   // DADOS GERAIS DA CLÍNICA
   // ---------------------------------------------------
   clinica: {
-    nome: "Sorrivem Odontologia",
-    subtitulo: "Seu Sorriso. Nossa Prioridade.",
-    logoUrl: "/imagens/logo.png", // Mantido o seu caminho original local
+    nome: "LH Odonto Clinic",
+    subtitulo: "Odontologia Avançada",
+    logoUrl: "/imagens/logo.png", // Mantenha a imagem da logo salva neste caminho
     contato: {
-      whatsappUrl: "https://wa.me/5511991000737?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+Sorrivem.", 
+      whatsappUrl: "https://wa.me/5521999273465?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+LH+Odonto+Clinic.", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(11) 2427-5957 / (11) 99100-0737",
-      emailLabel: "contato@sorrivem.com.br",
-      instagramLabel: "@sorrivem.odontologia",
+      telefoneLabel: "(21) 99927-3465",
+      emailLabel: "contato@lhodontoclinic.com.br",
+      instagramLabel: "@lhodontoclinic",
     },
     endereco: {
-      bairroCidade: "Alvinópolis, Atibaia - SP",
-      edificio: "Clínica Sorrivem",
-      detalhado: "Av. Dona Gertrudes, 552\nAlvinópolis\nAtibaia - SP, 12942-540",
-      comodidades: ["Prótese e Implantes", "Ortodontia", "Endodontia", "Estética Facial"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Sorrivem+Odontologia+Atibaia",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7338.675012210004!2d-46.576571906420895!3d-23.1213356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec187f5878acd%3A0x7e7b3f9c391c19b0!2sSorrivem%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1789151562347!5m2!1spt-BR!2sbr"
+      bairroCidade: "Barros Filho, Rio de Janeiro - RJ",
+      edificio: "LH Odonto Clinic",
+      detalhado: "Estr. João Paulo, 1128 - Sobrado\nBarros Filho\nRio de Janeiro - RJ, 21512-002",
+      comodidades: ["Lentes em Resina", "Reabilitação Oral", "Clareamento", "Odontologia Estética"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/LH+Odonto+Clinic+Barros+Filho",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.9929785351896!2d-43.3647721238913!3d-22.839749279302385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99632385c07613%3A0xcf9dcbef641c27e4!2sLH%20Odonto%20Clinic!5e0!3m2!1spt-BR!2sbr!4v1789158971514!5m2!1spt-BR!2sbr"
     },
-    horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:00",
+    horarios: "Aberto de Segunda a Sábado\nSábados a partir das 09:00",
   },
 
   nav: {
@@ -39,21 +39,21 @@ export const globalData = {
   // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png", // Mantido o caminho original seguro
-    eyebrow: "Alvinópolis — Atibaia, SP",
-    title1: "O seu sorriso",
-    title2: "merece o",
-    title3: "melhor.",
-    desc1: "Acreditamos que cuidar da sua saúde bucal é cuidar da sua qualidade de vida.",
-    descBold: " Seu Sorriso. Nossa Prioridade.",
-    desc2: " Somos uma clínica multidisciplinar pronta para atender todas as necessidades da sua família em um só lugar.",
+    eyebrow: "Barros Filho — Rio de Janeiro, RJ",
+    title1: "Elevando a sua",
+    title2: "autoestima",
+    title3: "através do sorriso.",
+    desc1: "Especialistas em ",
+    descBold: "Reabilitação Oral e Estética.",
+    desc2: " Transformamos sorrisos com a arte de esculpir dentes, unindo naturalidade, saúde e excelência em cada detalhe.",
     btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossos Tratamentos",
-    badgeTitle: "Sorrivem",
-    badgeDesc: "Odontologia Integrada",
+    badgeTitle: "Dr. Leonardo Oliveira",
+    badgeDesc: "CRO RJ 60324",
     stats: [
       { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 57, suffix: "+", label: "avaliações reais", thousands: false },
-      { target: 100, suffix: "%", label: "foco em você", thousands: false },
+      { target: 10, suffix: "+", label: "lentes por sorriso", thousands: false },
+      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
     ]
   },
 
@@ -61,25 +61,25 @@ export const globalData = {
   // SEÇÃO: SOBRE NÓS
   // ---------------------------------------------------
   about: {
-    eyebrow: "A Sorrivem",
-    title1: "Seu Sorriso.",
-    title2: "Nossa",
-    title3: "Prioridade.",
-    p1: "Localizada em Atibaia-SP, a Sorrivem Odontologia foi construída com um único objetivo: oferecer uma odontologia completa, ética e de altíssima qualidade para você e sua família.",
-    p2_1: "Comandada por especialistas, e com ",
-    p2_bold: "Responsabilidade Técnica da Dra. Luciana R. L. Felicio (CRO/SP 57494),",
-    p2_2: " nossa clínica dispõe de todas as áreas da odontologia. Da estética facial aos implantes, garantimos um tratamento integrado e seguro.",
+    eyebrow: "A LH Odonto Clinic",
+    title1: "A arte de",
+    title2: "esculpir",
+    title3: "sorrisos.",
+    p1: "Localizada em Barros Filho, Rio de Janeiro, a LH Odonto Clinic nasceu com o propósito de elevar a sua autoestima através de uma odontologia de resultados.",
+    p2_1: "Sob a Responsabilidade Técnica do ",
+    p2_bold: "Dr. Leonardo Oliveira (CRO RJ 60324),",
+    p2_2: " nossa clínica é referência em Reabilitação Oral e Estética, oferecendo tratamentos modernos como lentes em resina e clareamento avançado.",
     topics: [
-      { title: "Odontologia Completa", desc: "Todas as especialidades em um só lugar: Prótese, Implantes, Ortodontia e Endodontia." },
-      { title: "Estética e Harmonização", desc: "Além de cuidar dos seus dentes, oferecemos Estética Facial para harmonizar o seu sorriso." },
-      { title: "Atendimento Humanizado", desc: "Acolhemos nossos pacientes de forma atenciosa, garantindo conforto e reduzindo a ansiedade." },
-      { title: "Segurança Profissional", desc: "Equipe técnica altamente qualificada para diagnosticar e tratar casos de alta complexidade." },
+      { title: "Odontologia Avançada", desc: "Estrutura moderna e técnicas atualizadas para garantir precisão em cada tratamento." },
+      { title: "Lentes em Resina", desc: "A arte de esculpir dentes com resinas de alta qualidade para um sorriso natural e harmônico." },
+      { title: "Reabilitação Oral", desc: "Devolvemos a função mastigatória e a estética completa para a sua saúde e conforto." },
+      { title: "Elevação da Autoestima", desc: "Cuidamos de cada detalhe para que você volte a sorrir com confiança todos os dias." },
     ],
     btn: "Quero conhecer a clínica",
     gallery: [
-      { url: "/imagens/hero.png", title: "Cuidado Integrado" },
+      { url: "/imagens/hero.png", title: "Estética Dental" },
       { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80", title: "Odontologia Moderna" },
-      { url: "/imagens/leve.png", title: "Sorrisos Perfeitos" }
+      { url: "/imagens/leve.png", title: "Sorrisos Naturais" }
     ]
   },
 
@@ -89,18 +89,18 @@ export const globalData = {
   services: {
     eyebrow: "Nossas Especializações",
     title1: "Excelência em",
-    title2: "cada área.",
-    desc1: "A Sorrivem oferece uma equipe focada em ",
-    descBold: "múltiplas especialidades odontológicas",
-    desc2: ", garantindo que o seu tratamento seja sempre conduzido pelo profissional mais qualificado.",
+    title2: "cada detalhe.",
+    desc1: "A LH Odonto Clinic oferece soluções completas em ",
+    descBold: "Reabilitação Oral e Estética",
+    desc2: ", garantindo que o seu tratamento seja sempre seguro e de alto nível.",
     btn: "Ver todas as especializações",
     list: [
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantodontia e Prótese", desc: "Devolvemos a segurança ao mastigar e a beleza do seu sorriso com implantes duradouros e próteses fixas e móveis." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Alinhamento e correção da mordida através de aparelhos ortodônticos modernos, trazendo função e estética." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Dentística e Periodontia", desc: "Cuidamos da saúde da sua gengiva (Periodontia) e da estética restauradora dos dentes com resinas de alta performance." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Endodontia", desc: "Tratamento de canal seguro, confortável e indolor, focado em salvar o seu dente e eliminar infecções." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Estética Facial", desc: "Procedimentos estéticos voltados para o rejuvenescimento e harmonização, emoldurando perfeitamente o seu novo sorriso." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Clínico Geral", desc: "Prevenção, profilaxia (limpeza profunda) e check-ups completos para toda a família." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes em Resina", desc: "A arte de esculpir o seu sorriso. Corrigimos cor, formato e proporção dos dentes com resinas de alta durabilidade e polimento." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Utilizamos tecnologias avançadas (como clareamento a laser/LED) para devolver a luminosidade natural e o brilho dos seus dentes." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Tratamentos completos para pacientes que sofreram perdas ou desgastes severos, recuperando totalmente a estética e a função." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Odontologia Estética", desc: "Focamos na harmonia facial e na naturalidade para que o seu novo sorriso se integre perfeitamente aos seus traços." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Odontologia Preventiva", desc: "Check-ups, profilaxia e orientações fundamentais para manter a saúde das suas gengivas e a longevidade das lentes." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Um ambiente onde a sua ansiedade é acolhida. Trabalhamos para tornar sua ida ao dentista uma experiência tranquila e positiva." }
     ]
   },
 
@@ -110,24 +110,24 @@ export const globalData = {
   team: {
     title: "Corpo Clínico",
     members: [
-      { name: "Dra. Luciana R. L. Felicio", cro: "CRO/SP 57494", specialty: "Responsável Técnica", img: "https://images.unsplash.com/photo-1594824432258-2da8b78a0827?w=400&h=500&fit=crop" }
+      { name: "Dr. Leonardo Oliveira", cro: "CRO RJ 60324", specialty: "Responsável Técnico", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop" }
     ]
   },
 
   // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA E CAMPANHAS
+  // SEÇÃO: A ESSÊNCIA
   // ---------------------------------------------------
   convenios: {
-    eyebrow: "O Cuidado Sorrivem",
-    title1: "Tratamento",
-    title2: "seguro e",
-    title3: "integrado.",
-    desc: "Acreditamos que a confiança é a base de um tratamento odontológico de sucesso. Nosso objetivo é fazer com que você tenha segurança em cada etapa do seu atendimento.",
+    eyebrow: "O Cuidado LH",
+    title1: "Elevando a sua",
+    title2: "autoestima",
+    title3: "através do sorriso.",
+    desc: "Acreditamos que um sorriso bonito e saudável tem o poder de transformar a maneira como você se vê e como o mundo te enxerga.",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Diagnóstico Preciso", content: "Nossos profissionais avaliam a sua saúde bucal de forma global, identificando não apenas o problema, mas a causa raiz." },
-      { title: "Múltiplas Especialidades", content: "Seja para colocar um implante, tratar um canal ou iniciar um tratamento ortodôntico, nós resolvemos tudo no mesmo lugar." },
-      { title: "Estética e Função", content: "Um sorriso não precisa apenas ser bonito, ele precisa ser saudável. Nós unimos a Dentística e a Periodontia para resultados perfeitos." }
+      { title: "Foco na Naturalidade", content: "Nossos procedimentos de lentes em resina são desenhados um a um, artesanalmente, garantindo um resultado que não parece artificial." },
+      { title: "Tecnologia e Conforto", content: "Contamos com equipamentos modernos para agilizar o seu tratamento, entregando resultados precisos com o máximo de conforto possível." },
+      { title: "Planejamento Individualizado", content: "Avaliamos seu rosto, sua mordida e seus desejos antes de iniciar qualquer mudança, para que o resultado supere as suas expectativas." }
     ]
   },
 
@@ -135,18 +135,18 @@ export const globalData = {
   // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
   // ---------------------------------------------------
   testimonials: {
-    eyebrow: "A Sorrivem Odontologia",
-    title1: "Conforto e",
-    title2: "tecnologia.",
-    quote: "Nosso ambiente foi preparado para proporcionar o máximo de conforto para você e sua família.",
-    supporting: "Nossos pacientes nos avaliam com 5.0 estrelas no Google. Conheça um pouco do nosso espaço no Alvinópolis, Atibaia.",
+    eyebrow: "A Clínica",
+    title1: "Odontologia",
+    title2: "Avançada.",
+    quote: "Nosso ambiente foi preparado para proporcionar um atendimento de alto padrão para você e sua família.",
+    supporting: "Acompanhe um pouco do nosso espaço localizado na Estrada João Paulo, no Rio de Janeiro.",
     photos: [
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica Sorrivem" },
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Clínica LH Odonto" },
       { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Atendimento Clínico" },
       { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Estrutura da Clínica" },
-      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento" },
-      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe Odontológica" },
-      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos Saudáveis" }
+      { img: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=1000&fit=crop", alt: "Tratamento Odontológico" },
+      { img: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=1000&fit=crop", alt: "Equipe" },
+      { img: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&h=1000&fit=crop", alt: "Sorrisos Perfeitos" }
     ]
   },
 
@@ -155,13 +155,13 @@ export const globalData = {
   // ---------------------------------------------------
   results_cta: {
     eyebrow: "O Portfólio",
-    title1: "O seu sorriso",
-    title2: "merece o melhor.",
+    title1: "A arte de",
+    title2: "esculpir sorrisos.",
     p1: "Acreditamos na",
-    p_bold1: "odontologia funcional e estética",
-    p2: "capaz de devolver a sua autoestima e a sua qualidade de vida. Acompanhe a transformação clínica na nossa",
+    p_bold1: "odontologia estética",
+    p2: "capaz de devolver a sua autoconfiança de forma imediata. Acompanhe a transformação real na nossa",
     p_bold2: "galeria de resultados",
-    p3: "e descubra o padrão da Sorrivem Odontologia.",
+    p3: "e descubra o padrão da LH Odonto Clinic.",
     p_bold3: "",
     btn: "Ver Resultados Reais",
     imgUrl: "/imagens/dentes.png" 
@@ -173,10 +173,10 @@ export const globalData = {
   faq: {
     title: "Dúvidas Frequentes",
     list: [
-      { q: "Onde a Sorrivem Odontologia está localizada?", a: "Nossa clínica fica na Avenida Dona Gertrudes, 552, no bairro Alvinópolis, em Atibaia - SP." },
-      { q: "Quais especialidades a clínica atende?", a: "Oferecemos atendimento completo, cobrindo áreas como Prótese Dentária, Ortodontia, Periodontia, Implantodontia, Dentística, Endodontia e Estética Facial." },
-      { q: "A clínica faz implantes dentários?", a: "Sim! Trabalhamos com a Implantodontia para substituir raízes e dentes perdidos, devolvendo a força para mastigar e a beleza do seu sorriso de forma definitiva." },
-      { q: "Como agendar uma avaliação?", a: "É muito simples. Você pode nos chamar direto no WhatsApp pelo número (11) 99100-0737 ou ligar para o telefone fixo (11) 2427-5957." }
+      { q: "Onde a LH Odonto Clinic está localizada?", a: "Nossa clínica fica na Estrada João Paulo, 1128 - Sobrado, no bairro Barros Filho, no Rio de Janeiro - RJ." },
+      { q: "Quais são as especialidades da clínica?", a: "Nosso foco principal é a Reabilitação Oral e a Odontologia Estética, incluindo a confecção de Lentes em Resina e protocolos de Clareamento Dental." },
+      { q: "Como funcionam as Lentes em Resina?", a: "É um procedimento de estética dental onde aplicamos uma resina de alta performance sobre os dentes para corrigir cor, tamanho e formato, feito de forma artesanal no consultório." },
+      { q: "Como agendar uma avaliação?", a: "Basta clicar em qualquer botão de WhatsApp do site, ou nos adicionar diretamente pelo número (21) 99927-3465. Nossa equipe estará pronta para te atender." }
     ]
   },
 
@@ -185,9 +185,9 @@ export const globalData = {
   // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Av. Dona Gertrudes, 552", value2: "Alvinópolis" },
-    box2: { title: "Localização", value1: "Atibaia - SP", value2: "CEP: 12942-540" },
-    box3: { title: "Especialidades", value1: "Implantes, Ortodontia", value2: "Estética Facial e Endodontia" },
+    box1: { title: "Endereço", value1: "Estrada João Paulo, 1128", value2: "Sobrado - Barros Filho" },
+    box2: { title: "Localização", value1: "Rio de Janeiro - RJ", value2: "CEP: 21512-002" },
+    box3: { title: "Especialidades", value1: "Reabilitação Oral", value2: "Lentes em Resina e Estética" },
     btn: "Abrir no Google Maps"
   },
 
@@ -198,23 +198,23 @@ export const globalData = {
     eyebrow: "Marque uma Avaliação",
     title1: "A sua saúde no",
     title2: "lugar certo.",
-    desc: "Agende sua avaliação na Sorrivem. Conte com a segurança de uma equipe completa para tratar do seu sorriso com todo o cuidado que ele merece.",
+    desc: "Agende sua avaliação na LH Odonto Clinic. Conte com a segurança do Dr. Leonardo Oliveira e sua equipe para tratar do seu sorriso com excelência.",
     box1_title: "Endereço",
     box2_title: "Contato Rápido",
     box3_title: "Redes Sociais",
     box3_desc1: "Acompanhe nossa rotina",
-    box3_desc2: "@sorrivem.odontologia"
+    box3_desc2: "@lhodontoclinic"
   },
 
   // ---------------------------------------------------
   // RODAPÉ
   // ---------------------------------------------------
   footer: {
-    sobre: "Sorrivem Odontologia | O seu sorriso merece o melhor! Clínica odontológica completa e multidisciplinar em Atibaia, SP.",
+    sobre: "LH Odonto Clinic | Elevando autoestima através do sorriso. Especialistas em Reabilitação Oral e Estética no Rio de Janeiro.",
     title_tratamentos: "Especializações",
     title_contato: "Contato",
-    direitos: "© 2026 Sorrivem Odontologia. Todos os direitos reservados. RT: Dra. Luciana R. L. Felicio CRO/SP 57494.",
-    registro: "Alvinópolis — Atibaia, SP"
+    direitos: "© 2026 LH Odonto Clinic. Todos os direitos reservados. RT Dr. Leonardo Oliveira CRO RJ 60324.",
+    registro: "Barros Filho — Rio de Janeiro, RJ"
   },
 
   // ---------------------------------------------------
@@ -228,39 +228,39 @@ export const globalData = {
     p_bold1: "Odontologia de Excelência",
     p2: ". Valorizamos a",
     p_bold2: "naturalidade e a função",
-    p3: "em cada detalhe dos nossos tratamentos.",
+    p3: "em cada detalhe dos nossos tratamentos em resina e reabilitação.",
     btnSaberMais: "Agendar avaliação semelhante",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
-        category: "Implantodontia", 
-        duration: "Implantes Dentários", 
-        complaint: "Ausência dentária causando dificuldade para mastigar alimentos e insegurança ao sorrir.", 
-        procedure: "Instalação de implantes e prótese definitiva, recuperando totalmente a força mastigatória e o formato do sorriso.", 
+        category: "Estética do Sorriso", 
+        duration: "Lentes em Resina", 
+        complaint: "Descontentamento com a cor e pequenas assimetrias no formato dos dentes anteriores.", 
+        procedure: "Arte de esculpir 10 lentes em resina superior, devolvendo um sorriso harmônico e extremamente natural.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Ortodontia", 
-        duration: "Alinhamento Completo", 
-        complaint: "Dentes desalinhados, dificuldade de higienização e encaixe incorreto da mordida.", 
-        procedure: "Tratamento ortodôntico seguro, resultando no alinhamento ideal, facilitando a limpeza e melhorando a simetria facial.", 
+        category: "Odontologia Estética", 
+        duration: "Clareamento Avançado", 
+        complaint: "Dentes amarelados e com manchas devido à alimentação e ao tempo.", 
+        procedure: "Protocolo de clareamento no consultório com luz aceleradora, garantindo dentes muito mais claros e iluminados.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Odontologia Clínica", 
-        duration: "Endodontia", 
-        complaint: "Dor severa e constante devido à cárie profunda afetando a estrutura interna (polpa) do dente.", 
-        procedure: "Tratamento de canal executado por especialista, eliminando a dor e salvando a estrutura dental remanescente.", 
+        category: "Reabilitação Oral", 
+        duration: "Devolução de Função", 
+        complaint: "Desgaste severo dos dentes prejudicando a mordida e o suporte labial.", 
+        procedure: "Reabilitação completa restabelecendo o tamanho original dos dentes e a força mastigatória.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       },
       { 
-        category: "Dentística e Prevenção", 
-        duration: "Clareamento e Limpeza", 
-        complaint: "Dentes amarelados pelo tempo e acúmulo de placa bacteriana ao longo da margem gengival.", 
-        procedure: "Profilaxia rigorosa para promover a saúde da gengiva e protocolo de clareamento estético.", 
+        category: "Prevenção e Saúde", 
+        duration: "Profilaxia", 
+        complaint: "Acúmulo de tártaro causando inflamação na margem gengival.", 
+        procedure: "Limpeza profunda (profilaxia) devolvendo a saúde das gengivas e preparando o sorriso para a estética.", 
         beforeImg: "/imagens/branco.png", 
         afterImg: "/imagens/preto.png"    
       }
