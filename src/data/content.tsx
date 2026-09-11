@@ -24,7 +24,7 @@ export const globalData = {
       detalhado: "Av. Dona Gertrudes, 552\nAlvinópolis\nAtibaia - SP, 12942-540",
       comodidades: ["Prótese e Implantes", "Ortodontia", "Endodontia", "Estética Facial"],
       mapaGpsUrl: "https://maps.app.goo.gl/search/Sorrivem+Odontologia+Atibaia",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7338.675012210004!2d-46.576571906420895!3d-23.1213356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec187f5878acd%3A0x7e7b3f9c391c19b0!2sSorrivem%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1789151066315!5m2!1spt-BR!2sbr"
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7338.675012210004!2d-46.576571906420895!3d-23.1213356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec187f5878acd%3A0x7e7b3f9c391c19b0!2sSorrivem%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1789151562347!5m2!1spt-BR!2sbr"
     },
     horarios: "Atendimento de Segunda a Sexta\nEncerra às 19:00",
   },
