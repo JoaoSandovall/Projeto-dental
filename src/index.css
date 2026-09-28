@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - LH Odonto Clinic (Grafite/Preto Profundo para destacar o Dourado) */
-  --c-primary: #1C1B1A;
-  --c-primary-rgb: 28, 27, 26;
-  --c-primary-hover: #0F0F0E;
+  /* Cores Principais - Inova Sorrisos (Azul Cobalto da Logomarca - Confiança e Inovação) */
+  --c-primary: #18418C;
+  --c-primary-rgb: 24, 65, 140;
+  --c-primary-hover: #102B5E;
   
-  /* Cores de Destaque - Dourado da Logomarca */
-  --c-accent: #CFA968;
-  --c-accent-rgb: 207, 169, 104;
-  --c-accent-hover: #B5904D;
+  /* Cores de Destaque - Inova Sorrisos (Caramelo/Madeira inspirado na recepção da clínica) */
+  --c-accent: #D4A373;
+  --c-accent-rgb: 212, 163, 115;
+  --c-accent-hover: #BC8C5E;
   
-  /* Fundos - Branco Puro com toques de Cinza Claro Metálico */
+  /* Fundos - Branco Puro com toques de Off-White quente para acolhimento */
   --c-bg: #FFFFFF;
   --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F7F7F7; 
-  --c-team-placeholder: #1C1B1A;
+  --c-bg-alt: #F9F8F6; 
+  --c-team-placeholder: #18418C;
   
   /* Textos */
-  --c-text-main: #2A2A2A;
-  --c-text-muted: #666666;
-  --c-text-light: #A3A3A3;
+  --c-text-main: #1F2937;
+  --c-text-muted: #4B5563;
+  --c-text-light: #9CA3AF;
 }
 
 html {
@@ -74,7 +74,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.12;
+  opacity: 0.10;
   animation: auraFloat 18s linear infinite;
   z-index: 0;
   pointer-events: none;
