@@ -10,26 +10,26 @@
 }
 
 :root {
-  /* Cores Principais - Inova Sorrisos (Azul Cobalto da Logomarca - Confiança e Inovação) */
-  --c-primary: #18418C;
-  --c-primary-rgb: 24, 65, 140;
-  --c-primary-hover: #102B5E;
+  /* Cores Principais - Dra. Joselene Leal (Cinza Quente Escuro) */
+  --c-primary: #4A3F35;
+  --c-primary-rgb: 74, 63, 53;
+  --c-primary-hover: #362D25;
   
-  /* Cores de Destaque - Inova Sorrisos (Caramelo/Madeira inspirado na recepção da clínica) */
-  --c-accent: #D4A373;
-  --c-accent-rgb: 212, 163, 115;
-  --c-accent-hover: #BC8C5E;
+  /* Cores de Destaque - Rosa Coral / Salmão da Identidade Visual */
+  --c-accent: #E08A8C;
+  --c-accent-rgb: 224, 138, 140;
+  --c-accent-hover: #C97577;
   
-  /* Fundos - Branco Puro com toques de Off-White quente para acolhimento */
-  --c-bg: #FFFFFF;
-  --c-bg-rgb: 255, 255, 255;
-  --c-bg-alt: #F9F8F6; 
-  --c-team-placeholder: #18418C;
+  /* Fundos - Off-White com base quente */
+  --c-bg: #FCF9F8;
+  --c-bg-rgb: 252, 249, 248;
+  --c-bg-alt: #F5EFEF; 
+  --c-team-placeholder: #4A3F35;
   
   /* Textos */
-  --c-text-main: #1F2937;
-  --c-text-muted: #4B5563;
-  --c-text-light: #9CA3AF;
+  --c-text-main: #2C2621;
+  --c-text-muted: #6B5E55;
+  --c-text-light: #A3968F;
 }
 
 html {
@@ -74,7 +74,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.10;
+  opacity: 0.12;
   animation: auraFloat 18s linear infinite;
   z-index: 0;
   pointer-events: none;

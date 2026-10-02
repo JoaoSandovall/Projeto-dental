@@ -4,30 +4,26 @@ import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
 export const globalData = {
-  // ---------------------------------------------------
-  // DADOS GERAIS DA CLÍNICA
-  // ---------------------------------------------------
   clinica: {
-    nome: "Inova Sorrisos",
+    nome: "Dra. Joselene Leal",
     subtitulo: "Consultório Odontológico",
-    logoUrl: "/imagens/logo.png", // Mantenha a imagem da logo azul
+    logoUrl: "/imagens/logo.png",
     contato: {
-      whatsappUrl: "https://wa.me/5522992885631?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+Inova+Sorrisos.", 
+      whatsappUrl: "https://wa.me/557598475224?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Joselene.", 
       whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(22) 99288-5631",
-      emailLabel: "contato@inovasorrisos.com.br",
-      instagramLabel: "@inovasorrisos",
+      telefoneLabel: "(75) 3623-1818 / (75) 9847-5224",
+      emailLabel: "contato@drajoseleneleal.com.br",
+      instagramLabel: "@dra.joseleneleal",
     },
     endereco: {
-      bairroCidade: "Bacaxá, Saquarema - RJ",
-      edificio: "Consultório Inova Sorrisos",
-      detalhado: "Rua Beatriz Amaral Pereira, 79\nBacaxá\nSaquarema - RJ, 28994-702",
-      comodidades: ["Clínica Geral", "Ortodontia", "Implantes", "Estética Dental"],
-      mapaGpsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.4875016793208!2d-42.4705235!3d-22.895383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x975db3fbf8f8bf%3A0x7317197e2911bce4!2sInova%20Sorrisos%20-%20Consult%C3%B3rio%20Odontol%C3%B3gico!5e0!3m2!1spt-BR!2sbr!4v1790598482207!5m2!1spt-BR!2sbr",
-      // Link genérico de mapa para a rua em Bacaxá
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.966952865963!2d-42.46328328448822!3d-22.880521885025736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9768f5b8cb46b3%3A0xc3c9b77eb8a2e0a!2sR.%20Beatriz%20Amaral%20Pereira%2C%2079%20-%20Bacax%C3%A1%2C%20Saquarema%20-%20RJ%2C%2028994-702!5e0!3m2!1spt-BR!2sbr!4v1714400000000!5m2!1spt-BR!2sbr"
+      bairroCidade: "Centro, Feira de Santana - BA",
+      edificio: "Consultório Dra. Joselene Leal",
+      detalhado: "Rua Prof. Geminiano Costa, 222\nCentro\nFeira de Santana - BA, 44001-120",
+      comodidades: ["Lentes e Facetas", "Prótese sobre Implante", "Estética Dental", "Atendimento Humanizado"],
+      mapaGpsUrl: "https://maps.app.goo.gl/search/Consultorio+Odontologico+Dra+Joselene+Leal",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.960667887411!2d-38.9617876!3d-12.250941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714378c290ae699%3A0x71b8d0b9532d62e8!2sConsult%C3%B3rio%20Odontol%C3%B3gico%20Dra%20Joselene%20Leal!5e0!3m2!1spt-BR!2sbr!4v1790966333684!5m2!1spt-BR!2sbr"
     },
-    horarios: "Segunda a Sexta: 08:00 às 21:30\nSábado: 08:00 às 15:00",
+    horarios: "Aberto de Segunda a Sexta\nEncerra às 18:00",
   },
 
   nav: {
@@ -35,233 +31,197 @@ export const globalData = {
     ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: HERO
-  // ---------------------------------------------------
   hero: {
     imgUrl: "/imagens/hero.png", 
-    eyebrow: "Bacaxá — Saquarema, RJ",
-    title1: "Inovação",
-    title2: "e cuidado",
-    title3: "com seu sorriso.",
-    desc1: "Acreditamos em uma odontologia que une ",
-    descBold: "tecnologia e atendimento humano.",
-    desc2: " Na Inova Sorrisos, oferecemos tratamentos completos com horários flexíveis para cuidar da saúde da sua família.",
+    eyebrow: "Centro — Feira de Santana, BA",
+    title1: "Autoestima",
+    title2: "saúde e",
+    title3: "beleza.",
+    desc1: "Especialista em lentes, facetas e prótese sobre implante.",
+    descBold: " Resultados naturais.",
+    desc2: " Tratamentos executados com técnica e planejamento para valorizar a simetria do seu rosto.",
     btnPrimary: "Agende sua avaliação",
     btnOutline: "Nossos Tratamentos",
-    badgeTitle: "Inova Sorrisos",
-    badgeDesc: "Odontologia de Excelência",
+    badgeTitle: "Dra. Joselene Leal",
+    badgeDesc: "CRO BA",
     stats: [
       { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 34, suffix: "+", label: "avaliações reais", thousands: false },
-      { target: 100, suffix: "%", label: "foco no paciente", thousands: false },
+      { target: 26, suffix: "", label: "anos de atuação", thousands: false },
+      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: SOBRE NÓS
-  // ---------------------------------------------------
   about: {
-    eyebrow: "A Inova Sorrisos",
-    title1: "Conforto e",
-    title2: "inovação",
-    title3: "para você.",
-    p1: "Localizada em Bacaxá, Saquarema, a Inova Sorrisos nasceu com a missão de tornar a odontologia de excelência acessível e acolhedora para todos.",
-    p2_1: "Nossa clínica possui uma ",
-    p2_bold: "estrutura moderna e climatizada,",
-    p2_2: " projetada para proporcionar tranquilidade desde a recepção até a cadeira do dentista, com profissionais altamente capacitados.",
+    eyebrow: "Dra. Joselene Leal",
+    title1: "Precisão e",
+    title2: "experiência",
+    title3: "clínica.",
+    p1: "Localizado no Centro de Feira de Santana, o consultório oferece infraestrutura para reabilitação oral e estética dental.",
+    p2_1: "A ",
+    p2_bold: "Dra. Joselene Leal possui 26 anos de formação,",
+    p2_2: " direcionando o atendimento para a execução de lentes de contato, facetas e próteses sobre implante.",
     topics: [
-      { title: "Horário Estendido", desc: "Pensando na sua rotina, atendemos de segunda a sexta até às 21:30 e aos sábados até às 15:00." },
-      { title: "Atendimento Humanizado", desc: "Ouvimos as suas necessidades para criar um plano de tratamento confortável e sem traumas." },
-      { title: "Tecnologia Odontológica", desc: "Equipamentos de ponta para diagnósticos precisos e tratamentos mais rápidos e seguros." },
-      { title: "Odontologia Integrada", desc: "Todas as especialidades em um só lugar, da prevenção ao implante dentário." },
+      { title: "Odontologia Estética", desc: "Correção de formato e cor através de lentes e facetas." },
+      { title: "Prótese sobre Implante", desc: "Reabilitação mastigatória com estabilidade e materiais de alta resistência." },
+      { title: "Empreendedorismo Feminino", desc: "Clínica estruturada com foco em gestão de processos e excelência no atendimento." },
+      { title: "Protocolo Clínico", desc: "Avaliação estruturada para mapeamento das necessidades de cada paciente." },
     ],
-    btn: "Conheça nossa estrutura",
+    btn: "Quero conhecer a clínica",
     gallery: [
-      { url: "/imagens/clinica1.png", title: "Ambiente Acolhedor" },
-      { url: "/imagens/profissionalatuando.png", title: "Atendimento Especializado" },
-      { url: "/imagens/materiais1.png", title: "Tecnologia e Segurança" }
+      { url: "/imagens/profissionalatuando.png", title: "Atendimento Clínico" },
+      { url: "/imagens/clinica1.png", title: "Infraestrutura" },
+      { url: "/imagens/materiais1.png", title: "Tecnologia" }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: SERVIÇOS E PROCEDIMENTOS
-  // ---------------------------------------------------
   services: {
     eyebrow: "Nossas Especializações",
-    title1: "Tudo o que o",
-    title2: "seu sorriso precisa.",
-    desc1: "A Inova Sorrisos oferece soluções completas em ",
-    descBold: "saúde e estética bucal",
-    desc2: ", garantindo que o seu tratamento seja sempre eficiente e de alto padrão.",
+    title1: "Odontologia",
+    title2: "direcionada.",
+    desc1: "Soluções estruturadas para ",
+    descBold: "Reabilitação Oral e Estética",
+    desc2: ", executadas com materiais de alta performance.",
     btn: "Ver todas as especializações",
     list: [
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Implantes Dentários", desc: "Substitua dentes perdidos de forma definitiva e segura. Recuperamos a sua força mastigatória e a estética do seu sorriso." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Ortodontia", desc: "Aparelhos modernos (tradicionais e estéticos) para corrigir a posição dos dentes e garantir uma mordida perfeita." },
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Odontologia Estética", desc: "Facetas, lentes em resina e restaurações estéticas para harmonizar a cor e o formato dos seus dentes." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Dental", desc: "Técnicas seguras de clareamento (laser ou caseiro supervisionado) para devolver o brilho natural ao seu sorriso." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Endodontia (Canal)", desc: "Tratamento de canal realizado com precisão e conforto, focado em eliminar a dor e salvar a estrutura do dente." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Clínica Geral e Prevenção", desc: "Limpezas profundas, remoção de tártaro e check-ups regulares para manter a saúde bucal de toda a família em dia." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes e Facetas", desc: "Modificação estrutural e estética dos dentes anteriores utilizando cerâmica ou resina." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prótese sobre Implante", desc: "Substituição de elementos dentários perdidos utilizando bases de titânio e coroas definitivas." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Estética Dental", desc: "Procedimentos direcionados à harmonia visual do sorriso em relação às proporções faciais." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento", desc: "Remoção de pigmentação do esmalte dentário utilizando agentes clareadores supervisionados." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Odontologia Preventiva", desc: "Manutenção da saúde gengival e avaliação periódica da integridade das próteses e facetas." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Condução do tratamento com foco na redução da ansiedade e comunicação clara dos procedimentos." }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: CORPO CLÍNICO / ESPECIALISTAS
-  // ---------------------------------------------------
   team: {
-    title: "Quem cuida de você",
+    title: "Corpo Clínico",
     members: [
-      { name: "Equipe Inova Sorrisos", cro: "Especialistas", specialty: "Consultório Odontológico", img: "/imagens/profissionalatuando.png" }
+      { name: "Dra. Joselene Leal", cro: "Cirurgiã-Dentista", specialty: "Especialista em Lentes e Próteses", img: "/imagens/profissionalatuando.png" }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: A ESSÊNCIA
-  // ---------------------------------------------------
   convenios: {
-    eyebrow: "Nosso Propósito",
-    title1: "Inovação",
-    title2: "voltada para o",
-    title3: "seu bem-estar.",
-    desc: "A Inova Sorrisos alia as melhores técnicas odontológicas a um atendimento próximo, respeitoso e transparente, para que você sorria com confiança.",
+    eyebrow: "Protocolo de Atendimento",
+    title1: "Resultados",
+    title2: "baseados em",
+    title3: "diagnóstico.",
+    desc: "A execução de tratamentos estéticos e reabilitadores requer mapeamento prévio das condições orais e estruturais do paciente.",
     btn: "Agendar minha avaliação",
     list: [
-      { title: "Biossegurança Rigorosa", content: "Todos os nossos instrumentais e materiais passam por rígidos processos de esterilização para garantir 100% de segurança em cada procedimento." },
-      { title: "Conforto na Recepção", content: "Nossa clínica foi desenhada com um ambiente aconchegante, detalhes em madeira e iluminação pensada para relaxar você antes mesmo de entrar no consultório." },
-      { title: "Flexibilidade para Você", content: "Sabemos que a sua rotina é corrida. Por isso, somos uma das únicas clínicas da região de Saquarema com atendimento estendido até as 21h30." }
+      { title: "Planejamento Protético", content: "Análise da oclusão e dimensões faciais para a confecção de próteses sobre implante e facetas." },
+      { title: "Seleção de Materiais", content: "Utilização de componentes e resinas certificados para assegurar resistência e estabilidade de cor." },
+      { title: "Execução Técnica", content: "Aplicação de métodos minimamente invasivos durante o preparo dentário para preservação da estrutura sadia." }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: DEPOIMENTOS / GALERIA DE FOTOS
-  // ---------------------------------------------------
   testimonials: {
     eyebrow: "A Clínica",
-    title1: "Acolhimento e",
-    title2: "modernidade.",
-    quote: "Nosso ambiente foi preparado para proporcionar um atendimento seguro, limpo e extremamente confortável.",
-    supporting: "Nossos pacientes avaliam a Inova Sorrisos com 5 estrelas no Google. Conheça um pouco da nossa estrutura em Bacaxá.",
+    title1: "Infraestrutura e",
+    title2: "posicionamento.",
+    quote: "A autoestima desempenha papel fundamental para a saúde e bem-estar do indivíduo.",
+    supporting: "A clínica opera no Centro de Feira de Santana, possuindo infraestrutura adequada para procedimentos de reabilitação oral.",
     photos: [
-      { img: "/imagens/clinica1.png", alt: "Recepção Inova Sorrisos" },
-      { img: "/imagens/profissionalatuando.png", alt: "Atendimento Odontológico" },
-      { img: "/imagens/clinica2.png", alt: "Estrutura Moderna" },
-      { img: "/imagens/materiais1.png", alt: "Materiais de Alta Qualidade" },
-      { img: "/imagens/profissionaisatuando.png", alt: "Equipe em Ação" },
-      { img: "/imagens/materiais2.png", alt: "Biossegurança e Tecnologia" }
+      { img: "/imagens/clinica1.png", alt: "Estrutura da Clínica" },
+      { img: "/imagens/profissionalatuando.png", alt: "Atendimento Clínico" },
+      { img: "/imagens/clinica2.png", alt: "Recepção" },
+      { img: "/imagens/materiais1.png", alt: "Materiais Odontológicos" },
+      { img: "/imagens/profissionaisatuando.png", alt: "Equipe" },
+      { img: "/imagens/materiais2.png", alt: "Instrumental" }
     ]
   },
 
-  // ---------------------------------------------------
-  // SEÇÃO: CTA PARA RESULTADOS
-  // ---------------------------------------------------
   results_cta: {
     eyebrow: "O Portfólio",
-    title1: "A beleza da",
-    title2: "transformação.",
-    p1: "Acreditamos na",
-    p_bold1: "odontologia de qualidade",
-    p2: "que resolve dores e devolve a vontade de sorrir. Acompanhe a transformação real na nossa",
-    p_bold2: "galeria de resultados clínicos",
-    p3: "e comprove a diferença da Inova Sorrisos.",
+    title1: "Evidência",
+    title2: "clínica.",
+    p1: "Registros documentais de",
+    p_bold1: "casos reabilitados",
+    p2: ". O mapeamento fotográfico evidencia a precisão técnica na confecção de lentes e próteses apresentadas na",
+    p_bold2: "galeria de resultados",
+    p3: ".",
     p_bold3: "",
-    btn: "Ver Resultados Reais",
+    btn: "Acessar Resultados",
     imgUrl: "/imagens/dentes.png" 
   },
 
-  // ---------------------------------------------------
-  // FAQ
-  // ---------------------------------------------------
   faq: {
-    title: "Dúvidas Frequentes",
+    title: "Informações Frequentes",
     list: [
-      { q: "Onde a Inova Sorrisos está localizada?", a: "Nossa clínica fica na Rua Beatriz Amaral Pereira, 79, no bairro Bacaxá, em Saquarema - RJ." },
-      { q: "Até que horas a clínica funciona?", a: "Temos um horário muito flexível para facilitar a sua vida! Funcionamos de Segunda a Sexta, das 08:00 às 21:30, e aos Sábados das 08:00 às 15:00." },
-      { q: "A clínica faz tratamento de canal e implantes?", a: "Sim, oferecemos um atendimento odontológico completo. Desde a limpeza preventiva até tratamentos de canal (Endodontia) e instalação de Implantes dentários." },
-      { q: "Como faço para agendar uma consulta?", a: "Você pode nos ligar ou enviar uma mensagem pelo WhatsApp através do número (22) 99288-5631. Nossa equipe vai encontrar o melhor horário para você." }
+      { q: "Onde o consultório está localizado?", a: "O consultório está situado na Rua Prof. Geminiano Costa, 222, Centro, em Feira de Santana - BA." },
+      { q: "Quais são as áreas de atuação principais?", a: "O foco clínico abrange a confecção de lentes, facetas, próteses sobre implante e estética dental." },
+      { q: "O procedimento de facetas exige desgaste dental?", a: "O nível de preparo depende da indicação clínica. Utilizam-se protocolos minimamente invasivos para preservar o tecido dentário." },
+      { q: "Como é realizado o agendamento?", a: "O agendamento é feito via contato telefônico ou WhatsApp pelo número (75) 9847-5224." }
     ]
   },
 
-  // ---------------------------------------------------
-  // LOCALIZAÇÃO
-  // ---------------------------------------------------
   location: {
     eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Beatriz Amaral Pereira, 79", value2: "Bacaxá" },
-    box2: { title: "Localização", value1: "Saquarema - RJ", value2: "CEP: 28994-702" },
-    box3: { title: "Especialidades", value1: "Implantes, Ortodontia", value2: "Clínica Geral e Estética" },
+    box1: { title: "Endereço", value1: "Rua Prof. Geminiano Costa, 222", value2: "Centro" },
+    box2: { title: "Localização", value1: "Feira de Santana - BA", value2: "CEP: 44001-120" },
+    box3: { title: "Especialidades", value1: "Lentes, Facetas", value2: "Prótese sobre Implante" },
     btn: "Abrir no Google Maps"
   },
 
-  // ---------------------------------------------------
-  // CONTATO FINAL
-  // ---------------------------------------------------
   contact: {
-    eyebrow: "Marque uma Avaliação",
-    title1: "A sua saúde no",
-    title2: "lugar certo.",
-    desc: "Agende sua avaliação na Inova Sorrisos. Conte com a segurança de uma equipe dedicada e um horário de atendimento pensado para a sua comodidade.",
+    eyebrow: "Agendamento",
+    title1: "Contato",
+    title2: "direto.",
+    desc: "Solicite a marcação de horário para avaliação clínica. O atendimento é estruturado para fornecer diagnósticos precisos.",
     box1_title: "Endereço",
-    box2_title: "Contato Rápido",
-    box3_title: "Redes Sociais",
-    box3_desc1: "Acompanhe nossa rotina",
-    box3_desc2: "@inovasorrisos"
+    box2_title: "Contato",
+    box3_title: "Mídia Social",
+    box3_desc1: "Acompanhe atualizações",
+    box3_desc2: "@dra.joseleneleal"
   },
 
-  // ---------------------------------------------------
-  // RODAPÉ
-  // ---------------------------------------------------
   footer: {
-    sobre: "Inova Sorrisos | Consultório Odontológico em Bacaxá, Saquarema. Odontologia de excelência com atendimento humano e inovador.",
+    sobre: "Consultório Odontológico Dra Joselene Leal. Atuação clínica com foco em lentes, facetas e prótese sobre implante.",
     title_tratamentos: "Especializações",
     title_contato: "Contato",
-    direitos: "© 2026 Inova Sorrisos. Todos os direitos reservados.",
-    registro: "Bacaxá — Saquarema, RJ"
+    direitos: "© 2026 Dra Joselene Leal. Todos os direitos reservados.",
+    registro: "Feira de Santana — BA"
   },
 
-  // ---------------------------------------------------
-  // PÁGINA DE RESULTADOS
-  // ---------------------------------------------------
   results_page: {
-    eyebrow: "Casos Clínicos e Resultados",
-    title1: "A beleza de",
-    title2: "um sorriso.",
-    p1: "Confira a transformação dos nossos pacientes através da ",
-    p_bold1: "Odontologia de Excelência",
-    p2: ". Valorizamos a",
-    p_bold2: "saúde e a estética",
-    p3: "em cada detalhe dos nossos tratamentos.",
-    btnSaberMais: "Agendar avaliação semelhante",
+    eyebrow: "Casos Clínicos",
+    title1: "Resultados",
+    title2: "documentados.",
+    p1: "Registros fotográficos evidenciando as alterações morfológicas e estéticas obtidas por meio de ",
+    p_bold1: "intervenções clínicas",
+    p2: ". O foco recai sobre a",
+    p_bold2: "função e adaptação",
+    p3: "dos materiais restauradores.",
+    btnSaberMais: "Solicitar avaliação",
     btnVoltar: "Retornar à página inicial",
     cases: [
       { 
-        category: "Estética do Sorriso", 
-        duration: "Clareamento e Resinas", 
-        complaint: "Descontentamento com a cor e o formato irregular dos dentes anteriores.", 
-        procedure: "Protocolo de clareamento estético seguido de restaurações em resina para harmonizar o sorriso.", 
+        category: "Estética Dental", 
+        duration: "Facetas e Lentes", 
+        complaint: "Alterações de forma e pigmentação no grupo dos dentes anteriores.", 
+        procedure: "Instalação de lâminas estéticas para reconfiguração anatômica e adequação de cor.", 
+        beforeImg: "/imagens/antes.jpg", 
+        afterImg: "/imagens/depois.jpg"    
+      },
+      { 
+        category: "Odontologia Estética", 
+        duration: "Clareamento", 
+        complaint: "Saturação da coloração do esmalte dentário.", 
+        procedure: "Aplicação de protocolo de clareamento monitorado para redução da pigmentação intrínseca.", 
         beforeImg: "/imagens/antes.jpg", 
         afterImg: "/imagens/depois.jpg"    
       },
       { 
         category: "Reabilitação", 
-        duration: "Implantes Dentários", 
-        complaint: "Ausência de dentes causando dificuldade mastigatória e insegurança ao sorrir.", 
-        procedure: "Instalação segura de implantes dentários, recuperando de forma definitiva a estética e a força da mordida.", 
+        duration: "Prótese sobre Implante", 
+        complaint: "Edentulismo parcial comprometendo a eficiência mastigatória.", 
+        procedure: "Fixação de coroas sobre implantes osseointegrados para restabelecimento da oclusão.", 
         beforeImg: "/imagens/antes.jpg", 
         afterImg: "/imagens/depois.jpg"    
       },
       { 
-        category: "Ortodontia", 
-        duration: "Alinhamento Dental", 
-        complaint: "Dentes desalinhados prejudicando a mordida e dificultando a higienização.", 
-        procedure: "Tratamento com aparelho ortodôntico, resultando no alinhamento ideal e em um sorriso perfeitamente funcional.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"    
-      },
-      { 
-        category: "Prevenção e Saúde", 
-        duration: "Limpeza e Endodontia", 
-        complaint: "Dores agudas e acúmulo de tártaro causando desconforto na gengiva.", 
-        procedure: "Tratamento de canal indolor seguido de profilaxia completa, garantindo o fim da dor e a saúde da boca.", 
+        category: "Adequação do Meio", 
+        duration: "Profilaxia", 
+        complaint: "Presença de cálculo dental e inflamação dos tecidos periodontais.", 
+        procedure: "Remoção mecânica do biofilme e cálculo para manutenção da saúde gengival.", 
         beforeImg: "/imagens/antes.jpg", 
         afterImg: "/imagens/depois.jpg"    
       }
