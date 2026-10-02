@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
 import { Header } from "./components/sections/Header";
 import { Hero } from "./components/sections/Hero";
-import { About } from "./components/sections/About";
-import { Convenios } from "./components/sections/Convenios";
-import { Testimonials } from "./components/sections/Testimonials";
-import { ResultsCTA } from "./components/sections/ResultsCTA";
+import { AboutBrief } from "./components/sections/AboutBrief";
+import { Services } from "./components/sections/Services";
+import { Protocol } from "./components/sections/Protocol";
 import { FAQ } from "./components/sections/FAQ";
-import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
+import { AboutMePage } from "./components/pages/AboutMePage";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-
-import { ResultsPage } from "./components/pages/ResultsPage";
-import { SpecialtiesPage } from "./components/pages/SpecialtiesPage";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -29,8 +25,8 @@ export default function App() {
       window.history.pushState({}, "", e.detail);
       setCurrentPath(e.detail);
     };
-    window.addEventListener("navigate", handleInternalNav);
 
+    window.addEventListener("navigate", handleInternalNav);
     return () => {
       window.removeEventListener("popstate", onLocationChange);
       window.removeEventListener("navigate", handleInternalNav);
@@ -40,13 +36,11 @@ export default function App() {
   useEffect(() => {
     if (currentPath === displayPath) return;
     setStage("out");
-    
     const t1 = setTimeout(() => {
       setDisplayPath(currentPath);
       window.scrollTo(0, 0);
       setStage("in");
-    }, 260);
-    
+    }, 300);
     return () => clearTimeout(t1);
   }, [currentPath, displayPath]);
 
@@ -56,48 +50,33 @@ export default function App() {
     } else {
       if (currentPath !== "/") {
         window.dispatchEvent(new CustomEvent("navigate", { detail: "/" }));
-        setTimeout(() => {
-          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        }, 150);
+        setTimeout(() => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); }, 200);
       } else {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
 
-  let transitionClass = "";
-  if (stage === "out") transitionClass = "page-transition-out";
-  if (stage === "in") transitionClass = "page-transition-in";
+  const isTransitioning = stage === "out";
 
-  const handleAnimationEnd = () => {
-    if (stage === "in") setStage("done");
-  };
-
-  // === SOLUÇÃO DEFINITIVA ===
-  // Renderizamos o <Header /> aqui, isolado e imune a qualquer bug de CSS
   return (
-    <>
+    <div className="bg-[var(--c-bg)] min-h-screen text-[var(--c-text-main)]">
       <Header goTo={goTo} />
-      {/* A div com overflow-x-hidden foi removida daqui para liberar o sticky */}
-      <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
-        {displayPath.includes("resultados") ? (
-          <ResultsPage goTo={goTo} />
-        ) : displayPath.includes("especialidades") ? (
-          <SpecialtiesPage goTo={goTo} />
+      <div className={isTransitioning ? "page-transition-out" : "page-transition-in"} onAnimationEnd={() => setStage("done")}>
+        {displayPath === "/sobre-o-doutor" ? (
+          <AboutMePage goTo={goTo} />
         ) : (
           <>
             <Hero goTo={goTo} />
-            <About goTo={goTo} />
-            <Convenios />
-            <Testimonials />
-            <ResultsCTA />
+            <AboutBrief goTo={goTo} />
+            <Services />
+            <Protocol />
             <FAQ />
-            <Location />
             <Contact />
             <Footer />
           </>
         )}
       </div>
-    </>
+    </div>
   );
 }

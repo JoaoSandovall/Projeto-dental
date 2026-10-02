@@ -1,230 +1,121 @@
-import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
-
-export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
+export const serif = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
 export const globalData = {
   clinica: {
-    nome: "Dra. Joselene Leal",
-    subtitulo: "Consultório Odontológico",
-    logoUrl: "/imagens/logo.png",
+    nome: "DR. NAYHAN ANDRADE",
+    subtitulo: "Transplante Capilar & Tricologia",
     contato: {
-      whatsappUrl: "https://wa.me/557598475224?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Joselene.", 
-      whatsappLabel: "Agendar pelo WhatsApp",
-      telefoneLabel: "(75) 3623-1818 / (75) 9847-5224",
-      emailLabel: "contato@drajoseleneleal.com.br",
-      instagramLabel: "@dra.joseleneleal",
+      whatsappUrl: "https://wa.me/5575992410240", 
+      whatsappLabel: "Agendar Avaliação Clínica",
+      telefoneLabel: "(75) 99241-0240",
+      emailLabel: "contato@drnayhanandrade.com.br",
+      instagramLabel: "@drnayhanandrade",
     },
     endereco: {
-      bairroCidade: "Centro, Feira de Santana - BA",
-      edificio: "Consultório Dra. Joselene Leal",
-      detalhado: "Rua Prof. Geminiano Costa, 222\nCentro\nFeira de Santana - BA, 44001-120",
-      comodidades: ["Lentes e Facetas", "Prótese sobre Implante", "Estética Dental", "Atendimento Humanizado"],
-      mapaGpsUrl: "https://maps.app.goo.gl/search/Consultorio+Odontologico+Dra+Joselene+Leal",
-      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.960667887411!2d-38.9617876!3d-12.250941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x714378c290ae699%3A0x71b8d0b9532d62e8!2sConsult%C3%B3rio%20Odontol%C3%B3gico%20Dra%20Joselene%20Leal!5e0!3m2!1spt-BR!2sbr!4v1790966333684!5m2!1spt-BR!2sbr"
+      bairroCidade: "São João, Feira de Santana - BA",
+      edificio: "Consultório Médico",
+      detalhado: "R. Dr. Elpídio Nova, 178A\nSão João\nFeira de Santana - BA, 44051-730",
     },
-    horarios: "Aberto de Segunda a Sexta\nEncerra às 18:00",
   },
 
   nav: {
-    links: ["A Clínica", "Especialidades", "Nosso Cuidado", "Resultados", "Contato"],
-    ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"]
+    links: ["O Médico", "A Técnica", "Metodologia", "Contato"],
+    ids: ["/sobre-o-doutor", "tecnica", "protocolo", "contato"]
   },
 
   hero: {
-    imgUrl: "/imagens/hero.png", 
-    eyebrow: "Centro — Feira de Santana, BA",
-    title1: "Autoestima",
-    title2: "saúde e",
-    title3: "beleza.",
-    desc1: "Especialista em lentes, facetas e prótese sobre implante.",
-    descBold: " Resultados naturais.",
-    desc2: " Tratamentos executados com técnica e planejamento para valorizar a simetria do seu rosto.",
-    btnPrimary: "Agende sua avaliação",
-    btnOutline: "Nossos Tratamentos",
-    badgeTitle: "Dra. Joselene Leal",
-    badgeDesc: "CRO BA",
-    stats: [
-      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
-      { target: 26, suffix: "", label: "anos de atuação", thousands: false },
-      { target: 100, suffix: "%", label: "foco em naturalidade", thousands: false },
-    ]
+    imgUrl: "/imagens/hero2.png", 
+    eyebrow: "CRM 35840 - BA",
+    title1: "Restauração",
+    title2: "capilar",
+    title3: "de excelência.",
+    desc1: "A ciência moderna aplicada à sua imagem. ",
+    descBold: "Técnica FUE de Alta Densidade",
+    desc2: " com planejamento cirúrgico minucioso, focado em simetria e naturalidade indetectável.",
+    btnPrimary: "Agendar Consulta",
+    btnOutline: "Conhecer o Médico",
+    badgeTitle: "Membro SBRCC",
+    badgeDesc: "CRM 35840 - BA"
   },
 
-  about: {
-    eyebrow: "Dra. Joselene Leal",
-    title1: "Precisão e",
-    title2: "experiência",
-    title3: "clínica.",
-    p1: "Localizado no Centro de Feira de Santana, o consultório oferece infraestrutura para reabilitação oral e estética dental.",
-    p2_1: "A ",
-    p2_bold: "Dra. Joselene Leal possui 26 anos de formação,",
-    p2_2: " direcionando o atendimento para a execução de lentes de contato, facetas e próteses sobre implante.",
+  about_brief: {
+    imgUrl: "/imagens/image.png", 
+    eyebrow: "Direção Clínica",
+    title1: "Dr. Nayhan",
+    title2: "Andrade",
+    p1: "Médico tricologista e membro da Sociedade Brasileira de Restauração Capilar (SBRCC). Sua atuação é restrita à restauração capilar e ao tratamento clínico avançado de disfunções do couro cabeludo na região de Feira de Santana.",
+    p2: "O rigor cirúrgico e o refinamento estético andam lado a lado para entregar resultados que devolvem a confiança com máxima segurança.",
+    btn: "Ver Perfil Completo"
+  },
+
+  about_page: {
+    imgUrl1: "/imagens/hero.png", 
+    imgUrl2: "/imagens/imagecopy.png", 
+    eyebrow: "CRM-BA 35840 | Membro SBRCC",
+    title1: "Ciência, Arte e",
+    title2: "Ética Médica.",
+    p1: "A excelência em um transplante capilar está na invisibilidade do procedimento. O melhor resultado é aquele que ninguém percebe que foi feito. Na luta contra a calvície, investir em soluções pautadas na ciência é o único caminho para resgatar a sua autoestima de forma segura.",
+    p2: "O planejamento da linha frontal (hairline) e o mapeamento da área doadora determinam a viabilidade do procedimento. A angulação, o calibre do fio e a densidade de implantação são calculados individualmente para cada paciente com base em dermatoscopia de precisão.",
+    quote: "Meu compromisso é com a sua segurança clínica e com a devolução da sua melhor versão, de forma indetectável e natural.",
     topics: [
-      { title: "Odontologia Estética", desc: "Correção de formato e cor através de lentes e facetas." },
-      { title: "Prótese sobre Implante", desc: "Reabilitação mastigatória com estabilidade e materiais de alta resistência." },
-      { title: "Empreendedorismo Feminino", desc: "Clínica estruturada com foco em gestão de processos e excelência no atendimento." },
-      { title: "Protocolo Clínico", desc: "Avaliação estruturada para mapeamento das necessidades de cada paciente." },
-    ],
-    btn: "Quero conhecer a clínica",
-    gallery: [
-      { url: "/imagens/profissionalatuando.png", title: "Atendimento Clínico" },
-      { url: "/imagens/clinica1.png", title: "Infraestrutura" },
-      { url: "/imagens/materiais1.png", title: "Tecnologia" }
+      { title: "Diagnóstico Tricológico", desc: "Mapeamento microscópico do couro cabeludo para identificação clara da etiologia da alopecia antes de qualquer indicação cirúrgica." },
+      { title: "Técnica FUE de Alta Densidade", desc: "Extração folicular automatizada e implantação com controle rigoroso de profundidade e angulação, preservando a área doadora." },
+      { title: "Acompanhamento Integral", desc: "Monitoramento clínico de 12 a 15 meses pós-cirurgia para avaliação da taxa de sobrevivência folicular e maturação dos fios." }
     ]
   },
 
   services: {
-    eyebrow: "Nossas Especializações",
-    title1: "Odontologia",
-    title2: "direcionada.",
-    desc1: "Soluções estruturadas para ",
-    descBold: "Reabilitação Oral e Estética",
-    desc2: ", executadas com materiais de alta performance.",
-    btn: "Ver todas as especializações",
+    eyebrow: "Atuação Médica",
+    title1: "Procedimentos",
+    title2: "Clínicos",
+    desc1: "Intervenções baseadas em ",
+    descBold: "evidência científica",
+    desc2: " para restauração e manutenção capilar a longo prazo.",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes e Facetas", desc: "Modificação estrutural e estética dos dentes anteriores utilizando cerâmica ou resina." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Prótese sobre Implante", desc: "Substituição de elementos dentários perdidos utilizando bases de titânio e coroas definitivas." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Estética Dental", desc: "Procedimentos direcionados à harmonia visual do sorriso em relação às proporções faciais." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento", desc: "Remoção de pigmentação do esmalte dentário utilizando agentes clareadores supervisionados." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Odontologia Preventiva", desc: "Manutenção da saúde gengival e avaliação periódica da integridade das próteses e facetas." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Atendimento Humanizado", desc: "Condução do tratamento com foco na redução da ansiedade e comunicação clara dos procedimentos." }
+      { iconName: "Microscope", title: "Transplante FUE", desc: "Remoção individual de folículos da área doadora e implantação em áreas de rarefação sem cicatriz linear." },
+      { iconName: "FileText", title: "Tricologia Médica", desc: "Diagnóstico aprofundado e tratamento de condições patológicas do couro cabeludo e da haste capilar para estabilizar a queda." },
+      { iconName: "Crosshair", title: "Restauração de Sobrancelhas", desc: "Reconstrução minuciosa de falhas utilizando folículos capilares de calibre e angulação perfeitamente compatíveis." },
+      { iconName: "Shield", title: "Terapias Injetáveis", desc: "Protocolos médicos injetáveis (MMP/Mesoterapia) para otimização da área doadora e estímulo na área receptora." }
     ]
   },
 
-  team: {
-    title: "Corpo Clínico",
-    members: [
-      { name: "Dra. Joselene Leal", cro: "Cirurgiã-Dentista", specialty: "Especialista em Lentes e Próteses", img: "/imagens/profissionalatuando.png" }
-    ]
-  },
-
-  convenios: {
-    eyebrow: "Protocolo de Atendimento",
-    title1: "Resultados",
-    title2: "baseados em",
-    title3: "diagnóstico.",
-    desc: "A execução de tratamentos estéticos e reabilitadores requer mapeamento prévio das condições orais e estruturais do paciente.",
-    btn: "Agendar minha avaliação",
+  protocol: {
+    eyebrow: "Metodologia",
+    title1: "O Protocolo",
+    title2: "Operatório",
+    desc: "Nenhuma etapa é negligenciada. Adotamos uma estrutura de acompanhamento rigorosamente padronizada para assegurar a integridade dos enxertos e a saúde do paciente do início ao fim.",
     list: [
-      { title: "Planejamento Protético", content: "Análise da oclusão e dimensões faciais para a confecção de próteses sobre implante e facetas." },
-      { title: "Seleção de Materiais", content: "Utilização de componentes e resinas certificados para assegurar resistência e estabilidade de cor." },
-      { title: "Execução Técnica", content: "Aplicação de métodos minimamente invasivos durante o preparo dentário para preservação da estrutura sadia." }
+      { step: "01", title: "Avaliação e Dermatoscopia", content: "Análise da densidade da área doadora, aferição do calibre dos fios e demarcação cirúrgica preliminar alinhada com a anatomia e simetria facial do paciente." },
+      { step: "02", title: "Intervenção Cirúrgica FUE", content: "Extração de unidades foliculares sob anestesia local com sedação leve (procedimento indolor) e implantação unitária na área receptora." },
+      { step: "03", title: "Acompanhamento Clínico", content: "Nossa responsabilidade não acaba na alta cirúrgica. Realizamos o monitoramento clínico constante ao longo de 12 a 15 meses para potencializar a taxa de sobrevivência folicular." }
     ]
-  },
-
-  testimonials: {
-    eyebrow: "A Clínica",
-    title1: "Infraestrutura e",
-    title2: "posicionamento.",
-    quote: "A autoestima desempenha papel fundamental para a saúde e bem-estar do indivíduo.",
-    supporting: "A clínica opera no Centro de Feira de Santana, possuindo infraestrutura adequada para procedimentos de reabilitação oral.",
-    photos: [
-      { img: "/imagens/clinica1.png", alt: "Estrutura da Clínica" },
-      { img: "/imagens/profissionalatuando.png", alt: "Atendimento Clínico" },
-      { img: "/imagens/clinica2.png", alt: "Recepção" },
-      { img: "/imagens/materiais1.png", alt: "Materiais Odontológicos" },
-      { img: "/imagens/profissionaisatuando.png", alt: "Equipe" },
-      { img: "/imagens/materiais2.png", alt: "Instrumental" }
-    ]
-  },
-
-  results_cta: {
-    eyebrow: "O Portfólio",
-    title1: "Evidência",
-    title2: "clínica.",
-    p1: "Registros documentais de",
-    p_bold1: "casos reabilitados",
-    p2: ". O mapeamento fotográfico evidencia a precisão técnica na confecção de lentes e próteses apresentadas na",
-    p_bold2: "galeria de resultados",
-    p3: ".",
-    p_bold3: "",
-    btn: "Acessar Resultados",
-    imgUrl: "/imagens/dentes.png" 
   },
 
   faq: {
-    title: "Informações Frequentes",
+    title: "Informações Técnicas",
     list: [
-      { q: "Onde o consultório está localizado?", a: "O consultório está situado na Rua Prof. Geminiano Costa, 222, Centro, em Feira de Santana - BA." },
-      { q: "Quais são as áreas de atuação principais?", a: "O foco clínico abrange a confecção de lentes, facetas, próteses sobre implante e estética dental." },
-      { q: "O procedimento de facetas exige desgaste dental?", a: "O nível de preparo depende da indicação clínica. Utilizam-se protocolos minimamente invasivos para preservar o tecido dentário." },
-      { q: "Como é realizado o agendamento?", a: "O agendamento é feito via contato telefônico ou WhatsApp pelo número (75) 9847-5224." }
+      { q: "A técnica FUE gera cicatriz linear (corte)?", a: "Não. A extração produz microcicatrizes puntiformes de diâmetro submilimétrico, dispersas na área doadora, que se tornam imperceptíveis mesmo com o cabelo raspado." },
+      { q: "A cirurgia de transplante é dolorosa?", a: "O procedimento é executado sob anestesia local associada a protocolos de conforto. O paciente permanece tranquilo, sem sentir dor durante a extração ou implantação." },
+      { q: "Qual o tempo médio de um procedimento?", a: "A duração varia entre 6 a 8 horas, dependendo do grau de calvície e do volume de unidades foliculares que precisam ser extraídas e transplantadas." },
+      { q: "Quando verei o resultado final?", a: "Os fios transplantados costumam cair nas primeiras semanas (processo fisiológico normal) e voltam a crescer a partir do 3º mês. O resultado estético definitivo é avaliado entre 12 e 15 meses pós-cirurgia." }
     ]
-  },
-
-  location: {
-    eyebrow: "Endereço &\nAcesso",
-    box1: { title: "Endereço", value1: "Rua Prof. Geminiano Costa, 222", value2: "Centro" },
-    box2: { title: "Localização", value1: "Feira de Santana - BA", value2: "CEP: 44001-120" },
-    box3: { title: "Especialidades", value1: "Lentes, Facetas", value2: "Prótese sobre Implante" },
-    btn: "Abrir no Google Maps"
   },
 
   contact: {
     eyebrow: "Agendamento",
-    title1: "Contato",
-    title2: "direto.",
-    desc: "Solicite a marcação de horário para avaliação clínica. O atendimento é estruturado para fornecer diagnósticos precisos.",
+    title1: "Atendimento",
+    title2: "Especializado.",
+    desc: "O diagnóstico correto e o planejamento cirúrgico minucioso são determinantes para a excelência do seu resultado. Dê o primeiro passo para a sua restauração.",
     box1_title: "Endereço",
     box2_title: "Contato",
-    box3_title: "Mídia Social",
-    box3_desc1: "Acompanhe atualizações",
-    box3_desc2: "@dra.joseleneleal"
+    box3_title: "Acompanhe",
+    box3_desc1: "Conteúdo Técnico",
+    box3_desc2: "@drnayhanandrade",
+    btn: "Solicitar Avaliação"
   },
 
   footer: {
-    sobre: "Consultório Odontológico Dra Joselene Leal. Atuação clínica com foco em lentes, facetas e prótese sobre implante.",
-    title_tratamentos: "Especializações",
-    title_contato: "Contato",
-    direitos: "© 2026 Dra Joselene Leal. Todos os direitos reservados.",
-    registro: "Feira de Santana — BA"
-  },
-
-  results_page: {
-    eyebrow: "Casos Clínicos",
-    title1: "Resultados",
-    title2: "documentados.",
-    p1: "Registros fotográficos evidenciando as alterações morfológicas e estéticas obtidas por meio de ",
-    p_bold1: "intervenções clínicas",
-    p2: ". O foco recai sobre a",
-    p_bold2: "função e adaptação",
-    p3: "dos materiais restauradores.",
-    btnSaberMais: "Solicitar avaliação",
-    btnVoltar: "Retornar à página inicial",
-    cases: [
-      { 
-        category: "Estética Dental", 
-        duration: "Facetas e Lentes", 
-        complaint: "Alterações de forma e pigmentação no grupo dos dentes anteriores.", 
-        procedure: "Instalação de lâminas estéticas para reconfiguração anatômica e adequação de cor.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"    
-      },
-      { 
-        category: "Odontologia Estética", 
-        duration: "Clareamento", 
-        complaint: "Saturação da coloração do esmalte dentário.", 
-        procedure: "Aplicação de protocolo de clareamento monitorado para redução da pigmentação intrínseca.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"    
-      },
-      { 
-        category: "Reabilitação", 
-        duration: "Prótese sobre Implante", 
-        complaint: "Edentulismo parcial comprometendo a eficiência mastigatória.", 
-        procedure: "Fixação de coroas sobre implantes osseointegrados para restabelecimento da oclusão.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"    
-      },
-      { 
-        category: "Adequação do Meio", 
-        duration: "Profilaxia", 
-        complaint: "Presença de cálculo dental e inflamação dos tecidos periodontais.", 
-        procedure: "Remoção mecânica do biofilme e cálculo para manutenção da saúde gengival.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"    
-      }
-    ]
+    sobre: "Dr. Nayhan Andrade | CRM 35840-BA. Médico Tricologista e Membro SBRCC. Atuação exclusiva em Transplante Capilar FUE e Medicina Capilar na Bahia.",
+    direitos: "© 2026 Dr. Nayhan Andrade. Todos os direitos reservados."
   }
 };
