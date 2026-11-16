@@ -1,121 +1,316 @@
-export const serif = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
+import { CSSProperties } from "react";
+import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
+
+export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
 export const globalData = {
+  // ---------------------------------------------------
+  // DADOS GERAIS DA CLÍNICA
+  // ---------------------------------------------------
   clinica: {
-    nome: "DR. NAYHAN ANDRADE",
-    subtitulo: "Transplante Capilar & Tricologia",
+    nome: "Vivere Odontologia",
+    subtitulo: "Estética & Reabilitação Oral",
+    logoUrl: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23CFA968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M10 21.35s-2.12-1.74-3.53-3.15A11 11 0 0 1 3.3 11.5c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5a11 11 0 0 1-3.17 6.7c-1.41 1.41-3.53 3.15-3.53 3.15' /><path d='M14 21.35s2.12-1.74 3.53-3.15A11 11 0 0 0 20.7 11.5c0-4.14-3.36-7.5-7.5-7.5s-7.5 3.36-7.5 7.5a11 11 0 0 0 3.17 6.7c1.41 1.41 3.53 3.15 3.53 3.15' /></svg>", 
     contato: {
-      whatsappUrl: "https://wa.me/5575992410240", 
-      whatsappLabel: "Agendar Avaliação Clínica",
-      telefoneLabel: "(75) 99241-0240",
-      emailLabel: "contato@drnayhanandrade.com.br",
-      instagramLabel: "@drnayhanandrade",
+      whatsappUrl: "https://wa.me/5500000000000?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+na+cl%C3%ADnica.", 
+      whatsappLabel: "Agendar Atendimento",
+      telefoneLabel: "(00) 90000-0000",
+      emailLabel: "clinica@vivereodontologia.com.br",
+      instagramLabel: "@vivere.odonto",
     },
     endereco: {
-      bairroCidade: "São João, Feira de Santana - BA",
-      edificio: "Consultório Médico",
-      detalhado: "R. Dr. Elpídio Nova, 178A\nSão João\nFeira de Santana - BA, 44051-730",
+      bairroCidade: "Bairro Nobre, Sua Cidade - UF",
+      edificio: "Vivere Odontologia",
+      detalhado: "Avenida Principal, 1000 - Sala 101\nBairro Nobre\nSua Cidade - UF, 00000-000",
+      comodidades: ["Lentes em Resina", "Reabilitação Oclusal", "Clareamento Clínico", "Estética Dental"],
+      mapaGpsUrl: "#",
+      mapaEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975850290515!2d-46.66699318447573!3d-23.561332784682496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cd3e54bba9%3A0xc0fb1f2c2ecf555c!2sS%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1714400000000!5m2!1spt-BR!2sbr"
     },
+    horarios: "Atendimentos sob agendamento prévio.",
   },
 
+  // ---------------------------------------------------
+  // NAVEGAÇÃO SUPERIOR (HEADER / ASIDE)
+  // ---------------------------------------------------
   nav: {
-    links: ["O Médico", "A Técnica", "Metodologia", "Contato"],
-    ids: ["/sobre-o-doutor", "tecnica", "protocolo", "contato"]
+    links: ["A Clínica", "Especialista", "Metodologia", "Casos Clínicos", "Contato"],
+    ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"],
+    btnDesktop: "Agendar",
+    btnMobile: "Agendar Avaliação"
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO 1: HERO
+  // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero2.png", 
-    eyebrow: "CRM 35840 - BA",
-    title1: "Restauração",
-    title2: "capilar",
-    title3: "de excelência.",
-    desc1: "A ciência moderna aplicada à sua imagem. ",
-    descBold: "Técnica FUE de Alta Densidade",
-    desc2: " com planejamento cirúrgico minucioso, focado em simetria e naturalidade indetectável.",
-    btnPrimary: "Agendar Consulta",
-    btnOutline: "Conhecer o Médico",
-    badgeTitle: "Membro SBRCC",
-    badgeDesc: "CRM 35840 - BA"
-  },
-
-  about_brief: {
     imgUrl: "/imagens/image.png", 
-    eyebrow: "Direção Clínica",
-    title1: "Dr. Nayhan",
-    title2: "Andrade",
-    p1: "Médico tricologista e membro da Sociedade Brasileira de Restauração Capilar (SBRCC). Sua atuação é restrita à restauração capilar e ao tratamento clínico avançado de disfunções do couro cabeludo na região de Feira de Santana.",
-    p2: "O rigor cirúrgico e o refinamento estético andam lado a lado para entregar resultados que devolvem a confiança com máxima segurança.",
-    btn: "Ver Perfil Completo"
+    eyebrow: "Sua Cidade — UF",
+    title1: "A precisão",
+    title2: "da estética.",
+    title3: "O resgate da função.",
+    desc1: "Foco absoluto em ",
+    descBold: "Reabilitação Oral e Lentes em Resina.",
+    desc2: " Uma abordagem clínica onde o planejamento técnico encontra a proporção exata para o seu rosto.",
+    btnPrimary: "Agendar Avaliação",
+    btnOutline: "Nossos Tratamentos",
+    badgeTitle: "Dr. Responsável Técnico",
+    badgeDesc: "CRO 00000",
+    stats: [
+      { target: 5, suffix: ".0", label: "estrelas no google", thousands: false },
+      { target: 10, suffix: "+", label: "lentes esculpidas", thousands: false },
+      { target: 100, suffix: "%", label: "foco em previsibilidade", thousands: false },
+    ]
   },
 
-  about_page: {
-    imgUrl1: "/imagens/hero.png", 
-    imgUrl2: "/imagens/imagecopy.png", 
-    eyebrow: "CRM-BA 35840 | Membro SBRCC",
-    title1: "Ciência, Arte e",
-    title2: "Ética Médica.",
-    p1: "A excelência em um transplante capilar está na invisibilidade do procedimento. O melhor resultado é aquele que ninguém percebe que foi feito. Na luta contra a calvície, investir em soluções pautadas na ciência é o único caminho para resgatar a sua autoestima de forma segura.",
-    p2: "O planejamento da linha frontal (hairline) e o mapeamento da área doadora determinam a viabilidade do procedimento. A angulação, o calibre do fio e a densidade de implantação são calculados individualmente para cada paciente com base em dermatoscopia de precisão.",
-    quote: "Meu compromisso é com a sua segurança clínica e com a devolução da sua melhor versão, de forma indetectável e natural.",
+  // ---------------------------------------------------
+  // SEÇÃO 2: O CARROSSEL (ABOUT)
+  // ---------------------------------------------------
+  about: {
+    eyebrow: "A Vivere Odontologia",
+    title1: "Design",
+    title2: "autoral",
+    title3: "em resina.",
+    p1: "Localizada em um ponto nobre da cidade, a Vivere Odontologia foca em previsibilidade clínica e resultados de alto padrão.",
+    p2_1: "Sob a liderança de um ",
+    p2_bold: "Corpo Clínico Especializado,",
+    p2_2: " nossa estrutura foi desenhada para resolver casos complexos com precisão técnica e rigor cirúrgico.",
     topics: [
-      { title: "Diagnóstico Tricológico", desc: "Mapeamento microscópico do couro cabeludo para identificação clara da etiologia da alopecia antes de qualquer indicação cirúrgica." },
-      { title: "Técnica FUE de Alta Densidade", desc: "Extração folicular automatizada e implantação com controle rigoroso de profundidade e angulação, preservando a área doadora." },
-      { title: "Acompanhamento Integral", desc: "Monitoramento clínico de 12 a 15 meses pós-cirurgia para avaliação da taxa de sobrevivência folicular e maturação dos fios." }
+      { title: "Odontologia Avançada", desc: "Estrutura moderna e protocolos validados para reduzir margens de erro." },
+      { title: "Lentes em Resina", desc: "Correção de cor, textura e proporção com materiais de alta carga cerâmica." },
+      { title: "Reabilitação Oral", desc: "Devolução da dimensão vertical e suporte labial perdidos pelo desgaste." },
+      { title: "Fotografia Clínica", desc: "Registro estúdio-odontológico para guiar o diagnóstico e execução." },
+    ],
+    btn: "Conhecer a infraestrutura",
+    gallery: [
+      { url: "/imagens/sorriso1.png", title: "Proporção" },
+      { url: "/imagens/sorriso2.png", title: "Simetria" },
+      { url: "/imagens/sorriso3.png", title: "Textura" },
+      { url: "/imagens/sorriso5.png", title: "Naturalidade" }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO 3: ESCOPO CLÍNICO (SERVICES)
+  // ---------------------------------------------------
   services: {
-    eyebrow: "Atuação Médica",
-    title1: "Procedimentos",
-    title2: "Clínicos",
-    desc1: "Intervenções baseadas em ",
-    descBold: "evidência científica",
-    desc2: " para restauração e manutenção capilar a longo prazo.",
+    eyebrow: "Escopo Clínico",
+    title1: "Excelência",
+    title2: "técnica.",
+    desc1: "Nossa clínica entrega soluções definitivas em ",
+    descBold: "Reabilitação Oral e Estética",
+    desc2: ", atuando sempre sob rígidos protocolos de qualidade.",
+    btn: "Ver portfólio clínico",
     list: [
-      { iconName: "Microscope", title: "Transplante FUE", desc: "Remoção individual de folículos da área doadora e implantação em áreas de rarefação sem cicatriz linear." },
-      { iconName: "FileText", title: "Tricologia Médica", desc: "Diagnóstico aprofundado e tratamento de condições patológicas do couro cabeludo e da haste capilar para estabilizar a queda." },
-      { iconName: "Crosshair", title: "Restauração de Sobrancelhas", desc: "Reconstrução minuciosa de falhas utilizando folículos capilares de calibre e angulação perfeitamente compatíveis." },
-      { iconName: "Shield", title: "Terapias Injetáveis", desc: "Protocolos médicos injetáveis (MMP/Mesoterapia) para otimização da área doadora e estímulo na área receptora." }
+      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes em Resina", desc: "Correção de assimetrias, diastemas e cor com material de alta durabilidade e polimento contínuo." },
+      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Clínico", desc: "Protocolos supervisionados com agentes químicos controlados para clarear sem sensibilidade agressiva." },
+      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Tratamento de bruxismo e perdas dentárias múltiplas para restabelecer a estabilidade oclusal." },
+      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Plástica Gengival", desc: "Intervenção cirúrgica milimétrica para alinhar zênites e corrigir o aspecto de sorriso gengival." },
+      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Controle de Manutenção", desc: "Acompanhamento periódico preventivo, garantindo a extensão da vida útil das restaurações estéticas." },
+      { icon: <Users size={28} strokeWidth={1.2} />, title: "Diagnóstico Digital", desc: "Documentação fotográfica especializada e moldagens precisas que guiam cada etapa do planejamento." }
     ]
   },
 
-  protocol: {
-    eyebrow: "Metodologia",
-    title1: "O Protocolo",
-    title2: "Operatório",
-    desc: "Nenhuma etapa é negligenciada. Adotamos uma estrutura de acompanhamento rigorosamente padronizada para assegurar a integridade dos enxertos e a saúde do paciente do início ao fim.",
-    list: [
-      { step: "01", title: "Avaliação e Dermatoscopia", content: "Análise da densidade da área doadora, aferição do calibre dos fios e demarcação cirúrgica preliminar alinhada com a anatomia e simetria facial do paciente." },
-      { step: "02", title: "Intervenção Cirúrgica FUE", content: "Extração de unidades foliculares sob anestesia local com sedação leve (procedimento indolor) e implantação unitária na área receptora." },
-      { step: "03", title: "Acompanhamento Clínico", content: "Nossa responsabilidade não acaba na alta cirúrgica. Realizamos o monitoramento clínico constante ao longo de 12 a 15 meses para potencializar a taxa de sobrevivência folicular." }
+  // ---------------------------------------------------
+  // SEÇÃO 4: CORPO CLÍNICO
+  // ---------------------------------------------------
+  team: {
+    title: "O Especialista",
+    members: [
+      { name: "Dr. Nome do Especialista", cro: "CRO 00000", specialty: "Cirurgião Dentista", img: "/imagens/profissionalatuando.png" }
     ]
   },
 
-  faq: {
-    title: "Informações Técnicas",
+  // ---------------------------------------------------
+  // SEÇÃO 5: METODOLOGIA (CONVENIOS)
+  // ---------------------------------------------------
+  convenios: {
+    eyebrow: "Nossa Metodologia",
+    title1: "Engenharia",
+    title2: "do sorriso.",
+    title3: "",
+    desc: "Não utilizamos moldes padronizados. Todo planejamento leva em consideração a estrutura óssea, a proporção facial e a estabilidade mastigatória do paciente.",
+    btn: "Agendar avaliação técnica",
     list: [
-      { q: "A técnica FUE gera cicatriz linear (corte)?", a: "Não. A extração produz microcicatrizes puntiformes de diâmetro submilimétrico, dispersas na área doadora, que se tornam imperceptíveis mesmo com o cabelo raspado." },
-      { q: "A cirurgia de transplante é dolorosa?", a: "O procedimento é executado sob anestesia local associada a protocolos de conforto. O paciente permanece tranquilo, sem sentir dor durante a extração ou implantação." },
-      { q: "Qual o tempo médio de um procedimento?", a: "A duração varia entre 6 a 8 horas, dependendo do grau de calvície e do volume de unidades foliculares que precisam ser extraídas e transplantadas." },
-      { q: "Quando verei o resultado final?", a: "Os fios transplantados costumam cair nas primeiras semanas (processo fisiológico normal) e voltam a crescer a partir do 3º mês. O resultado estético definitivo é avaliado entre 12 e 15 meses pós-cirurgia." }
+      { title: "Diagnóstico Profundo", content: "Mapeamento completo da saúde bucal, alinhamento facial e fotos em estúdio antes de qualquer intervenção." },
+      { title: "Design Autoral", content: "As facetas de resina são esculpidas manualmente, dente por dente, evitando o aspecto opaco, plano e artificial." },
+      { title: "Execução Milimétrica", content: "Utilização de magnificação óptica e instrumentos dedicados para garantir resistência mecânica e adaptação." }
     ]
   },
 
+  // ---------------------------------------------------
+  // SEÇÃO 6: INFRAESTRUTURA (TESTIMONIALS)
+  // ---------------------------------------------------
+  testimonials: {
+    eyebrow: "A Clínica",
+    title1: "Padrão",
+    title2: "clínico.",
+    quote: "Um espaço projetado para que o rigor técnico e o conforto do paciente coexistam perfeitamente.",
+    supporting: "Nosso consultório dispõe de equipamentos avançados, centro de esterilização restrito e um estúdio fotográfico para documentação integral dos casos.",
+    detailsLabel: "Detalhes do Espaço",
+    footerLeft: "Vivere Odontologia",
+    footerRight: "Sua Cidade, UF",
+    photos: [
+      { img: "/imagens/clinica1.png", alt: "Estrutura Clínica" },
+      { img: "/imagens/profissionalatuando.png", alt: "Precisão Cirúrgica" },
+      { img: "/imagens/clinica2.png", alt: "Recepção" },
+      { img: "/imagens/materiais1.png", alt: "Instrumental Clínico" },
+      { img: "/imagens/profissionaisatuando.png", alt: "Equipe Especializada" },
+      { img: "/imagens/materiais2.png", alt: "Materiais Premium" }
+    ]
+  },
+
+  // ---------------------------------------------------
+  // SEÇÃO 7: CTA DE CASOS CLÍNICOS
+  // ---------------------------------------------------
+  results_cta: {
+    eyebrow: "Casos Documentados",
+    title1: "O resultado",
+    title2: "da nossa técnica.",
+    magneticBtn: "VER CASOS COMPLETOS  •  PORTFÓLIO CLÍNICO  •",
+    labelBefore: "Condição Inicial",
+    labelAfter: "Resultado Final",
+    p1: "Não trabalhamos com expectativas irreais. A",
+    p_bold1: "odontologia de excelência",
+    p2: "se comprova de forma visual. Explore o",
+    p_bold2: "portfólio de resultados",
+    p3: "e entenda o nível de detalhe estético e anatômico que entregamos diariamente.",
+    p_bold3: "",
+    btn: "Acessar Portfólio",
+    imgUrl: "/imagens/depois.jpg" 
+  },
+
+  // ---------------------------------------------------
+  // PÁGINA 2: CASOS CLÍNICOS COMPLETA
+  // ---------------------------------------------------
+  results_page: {
+    eyebrow: "Casos Clínicos Documentados",
+    title1: "Previsibilidade e",
+    title2: "resultado.",
+    labelBefore: "Início",
+    labelAfter: "Finalizado",
+    labelChallenge: "Diagnóstico Clínico",
+    labelSolution: "Plano de Tratamento",
+    p1: "Acompanhe a documentação rigorosa dos nossos casos de ",
+    p_bold1: "Reabilitação e Estética",
+    p2: ". Imagens reais que atestam a nossa aplicação de",
+    p_bold2: "anatomia, função e textura",
+    p3: "em cada reconstrução de faceta e ajuste oclusal.",
+    btnSaberMais: "Avaliar o meu caso clínico",
+    btnVoltar: "Retornar ao início",
+    cases: [
+      { 
+        category: "Estética Anterior", 
+        duration: "Lentes em Resina", 
+        complaint: "O paciente apresentava desnível nas margens, presença de diastemas e insatisfação com a saturação dos dentes.", 
+        procedure: "Recontorno estético com a escultura de 10 facetas diretas em resina policromática, restabelecendo as guias de desoclusão.", 
+        beforeImg: "/imagens/antes.jpg", 
+        afterImg: "/imagens/depois.jpg"  
+      },
+      { 
+        category: "Harmonização Dental", 
+        duration: "Clareamento & Facetas", 
+        complaint: "Dentes com pigmentação acentuada e bordas incisais fraturadas devido ao desgaste por atrição.", 
+        procedure: "Sessões de clareamento supervisionado seguidas da reconstrução anatômica das bordas incisais em resina composta.", 
+        beforeImg: "/imagens/antes.jpg", 
+        afterImg: "/imagens/depois.jpg"  
+      },
+      { 
+        category: "Reabilitação Oclusal", 
+        duration: "Restabelecimento de DVO", 
+        complaint: "Desgaste severo ocasionado por bruxismo ativo, comprometendo a dimensão vertical de oclusão e a estrutura dentária.", 
+        procedure: "Reabilitação adesiva funcional estendendo-se de molares a incisivos, desenvolvendo nova altura e protegendo os remanescentes.", 
+        beforeImg: "/imagens/antes.jpg", 
+        afterImg: "/imagens/depois.jpg"  
+      },
+      { 
+        category: "Adequação do Meio", 
+        duration: "Preparo Prévio", 
+        complaint: "Inflamação tecidual crônica marginal que impedia qualquer abordagem adesiva com segurança e longevidade.", 
+        procedure: "Tratamento periodontal de adequação e refinamento de margem, criando o cenário biológico ideal para o procedimento estético.", 
+        beforeImg: "/imagens/antes.jpg", 
+        afterImg: "/imagens/depois.jpg"  
+      }
+    ]
+  },
+
+  // ---------------------------------------------------
+  // PÁGINA 3: ESPECIALISTA (TIMELINE)
+  // ---------------------------------------------------
+  specialties_page: {
+    hero: {
+      title1: "DOMÍNIO",
+      title2: "TÉCNICO",
+      badge: "Cirurgião Dentista",
+      imgUrl: "/imagens/dr.png"
+    },
+    timeline: [
+      {
+        year: "2015",
+        title: "Fundação Técnica",
+        desc: "Formação em Odontologia, solidificando os pilares de precisão cirúrgica, estabilidade mecânica e biossegurança clínica.",
+        img: "/imagens/materiais1.png"
+      },
+      {
+        year: "2019",
+        title: "Foco Operatório",
+        desc: "Imersão contínua em escultura dental adesiva, dedicando-se exclusivamente ao refinamento de reabilitações em resinas compostas.",
+        img: "/imagens/profissionalatuando.png"
+      },
+      {
+        year: "2026",
+        title: "Vivere Odontologia",
+        desc: "Fundação da estrutura clínica dedicada, com protocolo de excelência projetado para casos de alto grau de exigência estética.",
+        img: "/imagens/clinica2.png" 
+      }
+    ]
+  },
+
+  // ---------------------------------------------------
+  // SEÇÃO 8: ENDEREÇO (LOCATION)
+  // ---------------------------------------------------
+  location: {
+    title1: "Onde nos",
+    title2: "encontrar.",
+    eyebrow: "Endereço &\nAcesso",
+    box1: { title: "Endereço", value1: "Avenida Principal, 1000", value2: "Sala 101 - Bairro Nobre" },
+    box2: { title: "Localização", value1: "Sua Cidade - UF", value2: "CEP: 00000-000" },
+    box3: { title: "Especialidades", value1: "Reabilitação Estética", value2: "Lentes em Resina Autoral" },
+    btn: "Abrir rotas no Maps"
+  },
+
+  // ---------------------------------------------------
+  // SEÇÃO 9: CONTATO E RODAPÉ (FOOTER)
+  // ---------------------------------------------------
   contact: {
-    eyebrow: "Agendamento",
-    title1: "Atendimento",
-    title2: "Especializado.",
-    desc: "O diagnóstico correto e o planejamento cirúrgico minucioso são determinantes para a excelência do seu resultado. Dê o primeiro passo para a sua restauração.",
+    eyebrow: "Agende sua Consulta",
+    title1: "Previsibilidade no",
+    title2: "tratamento.",
+    desc: "Inicie o planejamento do seu caso. Conte com o suporte de uma infraestrutura desenhada para entregar técnica e resultado em cada etapa.",
     box1_title: "Endereço",
-    box2_title: "Contato",
-    box3_title: "Acompanhe",
-    box3_desc1: "Conteúdo Técnico",
-    box3_desc2: "@drnayhanandrade",
-    btn: "Solicitar Avaliação"
+    box2_title: "Canal Direto",
+    box3_title: "Mídias Clínicas",
+    box3_desc1: "Acompanhe nossa rotina",
+    box3_desc2: "@vivere.odonto"
+  },
+  
+  footer: {
+    sobre: "Vivere Odontologia | Especialistas em Reabilitação Oral, Lentes em Resina e Odontologia de Alta Performance.",
+    title_tratamentos: "Escopo de Serviços",
+    title_contato: "Atendimento",
+    direitos: "© 2026 Vivere Odontologia. Todos os direitos reservados. RT Dr. Nome do Especialista CRO 00000.",
+    registro: "Sua Cidade — UF"
   },
 
-  footer: {
-    sobre: "Dr. Nayhan Andrade | CRM 35840-BA. Médico Tricologista e Membro SBRCC. Atuação exclusiva em Transplante Capilar FUE e Medicina Capilar na Bahia.",
-    direitos: "© 2026 Dr. Nayhan Andrade. Todos os direitos reservados."
+  // ---------------------------------------------------
+  // SEÇÃO EXTRA: FAQ 
+  // ---------------------------------------------------
+  faq: {
+    title: "Perguntas Comuns",
+    list: [
+      { q: "A clínica possui estacionamento próprio?", a: "Sim, estamos localizados em um edifício comercial que dispõe de estrutura completa de estacionamento rotativo para a sua segurança e comodidade." },
+      { q: "Qual o foco principal de atuação da clínica?", a: "Nossa expertise técnica está baseada na Reabilitação Oral Funcional e na Estética Avançada, especialmente através de Lentes e Facetas em Resina Composta." },
+      { q: "As lentes em resina mancham facilmente?", a: "Utilizamos resinas compostas com alta carga cerâmica e realizamos um polimento de excelência. Seguindo os protocolos de manutenção indicados na clínica, elas mantêm o brilho e a cor por muitos anos." },
+      { q: "Como dou andamento no meu agendamento?", a: "Basta acessar qualquer link do WhatsApp na página. Nossa equipe de relacionamento alinhará os horários de acordo com a disponibilidade da agenda clínica." }
+    ]
   }
 };

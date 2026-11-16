@@ -1,158 +1,144 @@
-import { useEffect, useState } from "react";
-import { Section } from "../ui/Section";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 
 export function Testimonials() {
-  const { eyebrow, quote, supporting, photos } = globalData.testimonials;
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const close = () => setActiveIndex(null);
-  const showPrev = () => setActiveIndex((i) => (i === null ? null : (i - 1 + photos.length) % photos.length));
-  const showNext = () => setActiveIndex((i) => (i === null ? null : (i + 1) % photos.length));
-
-  useEffect(() => {
-    if (activeIndex === null) return;
-
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowLeft") showPrev();
-      if (e.key === "ArrowRight") showNext();
-    };
-
-    window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [activeIndex]);
-
-  const colA = photos.filter((_, i) => i % 2 === 0);
-  const colB = photos.filter((_, i) => i % 2 !== 0);
-
-  const renderTile = (photo: { img: string; alt: string }, originalIndex: number, keyPrefix: string) => (
-    <button
-      key={`${keyPrefix}-${originalIndex}`}
-      onClick={() => setActiveIndex(originalIndex)}
-      className="relative block w-full aspect-[4/5] rounded-[1.4rem] overflow-hidden shrink-0 group focus:outline-none"
-    >
-      <img
-        src={photo.img}
-        alt={photo.alt}
-        loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 scale-[1.03] group-hover:scale-100 transition-all duration-700 ease-out"
-      />
-      <div className="absolute inset-0 bg-[var(--c-primary)] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-      <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[1.4rem]" />
-    </button>
-  );
+  const { 
+    eyebrow, 
+    title1, 
+    title2, 
+    quote, 
+    supporting, 
+    detailsLabel, 
+    footerLeft, 
+    footerRight, 
+    photos 
+  } = globalData.testimonials;
+  
+  // A primeira foto começa expandida
+  const [active, setActive] = useState(0);
 
   return (
-    <Section id="depoimentos" style={{ background: "var(--c-bg-alt)" }} className="overflow-hidden">
-      <div className="max-w-[1280px] mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-16 lg:gap-20 items-center">
+    <section id="depoimentos" className="py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-10 lg:px-20">
         
-        <div className="reveal lg:sticky lg:top-32">
-          <span className="eyebrow">{eyebrow}</span>
-          <div className="relative mt-4">
-            <span
-              aria-hidden
-              className="absolute -top-8 -left-2 text-[5rem] leading-none select-none opacity-15"
-              style={{ ...serif, color: "var(--c-primary)" }}
+        {/* Cabeçalho Desconstruído (Zero cara de template) */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16 md:mb-24">
+          <div className="max-w-2xl">
+            <h2 
+              className="text-[clamp(3rem,6vw,6rem)] leading-[0.9] text-white font-light tracking-tight mb-8"
+              style={serif}
             >
-              &ldquo;
-            </span>
-            <p
-              className="relative"
-              style={{ ...serif, fontWeight: 400, lineHeight: 1.22, fontSize: "clamp(1.7rem, 2.6vw, 2.5rem)", color: "var(--c-text-main)" }}
-            >
-              {quote}
+              {title1} <br/>
+              <em className="italic text-[var(--c-accent)]">{title2}</em>
+            </h2>
+            <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-md">
+              "{quote}"
             </p>
           </div>
-          <p className="mt-8 text-[0.95rem] leading-relaxed text-[var(--c-text-muted)] max-w-[440px]">
-            {supporting}
-          </p>
-          <div className="mt-10 flex items-center gap-3">
-            <span className="w-10 h-[1px] bg-[var(--c-accent)]" />
-            <span className="text-[0.68rem] uppercase tracking-[0.22em] font-semibold text-[var(--c-text-muted)]">
-              Clinmais – Camboriú, SC
+          
+          <div className="flex flex-col gap-4 lg:text-right max-w-xs">
+            <span className="text-[var(--c-accent)] text-xs tracking-[0.3em] uppercase font-bold">
+              {eyebrow}
             </span>
+            <p className="text-white/40 text-sm font-light leading-relaxed">
+              {supporting}
+            </p>
+            <div className="h-[1px] w-full bg-white/10 mt-2" />
           </div>
         </div>
 
-        <div className="relative grid grid-cols-2 gap-4 md:gap-5 h-[460px] sm:h-[560px] md:h-[640px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)]">
-          <div className="marquee-col overflow-hidden">
-            <div className="flex flex-col gap-4 md:gap-5 marquee-up">
-              {[...colA, ...colA].map((p, i) => renderTile(p, photos.indexOf(p), `a-${i}`))}
-            </div>
-          </div>
-          <div className="marquee-col overflow-hidden mt-10 md:mt-16">
-            <div className="flex flex-col gap-4 md:gap-5 marquee-down">
-              {[...colB, ...colB].map((p, i) => renderTile(p, photos.indexOf(p), `b-${i}`))}
-            </div>
-          </div>
+        {/* Gallery Accordion (Framer Motion Native) */}
+        <div className="flex flex-col md:flex-row w-full h-[100vh] md:h-[75vh] gap-2 md:gap-4">
+          {photos.map((photo, index) => {
+            const isActive = active === index;
+
+            return (
+              <motion.div
+                key={index}
+                layout
+                onClick={() => setActive(index)}
+                onMouseEnter={() => setActive(index)}
+                initial={false}
+                animate={{ 
+                  flex: isActive ? 5 : 1, // Expande para 5x o tamanho das fatias inativas
+                }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 200, 
+                  damping: 25, 
+                  mass: 0.8 
+                }}
+                className="relative overflow-hidden rounded-2xl md:rounded-[2rem] cursor-pointer group bg-[var(--c-dark-base)] border border-white/5"
+              >
+                {/* Imagem Absolute para não distorcer com o flex-grow */}
+                <motion.img
+                  src={photo.img}
+                  alt={photo.alt}
+                  animate={{
+                    filter: isActive ? "grayscale(0%)" : "grayscale(80%)",
+                    scale: isActive ? 1 : 1.1 // Leve zoom inativo para dar efeito ao expandir
+                  }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                />
+                
+                {/* Gradiente escuro para garantir leitura sempre */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+
+                {/* Conteúdo da Fatia */}
+                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end pointer-events-none">
+                  
+                  {/* Número que fica visível mesmo na fatia fina */}
+                  <div className="absolute top-6 left-6 md:top-8 md:left-8">
+                    <span 
+                      className={`text-xs font-mono tracking-widest transition-colors duration-500 ${
+                        isActive ? "text-[var(--c-accent)]" : "text-white/40"
+                      }`}
+                    >
+                      0{index + 1}
+                    </span>
+                  </div>
+
+                  <AnimatePresence mode="wait">
+                    {isActive && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="flex flex-col gap-2"
+                      >
+                        <h3 
+                          className="text-white text-2xl md:text-3xl font-light whitespace-nowrap"
+                          style={serif}
+                        >
+                          {photo.alt}
+                        </h3>
+                        <span className="text-white/50 text-xs tracking-[0.2em] uppercase">
+                          {detailsLabel}
+                        </span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Rodapé da Seção */}
+        <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-6">
+          <span className="text-white/30 text-[0.65rem] tracking-[0.3em] uppercase font-bold">
+            {footerLeft}
+          </span>
+          <span className="text-white/30 text-[0.65rem] tracking-[0.3em] uppercase font-bold">
+            {footerRight}
+          </span>
+        </div>
+
       </div>
-
-      {activeIndex !== null && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(11,26,19,0.92)] backdrop-blur-md px-4"
-          onClick={close}
-        >
-          <button
-            onClick={close}
-            aria-label="Fechar"
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-300 border border-white/20"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          </button>
-          
-          <button
-            onClick={(e) => { e.stopPropagation(); showPrev(); }}
-            aria-label="Foto anterior"
-            className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-300 border border-white/20"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          
-          <img
-            src={photos[activeIndex].img}
-            alt={photos[activeIndex].alt}
-            loading="lazy"
-            onClick={(e) => e.stopPropagation()}
-            className="max-w-[90vw] max-h-[85vh] rounded-[1.2rem] object-contain shadow-[0_30px_80px_rgba(0,0,0,0.4)]"
-          />
-          
-          <button
-            onClick={(e) => { e.stopPropagation(); showNext(); }}
-            aria-label="Próxima foto"
-            className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-300 border border-white/20"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
-      )}
-
-      <style>{`
-        @keyframes marquee-up-kf { 
-          from { transform: translateY(0) translateZ(0); } 
-          to { transform: translateY(-50%) translateZ(0); } 
-        }
-        @keyframes marquee-down-kf { 
-          from { transform: translateY(-50%) translateZ(0); } 
-          to { transform: translateY(0) translateZ(0); } 
-        }
-        .marquee-up { 
-          animation: marquee-up-kf 34s linear infinite; 
-          will-change: transform;
-        }
-        .marquee-down { 
-          animation: marquee-down-kf 40s linear infinite; 
-          will-change: transform;
-        }
-        .marquee-col:hover .marquee-up,
-        .marquee-col:hover .marquee-down { animation-play-state: paused; }
-      `}</style>
-    </Section>
+    </section>
   );
 }

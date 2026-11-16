@@ -1,25 +1,35 @@
 import { useState } from "react";
 import { Section } from "../ui/Section";
-import { serif, globalData } from "../../data/content";
+import { globalData } from "../../data/content";
 
 export function FAQ() {
-  const [active, setActive] = useState<number | null>(null);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   return (
-    <Section style={{ background: "var(--c-bg-alt)" }}>
-      <div className="max-w-[800px] mx-auto">
-        <div className="text-center mb-16 reveal">
-          <h2 style={serif} className="text-3xl md:text-5xl text-white">{globalData.faq.title}</h2>
+    <Section>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div className="reveal" style={{ textAlign: "center", marginBottom: "4.5rem" }}>
+           <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "clamp(2rem, 3vw, 2.8rem)", letterSpacing: "-0.03em", color: "var(--c-text-main)" }}>
+             {globalData.faq.title}
+           </h2>
         </div>
-        <div className="border-t border-white/10">
-          {globalData.faq.list.map((faq: any, i: number) => (
-            <div key={i} className="reveal border-b border-white/10">
-              <button onClick={() => setActive(active === i ? null : i)} className="w-full flex items-center justify-between py-6 text-left group">
-                <span className={`text-lg font-light transition-colors ${active === i ? 'text-[var(--c-accent)]' : 'text-white group-hover:text-[var(--c-accent)]'}`}>{faq.q}</span>
-                <span className="text-[var(--c-accent)] text-2xl font-light ml-4">{active === i ? "−" : "+"}</span>
+        <div className="stagger-children">
+          {globalData.faq.list.map((faq, i) => (
+            <div key={i} className="reveal faq-item" style={{ borderBottom: "1px solid rgba(var(--c-primary-rgb),0.1)" }}>
+              <button onClick={() => setActiveFaq(activeFaq === i ? null : i)} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1.75rem 0", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}>
+                <span style={{ fontSize: "1.05rem", fontWeight: activeFaq === i ? 600 : 500, color: activeFaq === i ? "var(--c-accent)" : "var(--c-text-main)", paddingRight: "1.5rem", transition: "color 0.3s ease" }}>
+                  {faq.q}
+                </span>
+                <span style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "var(--c-accent)", opacity: activeFaq === i ? 1 : 0.5, flexShrink: 0, transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease", transform: activeFaq === i ? "rotate(135deg)" : "rotate(0deg)" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
               </button>
-              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${active === i ? "max-h-[500px] opacity-100 pb-8" : "max-h-0 opacity-0"}`}>
-                <p className="text-[var(--c-text-muted)] font-light leading-relaxed pr-8">{faq.a}</p>
+              <div style={{ display: "grid", gridTemplateRows: activeFaq === i ? "1fr" : "0fr", transition: "grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1)" }}>
+                <div style={{ overflow: "hidden" }}>
+                  <p style={{ paddingBottom: "1.75rem", color: "var(--c-text-muted)", fontSize: ".95rem", lineHeight: 1.8, fontWeight: 300, opacity: activeFaq === i ? 1 : 0, transform: activeFaq === i ? "translateY(0)" : "translateY(-10px)", transition: "opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)" }}>
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

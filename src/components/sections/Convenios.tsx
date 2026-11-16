@@ -1,50 +1,100 @@
-import { useState } from "react";
-import { Section } from "../ui/Section";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 
-export function Convenios() {
-  const [activeTab, setActiveTab] = useState<number | null>(0);
-  const goToContact = (e: React.MouseEvent) => { e.preventDefault(); document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" }); };
+// Subcomponente para o efeito de opacidade vinculada à rolagem
+function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
+  const itemRef = useRef<HTMLDivElement>(null);
+  
+  // O hook mapeia quando o elemento entra na tela (90% do topo) até chegar a 40%
+  const { scrollYProgress } = useScroll({
+    target: itemRef,
+    offset: ["start 95%", "start 40%"]
+  });
+
+  // O texto começa apagado (20%) e vai acendendo até 100% conforme você rola
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+  // O texto vem levemente de baixo para cima acompanhando a rolagem
+  const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
 
   return (
-    <Section id="convenios">
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-        <div className="w-full lg:w-5/12 lg:sticky lg:top-32">
-          <div className="reveal"><span className="eyebrow">{globalData.convenios.eyebrow}</span></div>
-          <h2 className="reveal mt-3 mb-6" style={{ ...serif, fontWeight: 400, lineHeight: 1.1, fontSize: "clamp(2.4rem, 4vw, 3.8rem)", color: "var(--c-text-main)" }}>
-            {globalData.convenios.title1} <br />{globalData.convenios.title2} <em className="italic text-[var(--c-accent)]">{globalData.convenios.title3}</em>
+    <motion.div 
+      ref={itemRef}
+      style={{ opacity, y }}
+      className="flex flex-col border-t border-[rgba(var(--c-primary-rgb),0.1)] py-16 md:py-24 group"
+    >
+      <span className="text-[var(--c-accent)] text-sm md:text-base font-medium tracking-[0.25em] mb-6 block tabular-nums">
+        0{index + 1}
+      </span>
+      <h3 
+        className="text-3xl md:text-4xl lg:text-5xl text-[var(--c-text-main)] font-light mb-6 transition-colors duration-500 group-hover:text-[var(--c-accent)]" 
+        style={serif}
+      >
+        {item.title}
+      </h3>
+      <p className="text-[var(--c-text-muted)] text-base md:text-lg font-light leading-relaxed max-w-[90%] md:max-w-[80%]">
+        {item.content}
+      </p>
+    </motion.div>
+  );
+}
+
+export function Convenios() {
+  const { title1, title2, title3, desc, btn, list } = globalData.convenios;
+
+  const goToContact = (e: React.MouseEvent) => { 
+    e.preventDefault(); 
+    document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" }); 
+  };
+
+  return (
+    <section id="convenios" className="relative bg-[var(--c-bg)]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 flex flex-col lg:flex-row items-start gap-12 lg:gap-24">
+        
+        {/* LADO ESQUERDO: Fixo (Sticky) na tela no Desktop */}
+        <div className="w-full lg:w-5/12 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center pt-24 pb-12 lg:py-0">
+          
+          <h2 
+            className="text-[clamp(3.2rem,5vw,5.5rem)] leading-[0.95] text-[var(--c-text-main)] font-normal tracking-tight" 
+            style={serif}
+          >
+            {title1} <br />
+            {title2} <br />
+            <em className="italic text-[var(--c-accent)]">{title3}</em>
           </h2>
-          <p className="reveal text-[var(--c-text-muted)] text-[1.05rem] leading-relaxed font-light mb-10">
-            {globalData.convenios.desc}
+          
+          <p className="mt-10 text-[var(--c-text-muted)] text-lg md:text-xl font-light leading-relaxed max-w-md">
+            {desc}
           </p>
-          <div className="reveal">
-            <button onClick={goToContact} className="btn-outline">{globalData.convenios.btn}</button>
-          </div>
+
+          <button 
+            onClick={goToContact} 
+            className="mt-14 group inline-flex items-center gap-6 w-max"
+          >
+            <span className="text-[var(--c-text-main)] uppercase tracking-[0.2em] text-xs font-bold transition-colors group-hover:text-[var(--c-accent)]">
+              {btn}
+            </span>
+            <div className="w-16 h-[1px] bg-[var(--c-text-main)] group-hover:bg-[var(--c-accent)] transition-colors relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-full bg-[var(--c-bg)] -translate-x-full group-hover:animate-[slideRight_1s_ease-in-out_infinite]" />
+            </div>
+          </button>
         </div>
 
-        <div className="w-full lg:w-7/12 stagger-children border-t border-[rgba(var(--c-primary-rgb),0.1)]">
-          {globalData.convenios.list.map((item, i) => (
-            <div key={i} className="reveal" style={{ borderBottom: "1px solid rgba(var(--c-primary-rgb), 0.1)" }}>
-              <button onClick={() => setActiveTab(activeTab === i ? null : i)} className="w-full flex items-center justify-between py-8 text-left bg-transparent border-none cursor-pointer group">
-                <span className={`text-[1.1rem] md:text-[1.25rem] transition-colors duration-300 pr-6 ${activeTab === i ? "text-[var(--c-text-main)] font-medium" : "text-[var(--c-text-main)] font-normal group-hover:text-[var(--c-accent)]"}`} style={serif}>
-                  {item.title}
-                </span>
-                <span className="relative flex items-center justify-center w-6 h-6 shrink-0">
-                  <span className="absolute w-full h-[1.5px] bg-[var(--c-accent)] transition-transform duration-300" style={{ transform: activeTab === i ? "rotate(180deg)" : "rotate(0deg)" }} />
-                  <span className="absolute w-full h-[1.5px] bg-[var(--c-accent)] transition-transform duration-300" style={{ transform: activeTab === i ? "rotate(0deg)" : "rotate(-90deg)" }} />
-                </span>
-              </button>
-              <div className="grid transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" style={{ gridTemplateRows: activeTab === i ? "1fr" : "0fr" }}>
-                <div className="overflow-hidden">
-                  <p className={`pb-8 text-[var(--c-text-muted)] text-[0.95rem] md:text-[1.05rem] font-light leading-relaxed transition-all duration-500 delay-100 ${activeTab === i ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}>
-                    {item.content}
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* LADO DIREITO: Rolagem de Tópicos (Acompanha o Scroll) */}
+        <div className="w-full lg:w-7/12 flex flex-col pb-24 lg:pb-[20vh] lg:pt-[20vh]">
+          {list.map((item, index) => (
+            <ScrollLinkedItem key={index} item={item} index={index} />
           ))}
         </div>
+
       </div>
-    </Section>
+
+      <style>{`
+        @keyframes slideRight {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
+    </section>
   );
 }
