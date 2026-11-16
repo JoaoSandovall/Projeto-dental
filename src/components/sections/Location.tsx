@@ -1,4 +1,5 @@
 import { serif, globalData } from "../../data/content";
+import { Button } from "../ui/Button";
 
 export function Location() {
   const { location, clinica } = globalData;
@@ -9,7 +10,7 @@ export function Location() {
       className="w-full bg-[var(--c-bg)] py-24 md:py-32 border-t border-[rgba(var(--c-primary-rgb),0.05)]"
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
-
+        
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
             <h2 
@@ -30,7 +31,6 @@ export function Location() {
                   {location.box1.value2}
                 </div>
               </div>
-
               <div className="py-6 border-t border-[rgba(var(--c-primary-rgb),0.1)] flex flex-col sm:flex-row gap-2 sm:gap-8 justify-between group">
                 <span className="text-[0.65rem] font-bold tracking-[0.2em] text-[var(--c-text-muted)] uppercase w-32 shrink-0 group-hover:text-[var(--c-accent)] transition-colors">
                   {location.box2.title}
@@ -40,7 +40,6 @@ export function Location() {
                   {location.box2.value2}
                 </div>
               </div>
-
               <div className="py-6 border-y border-[rgba(var(--c-primary-rgb),0.1)] flex flex-col sm:flex-row gap-2 sm:gap-8 justify-between group">
                 <span className="text-[0.65rem] font-bold tracking-[0.2em] text-[var(--c-text-muted)] uppercase w-32 shrink-0 group-hover:text-[var(--c-accent)] transition-colors">
                   {location.box3.title}
@@ -54,15 +53,9 @@ export function Location() {
           </div>
 
           <div className="mt-14 lg:mt-0 pt-4">
-            <a 
-              href={clinica.endereco.mapaGpsUrl} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="group inline-flex items-center gap-4 text-[var(--c-text-main)] font-semibold text-[0.7rem] uppercase tracking-[0.25em] hover:text-[var(--c-accent)] transition-colors duration-500"
-            >
+            <Button as="a" href={clinica.endereco.mapaGpsUrl} target="_blank" variant="outline" className="mt-6 border-black/30">
               {location.btn}
-              <span className="w-10 h-[1px] bg-[var(--c-text-main)] group-hover:bg-[var(--c-accent)] group-hover:w-16 transition-all duration-500 ease-out" />
-            </a>
+            </Button>
           </div>
         </div>
 
@@ -79,7 +72,6 @@ export function Location() {
           />
           <div className="absolute inset-0 border border-[rgba(var(--c-primary-rgb),0.1)] rounded-[2rem] pointer-events-none" />
         </div>
-
       </div>
     </section>
   );

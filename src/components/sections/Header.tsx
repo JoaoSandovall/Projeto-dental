@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import { serif, globalData } from "../../data/content";
+import { Button } from "../ui/Button";
 
 export function Header({ goTo }: { goTo: (id: string) => void }) {
   const [scrolled, setScrolled] = useState(false);
@@ -66,12 +67,11 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
                 <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[1.5px] w-0 bg-[var(--c-accent)] transition-all duration-300 group-hover/link:w-full" />
               </button>
             ))}
-            <button
-              onClick={() => handleNav("contato")}
-              className="bg-[var(--c-primary)] text-white text-[0.85rem] font-medium px-6 py-3 rounded-full hover:bg-[var(--c-primary-hover)] hover:-translate-y-[1px] transition-all duration-300 shadow-sm"
-            >
-              {nav.btnDesktop}
-            </button>
+            <div className="flex items-center justify-center">
+              <Button variant="rolling" onClick={() => handleNav("contato")} className="shadow-sm">
+                {nav.btnDesktop}
+              </Button>
+            </div>
           </nav>
 
           <div className="lg:hidden relative z-[10001] -mr-2">
@@ -103,13 +103,11 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
             </button>
           ))}
         </nav>
-        <div className="mt-auto pt-6">
-          <button
-            onClick={() => handleNav("contato")}
-            className="w-full bg-[var(--c-primary)] text-white text-center py-4 rounded-full text-[0.9rem] font-medium shadow-md active:scale-[0.98] transition-transform"
-          >
+        
+        <div className="mt-auto pt-6 flex justify-center w-full">
+          <Button variant="rolling" onClick={() => handleNav("contato")} className="w-full shadow-md">
             {nav.btnMobile}
-          </button>
+          </Button>
         </div>
       </aside>
     </>

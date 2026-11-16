@@ -1,20 +1,15 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { serif, globalData } from "../../data/content";
+import { Button } from "../ui/Button";
 
-// Subcomponente para o efeito de opacidade vinculada à rolagem
 function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
   const itemRef = useRef<HTMLDivElement>(null);
-  
-  // O hook mapeia quando o elemento entra na tela (90% do topo) até chegar a 40%
   const { scrollYProgress } = useScroll({
     target: itemRef,
     offset: ["start 95%", "start 40%"]
   });
-
-  // O texto começa apagado (20%) e vai acendendo até 100% conforme você rola
   const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
-  // O texto vem levemente de baixo para cima acompanhando a rolagem
   const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
 
   return (
@@ -39,21 +34,19 @@ function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
   );
 }
 
-export function Convenios() {
+export function Methodology() {
   const { title1, title2, title3, desc, btn, list } = globalData.convenios;
 
-  const goToContact = (e: React.MouseEvent) => { 
-    e.preventDefault(); 
-    document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" }); 
+  const goToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="convenios" className="relative bg-[var(--c-bg)]">
+    <section id="metodologia" className="relative bg-[var(--c-bg)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 flex flex-col lg:flex-row items-start gap-12 lg:gap-24">
         
-        {/* LADO ESQUERDO: Fixo (Sticky) na tela no Desktop */}
         <div className="w-full lg:w-5/12 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center pt-24 pb-12 lg:py-0">
-          
           <h2 
             className="text-[clamp(3.2rem,5vw,5.5rem)] leading-[0.95] text-[var(--c-text-main)] font-normal tracking-tight" 
             style={serif}
@@ -67,20 +60,11 @@ export function Convenios() {
             {desc}
           </p>
 
-          <button 
-            onClick={goToContact} 
-            className="mt-14 group inline-flex items-center gap-6 w-max"
-          >
-            <span className="text-[var(--c-text-main)] uppercase tracking-[0.2em] text-xs font-bold transition-colors group-hover:text-[var(--c-accent)]">
-              {btn}
-            </span>
-            <div className="w-16 h-[1px] bg-[var(--c-text-main)] group-hover:bg-[var(--c-accent)] transition-colors relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-full bg-[var(--c-bg)] -translate-x-full group-hover:animate-[slideRight_1s_ease-in-out_infinite]" />
-            </div>
-          </button>
+          <Button variant="outline" onClick={goToContact as any} className="mt-10 w-max">
+            {btn}
+          </Button>
         </div>
 
-        {/* LADO DIREITO: Rolagem de Tópicos (Acompanha o Scroll) */}
         <div className="w-full lg:w-7/12 flex flex-col pb-24 lg:pb-[20vh] lg:pt-[20vh]">
           {list.map((item, index) => (
             <ScrollLinkedItem key={index} item={item} index={index} />
@@ -88,13 +72,6 @@ export function Convenios() {
         </div>
 
       </div>
-
-      <style>{`
-        @keyframes slideRight {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
-        }
-      `}</style>
     </section>
   );
 }

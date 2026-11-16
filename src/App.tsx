@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { Header } from "./components/sections/Header";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
-import { Convenios } from "./components/sections/Convenios";
-import { Testimonials } from "./components/sections/Testimonials";
+import { Methodology } from "./components/sections/Methodology";
+import { Infrastructure } from "./components/sections/Infrastructure";
 import { ResultsCTA } from "./components/sections/ResultsCTA";
 import { FAQ } from "./components/sections/FAQ";
 import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-
 import { ResultsPage } from "./components/pages/ResultsPage";
-import { SpecialtiesPage } from "./components/pages/SpecialtiesPage";
+import { SpecialistPage } from "./components/pages/SpecialistPage";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -73,31 +72,29 @@ export default function App() {
     if (stage === "in") setStage("done");
   };
 
-  // === SOLUÇÃO DEFINITIVA ===
-  // Renderizamos o <Header /> aqui, isolado e imune a qualquer bug de CSS
   return (
     <>
       <Header goTo={goTo} />
-      {/* A div com overflow-x-hidden foi removida daqui para liberar o sticky */}
+      
       <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
         {displayPath.includes("resultados") ? (
           <ResultsPage goTo={goTo} />
-        ) : displayPath.includes("especialidades") ? (
-          <SpecialtiesPage goTo={goTo} />
+        ) : displayPath.includes("especialista") ? (
+          <SpecialistPage goTo={goTo} />
         ) : (
           <>
             <Hero goTo={goTo} />
-            <About goTo={goTo} />
-            <Convenios />
-            <Testimonials />
+            <About />
+            <Methodology />
+            <Infrastructure />
             <ResultsCTA />
             <FAQ />
             <Location />
             <Contact />
-            <Footer />
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 }

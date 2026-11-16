@@ -33,8 +33,8 @@ export const globalData = {
   // NAVEGAÇÃO SUPERIOR (HEADER / ASIDE)
   // ---------------------------------------------------
   nav: {
-    links: ["A Clínica", "Especialista", "Metodologia", "Casos Clínicos", "Contato"],
-    ids: ["sobre", "/especialidades", "convenios", "/resultados", "contato"],
+    links: ["Tratamentos", "Metodologia", "O Especialista", "Casos Clínicos", "A Clínica"],
+    ids: ["servicos", "metodologia", "/especialista", "/resultados", "infraestrutura"],
     btnDesktop: "Agendar",
     btnMobile: "Agendar Avaliação"
   },
@@ -43,7 +43,7 @@ export const globalData = {
   // SEÇÃO 1: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/image.png", 
+    imgUrl: "/imagens/hero.png", 
     eyebrow: "Sua Cidade — UF",
     title1: "A precisão",
     title2: "da estética.",

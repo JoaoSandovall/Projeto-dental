@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 
-export function Testimonials() {
+export function Infrastructure() {
   const { 
     eyebrow, 
     title1, 
@@ -19,7 +19,7 @@ export function Testimonials() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="depoimentos" className="py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
+    <section id="infraestrutura" className="py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 md:px-10 lg:px-20">
         
         {/* Cabeçalho Desconstruído (Zero cara de template) */}

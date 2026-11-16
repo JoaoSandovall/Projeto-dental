@@ -116,17 +116,14 @@ export function About() {
 
                   {/* Informações Textuais (Desaparecem suavemente nos cards do fundo) */}
                   <motion.div 
-                    className="absolute bottom-8 left-8 right-8 flex flex-col pointer-events-none"
+                    className="absolute bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none"
                     animate={{ 
                       opacity: absDistance === 0 ? 1 : 0.3,
                       y: absDistance === 0 ? 0 : 10
                     }}
                     transition={{ duration: 0.4 }}
                   >
-                    <span className="text-[var(--c-accent)] text-xs font-bold tracking-[0.25em] block mb-2 uppercase">
-                      {String((index % sixPhotos.length) + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="text-white text-xl md:text-2xl font-light tracking-wide" style={serif}>
+                    <h3 className="text-white text-xl md:text-2xl font-light tracking-wide drop-shadow-md" style={serif}>
                       {img.title}
                     </h3>
                   </motion.div>
