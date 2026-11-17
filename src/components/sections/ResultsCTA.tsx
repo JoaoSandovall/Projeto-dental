@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
@@ -16,6 +16,8 @@ function Scanner({ beforeImg, afterImg, labelBefore, labelAfter }: { beforeImg: 
       <img 
         src={afterImg} 
         alt="Resultado Depois" 
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none" 
         draggable={false} 
       />
@@ -23,6 +25,8 @@ function Scanner({ beforeImg, afterImg, labelBefore, labelAfter }: { beforeImg: 
       <img 
         src={beforeImg} 
         alt="Situação Antes" 
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none grayscale-[85%] sepia-[15%] contrast-110" 
         style={{ clipPath: `polygon(0 0, ${position}% 0, ${position}% 100%, 0 100%)` }} 
         draggable={false} 
@@ -77,7 +81,7 @@ export function ResultsCTA() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
           
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -118,9 +122,9 @@ export function ResultsCTA() {
                 {results_cta.btn}
               </Button>
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -133,7 +137,7 @@ export function ResultsCTA() {
               labelBefore={results_cta.labelBefore}
               labelAfter={results_cta.labelAfter}
             />
-          </motion.div>
+          </m.div>
 
         </div>
 

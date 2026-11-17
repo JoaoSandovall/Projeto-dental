@@ -1,5 +1,4 @@
-import { CSSProperties } from "react";
-import { Smile, Sparkles, Shield, Users, CheckCircle, Heart } from "lucide-react";
+import type { CSSProperties } from "react";
 
 export const serif: CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif" };
 
@@ -43,7 +42,7 @@ export const globalData = {
   // SEÇÃO 1: HERO
   // ---------------------------------------------------
   hero: {
-    imgUrl: "/imagens/hero.png", 
+    imgUrl: "/imagens/hero.webp", 
     eyebrow: "Sua Cidade — UF",
     title1: "A precisão",
     title2: "da estética.",
@@ -82,10 +81,10 @@ export const globalData = {
     ],
     btn: "Conhecer a infraestrutura",
     gallery: [
-      { url: "/imagens/sorriso1.png", title: "Proporção" },
-      { url: "/imagens/sorriso2.png", title: "Simetria" },
-      { url: "/imagens/sorriso3.png", title: "Textura" },
-      { url: "/imagens/sorriso5.png", title: "Naturalidade" }
+      { url: "/imagens/sorriso1.webp", title: "Proporção" },
+      { url: "/imagens/sorriso2.webp", title: "Simetria" },
+      { url: "/imagens/sorriso3.webp", title: "Textura" },
+      { url: "/imagens/sorriso5.webp", title: "Naturalidade" }
     ]
   },
 
@@ -101,12 +100,13 @@ export const globalData = {
     desc2: ", atuando sempre sob rígidos protocolos de qualidade.",
     btn: "Ver portfólio clínico",
     list: [
-      { icon: <Sparkles size={28} strokeWidth={1.2} />, title: "Lentes em Resina", desc: "Correção de assimetrias, diastemas e cor com material de alta durabilidade e polimento contínuo." },
-      { icon: <CheckCircle size={28} strokeWidth={1.2} />, title: "Clareamento Clínico", desc: "Protocolos supervisionados com agentes químicos controlados para clarear sem sensibilidade agressiva." },
-      { icon: <Shield size={28} strokeWidth={1.2} />, title: "Reabilitação Oral", desc: "Tratamento de bruxismo e perdas dentárias múltiplas para restabelecer a estabilidade oclusal." },
-      { icon: <Smile size={28} strokeWidth={1.2} />, title: "Plástica Gengival", desc: "Intervenção cirúrgica milimétrica para alinhar zênites e corrigir o aspecto de sorriso gengival." },
-      { icon: <Heart size={28} strokeWidth={1.2} />, title: "Controle de Manutenção", desc: "Acompanhamento periódico preventivo, garantindo a extensão da vida útil das restaurações estéticas." },
-      { icon: <Users size={28} strokeWidth={1.2} />, title: "Diagnóstico Digital", desc: "Documentação fotográfica especializada e moldagens precisas que guiam cada etapa do planejamento." }
+      // (ícones removidos: esta seção não é renderizada no site e importava a lib lucide-react inteira)
+      { title: "Lentes em Resina", desc: "Correção de assimetrias, diastemas e cor com material de alta durabilidade e polimento contínuo." },
+      { title: "Clareamento Clínico", desc: "Protocolos supervisionados com agentes químicos controlados para clarear sem sensibilidade agressiva." },
+      { title: "Reabilitação Oral", desc: "Tratamento de bruxismo e perdas dentárias múltiplas para restabelecer a estabilidade oclusal." },
+      { title: "Plástica Gengival", desc: "Intervenção cirúrgica milimétrica para alinhar zênites e corrigir o aspecto de sorriso gengival." },
+      { title: "Controle de Manutenção", desc: "Acompanhamento periódico preventivo, garantindo a extensão da vida útil das restaurações estéticas." },
+      { title: "Diagnóstico Digital", desc: "Documentação fotográfica especializada e moldagens precisas que guiam cada etapa do planejamento." }
     ]
   },
 
@@ -116,7 +116,7 @@ export const globalData = {
   team: {
     title: "O Especialista",
     members: [
-      { name: "Dr. Nome do Especialista", cro: "CRO 00000", specialty: "Cirurgião Dentista", img: "/imagens/profissionalatuando.png" }
+      { name: "Dr. Nome do Especialista", cro: "CRO 00000", specialty: "Cirurgião Dentista", img: "/imagens/profissionalatuando.webp" }
     ]
   },
 
@@ -150,12 +150,12 @@ export const globalData = {
     footerLeft: "Vivere Odontologia",
     footerRight: "Sua Cidade, UF",
     photos: [
-      { img: "/imagens/clinica1.png", alt: "Estrutura Clínica" },
-      { img: "/imagens/profissionalatuando.png", alt: "Precisão Cirúrgica" },
-      { img: "/imagens/clinica2.png", alt: "Recepção" },
-      { img: "/imagens/materiais1.png", alt: "Instrumental Clínico" },
-      { img: "/imagens/profissionaisatuando.png", alt: "Equipe Especializada" },
-      { img: "/imagens/materiais2.png", alt: "Materiais Premium" }
+      { img: "/imagens/clinica1.webp", alt: "Estrutura Clínica" },
+      { img: "/imagens/profissionalatuando.webp", alt: "Precisão Cirúrgica" },
+      { img: "/imagens/clinica2.webp", alt: "Recepção" },
+      { img: "/imagens/materiais1.webp", alt: "Instrumental Clínico" },
+      { img: "/imagens/profissionaisatuando.webp", alt: "Equipe Especializada" },
+      { img: "/imagens/materiais2.webp", alt: "Materiais Premium" }
     ]
   },
 
@@ -176,7 +176,7 @@ export const globalData = {
     p3: "e entenda o nível de detalhe estético e anatômico que entregamos diariamente.",
     p_bold3: "",
     btn: "Acessar Portfólio",
-    imgUrl: "/imagens/depois.jpg" 
+    imgUrl: "/imagens/depois.webp" 
   },
 
   // ---------------------------------------------------
@@ -203,32 +203,32 @@ export const globalData = {
         duration: "Lentes em Resina", 
         complaint: "O paciente apresentava desnível nas margens, presença de diastemas e insatisfação com a saturação dos dentes.", 
         procedure: "Recontorno estético com a escultura de 10 facetas diretas em resina policromática, restabelecendo as guias de desoclusão.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"  
+        beforeImg: "/imagens/antes.webp", 
+        afterImg: "/imagens/depois.webp"  
       },
       { 
         category: "Harmonização Dental", 
         duration: "Clareamento & Facetas", 
         complaint: "Dentes com pigmentação acentuada e bordas incisais fraturadas devido ao desgaste por atrição.", 
         procedure: "Sessões de clareamento supervisionado seguidas da reconstrução anatômica das bordas incisais em resina composta.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"  
+        beforeImg: "/imagens/antes.webp", 
+        afterImg: "/imagens/depois.webp"  
       },
       { 
         category: "Reabilitação Oclusal", 
         duration: "Restabelecimento de DVO", 
         complaint: "Desgaste severo ocasionado por bruxismo ativo, comprometendo a dimensão vertical de oclusão e a estrutura dentária.", 
         procedure: "Reabilitação adesiva funcional estendendo-se de molares a incisivos, desenvolvendo nova altura e protegendo os remanescentes.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"  
+        beforeImg: "/imagens/antes.webp", 
+        afterImg: "/imagens/depois.webp"  
       },
       { 
         category: "Adequação do Meio", 
         duration: "Preparo Prévio", 
         complaint: "Inflamação tecidual crônica marginal que impedia qualquer abordagem adesiva com segurança e longevidade.", 
         procedure: "Tratamento periodontal de adequação e refinamento de margem, criando o cenário biológico ideal para o procedimento estético.", 
-        beforeImg: "/imagens/antes.jpg", 
-        afterImg: "/imagens/depois.jpg"  
+        beforeImg: "/imagens/antes.webp", 
+        afterImg: "/imagens/depois.webp"  
       }
     ]
   },
@@ -241,26 +241,26 @@ export const globalData = {
       title1: "DOMÍNIO",
       title2: "TÉCNICO",
       badge: "Cirurgião Dentista",
-      imgUrl: "/imagens/dr.png"
+      imgUrl: "/imagens/dr.webp"
     },
     timeline: [
       {
         year: "2015",
         title: "Fundação Técnica",
         desc: "Formação em Odontologia, solidificando os pilares de precisão cirúrgica, estabilidade mecânica e biossegurança clínica.",
-        img: "/imagens/materiais1.png"
+        img: "/imagens/materiais1.webp"
       },
       {
         year: "2019",
         title: "Foco Operatório",
         desc: "Imersão contínua em escultura dental adesiva, dedicando-se exclusivamente ao refinamento de reabilitações em resinas compostas.",
-        img: "/imagens/profissionalatuando.png"
+        img: "/imagens/profissionalatuando.webp"
       },
       {
         year: "2026",
         title: "Vivere Odontologia",
         desc: "Fundação da estrutura clínica dedicada, com protocolo de excelência projetado para casos de alto grau de exigência estética.",
-        img: "/imagens/clinica2.png" 
+        img: "/imagens/clinica2.webp" 
       }
     ]
   },

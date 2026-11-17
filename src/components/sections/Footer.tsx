@@ -2,8 +2,9 @@ import { serif, globalData } from "../../data/content";
 
 export function Footer() {
   const { clinica, footer } = globalData;
+
   return (
-    <footer className="pt-24 pb-10 px-6 md:px-10 bg-[var(--c-primary)]">
+    <footer className="pt-24 pb-10 px-6 md:px-10 lg:px-20 bg-[var(--c-primary)]">
       <div className="max-w-[1280px] mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
@@ -96,26 +97,6 @@ export function Footer() {
           <p>{footer.registro}</p>
         </div>
       </div>
-
-      <style>{`
-        .footer-social-list { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; }
-        .footer-social-list li::after { content: ""; display: block; height: 0px; transition: height 0.3s ease-in-out; pointer-events: none; }
-        .footer-social-list li:hover::after { height: 10px; }
-        .footer-social-list .icon-content { margin-right: 12px; position: relative; }
-        .footer-social-list .icon-content .tooltip { position: absolute; bottom: -32px; left: 50%; transform: translateX(-50%); color: #fff; padding: 4px 8px; border-radius: 4px; opacity: 0; pointer-events: none; visibility: hidden; font-size: 12px; transition: all 0.3s ease; white-space: nowrap; z-index: 10; }
-        .footer-social-list .icon-content:hover .tooltip { opacity: 1; visibility: visible; bottom: -38px; }
-        .footer-social-list .icon-content a { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; width: 42px; height: 42px; border-radius: 50%; color: #fff; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease-in-out; }
-        .footer-social-list .icon-content a:hover { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); color: white; border-color: transparent; }
-        .footer-social-list .icon-content a svg { position: relative; z-index: 1; width: 18px; height: 18px; }
-        .footer-social-list .icon-content a .filled { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 0; transition: all 0.3s ease-in-out; z-index: 0; }
-        .footer-social-list .icon-content a:hover .filled { height: 100%; }
-        .footer-social-list .icon-content a[data-social="instagram"] .filled,
-        .footer-social-list .icon-content a[data-social="instagram"] ~ .tooltip { background-color: #E1306C; }
-        .footer-social-list .icon-content a[data-social="whatsapp"] .filled,
-        .footer-social-list .icon-content a[data-social="whatsapp"] ~ .tooltip { background-color: #25D366; }
-        .footer-social-list .icon-content a[data-social="facebook"] .filled,
-        .footer-social-list .icon-content a[data-social="facebook"] ~ .tooltip { background-color: #1877F2; }
-      `}</style>
     </footer>
   );
 }

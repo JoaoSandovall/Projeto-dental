@@ -1,24 +1,37 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 
+// Mesma sequência de antes (galeria duplicada, repetida 20x = 240 itens),
+// mas calculada uma única vez em vez de a cada render/clique.
+const sixPhotos = [...globalData.about.gallery, ...globalData.about.gallery];
+const infiniteItems = Array(20).fill(sixPhotos).flat() as typeof sixPhotos;
+const VISIBLE_RANGE = 3;
+
 export function About() {
-  const { gallery } = globalData.about;
-  const sixPhotos = [...gallery, ...gallery];
-  const infiniteItems = Array(20).fill(sixPhotos).flat();
   const [currentIndex, setCurrentIndex] = useState(60);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
+  );
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // matchMedia só dispara quando cruza o breakpoint (antes: a cada pixel de resize)
+    const mq = window.matchMedia("(max-width: 767px)");
+    const handleChange = () => setIsMobile(mq.matches);
+    handleChange();
+    mq.addEventListener("change", handleChange);
+    return () => mq.removeEventListener("change", handleChange);
   }, []);
 
   const handleCardClick = (index: number) => {
     setCurrentIndex(index);
   };
+
+  // Só percorre os 7 cards visíveis (antes: mapeava os 240 itens a cada render)
+  const visibleIndexes: number[] = [];
+  for (let i = currentIndex - VISIBLE_RANGE; i <= currentIndex + VISIBLE_RANGE; i++) {
+    if (i >= 0 && i < infiniteItems.length) visibleIndexes.push(i);
+  }
 
   return (
     <section 
@@ -28,7 +41,7 @@ export function About() {
     >
       {/* Vitrine 2.5D Stacked */}
       <div className="relative w-full h-[550px] md:h-[650px] flex items-center justify-center overflow-hidden z-10">
-        <motion.div 
+        <m.div 
           className="absolute flex items-center cursor-grab active:cursor-grabbing w-full h-full justify-center"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -44,11 +57,10 @@ export function About() {
             }
           }}
         >
-          {infiniteItems.map((img, index) => {
+          {visibleIndexes.map((index) => {
+            const img = infiniteItems[index];
             const distance = index - currentIndex;
             const absDistance = Math.abs(distance);
-            
-            if (absDistance > 3) return null;
             
             const scale = Math.max(1 - absDistance * 0.15, 0.65);
             const zIndex = 50 - absDistance;
@@ -60,7 +72,7 @@ export function About() {
               : Math.sign(distance) * (baseOffset + (absDistance > 1 ? (absDistance - 1) * secondaryOffset : 0));
 
             return (
-              <motion.div
+              <m.div
                 key={index}
                 onClick={() => handleCardClick(index)}
                 className="absolute flex flex-col items-center cursor-pointer"
@@ -80,12 +92,14 @@ export function About() {
                   <img
                     src={img.url}
                     alt={img.title}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-1000 group-hover:scale-105"
                     draggable="false"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none opacity-80" />
                   
-                  <motion.div 
+                  <m.div 
                     className="absolute inset-0 bg-white pointer-events-none"
                     animate={{ opacity: absDistance === 0 ? 0 : 0.65 }}
                     transition={{ duration: 0.4 }}
@@ -95,7 +109,7 @@ export function About() {
                     <div className="absolute inset-0 border-[1.5px] border-[var(--c-accent)]/60 rounded-[2rem] pointer-events-none" />
                   )}
                   
-                  <motion.div 
+                  <m.div 
                     className="absolute bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none"
                     animate={{ 
                       opacity: absDistance === 0 ? 1 : 0.3,
@@ -106,12 +120,12 @@ export function About() {
                     <h3 className="text-white text-xl md:text-2xl font-light tracking-wide drop-shadow-md" style={serif}>
                       {img.title}
                     </h3>
-                  </motion.div>
+                  </m.div>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="flex items-center justify-center gap-4 mt-8 z-20">

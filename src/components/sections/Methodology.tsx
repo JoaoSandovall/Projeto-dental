@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
@@ -13,7 +13,7 @@ function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
   const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
 
   return (
-    <motion.div 
+    <m.div 
       ref={itemRef}
       style={{ opacity, y }}
       className="flex flex-col border-t border-[rgba(var(--c-primary-rgb),0.1)] py-16 md:py-24 group"
@@ -30,7 +30,7 @@ function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
       <p className="text-[var(--c-text-muted)] text-base md:text-lg font-light leading-relaxed max-w-[90%] md:max-w-[80%]">
         {item.content}
       </p>
-    </motion.div>
+    </m.div>
   );
 }
 

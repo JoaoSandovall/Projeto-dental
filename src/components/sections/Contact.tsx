@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
@@ -10,13 +10,25 @@ export function Contact() {
       id="contato" 
       className="relative w-full bg-[var(--c-dark-base)] py-24 md:py-32 flex flex-col justify-between overflow-hidden"
     >
-      <div className="absolute bottom-0 right-0 w-[50vw] h-[50vw] bg-[var(--c-accent)] blur-[200px] rounded-full opacity-[0.03] pointer-events-none" />
+      {/* Brilho dourado de fundo. Antes: círculo com filter: blur(200px) (muito caro para a GPU, repintado no scroll).
+          Agora: gradiente radial com o mesmo desenho do círculo desfocado — visual equivalente, custo quase zero. */}
+      <div
+        className="absolute rounded-full opacity-[0.03] pointer-events-none"
+        style={{
+          width: "calc(50vw + 800px)",
+          height: "calc(50vw + 800px)",
+          right: "-400px",
+          bottom: "-400px",
+          background:
+            "radial-gradient(circle closest-side, rgba(var(--c-accent-rgb),0.8) 0%, rgba(var(--c-accent-rgb),0.62) calc(25vw * 0.55), rgba(var(--c-accent-rgb),0.35) calc(25vw + 100px), rgba(var(--c-accent-rgb),0.1) calc(25vw + 260px), transparent 100%)",
+        }}
+      />
 
       <div className="max-w-[1440px] w-full mx-auto px-6 md:px-10 lg:px-20 z-10 flex flex-col">
         
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20 md:mb-32">
           
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -38,9 +50,9 @@ export function Contact() {
             <p className="text-white/60 text-[1.1rem] md:text-[1.25rem] font-light leading-relaxed max-w-lg">
               {contact.desc}
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -51,10 +63,10 @@ export function Contact() {
             <Button as="a" href={clinica.contato.whatsappUrl} target="_blank" colorTheme="dark" className="w-full sm:w-auto">
               {clinica.contato.whatsappLabel}
             </Button>
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -90,7 +102,7 @@ export function Contact() {
               {contact.box3_desc2}
             </p>
           </div>
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

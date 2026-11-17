@@ -9,13 +9,17 @@ export function useCountUp(target: number, duration = 2500, startDelay = 50) {
     const el = ref.current;
     if (!el) return;
 
+    let timeoutId: number | undefined;
+    let frameId: number | undefined;
+
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
           
-          setTimeout(() => {
-            let start: number;
+          timeoutId = window.setTimeout(() => {
+            let start: number | undefined;
+            let last = -1;
 
             const step = (now: number) => {
               if (start === undefined) start = now;
@@ -33,16 +37,20 @@ export function useCountUp(target: number, duration = 2500, startDelay = 50) {
                 currentVal = target - 1;
               }
               
-              setValue(currentVal);
+              // Só re-renderiza quando o número realmente muda (antes era a cada frame)
+              if (currentVal !== last) {
+                last = currentVal;
+                setValue(currentVal);
+              }
               
               if (progress < 1) {
-                requestAnimationFrame(step);
+                frameId = requestAnimationFrame(step);
               } else {
                 setValue(target);
               }
             };
 
-            requestAnimationFrame(step);
+            frameId = requestAnimationFrame(step);
           }, startDelay);
 
           obs.disconnect();
@@ -52,7 +60,12 @@ export function useCountUp(target: number, duration = 2500, startDelay = 50) {
     );
 
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => {
+      obs.disconnect();
+      // Evita setState em componente desmontado (ex.: trocar de página no meio da contagem)
+      if (timeoutId !== undefined) clearTimeout(timeoutId);
+      if (frameId !== undefined) cancelAnimationFrame(frameId);
+    };
   }, [target, duration, startDelay]);
 
   return { value, ref };

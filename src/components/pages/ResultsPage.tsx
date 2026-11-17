@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Footer } from "../sections/Footer";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
@@ -9,8 +8,8 @@ function BeforeAfterSlider({ beforeImg, afterImg, labelBefore, labelAfter }: { b
 
   return (
     <div className="relative w-full h-[400px] md:h-[450px] bg-[var(--c-bg)] overflow-hidden select-none rounded-2xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <img src={afterImg} alt="Resultado Depois" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
-      <img src={beforeImg} alt="Situação Antes" className="absolute inset-0 w-full h-full object-cover pointer-events-none" style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }} draggable={false} />
+      <img src={afterImg} alt="Resultado Depois" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
+      <img src={beforeImg} alt="Situação Antes" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }} draggable={false} />
       
       <div className="absolute top-0 bottom-0 w-[1.5px] bg-white/80 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-transform duration-75" style={{ left: `calc(${sliderPosition}% - 0.75px)` }}>
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${isHovered ? 'bg-white/90 scale-110 shadow-xl' : 'bg-white/50 backdrop-blur-sm shadow-md border border-white/40'}`}>
@@ -95,7 +94,6 @@ export function ResultsPage({ goTo }: { goTo: (id: string) => void }) {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

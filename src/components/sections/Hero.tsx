@@ -1,5 +1,5 @@
-import { useRef, MouseEvent as ReactMouseEvent } from "react";
-import { motion, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
+import type { MouseEvent as ReactMouseEvent } from "react";
+import { m, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 import { useCountUp } from "../../hooks/useCountUp";
 import { Button } from "../ui/Button";
@@ -9,7 +9,7 @@ function StatCounter({ target, suffix, label, thousands, delay }: any) {
   const display = thousands ? value.toLocaleString("pt-BR") : value;
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
@@ -22,9 +22,25 @@ function StatCounter({ target, suffix, label, thousands, delay }: any) {
       <div className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--c-text-muted)] font-medium">
         {label}
       </div>
-    </motion.div>
+    </m.div>
   );
 }
+
+// Constantes fora do componente: não são recriadas a cada render
+const springConfig = { damping: 45, stiffness: 50, mass: 0.5 };
+
+const maskVariant: Variants = {
+  hidden: { y: "115%" },
+  visible: { 
+    y: "0%", 
+    transition: { 
+      duration: 1.1, 
+      ease: [0.22, 1, 0.36, 1] as any 
+    } 
+  }
+};
+
+const noiseBg = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`;
 
 export function Hero({ goTo }: { goTo: (id: string) => void }) {
   const { hero, clinica } = globalData;
@@ -32,7 +48,6 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
-  const springConfig = { damping: 45, stiffness: 50, mass: 0.5 };
   const springX = useSpring(mouseX, springConfig);
   const springY = useSpring(mouseY, springConfig);
   
@@ -45,19 +60,6 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
     mouseX.set(clientX / innerWidth - 0.5);
     mouseY.set(clientY / innerHeight - 0.5);
   };
-
-  const maskVariant: Variants = {
-    hidden: { y: "115%" },
-    visible: { 
-      y: "0%", 
-      transition: { 
-        duration: 1.1, 
-        ease: [0.22, 1, 0.36, 1] as any 
-      } 
-    }
-  };
-
-  const noiseBg = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`;
 
   return (
     <section 
@@ -75,26 +77,26 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
               className="text-[clamp(3rem,6.5vw,7.5rem)] leading-[0.95] font-normal text-[var(--c-text-main)] tracking-tight"
             >
               <div className="overflow-hidden pb-2" style={{ willChange: "transform" }}>
-                <motion.span variants={maskVariant} initial="hidden" animate="visible" className="block origin-top-left">
+                <m.span variants={maskVariant} initial="hidden" animate="visible" className="block origin-top-left">
                   {hero.title1}
-                </motion.span>
+                </m.span>
               </div>
               
               <div className="overflow-hidden pb-2" style={{ willChange: "transform" }}>
-                <motion.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.1 }} className="text-[var(--c-accent)] italic block origin-top-left">
+                <m.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.1 }} className="text-[var(--c-accent)] italic block origin-top-left">
                   {hero.title2}
-                </motion.span>
+                </m.span>
               </div>
               
               <div className="overflow-hidden pb-2" style={{ willChange: "transform" }}>
-                <motion.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.2 }} className="block origin-top-left">
+                <m.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.2 }} className="block origin-top-left">
                   {hero.title3}
-                </motion.span>
+                </m.span>
               </div>
             </h1>
           </div>
 
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -109,20 +111,22 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
                 {hero.btnPrimary}
               </Button>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         <div className="relative w-full h-[40vh] md:h-[55vh] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[var(--c-dark-deep)] shadow-[0_30px_80px_rgba(0,0,0,0.08)] mb-12 md:mb-16">
-          <motion.img 
+          <m.img 
             style={{ x: imgX, y: imgY, scale: 1.05 }}
             src={hero.imgUrl} 
             alt={clinica.nome} 
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-[filter] duration-1000 will-change-transform"
           />
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: noiseBg }} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
           
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -134,7 +138,7 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
             <span className="text-[0.65rem] md:text-xs tracking-[0.2em] font-mono text-[var(--c-accent)]">
               {hero.badgeTitle} — {hero.badgeDesc}
             </span>
-          </motion.div>
+          </m.div>
         </div>
 
         <div className="mt-auto grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-[rgba(var(--c-primary-rgb),0.1)]">

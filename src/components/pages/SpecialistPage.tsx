@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import { serif, globalData } from "../../data/content";
-import { Footer } from "../sections/Footer";
+import { srcSetFor } from "../../lib/img";
 
 export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
   const { team, specialties_page } = globalData;
@@ -25,7 +25,7 @@ export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
           ref={heroRef} 
           className="relative w-full h-[85vh] md:h-[100vh] bg-[var(--c-dark-base)] overflow-hidden flex items-end justify-center"
         >
-          <motion.div 
+          <m.div 
             style={{ y: textY }} 
             className="absolute inset-0 flex flex-col items-center justify-center z-0 opacity-30 select-none pointer-events-none"
           >
@@ -36,18 +36,22 @@ export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
               {hero.title1} <br />
               <em className="italic text-[var(--c-accent)] pr-12 lg:pr-32">{hero.title2}</em>
             </h1>
-          </motion.div>
+          </m.div>
 
-          <motion.div 
+          <m.div 
             style={{ y: imgY, scale: imgScale }} 
             className="relative z-10 w-[95%] sm:w-[70%] md:w-[50%] lg:w-[40%] h-[85%] flex items-end justify-center"
           >
             <img
               src={hero.imgUrl}
+              srcSet={srcSetFor(hero.imgUrl)}
+              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, (min-width: 640px) 70vw, 95vw"
               alt={dr.name}
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-contain object-bottom grayscale-[15%] drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
             />
-          </motion.div>
+          </m.div>
 
           <div className="absolute bottom-8 left-6 md:left-12 right-6 md:right-12 flex items-end justify-between z-20 pointer-events-none">
             <div className="text-white/90">
@@ -72,7 +76,7 @@ export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
               {timeline.map((item, i) => {
                 const isEven = i % 2 === 0;
                 return (
-                  <motion.div
+                  <m.div
                     key={i}
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -99,13 +103,17 @@ export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
 
                     <div className="w-full md:w-1/2 flex justify-center pl-12 md:pl-0">
                       <div className="relative w-full max-w-[320px] aspect-[3/4.5] overflow-hidden rounded-[2rem] bg-[var(--c-light-surface)] shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-                        <motion.img
+                        <m.img
                           initial={{ scale: 1.25 }}
                           whileInView={{ scale: 1 }}
                           viewport={{ once: false, margin: "0px 0px -20% 0px" }}
                           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                           src={item.img}
+                          srcSet={srcSetFor(item.img)}
+                          sizes="320px"
                           alt={item.title}
+                          loading="lazy"
+                          decoding="async"
                           className="absolute inset-0 w-full h-full object-cover grayscale-[30%]"
                         />
                         <div className="absolute inset-0 border border-[rgba(var(--c-primary-rgb),0.1)] rounded-[2rem] pointer-events-none" />
@@ -113,14 +121,13 @@ export function SpecialistPage({ goTo }: { goTo: (id: string) => void }) {
                     </div>
 
                     <div className="absolute left-[24px] md:left-1/2 w-4 h-4 bg-[var(--c-bg)] border-[2.5px] border-[var(--c-primary)] rounded-full -translate-x-[7px] md:-translate-x-1/2 mt-2 md:mt-0" />
-                  </motion.div>
+                  </m.div>
                 );
               })}
             </div>
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

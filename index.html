@@ -4,7 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vivere Odontologia — Estética e Reabilitação Oral. Lentes em resina, reabilitação oclusal e clareamento com planejamento técnico de alto padrão." />
+    <meta name="theme-color" content="#FFFFFF" />
     <title>Modelo de página</title>
+
+    <!-- Fontes auto-hospedadas: baixam em paralelo com o JS, sem esperar o CSS -->
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/dm-sans-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Imagem principal (LCP) da home: começa a baixar antes do React montar a página -->
+    <script>
+      if (!/resultados|especialista/.test(location.pathname)) {
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'image'; l.href = '/imagens/hero.webp'; l.fetchPriority = 'high';
+        document.head.appendChild(l);
+      }
+    </script>
 </head>
 
   <body>

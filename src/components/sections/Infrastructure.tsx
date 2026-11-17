@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { serif, globalData } from "../../data/content";
+import { srcSetFor } from "../../lib/img";
 
 export function Infrastructure() {
   const { 
@@ -14,15 +15,13 @@ export function Infrastructure() {
     footerRight, 
     photos 
   } = globalData.testimonials;
-  
-  // A primeira foto começa expandida
+
   const [active, setActive] = useState(0);
 
   return (
     <section id="infraestrutura" className="py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-10 lg:px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20">
         
-        {/* Cabeçalho Desconstruído (Zero cara de template) */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16 md:mb-24">
           <div className="max-w-2xl">
             <h2 
@@ -48,20 +47,18 @@ export function Infrastructure() {
           </div>
         </div>
 
-        {/* Gallery Accordion (Framer Motion Native) */}
         <div className="flex flex-col md:flex-row w-full h-[100vh] md:h-[75vh] gap-2 md:gap-4">
           {photos.map((photo, index) => {
             const isActive = active === index;
-
             return (
-              <motion.div
+              <m.div
                 key={index}
                 layout
                 onClick={() => setActive(index)}
                 onMouseEnter={() => setActive(index)}
                 initial={false}
                 animate={{ 
-                  flex: isActive ? 5 : 1, // Expande para 5x o tamanho das fatias inativas
+                  flex: isActive ? 5 : 1, 
                 }}
                 transition={{ 
                   type: "spring", 
@@ -71,26 +68,26 @@ export function Infrastructure() {
                 }}
                 className="relative overflow-hidden rounded-2xl md:rounded-[2rem] cursor-pointer group bg-[var(--c-dark-base)] border border-white/5"
               >
-                {/* Imagem Absolute para não distorcer com o flex-grow */}
-                <motion.img
+                <m.img
                   src={photo.img}
+                  srcSet={srcSetFor(photo.img)}
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   alt={photo.alt}
+                  loading="lazy"
+                  decoding="async"
                   animate={{
                     filter: isActive ? "grayscale(0%)" : "grayscale(80%)",
-                    scale: isActive ? 1 : 1.1 // Leve zoom inativo para dar efeito ao expandir
+                    scale: isActive ? 1 : 1.1
                   }}
                   transition={{ duration: 0.4 }}
                   className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                 />
                 
-                {/* Gradiente escuro para garantir leitura sempre */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 pointer-events-none" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
 
-                {/* Conteúdo da Fatia */}
                 <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end pointer-events-none">
                   
-                  {/* Número que fica visível mesmo na fatia fina */}
                   <div className="absolute top-6 left-6 md:top-8 md:left-8">
                     <span 
                       className={`text-xs font-mono tracking-widest transition-colors duration-500 ${
@@ -103,7 +100,7 @@ export function Infrastructure() {
 
                   <AnimatePresence mode="wait">
                     {isActive && (
-                      <motion.div
+                      <m.div
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 15 }}
@@ -119,16 +116,15 @@ export function Infrastructure() {
                         <span className="text-white/50 text-xs tracking-[0.2em] uppercase">
                           {detailsLabel}
                         </span>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
 
-        {/* Rodapé da Seção */}
         <div className="mt-12 flex items-center justify-between border-t border-white/10 pt-6">
           <span className="text-white/30 text-[0.65rem] tracking-[0.3em] uppercase font-bold">
             {footerLeft}
@@ -137,7 +133,6 @@ export function Infrastructure() {
             {footerRight}
           </span>
         </div>
-
       </div>
     </section>
   );

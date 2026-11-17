@@ -1,12 +1,42 @@
 import { useState, useEffect } from "react";
-import Hamburger from "hamburger-react";
+import { Twirl as Hamburger } from "hamburger-react";
+import { m } from "framer-motion";
 import { serif, globalData } from "../../data/content";
-import { Button } from "../ui/Button";
+
+// Animação de Entrada (Cascata dos links ao carregar o site)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -15 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.7, ease: "easeOut" } 
+  }
+};
+
+// Links fixos: definidos fora do componente para não serem recriados a cada render (scroll)
+const navLinks = [
+  { label: "A Clínica", href: "sobre", isPage: false, position: "left" },
+  { label: "O Especialista", href: "/especialista", isPage: true, position: "left" },
+  { label: "Metodologia", href: "metodologia", isPage: false, position: "left" },
+  { label: "Infraestrutura", href: "infraestrutura", isPage: false, position: "right" },
+  { label: "Casos Clínicos", href: "/resultados", isPage: true, position: "right" },
+  { label: "Contato", href: "contato", isPage: false, position: "right" },
+];
+const leftLinks = navLinks.filter((link) => link.position === "left");
+const rightLinks = navLinks.filter((link) => link.position === "right");
 
 export function Header({ goTo }: { goTo: (id: string) => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { nav, clinica } = globalData;
+  const { clinica } = globalData;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -16,100 +46,169 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
   }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = ""; 
-    }
+    if (menuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const handleNav = (id: string) => {
+  const handleNav = (href: string, isPage: boolean) => {
     setMenuOpen(false);
-    if (id === "/resultados" || id === "/especialista") {
-      window.dispatchEvent(new CustomEvent("navigate", { detail: id }));
+    if (isPage) {
+      window.dispatchEvent(new CustomEvent("navigate", { detail: href }));
     } else {
-      goTo(id);
+      goTo(href);
     }
   };
+
+  const goHome = () => handleNav("inicio", false);
+
+  // A MÁGICA DO IPA: O ease-in-out deixa a ida e a volta exatamente no mesmo ritmo!
+  const transitionClass = "transition-all duration-700 ease-in-out";
+  const spacerTransition = "transition-[max-width] duration-700 ease-in-out";
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-500 ${
-          scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-[0_4px_28px_rgba(var(--c-primary-rgb),0.06)]"
-            : "bg-white/70 backdrop-blur-sm"
+        className={`fixed inset-x-0 top-0 z-[9999] will-change-transform transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 ease-in-out ${
+          scrolled || menuOpen
+            ? "bg-white/95 backdrop-blur-md shadow-[0_4px_28px_rgba(0,0,0,0.04)] border-b border-black/5"
+            : "bg-transparent border-b border-transparent"
         }`}
       >
-        <div className="max-w-[1280px] mx-auto px-5 md:px-10 h-[76px] md:h-[92px] flex items-center justify-between relative z-[10000]">
-          <div className="flex items-center gap-3 cursor-pointer select-none group" onClick={() => handleNav("inicio")}>
-            <img src={clinica.logoUrl} alt="Logo" className="h-9 md:h-11 w-auto object-contain" />
-            <div className="hidden sm:flex items-center gap-3">
-              <span style={{ ...serif }} className="text-[1.3rem] text-[var(--c-text-main)] leading-none">
-                {clinica.nome}
-              </span>
-              <span className="w-[1px] h-4 bg-[var(--c-primary)] opacity-15" />
-              <span className="text-[0.72rem] text-[var(--c-text-muted)] font-normal">
-                {clinica.subtitulo}
-              </span>
-            </div>
-          </div>
+        {/* Contêiner alargado para empurrar aos extremos absolutos */}
+        <div className="flex h-[76px] xl:h-[92px] w-full max-w-[1920px] mx-auto px-6 lg:px-8 relative z-20">
+          
+          {/* LADO ESQUERDO DO HEADER */}
+          <m.div 
+            variants={containerVariants as any} 
+            initial="hidden" 
+            animate="visible" 
+            className={`hidden lg:flex items-center justify-end w-1/2 ${transitionClass}`}
+          >
+            <m.button variants={itemVariants as any} onClick={goHome} className="flex items-center gap-3 active:scale-95 shrink-0 cursor-pointer transition-transform duration-300">
+              <img
+                src={clinica.logoUrl}
+                alt="Logo"
+                className="h-10 xl:h-12 w-auto object-contain"
+              />
+              <div className="hidden xl:flex flex-col text-[var(--c-text-main)] tracking-tight text-left" style={serif}>
+                <span className="text-[1.25rem] leading-[1.1]">Vivere</span>
+                <span className="text-[1.25rem] leading-[1.1]">Odontologia</span>
+              </div>
+            </m.button>
+            
+            {/* O Espaçador Dinâmico */}
+            <div 
+              className={`flex-1 w-full ${spacerTransition}`} 
+              style={{ maxWidth: scrolled ? "36px" : "1200px" }} 
+            />
 
-          <nav className="hidden lg:flex items-center gap-9">
-            {nav.links.map((label, i) => (
-              <button
-                key={label}
-                onClick={() => handleNav(nav.ids[i])}
-                className="relative text-[0.92rem] text-[var(--c-text-muted)] hover:text-[var(--c-text-main)] transition-colors duration-300 group/link py-1"
-              >
-                {label}
-                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[1.5px] w-0 bg-[var(--c-accent)] transition-all duration-300 group-hover/link:w-full" />
-              </button>
-            ))}
-            <div className="flex items-center justify-center">
-              <Button onClick={() => handleNav("/especialista")} className="shadow-sm">
-                {nav.btnDesktop}
-              </Button>
+            <div className="flex items-center gap-7 xl:gap-10 shrink-0 pr-4 xl:pr-5">
+              {leftLinks.map((link) => (
+                <m.button 
+                  variants={itemVariants as any}
+                  key={link.href} 
+                  onClick={() => handleNav(link.href, link.isPage)} 
+                  className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
+                >
+                  {link.label}
+                </m.button>
+              ))}
             </div>
-          </nav>
+          </m.div>
 
-          <div className="lg:hidden relative z-[10001] -mr-2">
-            <Hamburger toggled={menuOpen} toggle={setMenuOpen} color="var(--c-primary)" size={24} rounded />
+          {/* LADO DIREITO DO HEADER */}
+          <m.div 
+            variants={containerVariants as any} 
+            initial="hidden" 
+            animate="visible" 
+            className={`hidden lg:flex items-center justify-start w-1/2 ${transitionClass}`}
+          >
+            <div className="flex items-center gap-7 xl:gap-10 shrink-0 pl-4 xl:pl-5">
+              {rightLinks.map((link) => (
+                <m.button 
+                  variants={itemVariants as any}
+                  key={link.href} 
+                  onClick={() => handleNav(link.href, link.isPage)} 
+                  className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
+                >
+                  {link.label}
+                </m.button>
+              ))}
+            </div>
+
+            {/* O Espaçador Dinâmico */}
+            <div 
+              className={`flex-1 w-full ${spacerTransition}`} 
+              style={{ maxWidth: scrolled ? "36px" : "1200px" }} 
+            />
+
+            <m.button
+              variants={itemVariants as any}
+              onClick={() => handleNav("contato", false)}
+              className="px-6 xl:px-8 py-2.5 xl:py-3 text-[0.65rem] xl:text-[0.7rem] font-bold rounded-full uppercase tracking-[0.15em] whitespace-nowrap shrink-0 cursor-pointer border bg-[var(--c-primary)] text-white hover:bg-[var(--c-primary-hover)] border-[var(--c-primary)] transition-colors duration-300 shadow-sm"
+            >
+              Agendar Consulta
+            </m.button>
+          </m.div>
+
+          {/* MOBILE HEADER (Preservado) */}
+          <div className="lg:hidden flex items-center justify-between w-full">
+            <button onClick={goHome} className="flex items-center gap-3 cursor-pointer text-left">
+              <img
+                src={clinica.logoUrl}
+                alt="Logo"
+                className="h-9 md:h-10 w-auto object-contain"
+              />
+              <div className="flex flex-col text-[var(--c-text-main)] tracking-tight" style={serif}>
+                <span className="text-[1.2rem] leading-[1.05]">Vivere</span>
+                <span className="text-[1.2rem] leading-[1.05]">Odontologia</span>
+              </div>
+            </button>
+            <div className="relative z-20 -mr-3">
+              <Hamburger
+                toggled={menuOpen}
+                toggle={setMenuOpen}
+                size={24}
+                duration={0.4}
+                color="var(--c-primary)"
+                label={menuOpen ? "Fechar menu" : "Abrir menu"}
+              />
+            </div>
           </div>
         </div>
-      </header>
 
+        {/* MENU DESDOBRÁVEL DO MOBILE */}
+        {menuOpen && (
+          <div className="lg:hidden w-full bg-[#FFFFFF] shadow-2xl border-t border-[rgba(var(--c-primary-rgb),0.05)] flex flex-col h-[100dvh]">
+            <div className="py-4 px-6 flex flex-col gap-1 pb-8 mt-2">
+              {navLinks.map((link) => (
+                <button 
+                  key={link.href} 
+                  onClick={() => handleNav(link.href, link.isPage)} 
+                  style={serif}
+                  className="text-left text-[1.4rem] text-[var(--c-text-main)] py-4 border-b border-[rgba(var(--c-primary-rgb),0.08)] tracking-wide cursor-pointer block"
+                >
+                  {link.label}
+                </button>
+              ))}
+              <button 
+                onClick={() => handleNav("contato", false)} 
+                className="mt-8 px-5 py-4 text-[0.7rem] font-bold text-center rounded-full uppercase tracking-[0.2em] transition-colors bg-[var(--c-primary)] text-white hover:bg-black cursor-pointer block shadow-md"
+              >
+                Agendar Consulta
+              </button>
+            </div>
+          </div>
+        )}
+      </header>
+      
+      {/* Overlay do menu mobile: quando fechado fica "invisible" (após o fade), para o navegador
+          não manter um backdrop-blur de tela cheia sendo calculado o tempo todo */}
       <div
-        className={`fixed inset-0 bg-[rgba(var(--c-primary-rgb),0.35)] backdrop-blur-sm z-[9997] lg:hidden transition-opacity duration-300 ${menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 bg-[rgba(var(--c-primary-rgb),0.35)] backdrop-blur-sm z-[9997] lg:hidden transition-[opacity,visibility] duration-300 ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
         onClick={() => setMenuOpen(false)}
       />
-
-      <aside
-        className={`fixed top-0 right-0 w-[85vw] max-w-[340px] h-[100dvh] bg-white z-[9998] shadow-2xl flex flex-col pt-[96px] px-7 pb-8 lg:hidden transition-transform duration-500 ease-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
-      >
-        <nav className="flex flex-col mt-4 overflow-y-auto flex-1">
-          {nav.links.map((label, i) => (
-            <button
-              key={label}
-              onClick={() => handleNav(nav.ids[i])}
-              style={{ ...serif }}
-              className="flex items-baseline gap-4 text-left py-4 border-b border-[rgba(var(--c-primary-rgb),0.08)]"
-            >
-              <span className="text-[0.7rem] font-['DM_Sans',sans-serif] text-[var(--c-accent)] tabular-nums">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="text-[1.5rem] text-[var(--c-text-main)]">{label}</span>
-            </button>
-          ))}
-        </nav>
-        
-        <div className="mt-auto pt-6 flex justify-center w-full">
-          <Button onClick={() => handleNav("/especialista")} className="w-full shadow-md">
-            {nav.btnMobile}
-          </Button>
-        </div>
-      </aside>
     </>
   );
 }

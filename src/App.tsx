@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Header } from "./components/sections/Header";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
@@ -10,9 +10,21 @@ import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { ResultsPage } from "./components/pages/ResultsPage";
-// Correção do import: Removidas as chaves porque a página usa "export default"
-import SpecialistPage from "./components/pages/SpecialistPage"; 
+
+// Páginas internas em chunks separados: a home não paga pelo código delas.
+// Elas são pré-carregadas quando o navegador fica ocioso, então a navegação continua instantânea.
+const loadResultsPage = () => import("./components/pages/ResultsPage");
+const loadSpecialistPage = () => import("./components/pages/SpecialistPage");
+const ResultsPage = lazy(() => loadResultsPage().then((mod) => ({ default: mod.ResultsPage })));
+const SpecialistPage = lazy(loadSpecialistPage);
+
+function preloadRoute(path: string): Promise<unknown> {
+  if (path.includes("resultados")) return loadResultsPage();
+  if (path.includes("especialista")) return loadSpecialistPage();
+  return Promise.resolve();
+}
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -25,9 +37,10 @@ export default function App() {
     const onLocationChange = () => setCurrentPath(window.location.pathname);
     window.addEventListener("popstate", onLocationChange);
     
-    const handleInternalNav = (e: any) => {
-      window.history.pushState({}, "", e.detail);
-      setCurrentPath(e.detail);
+    const handleInternalNav = (e: Event) => {
+      const path = (e as CustomEvent<string>).detail;
+      window.history.pushState({}, "", path);
+      setCurrentPath(path);
     };
     
     window.addEventListener("navigate", handleInternalNav);
@@ -38,17 +51,35 @@ export default function App() {
     };
   }, []);
 
+  // Pré-carrega as páginas internas quando a home já terminou de carregar e o navegador está ocioso.
+  useEffect(() => {
+    const prefetch = () => {
+      const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1200));
+      idle(() => {
+        loadResultsPage();
+        loadSpecialistPage();
+      });
+    };
+    if (document.readyState === "complete") prefetch();
+    else window.addEventListener("load", prefetch, { once: true });
+    return () => window.removeEventListener("load", prefetch);
+  }, []);
+
   useEffect(() => {
     if (currentPath === displayPath) return;
     
+    let cancelled = false;
     setStage("out");
-    const t1 = setTimeout(() => {
+    // Mesmo tempo de fade-out de antes (260ms); se a página ainda não estiver em cache,
+    // espera ela chegar para o fade-in acontecer com o conteúdo já pronto.
+    Promise.all([wait(260), preloadRoute(currentPath).catch(() => {})]).then(() => {
+      if (cancelled) return;
       setDisplayPath(currentPath);
       window.scrollTo(0, 0);
       setStage("in");
-    }, 260);
+    });
     
-    return () => clearTimeout(t1);
+    return () => { cancelled = true; };
   }, [currentPath, displayPath]);
 
   const goTo = (id: string) => {
@@ -80,9 +111,13 @@ export default function App() {
       
       <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
         {displayPath.includes("resultados") ? (
-          <ResultsPage goTo={goTo} />
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <ResultsPage goTo={goTo} />
+          </Suspense>
         ) : displayPath.includes("especialista") ? (
-          <SpecialistPage goTo={goTo} />
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <SpecialistPage goTo={goTo} />
+          </Suspense>
         ) : (
           <>
             <Hero goTo={goTo} />
