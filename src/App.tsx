@@ -11,7 +11,8 @@ import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import { ResultsPage } from "./components/pages/ResultsPage";
-import { SpecialistPage } from "./components/pages/SpecialistPage";
+// Correção do import: Removidas as chaves porque a página usa "export default"
+import SpecialistPage from "./components/pages/SpecialistPage"; 
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -28,8 +29,9 @@ export default function App() {
       window.history.pushState({}, "", e.detail);
       setCurrentPath(e.detail);
     };
+    
     window.addEventListener("navigate", handleInternalNav);
-
+    
     return () => {
       window.removeEventListener("popstate", onLocationChange);
       window.removeEventListener("navigate", handleInternalNav);
@@ -38,8 +40,8 @@ export default function App() {
 
   useEffect(() => {
     if (currentPath === displayPath) return;
-    setStage("out");
     
+    setStage("out");
     const t1 = setTimeout(() => {
       setDisplayPath(currentPath);
       window.scrollTo(0, 0);
@@ -94,6 +96,8 @@ export default function App() {
           </>
         )}
       </div>
+      
+      {/* Footer fica global e não sofre com as transições abruptas */}
       <Footer />
     </>
   );

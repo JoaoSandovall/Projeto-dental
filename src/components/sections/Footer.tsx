@@ -1,7 +1,7 @@
 import { serif, globalData } from "../../data/content";
 
 export function Footer() {
-  const { clinica, footer, services } = globalData;
+  const { clinica, footer } = globalData;
   return (
     <footer className="pt-24 pb-10 px-6 md:px-10 bg-[var(--c-primary)]">
       <div className="max-w-[1280px] mx-auto">
@@ -58,15 +58,15 @@ export function Footer() {
             </div>
           </div>
 
-          {/* COLUNA TRATAMENTOS */}
+          {/* COLUNA ESPECIALIDADES (Agora puxa de clinica.endereco.comodidades) */}
           <div>
             <div className="text-[0.68rem] font-semibold tracking-[0.2em] uppercase text-white mb-6">
-              {footer.title_tratamentos}
+              Especialidades
             </div>
             <ul className="flex flex-col gap-[0.85rem]">
-              {services.list.slice(0, 5).map((s) => (
-                <li key={s.title} className="text-white/60 text-[0.9rem] font-light cursor-pointer transition-colors duration-300 hover:text-[var(--c-accent)]">
-                  {s.title}
+              {clinica.endereco.comodidades.map((item) => (
+                <li key={item} className="text-white/60 text-[0.9rem] font-light transition-colors duration-300">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -95,103 +95,26 @@ export function Footer() {
           <p>{footer.direitos}</p>
           <p>{footer.registro}</p>
         </div>
-
       </div>
 
-      {/* ESTILOS ISOLADOS DOS ÍCONES SOCIAIS */}
       <style>{`
-        .footer-social-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          align-items: center;
-        }
-        .footer-social-list li::after {
-          content: "";
-          display: block;
-          height: 0px;
-          transition: height 0.3s ease-in-out;
-          pointer-events: none;
-        }
-        .footer-social-list li:hover::after {
-          height: 10px;
-        }
-        .footer-social-list .icon-content {
-          margin-right: 12px;
-          position: relative;
-        }
-        .footer-social-list .icon-content .tooltip {
-          position: absolute;
-          bottom: -32px;
-          left: 50%;
-          transform: translateX(-50%);
-          color: #fff;
-          padding: 4px 8px;
-          border-radius: 4px;
-          opacity: 0;
-          pointer-events: none;
-          visibility: hidden;
-          font-size: 12px;
-          transition: all 0.3s ease;
-          white-space: nowrap;
-          z-index: 10;
-        }
-        .footer-social-list .icon-content:hover .tooltip {
-          opacity: 1;
-          visibility: visible;
-          bottom: -38px;
-        }
-        .footer-social-list .icon-content a {
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          color: #fff;
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          transition: all 0.3s ease-in-out;
-        }
-        .footer-social-list .icon-content a:hover {
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-          color: white;
-          border-color: transparent;
-        }
-        .footer-social-list .icon-content a svg {
-          position: relative;
-          z-index: 1;
-          width: 18px;
-          height: 18px;
-        }
-        .footer-social-list .icon-content a .filled {
-          position: absolute;
-          top: auto;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 0;
-          transition: all 0.3s ease-in-out;
-          z-index: 0;
-        }
-        .footer-social-list .icon-content a:hover .filled {
-          height: 100%;
-        }
+        .footer-social-list { list-style: none; padding: 0; margin: 0; display: flex; align-items: center; }
+        .footer-social-list li::after { content: ""; display: block; height: 0px; transition: height 0.3s ease-in-out; pointer-events: none; }
+        .footer-social-list li:hover::after { height: 10px; }
+        .footer-social-list .icon-content { margin-right: 12px; position: relative; }
+        .footer-social-list .icon-content .tooltip { position: absolute; bottom: -32px; left: 50%; transform: translateX(-50%); color: #fff; padding: 4px 8px; border-radius: 4px; opacity: 0; pointer-events: none; visibility: hidden; font-size: 12px; transition: all 0.3s ease; white-space: nowrap; z-index: 10; }
+        .footer-social-list .icon-content:hover .tooltip { opacity: 1; visibility: visible; bottom: -38px; }
+        .footer-social-list .icon-content a { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; width: 42px; height: 42px; border-radius: 50%; color: #fff; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease-in-out; }
+        .footer-social-list .icon-content a:hover { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); color: white; border-color: transparent; }
+        .footer-social-list .icon-content a svg { position: relative; z-index: 1; width: 18px; height: 18px; }
+        .footer-social-list .icon-content a .filled { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 0; transition: all 0.3s ease-in-out; z-index: 0; }
+        .footer-social-list .icon-content a:hover .filled { height: 100%; }
         .footer-social-list .icon-content a[data-social="instagram"] .filled,
-        .footer-social-list .icon-content a[data-social="instagram"] ~ .tooltip {
-          background-color: #E1306C;
-        }
+        .footer-social-list .icon-content a[data-social="instagram"] ~ .tooltip { background-color: #E1306C; }
         .footer-social-list .icon-content a[data-social="whatsapp"] .filled,
-        .footer-social-list .icon-content a[data-social="whatsapp"] ~ .tooltip {
-          background-color: #25D366;
-        }
+        .footer-social-list .icon-content a[data-social="whatsapp"] ~ .tooltip { background-color: #25D366; }
         .footer-social-list .icon-content a[data-social="facebook"] .filled,
-        .footer-social-list .icon-content a[data-social="facebook"] ~ .tooltip {
-          background-color: #1877F2;
-        }
+        .footer-social-list .icon-content a[data-social="facebook"] ~ .tooltip { background-color: #1877F2; }
       `}</style>
     </footer>
   );

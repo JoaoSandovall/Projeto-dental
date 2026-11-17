@@ -43,10 +43,11 @@ export function Methodology() {
   };
 
   return (
-    <section id="metodologia" className="relative bg-[var(--c-bg)]">
+    <section id="metodologia" className="relative bg-[var(--c-bg)] py-24 md:py-32">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 flex flex-col lg:flex-row items-start gap-12 lg:gap-24">
         
-        <div className="w-full lg:w-5/12 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center pt-24 pb-12 lg:py-0">
+        {/* Lado Fixo (Removido os pt/pb internos malucos) */}
+        <div className="w-full lg:w-5/12 lg:sticky lg:top-32 flex flex-col justify-center">
           <h2 
             className="text-[clamp(3.2rem,5vw,5.5rem)] leading-[0.95] text-[var(--c-text-main)] font-normal tracking-tight" 
             style={serif}
@@ -65,7 +66,8 @@ export function Methodology() {
           </Button>
         </div>
 
-        <div className="w-full lg:w-7/12 flex flex-col pb-24 lg:pb-[20vh] lg:pt-[20vh]">
+        {/* Lado do Scroll (Removido os padding Y internos malucos) */}
+        <div className="w-full lg:w-7/12 flex flex-col mt-12 lg:mt-0">
           {list.map((item, index) => (
             <ScrollLinkedItem key={index} item={item} index={index} />
           ))}

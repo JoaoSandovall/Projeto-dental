@@ -26,7 +26,7 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
 
   const handleNav = (id: string) => {
     setMenuOpen(false);
-    if (id === "/resultados" || id === "/especialidades") {
+    if (id === "/resultados" || id === "/especialista") {
       window.dispatchEvent(new CustomEvent("navigate", { detail: id }));
     } else {
       goTo(id);
@@ -68,7 +68,7 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
               </button>
             ))}
             <div className="flex items-center justify-center">
-              <Button variant="rolling" onClick={() => handleNav("contato")} className="shadow-sm">
+              <Button onClick={() => handleNav("/especialista")} className="shadow-sm">
                 {nav.btnDesktop}
               </Button>
             </div>
@@ -105,7 +105,7 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
         </nav>
         
         <div className="mt-auto pt-6 flex justify-center w-full">
-          <Button variant="rolling" onClick={() => handleNav("contato")} className="w-full shadow-md">
+          <Button onClick={() => handleNav("/especialista")} className="w-full shadow-md">
             {nav.btnMobile}
           </Button>
         </div>

@@ -33,10 +33,10 @@ export const globalData = {
   // NAVEGAÇÃO SUPERIOR (HEADER / ASIDE)
   // ---------------------------------------------------
   nav: {
-    links: ["Tratamentos", "Metodologia", "O Especialista", "Casos Clínicos", "A Clínica"],
-    ids: ["servicos", "metodologia", "/especialista", "/resultados", "infraestrutura"],
-    btnDesktop: "Agendar",
-    btnMobile: "Agendar Avaliação"
+    links: ["A Clínica", "Metodologia", "Infraestrutura", "Casos Clínicos", "Contato"],
+    ids: ["sobre", "metodologia", "infraestrutura", "/resultados", "contato"],
+    btnDesktop: "O Especialista",
+    btnMobile: "Conhecer o Especialista"
   },
 
   // ---------------------------------------------------

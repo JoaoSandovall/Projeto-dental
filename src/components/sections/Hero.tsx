@@ -63,7 +63,8 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
     <section 
       id="inicio" 
       onMouseMove={handleMouseMove}
-      className="relative min-h-[100svh] bg-[var(--c-bg)] pt-32 md:pt-36 pb-16 flex flex-col justify-between overflow-hidden"
+      // PADDING CORRIGIDO AQUI: pb-24 md:pb-32
+      className="relative min-h-[100svh] bg-[var(--c-bg)] pt-32 md:pt-36 pb-24 md:pb-32 flex flex-col justify-between overflow-hidden"
     >
       <div className="max-w-[1440px] w-full mx-auto px-6 md:px-10 lg:px-20 flex flex-col z-10 h-full">
         
