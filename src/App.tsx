@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "./components/sections/Header";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
@@ -10,14 +10,10 @@ import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import { FloatingWhatsApp } from "./components/ui/FloatingWhatsApp";
+import { ResultsPage } from "./components/pages/ResultsPage";
+import { SpecialistPage } from "./components/pages/SpecialistPage";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { loadResultsPage, loadSpecialistPage, preloadRoute } from "./lib/routes";
-
-// Páginas internas em chunks separados: a home não paga pelo código delas.
-const ResultsPage = lazy(() => loadResultsPage().then((mod) => ({ default: mod.ResultsPage })));
-const SpecialistPage = lazy(loadSpecialistPage);
-
-const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+import { preloadRoute } from "./lib/routes";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -32,6 +28,7 @@ export default function App() {
     
     const handleInternalNav = (e: Event) => {
       const path = (e as CustomEvent<string>).detail;
+      if (path === window.location.pathname) return;
       window.history.pushState({}, "", path);
       setCurrentPath(path);
     };
@@ -44,10 +41,10 @@ export default function App() {
     };
   }, []);
 
-  // Pré-carrega código e imagens das páginas internas quando a home já terminou de carregar.
+  // Pré-decodifica as imagens das páginas internas na GPU quando o navegador fica ocioso.
   useEffect(() => {
     const prefetch = () => {
-      const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1200));
+      const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1000));
       idle(() => {
         preloadRoute("/especialista");
         preloadRoute("/resultados");
@@ -61,21 +58,16 @@ export default function App() {
   useEffect(() => {
     if (currentPath === displayPath) return;
     
-    let cancelled = false;
+    preloadRoute(currentPath);
     setStage("out");
-    // Sincronizado com pageFadeOut (.32s no CSS) + garante que o chunk e a imagem já estejam
-    // decodificados na memória antes de virar a página.
-    Promise.all([wait(320), preloadRoute(currentPath).catch(() => {})]).then(() => {
-      if (cancelled) return;
+
+    const timer = window.setTimeout(() => {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-      requestAnimationFrame(() => {
-        if (cancelled) return;
-        setDisplayPath(currentPath);
-        setStage("in");
-      });
-    });
+      setDisplayPath(currentPath);
+      setStage("in");
+    }, 220);
     
-    return () => { cancelled = true; };
+    return () => window.clearTimeout(timer);
   }, [currentPath, displayPath]);
 
   const goTo = (id: string) => {
@@ -84,9 +76,9 @@ export default function App() {
     } else {
       if (currentPath !== "/") {
         window.dispatchEvent(new CustomEvent("navigate", { detail: "/" }));
-        setTimeout(() => {
+        window.setTimeout(() => {
           document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        }, 380);
+        }, 280);
       } else {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }
@@ -108,13 +100,9 @@ export default function App() {
       
       <div className={transitionClass} onAnimationEnd={handleAnimationEnd} style={{ position: "relative" }}>
         {displayPath.includes("resultados") ? (
-          <Suspense fallback={<div className="min-h-screen bg-[var(--c-bg)]" />}>
-            <ResultsPage goTo={goTo} />
-          </Suspense>
+          <ResultsPage goTo={goTo} />
         ) : displayPath.includes("especialista") ? (
-          <Suspense fallback={<div className="min-h-screen bg-[var(--c-dark-base)]" />}>
-            <SpecialistPage />
-          </Suspense>
+          <SpecialistPage />
         ) : (
           <>
             <Hero goTo={goTo} />

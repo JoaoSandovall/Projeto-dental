@@ -112,10 +112,10 @@ export function About() {
   return (
     <section 
       id="sobre" 
-      className="relative w-full bg-[var(--c-bg)] min-h-0 md:min-h-[80vh] py-14 sm:py-20 md:py-32 overflow-hidden flex flex-col justify-center select-none"
+      className="relative w-full bg-[var(--c-bg)] scroll-mt-20 md:scroll-mt-24 py-14 sm:py-20 md:py-28 overflow-hidden flex flex-col items-center justify-center select-none"
     >
       {/* Vitrine 2.5D Stacked */}
-      <div className="relative w-full h-[410px] sm:h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden z-10">
+      <div className="relative w-full h-[400px] sm:h-[480px] md:h-[580px] flex items-center justify-center overflow-hidden z-10">
         <m.div 
           style={{ x: dragX }}
           onPointerDown={handlePointerDown}
@@ -152,7 +152,7 @@ export function About() {
                 }}
                 transition={cardSpringTransition}
               >
-                <div className="relative w-[256px] sm:w-[340px] md:w-[400px] aspect-[3/4.2] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] group">
+                <div className="relative w-[256px] sm:w-[330px] md:w-[376px] aspect-[3/4.1] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] group">
                   <img
                     src={img.url}
                     alt={img.title}

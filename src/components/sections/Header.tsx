@@ -51,15 +51,13 @@ const mobileLinkVariants = {
 
 // Links fixos: definidos fora do componente para não serem recriados a cada render (scroll)
 const navLinks = [
-  { label: "A Clínica", href: "sobre", isPage: false, position: "left" },
-  { label: "O Especialista", href: "/especialista", isPage: true, position: "left" },
-  { label: "Metodologia", href: "metodologia", isPage: false, position: "left" },
-  { label: "Infraestrutura", href: "infraestrutura", isPage: false, position: "right" },
-  { label: "Casos Clínicos", href: "/resultados", isPage: true, position: "right" },
-  { label: "Contato", href: "contato", isPage: false, position: "right" },
+  { label: "A Clínica", href: "sobre", isPage: false },
+  { label: "O Especialista", href: "/especialista", isPage: true },
+  { label: "Metodologia", href: "metodologia", isPage: false },
+  { label: "Infraestrutura", href: "infraestrutura", isPage: false },
+  { label: "Casos Clínicos", href: "/resultados", isPage: true },
+  { label: "Contato", href: "contato", isPage: false },
 ];
-const leftLinks = navLinks.filter((link) => link.position === "left");
-const rightLinks = navLinks.filter((link) => link.position === "right");
 
 export function Header({ goTo }: { goTo: (id: string) => void }) {
   const [scrolled, setScrolled] = useState(false);
@@ -97,28 +95,25 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
 
   const goHome = () => handleNav("inicio", false);
 
-  // A MÁGICA DO IPA: O ease-in-out deixa a ida e a volta exatamente no mesmo ritmo!
-  const transitionClass = "transition-all duration-700 ease-in-out";
   const spacerTransition = "transition-[max-width] duration-700 ease-in-out";
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[9999] pt-[env(safe-area-inset-top,0px)] will-change-transform transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 ease-in-out ${
+        className={`fixed inset-x-0 top-0 z-[9999] pt-[env(safe-area-inset-top,0px)] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-500 ease-out ${
           scrolled || menuOpen
             ? "bg-white/95 backdrop-blur-md shadow-[0_4px_28px_rgba(0,0,0,0.04)] border-b border-black/5"
             : "bg-transparent border-b border-transparent"
         }`}
       >
-        {/* Contêiner alargado para empurrar aos extremos absolutos */}
+        {/* Contêiner desktop único e matematicamente centralizado (tanto aberto quanto recolhido no scroll) */}
         <div className="flex h-[72px] sm:h-[76px] xl:h-[92px] w-full max-w-[1920px] mx-auto px-5 sm:px-6 lg:px-8 relative z-20">
           
-          {/* LADO ESQUERDO DO HEADER */}
           <m.div 
             variants={containerVariants as any} 
             initial="hidden" 
             animate="visible" 
-            className={`hidden lg:flex items-center justify-end w-1/2 ${transitionClass}`}
+            className="hidden lg:flex items-center justify-center w-full"
           >
             <m.button variants={itemVariants as any} onClick={goHome} className="flex items-center gap-3 active:scale-95 shrink-0 cursor-pointer transition-transform duration-300">
               <img
@@ -132,60 +127,37 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
               </div>
             </m.button>
             
-            {/* O Espaçador Dinâmico */}
+            {/* Espaçador Dinâmico Esquerdo */}
             <div 
               className={`flex-1 w-full ${spacerTransition}`} 
-              style={{ maxWidth: scrolled ? "36px" : "1200px" }} 
+              style={{ maxWidth: scrolled ? "52px" : "1200px" }} 
             />
 
-            <div className="flex items-center gap-7 xl:gap-10 shrink-0 pr-4 xl:pr-5">
-              {leftLinks.map((link) => (
+            <nav aria-label="Navegação Principal" className="flex items-center gap-7 xl:gap-10 shrink-0">
+              {navLinks.map((link) => (
                 <m.button 
                   variants={itemVariants as any}
                   key={link.href} 
                   onMouseEnter={link.isPage ? () => preloadRoute(link.href) : undefined}
                   onTouchStart={link.isPage ? () => preloadRoute(link.href) : undefined}
                   onClick={() => handleNav(link.href, link.isPage)} 
-                  className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
+                  className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.22em] uppercase font-medium transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
                 >
                   {link.label}
                 </m.button>
               ))}
-            </div>
-          </m.div>
+            </nav>
 
-          {/* LADO DIREITO DO HEADER */}
-          <m.div 
-            variants={containerVariants as any} 
-            initial="hidden" 
-            animate="visible" 
-            className={`hidden lg:flex items-center justify-start w-1/2 ${transitionClass}`}
-          >
-            <div className="flex items-center gap-7 xl:gap-10 shrink-0 pl-4 xl:pl-5">
-              {rightLinks.map((link) => (
-                <m.button 
-                  variants={itemVariants as any}
-                  key={link.href} 
-                  onMouseEnter={link.isPage ? () => preloadRoute(link.href) : undefined}
-                  onTouchStart={link.isPage ? () => preloadRoute(link.href) : undefined}
-                  onClick={() => handleNav(link.href, link.isPage)} 
-                  className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
-                >
-                  {link.label}
-                </m.button>
-              ))}
-            </div>
-
-            {/* O Espaçador Dinâmico */}
+            {/* Espaçador Dinâmico Direito */}
             <div 
               className={`flex-1 w-full ${spacerTransition}`} 
-              style={{ maxWidth: scrolled ? "36px" : "1200px" }} 
+              style={{ maxWidth: scrolled ? "52px" : "1200px" }} 
             />
 
             <m.button
               variants={itemVariants as any}
               onClick={() => handleNav("contato", false)}
-              className="px-6 xl:px-8 py-2.5 xl:py-3 text-[0.65rem] xl:text-[0.7rem] font-bold rounded-full uppercase tracking-[0.15em] whitespace-nowrap shrink-0 cursor-pointer border bg-[var(--c-primary)] text-white hover:bg-[var(--c-primary-hover)] border-[var(--c-primary)] transition-colors duration-300 shadow-sm"
+              className="px-6 xl:px-8 py-2.5 xl:py-3 text-[0.65rem] xl:text-[0.7rem] font-medium rounded-full uppercase tracking-[0.22em] whitespace-nowrap shrink-0 cursor-pointer border bg-[var(--c-primary)] text-white hover:bg-[var(--c-primary-hover)] border-[var(--c-primary)] transition-colors duration-300 shadow-sm"
             >
               Agendar Consulta
             </m.button>

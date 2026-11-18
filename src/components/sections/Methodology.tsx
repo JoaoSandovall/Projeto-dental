@@ -16,18 +16,18 @@ function ScrollLinkedItem({ item, index }: { item: any; index: number }) {
     <m.div 
       ref={itemRef}
       style={{ opacity, y }}
-      className="flex flex-col border-t border-[rgba(var(--c-primary-rgb),0.1)] py-10 sm:py-14 md:py-24 group will-change-transform"
+      className="flex flex-col border-t border-[rgba(var(--c-primary-rgb),0.1)] py-10 sm:py-14 md:py-20 last:pb-0 group will-change-transform"
     >
       <span className="text-[var(--c-accent)] text-xs sm:text-sm md:text-base font-medium tracking-[0.25em] mb-4 md:mb-6 block tabular-nums">
         0{index + 1}
       </span>
       <h3 
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--c-text-main)] font-light mb-4 md:mb-6 transition-colors duration-500 group-hover:text-[var(--c-accent)]" 
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--c-text-main)] font-light tracking-tight leading-[1.08] mb-4 md:mb-6 transition-colors duration-500 group-hover:text-[var(--c-accent)]" 
         style={serif}
       >
         {item.title}
       </h3>
-      <p className="text-[var(--c-text-muted)] text-[0.95rem] sm:text-base md:text-lg font-light leading-relaxed max-w-full md:max-w-[80%]">
+      <p className="text-[var(--c-text-muted)] text-[0.95rem] sm:text-base md:text-lg font-light leading-[1.75] max-w-xl">
         {item.content}
       </p>
     </m.div>
@@ -43,13 +43,13 @@ export function Methodology() {
   };
 
   return (
-    <section id="metodologia" className="relative bg-[var(--c-bg)] py-16 sm:py-24 md:py-32">
+    <section id="metodologia" className="relative bg-[var(--c-bg)] scroll-mt-20 md:scroll-mt-24 py-16 sm:py-24 md:py-32">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 flex flex-col lg:flex-row items-start gap-10 sm:gap-12 lg:gap-24">
         
         {/* Lado Fixo */}
         <div className="w-full lg:w-5/12 lg:sticky lg:top-32 flex flex-col justify-center">
           <h2 
-            className="text-[clamp(2.5rem,8vw,5.5rem)] md:text-[clamp(3.2rem,5vw,5.5rem)] leading-[0.95] text-[var(--c-text-main)] font-normal tracking-tight" 
+            className="text-[clamp(2.5rem,8vw,5.5rem)] md:text-[clamp(3.2rem,5vw,5.5rem)] leading-[0.95] text-[var(--c-text-main)] font-light tracking-tighter" 
             style={serif}
           >
             {title1} <br />
@@ -62,7 +62,7 @@ export function Methodology() {
             ) : null}
           </h2>
           
-          <p className="mt-6 md:mt-10 text-[var(--c-text-muted)] text-[0.98rem] sm:text-lg md:text-xl font-light leading-relaxed max-w-md">
+          <p className="mt-6 md:mt-10 text-[var(--c-text-muted)] text-[0.98rem] sm:text-lg md:text-xl font-light leading-[1.75] max-w-md">
             {desc}
           </p>
 

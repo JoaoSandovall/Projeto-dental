@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Section } from "../ui/Section";
-import { globalData } from "../../data/content";
+import { serif, globalData } from "../../data/content";
 
 export function FAQ() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -9,9 +9,12 @@ export function FAQ() {
     <Section>
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <div className="reveal text-center mb-10 sm:mb-14 md:mb-[4.5rem]">
-           <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "clamp(1.75rem, 4vw, 2.8rem)", letterSpacing: "-0.03em", color: "var(--c-text-main)" }}>
-             {globalData.faq.title}
-           </h2>
+          <h2
+            style={serif}
+            className="font-light text-[clamp(2.4rem,4.5vw,3.8rem)] leading-[1.02] tracking-tighter text-[var(--c-text-main)]"
+          >
+            {globalData.faq.title}
+          </h2>
         </div>
         <div className="stagger-children">
           {globalData.faq.list.map((faq, i) => (
@@ -22,7 +25,7 @@ export function FAQ() {
                 onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                 className="w-full flex items-center justify-between py-5 sm:py-6 md:py-7 bg-transparent border-0 cursor-pointer text-left"
               >
-                <span style={{ fontSize: "1.02rem", fontWeight: activeFaq === i ? 600 : 500, color: activeFaq === i ? "var(--c-accent)" : "var(--c-text-main)", paddingRight: "1.25rem", transition: "color 0.3s ease" }}>
+                <span style={{ fontSize: "1.02rem", fontWeight: activeFaq === i ? 500 : 400, color: activeFaq === i ? "var(--c-accent)" : "var(--c-text-main)", paddingRight: "1.25rem", transition: "color 0.3s ease" }}>
                   {faq.q}
                 </span>
                 <span aria-hidden="true" style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "var(--c-accent)", opacity: activeFaq === i ? 1 : 0.5, flexShrink: 0, width: 28, height: 28, transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease", transform: activeFaq === i ? "rotate(135deg)" : "rotate(0deg)" }}>
@@ -31,7 +34,7 @@ export function FAQ() {
               </button>
               <div style={{ display: "grid", gridTemplateRows: activeFaq === i ? "1fr" : "0fr", transition: "grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1)" }}>
                 <div style={{ overflow: "hidden" }}>
-                  <p style={{ paddingBottom: "1.5rem", color: "var(--c-text-muted)", fontSize: ".95rem", lineHeight: 1.8, fontWeight: 300, opacity: activeFaq === i ? 1 : 0, transform: activeFaq === i ? "translateY(0)" : "translateY(-10px)", transition: "opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)" }}>
+                  <p className="max-w-xl" style={{ paddingBottom: "1.5rem", color: "var(--c-text-muted)", fontSize: ".95rem", lineHeight: 1.8, fontWeight: 300, opacity: activeFaq === i ? 1 : 0, transform: activeFaq === i ? "translateY(0)" : "translateY(-10px)", transition: "opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)" }}>
                     {faq.a}
                   </p>
                 </div>

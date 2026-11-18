@@ -150,19 +150,19 @@ a, button, [role="button"], input, select, textarea, .cursor-pointer, .nav-link,
 
 @keyframes pageFadeOut {
   from { opacity: 1; transform: translate3d(0, 0, 0); }
-  to   { opacity: 0; transform: translate3d(0, -10px, 0); }
+  to   { opacity: 0; transform: translate3d(0, -8px, 0); }
 }
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
   to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 .page-transition-out {
-  animation: pageFadeOut .32s cubic-bezier(.32, 0, .67, 0) forwards;
+  animation: pageFadeOut .22s cubic-bezier(.4, 0, 1, 1) forwards;
   will-change: opacity, transform;
   pointer-events: none;
 }
 .page-transition-in {
-  animation: pageFadeIn .52s cubic-bezier(.22, 1, .36, 1) both;
+  animation: pageFadeIn .38s cubic-bezier(.22, 1, .36, 1) both;
   will-change: opacity, transform;
 }
 
@@ -194,8 +194,8 @@ a, button, [role="button"], input, select, textarea, .cursor-pointer, .nav-link,
   border-radius: 999px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   cursor: pointer;
   overflow: hidden;
@@ -207,8 +207,8 @@ a, button, [role="button"], input, select, textarea, .cursor-pointer, .nav-link,
 @media (min-width: 640px) {
   .custom-learn-more-btn {
     padding: 1.15rem 2.5rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
   }
 }
 

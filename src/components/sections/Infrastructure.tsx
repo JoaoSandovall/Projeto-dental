@@ -19,28 +19,28 @@ export function Infrastructure() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="infraestrutura" className="py-16 sm:py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
+    <section id="infraestrutura" className="scroll-mt-20 md:scroll-mt-24 py-16 sm:py-24 md:py-32 bg-[var(--c-dark-base)] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20">
         
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 sm:gap-10 mb-12 sm:mb-16 md:mb-24">
           <div className="max-w-2xl">
             <h2 
-              className="text-[clamp(2.6rem,8vw,6rem)] md:text-[clamp(3rem,6vw,6rem)] leading-[0.92] text-white font-light tracking-tight mb-6 md:mb-8"
+              className="text-[clamp(2.6rem,8vw,6rem)] md:text-[clamp(3rem,6vw,6rem)] leading-[0.92] text-white font-light tracking-tighter mb-6 md:mb-8"
               style={serif}
             >
               {title1} <br/>
               <em className="italic text-[var(--c-accent)]">{title2}</em>
             </h2>
-            <p className="text-white/60 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-md">
+            <p className="text-white/60 text-base sm:text-lg md:text-xl font-light leading-[1.75] max-w-md">
               "{quote}"
             </p>
           </div>
           
           <div className="flex flex-col gap-3 sm:gap-4 lg:text-right max-w-xs">
-            <span className="text-[var(--c-accent)] text-xs tracking-[0.3em] uppercase font-bold">
+            <span className="text-[var(--c-accent)] text-xs tracking-[0.3em] uppercase font-medium">
               {eyebrow}
             </span>
-            <p className="text-white/40 text-sm font-light leading-relaxed">
+            <p className="text-white/40 text-sm font-light leading-[1.75]">
               {supporting}
             </p>
             <div className="h-[1px] w-full bg-white/10 mt-2" />
@@ -137,10 +137,10 @@ export function Infrastructure() {
         </div>
 
         <div className="mt-8 sm:mt-12 flex items-center justify-between border-t border-white/10 pt-5 sm:pt-6 gap-4">
-          <span className="text-white/30 text-[0.62rem] sm:text-[0.65rem] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-bold">
+          <span className="text-white/30 text-[0.62rem] sm:text-[0.65rem] tracking-[0.28em] sm:tracking-[0.3em] uppercase font-medium">
             {footerLeft}
           </span>
-          <span className="text-white/30 text-[0.62rem] sm:text-[0.65rem] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-bold text-right">
+          <span className="text-white/30 text-[0.62rem] sm:text-[0.65rem] tracking-[0.28em] sm:tracking-[0.3em] uppercase font-medium text-right">
             {footerRight}
           </span>
         </div>

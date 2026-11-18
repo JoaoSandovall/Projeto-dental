@@ -31,7 +31,7 @@ function StatCounter({ target, suffix, label, thousands, delay }: any) {
 const springConfig = { damping: 45, stiffness: 50, mass: 0.5 };
 
 const maskVariant: Variants = {
-  hidden: { y: "115%" },
+  hidden: { y: "125%" },
   visible: { 
     y: "0%", 
     transition: { 
@@ -56,11 +56,8 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
   // Só calcula parallax para mouse (ignora toques em celular para poupar CPU/GPU)
   const handlePointerMove = (e: ReactPointerEvent<HTMLElement>) => {
     if (e.pointerType !== "mouse") return;
-    const rect = e.currentTarget;
-    const w = rect.clientWidth || 1;
-    const h = rect.clientHeight || 1;
-    mouseX.set(e.clientX / w - 0.5);
-    mouseY.set(e.clientY / h - 0.5);
+    mouseX.set(e.clientX / (window.innerWidth || 1) - 0.5);
+    mouseY.set(e.clientY / (window.innerHeight || 1) - 0.5);
   };
 
   return (
@@ -75,21 +72,21 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
           <div className="lg:col-span-7 xl:col-span-8 flex flex-col gap-1 sm:gap-2">
             <h1 
               style={serif} 
-              className="text-[clamp(2.45rem,8.5vw,7.5rem)] md:text-[clamp(3rem,6.5vw,7.5rem)] leading-[0.95] font-normal text-[var(--c-text-main)] tracking-tight"
+              className="text-[clamp(2.45rem,8.5vw,7.5rem)] md:text-[clamp(3rem,6.5vw,7.5rem)] leading-[0.95] font-light text-[var(--c-text-main)] tracking-tighter"
             >
-              <div className="overflow-hidden pb-1.5 sm:pb-2" style={{ willChange: "transform" }}>
+              <div className="overflow-hidden pb-4 md:pb-6 -mb-2.5 md:-mb-4" style={{ willChange: "transform" }}>
                 <m.span variants={maskVariant} initial="hidden" animate="visible" className="block origin-top-left">
                   {hero.title1}
                 </m.span>
               </div>
               
-              <div className="overflow-hidden pb-1.5 sm:pb-2" style={{ willChange: "transform" }}>
+              <div className="overflow-hidden pb-4 md:pb-6 -mb-2.5 md:-mb-4" style={{ willChange: "transform" }}>
                 <m.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.1 }} className="text-[var(--c-accent)] italic block origin-top-left">
                   {hero.title2}
                 </m.span>
               </div>
               
-              <div className="overflow-hidden pb-1.5 sm:pb-2" style={{ willChange: "transform" }}>
+              <div className="overflow-hidden pb-4 md:pb-6 -mb-2 md:-mb-3" style={{ willChange: "transform" }}>
                 <m.span variants={maskVariant} initial="hidden" animate="visible" transition={{ delay: 0.2 }} className="block origin-top-left">
                   {hero.title3}
                 </m.span>
@@ -103,7 +100,7 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
             transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 xl:col-span-4 flex flex-col justify-end h-full pb-1 sm:pb-2"
           >
-            <p className="text-[var(--c-text-muted)] text-[0.95rem] md:text-lg font-light leading-relaxed mb-6 md:mb-8">
+            <p className="text-[var(--c-text-muted)] text-[0.95rem] md:text-lg font-light leading-[1.75] max-w-md mb-6 md:mb-8">
               {hero.desc1} <strong className="font-medium text-[var(--c-text-main)]">{hero.descBold}</strong>{hero.desc2}
             </p>
             

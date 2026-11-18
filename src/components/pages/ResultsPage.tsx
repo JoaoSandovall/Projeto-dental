@@ -9,7 +9,7 @@ function BeforeAfterSlider({ beforeImg, afterImg, labelBefore, labelAfter }: { b
     <div
       ref={containerRef}
       style={{ "--pos": "50%" } as CSSProperties}
-      className="relative w-full h-[260px] sm:h-[360px] md:h-[450px] bg-[var(--c-bg)] overflow-hidden select-none rounded-2xl group"
+      className="relative w-full aspect-[16/10] sm:aspect-auto sm:h-[360px] md:h-[450px] bg-[var(--c-bg)] overflow-hidden select-none rounded-2xl group"
     >
       <img src={afterImg} alt="Resultado Depois" width={656} height={396} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
       <img src={beforeImg} alt="Situação Antes" width={653} height={410} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none will-change-[clip-path]" style={{ clipPath: "inset(0 calc(100% - var(--pos)) 0 0)" }} draggable={false} />
@@ -48,13 +48,13 @@ export function ResultsPage({ goTo }: { goTo: (id: string) => void }) {
         <div className="max-w-[1360px] mx-auto px-4 md:px-8 w-full pt-4 sm:pt-8 md:pt-[4rem]">
           <div className="bg-[var(--c-primary)] w-full rounded-[2rem] md:rounded-[3rem] pt-12 pb-28 sm:pt-16 sm:pb-32 md:pt-24 md:pb-44 px-5 sm:px-6 md:px-10 text-center shadow-2xl relative z-10 flex flex-col items-center">
             <div className="anim-fade-up">
-              <span className="inline-block font-['DM_Sans',sans-serif] text-[0.65rem] sm:text-[0.68rem] font-semibold tracking-[0.2em] uppercase text-[var(--c-accent)] pb-1 border-b border-[rgba(var(--c-accent-rgb),0.4)] mb-5 sm:mb-6">
+              <span className="inline-block font-['DM_Sans',sans-serif] text-[0.65rem] sm:text-[0.68rem] font-medium tracking-[0.28em] uppercase text-[var(--c-accent)] pb-1 border-b border-[rgba(var(--c-accent-rgb),0.4)] mb-5 sm:mb-6">
                 {results_page.eyebrow}
               </span>
-              <h1 style={{ ...serif }} className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[#FFFFFF] font-normal tracking-tight leading-tight max-w-4xl mx-auto">
+              <h1 style={{ ...serif }} className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[#FFFFFF] font-light tracking-tighter leading-[1.02] max-w-4xl mx-auto">
                 {results_page.title1} <em className="italic text-[var(--c-accent)]">{results_page.title2}</em>
               </h1>
-              <p className="text-[#FFFFFF]/80 max-w-2xl mx-auto mt-5 sm:mt-6 font-light text-[0.95rem] sm:text-[1.05rem] leading-relaxed">
+              <p className="text-[#FFFFFF]/80 max-w-xl mx-auto mt-5 sm:mt-6 font-light text-[0.95rem] sm:text-[1.05rem] leading-[1.75]">
                 {results_page.p1} <strong className="font-medium text-white">{results_page.p_bold1}</strong>{results_page.p2} <strong className="font-medium text-white">{results_page.p_bold2}</strong> {results_page.p3}
               </p>
             </div>
@@ -73,20 +73,20 @@ export function ResultsPage({ goTo }: { goTo: (id: string) => void }) {
                 />
                 <div className="pt-6 sm:pt-8 px-4 sm:px-5 pb-4 sm:pb-5 flex flex-col flex-grow">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
-                    <h3 style={{ ...serif }} className="text-2xl md:text-[1.75rem] text-[var(--c-text-main)]">{item.category}</h3>
-                    <span className="text-[var(--c-accent)] text-[0.65rem] uppercase tracking-[0.15em] border border-[rgba(var(--c-accent-rgb),0.4)] px-4 py-1.5 sm:py-2 rounded-full font-medium w-max">
+                    <h3 style={{ ...serif }} className="text-2xl md:text-[1.85rem] font-light tracking-tight leading-[1.08] text-[var(--c-text-main)]">{item.category}</h3>
+                    <span className="text-[var(--c-accent)] text-[0.65rem] uppercase tracking-[0.22em] border border-[rgba(var(--c-accent-rgb),0.4)] px-4 py-1.5 sm:py-2 rounded-full font-medium w-max">
                       {item.duration}
                     </span>
                   </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10 flex-grow border-l-2 border-[rgba(var(--c-primary-rgb),0.15)] pl-4 sm:pl-6">
                     <div>
-                      <h4 className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--c-text-muted)] font-semibold mb-2 sm:mb-3">{results_page.labelChallenge}</h4>
-                      <p className="text-[var(--c-text-main)] font-light text-[0.95rem] leading-relaxed">"{item.complaint}"</p>
+                      <h4 className="text-[0.65rem] uppercase tracking-[0.25em] text-[var(--c-text-muted)] font-medium mb-2 sm:mb-3">{results_page.labelChallenge}</h4>
+                      <p className="text-[var(--c-text-main)] font-light text-[0.95rem] leading-[1.75]">"{item.complaint}"</p>
                     </div>
                     <div>
-                      <h4 className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--c-accent)] font-semibold mb-2 sm:mb-3">{results_page.labelSolution}</h4>
-                      <p className="text-[var(--c-text-main)] font-light text-[0.95rem] leading-relaxed">{item.procedure}</p>
+                      <h4 className="text-[0.65rem] uppercase tracking-[0.25em] text-[var(--c-accent)] font-medium mb-2 sm:mb-3">{results_page.labelSolution}</h4>
+                      <p className="text-[var(--c-text-main)] font-light text-[0.95rem] leading-[1.75]">{item.procedure}</p>
                     </div>
                   </div>
                   

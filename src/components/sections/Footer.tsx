@@ -4,8 +4,8 @@ export function Footer() {
   const { clinica, footer } = globalData;
 
   return (
-    <footer className="pt-16 sm:pt-20 md:pt-24 pb-[max(2.5rem,env(safe-area-inset-bottom,2.5rem))] px-6 md:px-10 lg:px-20 bg-[var(--c-primary)]">
-      <div className="max-w-[1280px] mx-auto">
+    <footer className="pt-16 sm:pt-20 md:pt-24 pb-[max(2.5rem,env(safe-area-inset-bottom,2.5rem))] bg-[var(--c-primary)]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12 md:gap-8 mb-12 md:mb-16">
           <div className="sm:col-span-2">

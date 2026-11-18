@@ -12,7 +12,7 @@ export function FloatingWhatsApp() {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, duration: 0.5, type: "spring", bounce: 0.5 }}
-      className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[9990] flex items-center justify-center w-[54px] h-[54px] md:w-16 md:h-16 bg-[#25D366] text-white rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(37,211,102,0.6)] transition-all duration-300 group"
+      className="md:hidden fixed bottom-6 right-6 z-[9990] flex items-center justify-center w-[54px] h-[54px] bg-[#25D366] text-white rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] active:scale-95 transition-all duration-300 group"
       aria-label="Agendar Consulta pelo WhatsApp"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 md:w-8 md:h-8 relative z-10" aria-hidden="true">
