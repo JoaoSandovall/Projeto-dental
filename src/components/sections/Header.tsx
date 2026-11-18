@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Twirl as Hamburger } from "hamburger-react";
-import { m } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { serif, globalData } from "../../data/content";
+import { preloadRoute } from "../../App";
 
 // Animação de Entrada (Cascata dos links ao carregar o site)
 const containerVariants = {
@@ -18,6 +19,33 @@ const itemVariants = {
     opacity: 1, 
     y: 0, 
     transition: { duration: 0.7, ease: "easeOut" } 
+  }
+};
+
+const mobileMenuVariants = {
+  hidden: {
+    opacity: 0,
+    height: 0,
+    transition: { duration: 0.32, ease: [0.32, 0, 0.67, 0] }
+  },
+  visible: {
+    opacity: 1,
+    height: "auto",
+    transition: {
+      duration: 0.45,
+      ease: [0.22, 1, 0.36, 1],
+      staggerChildren: 0.055,
+      delayChildren: 0.06
+    }
+  }
+};
+
+const mobileLinkVariants = {
+  hidden: { opacity: 0, x: -12 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] }
   }
 };
 
@@ -69,14 +97,14 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[9999] will-change-transform transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 ease-in-out ${
+        className={`fixed inset-x-0 top-0 z-[9999] pt-[env(safe-area-inset-top,0px)] will-change-transform transition-[background-color,border-color,box-shadow,backdrop-filter] duration-700 ease-in-out ${
           scrolled || menuOpen
             ? "bg-white/95 backdrop-blur-md shadow-[0_4px_28px_rgba(0,0,0,0.04)] border-b border-black/5"
             : "bg-transparent border-b border-transparent"
         }`}
       >
         {/* Contêiner alargado para empurrar aos extremos absolutos */}
-        <div className="flex h-[76px] xl:h-[92px] w-full max-w-[1920px] mx-auto px-6 lg:px-8 relative z-20">
+        <div className="flex h-[72px] sm:h-[76px] xl:h-[92px] w-full max-w-[1920px] mx-auto px-5 sm:px-6 lg:px-8 relative z-20">
           
           {/* LADO ESQUERDO DO HEADER */}
           <m.div 
@@ -108,6 +136,8 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
                 <m.button 
                   variants={itemVariants as any}
                   key={link.href} 
+                  onMouseEnter={link.isPage ? () => preloadRoute(link.href) : undefined}
+                  onTouchStart={link.isPage ? () => preloadRoute(link.href) : undefined}
                   onClick={() => handleNav(link.href, link.isPage)} 
                   className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
                 >
@@ -129,6 +159,8 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
                 <m.button 
                   variants={itemVariants as any}
                   key={link.href} 
+                  onMouseEnter={link.isPage ? () => preloadRoute(link.href) : undefined}
+                  onTouchStart={link.isPage ? () => preloadRoute(link.href) : undefined}
                   onClick={() => handleNav(link.href, link.isPage)} 
                   className="text-[0.68rem] xl:text-[0.72rem] tracking-[0.15em] uppercase font-semibold transition-colors duration-300 whitespace-nowrap cursor-pointer text-[var(--c-text-muted)] hover:text-[var(--c-text-main)]"
                 >
@@ -152,24 +184,24 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
             </m.button>
           </m.div>
 
-          {/* MOBILE HEADER (Preservado) */}
+          {/* MOBILE HEADER */}
           <div className="lg:hidden flex items-center justify-between w-full">
-            <button onClick={goHome} className="flex items-center gap-3 cursor-pointer text-left">
+            <button onClick={goHome} className="flex items-center gap-2.5 sm:gap-3 cursor-pointer text-left active:scale-95 transition-transform">
               <img
                 src={clinica.logoUrl}
                 alt="Logo"
                 className="h-9 md:h-10 w-auto object-contain"
               />
               <div className="flex flex-col text-[var(--c-text-main)] tracking-tight" style={serif}>
-                <span className="text-[1.2rem] leading-[1.05]">Vivere</span>
-                <span className="text-[1.2rem] leading-[1.05]">Odontologia</span>
+                <span className="text-[1.15rem] sm:text-[1.2rem] leading-[1.05]">Vivere</span>
+                <span className="text-[1.15rem] sm:text-[1.2rem] leading-[1.05]">Odontologia</span>
               </div>
             </button>
-            <div className="relative z-20 -mr-3">
+            <div className="relative z-20 -mr-2 flex items-center justify-center min-w-[44px] min-h-[44px]">
               <Hamburger
                 toggled={menuOpen}
                 toggle={setMenuOpen}
-                size={24}
+                size={22}
                 duration={0.4}
                 color="var(--c-primary)"
                 label={menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -178,29 +210,47 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
           </div>
         </div>
 
-        {/* MENU DESDOBRÁVEL DO MOBILE */}
-        {menuOpen && (
-          <div className="lg:hidden w-full bg-[#FFFFFF] shadow-2xl border-t border-[rgba(var(--c-primary-rgb),0.05)] flex flex-col h-[100dvh]">
-            <div className="py-4 px-6 flex flex-col gap-1 pb-8 mt-2">
-              {navLinks.map((link) => (
-                <button 
-                  key={link.href} 
-                  onClick={() => handleNav(link.href, link.isPage)} 
-                  style={serif}
-                  className="text-left text-[1.4rem] text-[var(--c-text-main)] py-4 border-b border-[rgba(var(--c-primary-rgb),0.08)] tracking-wide cursor-pointer block"
+        {/* MENU DESDOBRÁVEL DO MOBILE (Animado com Framer Motion + Safe Area) */}
+        <AnimatePresence>
+          {menuOpen && (
+            <m.nav
+              aria-label="Menu Mobile"
+              variants={mobileMenuVariants as any}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="lg:hidden w-full bg-[#FFFFFF] shadow-2xl border-t border-[rgba(var(--c-primary-rgb),0.06)] overflow-hidden"
+            >
+              <div className="py-4 px-6 pb-[max(2rem,env(safe-area-inset-bottom,2rem))] flex flex-col max-h-[calc(100dvh-72px)] overflow-y-auto">
+                {navLinks.map((link, idx) => (
+                  <m.button 
+                    variants={mobileLinkVariants as any}
+                    key={link.href} 
+                    onTouchStart={link.isPage ? () => preloadRoute(link.href) : undefined}
+                    onClick={() => handleNav(link.href, link.isPage)} 
+                    style={serif}
+                    className="group w-full flex items-center justify-between text-left text-[1.45rem] text-[var(--c-text-main)] py-3.5 border-b border-[rgba(var(--c-primary-rgb),0.08)] tracking-wide cursor-pointer active:text-[var(--c-accent)] transition-colors"
+                  >
+                    <span className="flex items-baseline gap-3.5">
+                      <span className="font-mono text-[0.65rem] text-[var(--c-accent)] tracking-widest">
+                        0{idx + 1}
+                      </span>
+                      <span>{link.label}</span>
+                    </span>
+                    <span className="text-[var(--c-accent)] opacity-60 text-base font-sans">→</span>
+                  </m.button>
+                ))}
+                <m.button 
+                  variants={mobileLinkVariants as any}
+                  onClick={() => handleNav("contato", false)} 
+                  className="mt-6 px-5 py-4 text-[0.7rem] font-bold text-center rounded-full uppercase tracking-[0.2em] transition-all bg-[var(--c-primary)] text-white active:scale-[0.98] hover:bg-black cursor-pointer block shadow-md"
                 >
-                  {link.label}
-                </button>
-              ))}
-              <button 
-                onClick={() => handleNav("contato", false)} 
-                className="mt-8 px-5 py-4 text-[0.7rem] font-bold text-center rounded-full uppercase tracking-[0.2em] transition-colors bg-[var(--c-primary)] text-white hover:bg-black cursor-pointer block shadow-md"
-              >
-                Agendar Consulta
-              </button>
-            </div>
-          </div>
-        )}
+                  Agendar Consulta
+                </m.button>
+              </div>
+            </m.nav>
+          )}
+        </AnimatePresence>
       </header>
       
       {/* Overlay do menu mobile: quando fechado fica "invisible" (após o fade), para o navegador

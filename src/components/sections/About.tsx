@@ -4,7 +4,9 @@ import { serif, globalData } from "../../data/content";
 
 // Mesma sequência de antes (galeria duplicada, repetida 20x = 240 itens),
 // mas calculada uma única vez em vez de a cada render/clique.
-const sixPhotos = [...globalData.about.gallery, ...globalData.about.gallery];
+const gallery = globalData.about.gallery;
+const galleryLen = gallery.length;
+const sixPhotos = [...gallery, ...gallery];
 const infiniteItems = Array(20).fill(sixPhotos).flat() as typeof sixPhotos;
 const VISIBLE_RANGE = 3;
 
@@ -33,26 +35,30 @@ export function About() {
     if (i >= 0 && i < infiniteItems.length) visibleIndexes.push(i);
   }
 
+  const activeDot = ((currentIndex % galleryLen) + galleryLen) % galleryLen;
+
   return (
     <section 
       id="sobre" 
-      // PADDING CORRIGIDO AQUI: py-24 md:py-32
-      className="relative w-full bg-[var(--c-bg)] min-h-[80vh] py-24 md:py-32 overflow-hidden flex flex-col justify-center select-none"
+      className="relative w-full bg-[var(--c-bg)] min-h-0 md:min-h-[80vh] py-14 sm:py-20 md:py-32 overflow-hidden flex flex-col justify-center select-none"
     >
       {/* Vitrine 2.5D Stacked */}
-      <div className="relative w-full h-[550px] md:h-[650px] flex items-center justify-center overflow-hidden z-10">
+      <div className="relative w-full h-[410px] sm:h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden z-10">
         <m.div 
-          className="absolute flex items-center cursor-grab active:cursor-grabbing w-full h-full justify-center"
+          className="absolute flex items-center cursor-grab active:cursor-grabbing w-full h-full justify-center touch-pan-y"
           drag="x"
+          dragDirectionLock
           dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.15}
-          onDragEnd={(e, info) => {
+          dragElastic={0.18}
+          onDragEnd={(_e, info) => {
             const offset = info.offset.x;
             const velocity = info.velocity.x;
+            const offsetLimit = isMobile ? 26 : 40;
+            const velocityLimit = isMobile ? 320 : 500;
             
-            if (offset < -40 || velocity < -500) {
+            if (offset < -offsetLimit || velocity < -velocityLimit) {
               setCurrentIndex((prev) => prev + 1);
-            } else if (offset > 40 || velocity > 500) {
+            } else if (offset > offsetLimit || velocity > velocityLimit) {
               setCurrentIndex((prev) => prev - 1);
             }
           }}
@@ -64,8 +70,8 @@ export function About() {
             
             const scale = Math.max(1 - absDistance * 0.15, 0.65);
             const zIndex = 50 - absDistance;
-            const baseOffset = isMobile ? 130 : 240;
-            const secondaryOffset = isMobile ? 90 : 160;
+            const baseOffset = isMobile ? 112 : 240;
+            const secondaryOffset = isMobile ? 74 : 160;
             
             const translateX = distance === 0 
               ? 0 
@@ -75,7 +81,7 @@ export function About() {
               <m.div
                 key={index}
                 onClick={() => handleCardClick(index)}
-                className="absolute flex flex-col items-center cursor-pointer"
+                className="absolute flex flex-col items-center cursor-pointer will-change-transform"
                 animate={{
                   x: translateX,
                   scale: scale,
@@ -83,12 +89,12 @@ export function About() {
                 }}
                 transition={{
                   type: "spring",
-                  stiffness: 400,
-                  damping: 40,
+                  stiffness: 380,
+                  damping: 38,
                   mass: 0.8
                 }}
               >
-                <div className="relative w-[280px] sm:w-[340px] md:w-[400px] aspect-[3/4.2] rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] group">
+                <div className="relative w-[256px] sm:w-[340px] md:w-[400px] aspect-[3/4.2] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] group">
                   <img
                     src={img.url}
                     alt={img.title}
@@ -106,11 +112,11 @@ export function About() {
                   />
                   
                   {absDistance === 0 && (
-                    <div className="absolute inset-0 border-[1.5px] border-[var(--c-accent)]/60 rounded-[2rem] pointer-events-none" />
+                    <div className="absolute inset-0 border-[1.5px] border-[var(--c-accent)]/60 rounded-[1.75rem] md:rounded-[2rem] pointer-events-none" />
                   )}
                   
                   <m.div 
-                    className="absolute bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none"
+                    className="absolute bottom-6 sm:bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none"
                     animate={{ 
                       opacity: absDistance === 0 ? 1 : 0.3,
                       y: absDistance === 0 ? 0 : 10
@@ -128,21 +134,32 @@ export function About() {
         </m.div>
       </div>
 
-      <div className="flex items-center justify-center gap-4 mt-8 z-20">
+      <div className="flex items-center justify-center gap-4 mt-5 sm:mt-8 z-20">
         <button 
           onClick={() => setCurrentIndex((prev) => prev - 1)}
-          className="w-10 h-10 rounded-full border border-[rgba(var(--c-primary-rgb),0.1)] flex items-center justify-center text-[var(--c-primary)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 transition-all bg-white"
+          className="w-11 h-11 md:w-10 md:h-10 rounded-full border border-[rgba(var(--c-primary-rgb),0.12)] flex items-center justify-center text-[var(--c-primary)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 active:scale-90 transition-all bg-white"
           aria-label="Anterior"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
+
+        <div className="flex items-center gap-2 px-1" aria-hidden="true">
+          {gallery.map((_, idx) => (
+            <span
+              key={idx}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                activeDot === idx ? "w-5 bg-[var(--c-accent)]" : "w-1.5 bg-[rgba(var(--c-primary-rgb),0.18)]"
+              }`}
+            />
+          ))}
+        </div>
         
         <button 
           onClick={() => setCurrentIndex((prev) => prev + 1)}
-          className="w-10 h-10 rounded-full border border-[rgba(var(--c-primary-rgb),0.1)] flex items-center justify-center text-[var(--c-primary)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 transition-all bg-white"
+          className="w-11 h-11 md:w-10 md:h-10 rounded-full border border-[rgba(var(--c-primary-rgb),0.12)] flex items-center justify-center text-[var(--c-primary)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 active:scale-90 transition-all bg-white"
           aria-label="Próximo"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18l6-6-6-6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
         </button>
       </div>
     </section>
