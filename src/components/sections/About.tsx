@@ -1,14 +1,21 @@
-import { useState, useEffect } from "react";
-import { m } from "framer-motion";
+import { useState, useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
+import { m, useMotionValue, useSpring } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 
-// Mesma sequência de antes (galeria duplicada, repetida 20x = 240 itens),
-// mas calculada uma única vez em vez de a cada render/clique.
+// Sequência calculada uma única vez fora do componente
 const gallery = globalData.about.gallery;
 const galleryLen = gallery.length;
 const sixPhotos = [...gallery, ...gallery];
 const infiniteItems = Array(20).fill(sixPhotos).flat() as typeof sixPhotos;
 const VISIBLE_RANGE = 3;
+
+const dragSpringConfig = { stiffness: 380, damping: 36, mass: 0.7 };
+const cardSpringTransition = {
+  type: "spring" as const,
+  stiffness: 380,
+  damping: 38,
+  mass: 0.8,
+};
 
 export function About() {
   const [currentIndex, setCurrentIndex] = useState(60);
@@ -16,8 +23,19 @@ export function About() {
     () => typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches
   );
 
+  // Drag horizontal leve (substitui o motor pesado do domMax mantendo a mesma elasticidade 0.18 e mola)
+  const rawDragX = useMotionValue(0);
+  const dragX = useSpring(rawDragX, dragSpringConfig);
+  const dragState = useRef<{
+    active: boolean;
+    startX: number;
+    startY: number;
+    startTime: number;
+    locked: "x" | "y" | null;
+    moved: boolean;
+  }>({ active: false, startX: 0, startY: 0, startTime: 0, locked: null, moved: false });
+
   useEffect(() => {
-    // matchMedia só dispara quando cruza o breakpoint (antes: a cada pixel de resize)
     const mq = window.matchMedia("(max-width: 767px)");
     const handleChange = () => setIsMobile(mq.matches);
     handleChange();
@@ -25,11 +43,65 @@ export function About() {
     return () => mq.removeEventListener("change", handleChange);
   }, []);
 
+  const handlePointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0 && e.pointerType === "mouse") return;
+    dragState.current = {
+      active: true,
+      startX: e.clientX,
+      startY: e.clientY,
+      startTime: performance.now(),
+      locked: null,
+      moved: false,
+    };
+  };
+
+  const handlePointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const st = dragState.current;
+    if (!st.active) return;
+    const dx = e.clientX - st.startX;
+    const dy = e.clientY - st.startY;
+
+    if (!st.locked) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+      st.locked = Math.abs(dx) >= Math.abs(dy) ? "x" : "y";
+    }
+
+    if (st.locked === "y") {
+      st.active = false;
+      rawDragX.set(0);
+      return;
+    }
+
+    st.moved = Math.abs(dx) > 8;
+    rawDragX.set(dx * 0.18);
+  };
+
+  const finishDrag = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const st = dragState.current;
+    if (!st.active) return;
+    st.active = false;
+    rawDragX.set(0);
+
+    if (st.locked !== "x") return;
+    const offset = e.clientX - st.startX;
+    const dt = Math.max(performance.now() - st.startTime, 16);
+    const velocity = (offset / dt) * 1000;
+    const offsetLimit = isMobile ? 26 : 40;
+    const velocityLimit = isMobile ? 320 : 500;
+
+    if (offset < -offsetLimit || velocity < -velocityLimit) {
+      setCurrentIndex((prev) => prev + 1);
+    } else if (offset > offsetLimit || velocity > velocityLimit) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
+
   const handleCardClick = (index: number) => {
+    if (dragState.current.moved) return;
     setCurrentIndex(index);
   };
 
-  // Só percorre os 7 cards visíveis (antes: mapeava os 240 itens a cada render)
+  // Só percorre os 7 cards visíveis
   const visibleIndexes: number[] = [];
   for (let i = currentIndex - VISIBLE_RANGE; i <= currentIndex + VISIBLE_RANGE; i++) {
     if (i >= 0 && i < infiniteItems.length) visibleIndexes.push(i);
@@ -45,35 +117,26 @@ export function About() {
       {/* Vitrine 2.5D Stacked */}
       <div className="relative w-full h-[410px] sm:h-[500px] md:h-[650px] flex items-center justify-center overflow-hidden z-10">
         <m.div 
+          style={{ x: dragX }}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={finishDrag}
+          onPointerCancel={finishDrag}
+          onPointerLeave={finishDrag}
           className="absolute flex items-center cursor-grab active:cursor-grabbing w-full h-full justify-center touch-pan-y"
-          drag="x"
-          dragDirectionLock
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.18}
-          onDragEnd={(_e, info) => {
-            const offset = info.offset.x;
-            const velocity = info.velocity.x;
-            const offsetLimit = isMobile ? 26 : 40;
-            const velocityLimit = isMobile ? 320 : 500;
-            
-            if (offset < -offsetLimit || velocity < -velocityLimit) {
-              setCurrentIndex((prev) => prev + 1);
-            } else if (offset > offsetLimit || velocity > velocityLimit) {
-              setCurrentIndex((prev) => prev - 1);
-            }
-          }}
         >
           {visibleIndexes.map((index) => {
             const img = infiniteItems[index];
             const distance = index - currentIndex;
             const absDistance = Math.abs(distance);
+            const isCenter = absDistance === 0;
             
             const scale = Math.max(1 - absDistance * 0.15, 0.65);
             const zIndex = 50 - absDistance;
             const baseOffset = isMobile ? 112 : 240;
             const secondaryOffset = isMobile ? 74 : 160;
             
-            const translateX = distance === 0 
+            const translateX = isCenter 
               ? 0 
               : Math.sign(distance) * (baseOffset + (absDistance > 1 ? (absDistance - 1) * secondaryOffset : 0));
 
@@ -87,17 +150,14 @@ export function About() {
                   scale: scale,
                   zIndex: zIndex,
                 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 380,
-                  damping: 38,
-                  mass: 0.8
-                }}
+                transition={cardSpringTransition}
               >
                 <div className="relative w-[256px] sm:w-[340px] md:w-[400px] aspect-[3/4.2] rounded-[1.75rem] md:rounded-[2rem] overflow-hidden bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] group">
                   <img
                     src={img.url}
                     alt={img.title}
+                    width={366}
+                    height={810}
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none transition-transform duration-1000 group-hover:scale-105"
@@ -105,28 +165,27 @@ export function About() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none opacity-80" />
                   
-                  <m.div 
-                    className="absolute inset-0 bg-white pointer-events-none"
-                    animate={{ opacity: absDistance === 0 ? 0 : 0.65 }}
-                    transition={{ duration: 0.4 }}
+                  {/* Véu branco e título animados via CSS compositor (reduz 14 instâncias JS do Framer Motion) */}
+                  <div 
+                    className="absolute inset-0 bg-white pointer-events-none transition-opacity duration-400"
+                    style={{ opacity: isCenter ? 0 : 0.65 }}
                   />
                   
-                  {absDistance === 0 && (
+                  {isCenter && (
                     <div className="absolute inset-0 border-[1.5px] border-[var(--c-accent)]/60 rounded-[1.75rem] md:rounded-[2rem] pointer-events-none" />
                   )}
                   
-                  <m.div 
-                    className="absolute bottom-6 sm:bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none"
-                    animate={{ 
-                      opacity: absDistance === 0 ? 1 : 0.3,
-                      y: absDistance === 0 ? 0 : 10
+                  <div 
+                    className="absolute bottom-6 sm:bottom-8 left-0 right-0 px-6 flex flex-col items-center text-center pointer-events-none transition-[opacity,transform] duration-400"
+                    style={{ 
+                      opacity: isCenter ? 1 : 0.3,
+                      transform: isCenter ? "translate3d(0,0,0)" : "translate3d(0,10px,0)",
                     }}
-                    transition={{ duration: 0.4 }}
                   >
                     <h3 className="text-white text-xl md:text-2xl font-light tracking-wide drop-shadow-md" style={serif}>
                       {img.title}
                     </h3>
-                  </m.div>
+                  </div>
                 </div>
               </m.div>
             );

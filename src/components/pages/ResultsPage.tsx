@@ -1,23 +1,37 @@
-import { useState } from "react";
+import { useRef, type CSSProperties } from "react";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
 function BeforeAfterSlider({ beforeImg, afterImg, labelBefore, labelAfter }: { beforeImg: string, afterImg: string, labelBefore: string, labelAfter: string }) {
-  const [sliderPosition, setSliderPosition] = useState(50);
-  const [isHovered, setIsHovered] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="relative w-full h-[260px] sm:h-[360px] md:h-[450px] bg-[var(--c-bg)] overflow-hidden select-none rounded-2xl group" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <img src={afterImg} alt="Resultado Depois" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
-      <img src={beforeImg} alt="Situação Antes" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }} draggable={false} />
+    <div
+      ref={containerRef}
+      style={{ "--pos": "50%" } as CSSProperties}
+      className="relative w-full h-[260px] sm:h-[360px] md:h-[450px] bg-[var(--c-bg)] overflow-hidden select-none rounded-2xl group"
+    >
+      <img src={afterImg} alt="Resultado Depois" width={656} height={396} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none" draggable={false} />
+      <img src={beforeImg} alt="Situação Antes" width={653} height={410} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover pointer-events-none will-change-[clip-path]" style={{ clipPath: "inset(0 calc(100% - var(--pos)) 0 0)" }} draggable={false} />
       
-      <div className="absolute top-0 bottom-0 w-[1.5px] bg-white/80 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.5)]" style={{ left: `calc(${sliderPosition}% - 0.75px)` }}>
-        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${isHovered ? 'bg-white/90 scale-110 shadow-xl' : 'bg-white/50 backdrop-blur-sm shadow-md border border-white/40'}`}>
+      <div className="absolute top-0 bottom-0 w-[1.5px] bg-white/80 pointer-events-none shadow-[0_0_15px_rgba(0,0,0,0.5)]" style={{ left: "calc(var(--pos) - 0.75px)" }}>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 bg-white/50 backdrop-blur-sm shadow-md border border-white/40 group-hover:bg-white/90 group-hover:scale-110 group-hover:shadow-xl">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 18l-6-6 6-6" /><path d="M15 18l6-6-6-6" /></svg>
         </div>
       </div>
       
-      <input type="range" min="0" max="100" value={sliderPosition} onChange={(e) => setSliderPosition(Number(e.target.value))} className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10 m-0 p-0 touch-pan-y" aria-label="Controle deslizante de antes e depois" />
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="0.1"
+        defaultValue={50}
+        onInput={(e) => {
+          containerRef.current?.style.setProperty("--pos", `${e.currentTarget.value}%`);
+        }}
+        className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10 m-0 p-0 touch-pan-y"
+        aria-label="Controle deslizante de antes e depois"
+      />
       
       <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 bg-black/45 backdrop-blur-md border border-white/20 text-[#FFFFFF] text-[0.58rem] sm:text-[0.6rem] font-medium tracking-[0.18em] sm:tracking-[0.2em] uppercase px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full pointer-events-none">{labelBefore}</div>
       <div className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 bg-[rgba(var(--c-primary-rgb),0.75)] backdrop-blur-md border border-white/20 text-[#FFFFFF] text-[0.58rem] sm:text-[0.6rem] font-medium tracking-[0.18em] sm:tracking-[0.2em] uppercase px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full pointer-events-none">{labelAfter}</div>
@@ -77,7 +91,7 @@ export function ResultsPage({ goTo }: { goTo: (id: string) => void }) {
                   </div>
                   
                   <div className="mt-auto pt-5 sm:pt-6 border-t border-[rgba(var(--c-primary-rgb),0.1)] flex justify-center w-full">
-                    <Button onClick={() => goTo("contato")} variant="skew" hoverText="Iniciar Tratamento" className="w-full mt-2 sm:mt-4 h-[54px] !rounded-full">
+                    <Button onClick={() => goTo("contato")} className="w-full mt-2 sm:mt-4 h-[54px] !rounded-full">
                       {results_page.btnSaberMais}
                     </Button>
                   </div>

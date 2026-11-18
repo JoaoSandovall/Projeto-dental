@@ -1,31 +1,48 @@
 <!doctype html>
 <html lang="pt-BR">
-  
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Vivere Odontologia — Estética e Reabilitação Oral. Lentes em resina, reabilitação oclusal e clareamento com planejamento técnico de alto padrão." />
-    <meta name="theme-color" content="#FFFFFF" />
-    <title>Modelo de página</title>
+    
+    <!-- SEO Básico -->
+    <meta name="description" content="Blanc Odontologia — Estética Avançada e Reabilitação Oral no Sudoeste, Brasília. Lentes em resina, reabilitação oclusal e estética dental com planejamento digital." />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <title>Blanc Odontologia — Estética Avançada & Reabilitação</title>
+
+    <!-- Open Graph - Redes Sociais (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blancodontologia.com.br/" />
+    <meta property="og:title" content="Blanc Odontologia — Estética Avançada & Reabilitação" />
+    <meta property="og:description" content="Atuação exclusiva em Reabilitação Oral e Lentes em Resina no Sudoeste, Brasília. O rigor da função aliado à arquitetura do sorriso." />
+    <!-- IMPORTANTE: O WhatsApp exige o caminho absoluto com "https" para puxar a imagem. -->
+    <!-- Quando for subir o site oficial, troque esta URL para o link real da foto de capa -->
+    <meta property="og:image" content="https://blancodontologia.com.br/imagens/hero.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Fontes auto-hospedadas: baixam em paralelo com o JS, sem esperar o CSS -->
     <link rel="preload" href="/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/dm-sans-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- Imagem principal (LCP) da home: começa a baixar antes do React montar a página -->
+    <!-- Imagem principal (LCP) da home: baixa a versão mobile (25 KB) ou desktop (47 KB) antes do React montar -->
     <script>
       if (!/resultados|especialista/.test(location.pathname)) {
         var l = document.createElement('link');
-        l.rel = 'preload'; l.as = 'image'; l.href = '/imagens/hero.webp'; l.fetchPriority = 'high';
+        l.rel = 'preload';
+        l.as = 'image';
+        l.href = '/imagens/hero.webp';
+        l.imageSrcset = '/imagens/hero-sm.webp 600w, /imagens/hero.webp 900w';
+        l.imageSizes = '(min-width: 640px) 90vw, 100vw';
+        l.fetchPriority = 'high';
         document.head.appendChild(l);
       }
     </script>
-</head>
+  </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-
 </html>

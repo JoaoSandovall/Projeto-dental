@@ -44,10 +44,17 @@ export default defineConfig({
     },
   },
   build: {
-    // Navegadores modernos: menos polyfills/transpilação = JS menor e mais rápido
     target: 'es2022',
-    // Imagens pequenas não viram base64 dentro do JS
     assetsInlineLimit: 2048,
     reportCompressedSize: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+            return 'react-vendor'
+          }
+        },
+      },
+    },
   },
 })

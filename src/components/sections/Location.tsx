@@ -1,8 +1,31 @@
+import { useEffect, useRef, useState } from "react";
 import { serif, globalData } from "../../data/content";
 import { Button } from "../ui/Button";
 
 export function Location() {
   const { location, clinica } = globalData;
+  const mapBoxRef = useRef<HTMLDivElement>(null);
+  const [mapActive, setMapActive] = useState(false);
+
+  // Só carrega o iframe pesado do Google Maps (~800 KB de JS externo) quando o usuário
+  // chega a 450px da seção de localização, mantendo o scroll do resto da página 100% leve.
+  useEffect(() => {
+    const el = mapBoxRef.current;
+    if (!el || mapActive) return;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapActive(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: "450px 0px" }
+    );
+
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [mapActive]);
 
   return (
     <section 
@@ -53,24 +76,29 @@ export function Location() {
           </div>
 
           <div className="mt-8 sm:mt-12 lg:mt-0 pt-2 sm:pt-4">
-            <Button as="a" href={clinica.endereco.mapaGpsUrl} target="_blank" variant="outline" className="mt-2 sm:mt-6 w-full sm:w-auto border-black/30">
+            <Button as="a" href={clinica.endereco.mapaGpsUrl} target="_blank" className="mt-2 sm:mt-6 w-full sm:w-auto border-black/30">
               {location.btn}
             </Button>
           </div>
         </div>
 
-        <div className="lg:col-span-7 w-full h-[320px] sm:h-[420px] lg:h-auto min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[var(--c-light-surface)] group shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
-          <iframe 
-            title={`Mapa de localização — ${clinica.nome}`}
-            src={clinica.endereco.mapaEmbedUrl} 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade" 
-            className="absolute inset-0 grayscale-[35%] md:grayscale-[100%] contrast-[1.05] md:contrast-[1.1] opacity-90 md:opacity-70 transition-all duration-700 ease-in-out group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100"
-          />
+        <div
+          ref={mapBoxRef}
+          className="lg:col-span-7 w-full h-[320px] sm:h-[420px] lg:h-auto min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[var(--c-light-surface)] group shadow-[0_20px_50px_rgba(0,0,0,0.05)]"
+        >
+          {mapActive && (
+            <iframe 
+              title={`Mapa de localização — ${clinica.nome}`}
+              src={clinica.endereco.mapaEmbedUrl} 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade" 
+              className="absolute inset-0 grayscale-[35%] md:grayscale-[100%] contrast-[1.05] md:contrast-[1.1] opacity-90 md:opacity-70 transition-all duration-700 ease-in-out group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100"
+            />
+          )}
           <div className="absolute inset-0 border border-[rgba(var(--c-primary-rgb),0.1)] rounded-[1.5rem] md:rounded-[2rem] pointer-events-none" />
         </div>
       </div>

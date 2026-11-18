@@ -66,7 +66,7 @@ export function Methodology() {
             {desc}
           </p>
 
-          <Button variant="outline" onClick={goToContact as any} className="mt-8 md:mt-10 w-full sm:w-max">
+          <Button onClick={goToContact} className="mt-8 md:mt-10 w-full sm:w-max">
             {btn}
           </Button>
         </div>

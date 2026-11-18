@@ -1,4 +1,4 @@
-import React, { ReactNode, CSSProperties } from "react";
+import type { ReactNode, CSSProperties } from "react";
 
 interface SectionProps {
   children: ReactNode;

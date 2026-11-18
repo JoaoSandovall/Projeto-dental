@@ -51,35 +51,31 @@ export function Infrastructure() {
           {photos.map((photo, index) => {
             const isActive = active === index;
             return (
-              <m.div
+              <div
                 key={index}
                 onClick={() => setActive(index)}
                 onPointerEnter={(e) => {
                   if (e.pointerType === "mouse") setActive(index);
                 }}
-                initial={false}
-                animate={{ 
-                  flex: isActive ? 5 : 1, 
-                }}
-                transition={{ 
-                  duration: 0.55,
-                  ease: [0.22, 1, 0.36, 1]
+                style={{
+                  flex: isActive ? 5 : 1,
+                  transition: "flex 550ms cubic-bezier(0.22, 1, 0.36, 1)",
                 }}
                 className="relative overflow-hidden rounded-2xl md:rounded-[2rem] cursor-pointer group bg-[var(--c-dark-base)] border border-white/5"
               >
-                <m.img
+                <img
                   src={photo.img}
                   srcSet={srcSetFor(photo.img)}
                   sizes="(min-width: 768px) 50vw, 100vw"
                   alt={photo.alt}
                   loading="lazy"
                   decoding="async"
-                  animate={{
-                    filter: isActive ? "grayscale(0%)" : "grayscale(80%)",
-                    scale: isActive ? 1 : 1.08
+                  style={{
+                    transition: "filter 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1)",
                   }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                  className={`absolute inset-0 w-full h-full object-cover pointer-events-none will-change-transform ${
+                    isActive ? "grayscale-0 scale-100" : "grayscale-[80%] scale-[1.08]"
+                  }`}
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent opacity-85 pointer-events-none" />
@@ -135,7 +131,7 @@ export function Infrastructure() {
                     )}
                   </AnimatePresence>
                 </div>
-              </m.div>
+              </div>
             );
           })}
         </div>

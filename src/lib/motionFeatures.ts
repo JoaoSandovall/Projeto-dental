@@ -1,6 +1,6 @@
-// Pacote de recursos do Framer Motion (animações, gestos, drag e layout).
-// Fica num chunk separado e é carregado em paralelo com o React (ver main.tsx),
-// tirando ~metade do Framer Motion do JavaScript crítico da primeira pintura.
-import { domMax } from "framer-motion";
+// Pacote enxuto de animações do Framer Motion (domAnimation em vez de domMax):
+// remove ~48 KB do motor de layout projection que não é necessário,
+// mantendo todas as animações, springs, variants, scroll e whileInView intactos.
+import { domAnimation } from "framer-motion";
 
-export default domMax;
+export default domAnimation;

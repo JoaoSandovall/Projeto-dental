@@ -9,38 +9,13 @@ import { FAQ } from "./components/sections/FAQ";
 import { Location } from "./components/sections/Location";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
+import { FloatingWhatsApp } from "./components/ui/FloatingWhatsApp";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { globalData } from "./data/content";
-import { preloadImage, srcSetFor } from "./lib/img";
+import { loadResultsPage, loadSpecialistPage, preloadRoute } from "./lib/routes";
 
 // Páginas internas em chunks separados: a home não paga pelo código delas.
-// Elas são pré-carregadas quando o navegador fica ocioso (e ao passar o mouse no link),
-// junto com a decodificação da foto principal do especialista, para a transição ser instantânea.
-const loadResultsPage = () => import("./components/pages/ResultsPage");
-const loadSpecialistPage = () => import("./components/pages/SpecialistPage");
 const ResultsPage = lazy(() => loadResultsPage().then((mod) => ({ default: mod.ResultsPage })));
 const SpecialistPage = lazy(loadSpecialistPage);
-
-const SPECIALIST_HERO_SIZES = "(min-width: 1024px) 40vw, (min-width: 768px) 50vw, (min-width: 640px) 70vw, 95vw";
-
-export function preloadRoute(path: string): Promise<unknown> {
-  if (path.includes("resultados")) {
-    const firstCase = globalData.results_page.cases[0];
-    return Promise.all([
-      loadResultsPage(),
-      firstCase ? preloadImage(firstCase.beforeImg) : Promise.resolve(),
-      firstCase ? preloadImage(firstCase.afterImg) : Promise.resolve(),
-    ]);
-  }
-  if (path.includes("especialista")) {
-    const heroImg = globalData.specialties_page.hero.imgUrl;
-    return Promise.all([
-      loadSpecialistPage(),
-      preloadImage(heroImg, srcSetFor(heroImg), SPECIALIST_HERO_SIZES),
-    ]);
-  }
-  return Promise.resolve();
-}
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -92,8 +67,6 @@ export default function App() {
     // decodificados na memória antes de virar a página.
     Promise.all([wait(320), preloadRoute(currentPath).catch(() => {})]).then(() => {
       if (cancelled) return;
-      // html tem scroll-behavior: smooth; forçamos "instant" na troca de página para não competir
-      // com a animação de entrada e o header não ficar preso no estado "scrolled".
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
       requestAnimationFrame(() => {
         if (cancelled) return;
@@ -140,7 +113,7 @@ export default function App() {
           </Suspense>
         ) : displayPath.includes("especialista") ? (
           <Suspense fallback={<div className="min-h-screen bg-[var(--c-dark-base)]" />}>
-            <SpecialistPage goTo={goTo} />
+            <SpecialistPage />
           </Suspense>
         ) : (
           <>
@@ -156,8 +129,8 @@ export default function App() {
         )}
       </div>
       
-      {/* Footer fica global e não sofre com as transições abruptas */}
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }

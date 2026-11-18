@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Twirl as Hamburger } from "hamburger-react";
 import { m, AnimatePresence } from "framer-motion";
 import { serif, globalData } from "../../data/content";
-import { preloadRoute } from "../../App";
+import { preloadRoute } from "../../lib/routes";
 
 // Animação de Entrada (Cascata dos links ao carregar o site)
 const containerVariants = {
@@ -67,9 +67,16 @@ export function Header({ goTo }: { goTo: (id: string) => void }) {
   const { clinica } = globalData;
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    let lastScrolled = window.scrollY > 10;
+    setScrolled(lastScrolled);
+    const handleScroll = () => {
+      const next = window.scrollY > 10;
+      if (next !== lastScrolled) {
+        lastScrolled = next;
+        setScrolled(next);
+      }
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

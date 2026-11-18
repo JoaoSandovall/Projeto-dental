@@ -1,7 +1,8 @@
-import type { MouseEvent as ReactMouseEvent } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 import { m, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
 import { serif, globalData } from "../../data/content";
 import { useCountUp } from "../../hooks/useCountUp";
+import { srcSetFor } from "../../lib/img";
 import { Button } from "../ui/Button";
 
 function StatCounter({ target, suffix, label, thousands, delay }: any) {
@@ -40,8 +41,6 @@ const maskVariant: Variants = {
   }
 };
 
-const noiseBg = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`;
-
 export function Hero({ goTo }: { goTo: (id: string) => void }) {
   const { hero, clinica } = globalData;
 
@@ -54,17 +53,20 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
   const imgX = useTransform(springX, [-0.5, 0.5], [-12, 12]);
   const imgY = useTransform(springY, [-0.5, 0.5], [-12, 12]);
 
-  const handleMouseMove = (e: ReactMouseEvent) => {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX.set(clientX / innerWidth - 0.5);
-    mouseY.set(clientY / innerHeight - 0.5);
+  // Só calcula parallax para mouse (ignora toques em celular para poupar CPU/GPU)
+  const handlePointerMove = (e: ReactPointerEvent<HTMLElement>) => {
+    if (e.pointerType !== "mouse") return;
+    const rect = e.currentTarget;
+    const w = rect.clientWidth || 1;
+    const h = rect.clientHeight || 1;
+    mouseX.set(e.clientX / w - 0.5);
+    mouseY.set(e.clientY / h - 0.5);
   };
 
   return (
     <section 
       id="inicio" 
-      onMouseMove={handleMouseMove}
+      onPointerMove={handlePointerMove}
       className="relative min-h-[100svh] bg-[var(--c-bg)] pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-24 md:pb-32 flex flex-col justify-between overflow-hidden"
     >
       <div className="max-w-[1440px] w-full mx-auto px-6 md:px-10 lg:px-20 flex flex-col z-10 h-full">
@@ -106,7 +108,7 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
             </p>
             
             <div className="flex items-center w-full sm:w-auto">
-              <Button onClick={() => goTo("contato")} hoverText="Falar com Especialista" className="w-full sm:w-auto">
+              <Button onClick={() => goTo("contato")} className="w-full sm:w-auto">
                 {hero.btnPrimary}
               </Button>
             </div>
@@ -116,13 +118,16 @@ export function Hero({ goTo }: { goTo: (id: string) => void }) {
         <div className="relative w-full h-[38svh] sm:h-[46svh] md:h-[55vh] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[var(--c-dark-deep)] shadow-[0_30px_80px_rgba(0,0,0,0.08)] mb-10 md:mb-16">
           <m.img 
             style={{ x: imgX, y: imgY, scale: 1.05 }}
-            src={hero.imgUrl} 
+            src={hero.imgUrl}
+            srcSet={srcSetFor(hero.imgUrl)}
+            sizes="(min-width: 640px) 90vw, 100vw"
+            width={900}
+            height={1200}
             alt={clinica.nome} 
             fetchPriority="high"
             decoding="async"
             className="absolute inset-0 w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-[filter] duration-1000 will-change-transform"
           />
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: noiseBg }} />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 md:from-black/50 md:via-transparent to-transparent pointer-events-none" />
           
           <m.div 

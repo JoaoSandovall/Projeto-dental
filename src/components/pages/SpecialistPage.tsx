@@ -5,7 +5,7 @@ import { srcSetFor } from "../../lib/img";
 
 const easeLuxury = [0.22, 1, 0.36, 1] as const;
 
-export function SpecialistPage({ goTo: _goTo }: { goTo: (id: string) => void }) {
+export function SpecialistPage() {
   const { team, specialties_page } = globalData;
   const dr = team.members[0];
   const { hero, timeline } = specialties_page;
@@ -54,8 +54,8 @@ export function SpecialistPage({ goTo: _goTo }: { goTo: (id: string) => void }) 
               src={hero.imgUrl}
               srcSet={srcSetFor(hero.imgUrl)}
               sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, (min-width: 640px) 70vw, 92vw"
-              width={1196}
-              height={1800}
+              width={660}
+              height={740}
               alt={dr.name}
               fetchPriority="high"
               decoding="async"

@@ -12,7 +12,7 @@ const loadMotionFeatures = () => motionFeatures
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <LazyMotion features={loadMotionFeatures} strict>
+    <LazyMotion features={loadMotionFeatures}>
       <App />
     </LazyMotion>
   </React.StrictMode>,
